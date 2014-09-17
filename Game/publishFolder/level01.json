@@ -1,0 +1,231 @@
+{
+  "designResolution" : "{320.000000, 480.000000}",
+  "globalGravityForce" : 8,
+  "tags" : [
+    "DEFAULT"
+  ],
+  "aspect" : 5,
+  "backgroundColor" : "{{0.617358, 0.617319}, {0.617343, 1.000000}}",
+  "uuid" : "4CEAEEC0-6BAC-46B1-A17B-4B233E3D8FE6",
+  "children" : [
+    {
+      "rotation" : 0,
+      "parentUUID" : "4CEAEEC0-6BAC-46B1-A17B-4B233E3D8FE6",
+      "tags" : [
+        "DEFAULT"
+      ],
+      "generalPosition" : "{0.000000, 0.000000}",
+      "uuid" : "5D69B343-3AA7-41E7-ABF6-BC7567A7953A",
+      "name" : "BACK USER INTERFACE",
+      "anchor" : "{0.500000, 0.500000}",
+      "size" : "{128.000000, 128.000000}",
+      "nodeType" : "LHBackUINode",
+      "alpha" : 255,
+      "scale" : "{1.000000, 1.000000}",
+      "invisibleInEditor" : false,
+      "zOrder" : -1,
+      "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+    },
+    {
+      "rotation" : 0,
+      "parentUUID" : "4CEAEEC0-6BAC-46B1-A17B-4B233E3D8FE6",
+      "tags" : [
+        "DEFAULT"
+      ],
+      "generalPosition" : "{0.000000, 0.000000}",
+      "uuid" : "A96AB308-F32F-46A1-AA26-05C658FFF01C",
+      "children" : [
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "generalPosition" : "{0.500000, 0.500000}",
+          "uuid" : "7A368E35-C261-4652-92B6-2F5C9DB7D626",
+          "name" : "newBgrd",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{320.000000, 480.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "invisibleInEditor" : false,
+          "relativeImagePath" : "backgrounds\/",
+          "zOrder" : 0,
+          "imageFileName" : "bgrd.png",
+          "colorOverlay" : "{{0.000000, 1.000000}, {0.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 45,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "generalPosition" : "{0.294357, -0.012013}",
+          "uuid" : "58B96C89-0219-41B5-A8DD-763D0501A8CF",
+          "name" : "positioning_1",
+          "anchor" : "{0.250080, 0.253274}",
+          "size" : "{64.000000, 64.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.664832, 1.675130}",
+          "invisibleInEditor" : false,
+          "relativeImagePath" : "backgrounds\/",
+          "zOrder" : 0,
+          "imageFileName" : "positioning.png",
+          "colorOverlay" : "{{0.000000, 0.000000}, {1.000000, 1.000000}}"
+        }
+      ],
+      "name" : "GAME WORLD",
+      "anchor" : "{0.500000, 0.500000}",
+      "size" : "{128.000000, 128.000000}",
+      "nodeType" : "LHGameWorldNode",
+      "alpha" : 255,
+      "scale" : "{1.000000, 1.000000}",
+      "invisibleInEditor" : false,
+      "zOrder" : 0,
+      "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+    },
+    {
+      "rotation" : 0,
+      "parentUUID" : "4CEAEEC0-6BAC-46B1-A17B-4B233E3D8FE6",
+      "tags" : [
+        "DEFAULT"
+      ],
+      "generalPosition" : "{0.000000, 0.000000}",
+      "uuid" : "3A18EC17-042B-4402-AD3C-D86700F4EBBD",
+      "children" : [
+        {
+          "rotation" : 90,
+          "parentUUID" : "_USER_INTERFACE_NODE_UUID_",
+          "tags" : [
+            "DEFAULT",
+            "STATUE",
+            "OBJECT"
+          ],
+          "spriteUUID" : "D78AF2EE-072C-4690-9A29-B403F8564573",
+          "spriteName" : "object_statue",
+          "generalPosition" : "{0.099316, 0.082892}",
+          "uuid" : "04F45758-4001-43C5-B1CD-ACF39C8DC071",
+          "name" : "object_statue",
+          "anchor" : "{0.292808, 0.794739}",
+          "size" : "{53.000000, 74.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 136.0379,
+          "scale" : "{1.000000, 1.000000}",
+          "invisibleInEditor" : false,
+          "relativeImagePath" : "publishFolder\/",
+          "zOrder" : -3,
+          "imageFileName" : "objects.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        }
+      ],
+      "name" : "FRONT USER INTERFACE",
+      "anchor" : "{0.500000, 0.500000}",
+      "size" : "{128.000000, 128.000000}",
+      "nodeType" : "LHUINode",
+      "alpha" : 255,
+      "scale" : "{1.000000, 1.000000}",
+      "invisibleInEditor" : false,
+      "zOrder" : 1,
+      "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+    }
+  ],
+  "devices" : [
+    {
+      "ratio" : 1,
+      "suffix" : "",
+      "size" : "{320.000000, 480.000000}"
+    },
+    {
+      "ratio" : 2,
+      "suffix" : "@2x",
+      "size" : "{640.000000, 960.000000}"
+    },
+    {
+      "ratio" : 2,
+      "suffix" : "@2x",
+      "size" : "{640.000000, 1136.000000}"
+    },
+    {
+      "ratio" : 2,
+      "suffix" : "@2x",
+      "size" : "{768.000000, 1024.000000}"
+    },
+    {
+      "ratio" : 4,
+      "suffix" : "@4x",
+      "size" : "{1536.000000, 2048.000000}"
+    },
+    {
+      "ratio" : 2,
+      "suffix" : "@2x",
+      "size" : "{540.000000, 960.000000}"
+    },
+    {
+      "ratio" : 2,
+      "suffix" : "@2x",
+      "size" : "{480.000000, 854.000000}"
+    },
+    {
+      "ratio" : 2,
+      "suffix" : "@2x",
+      "size" : "{480.000000, 800.000000}"
+    },
+    {
+      "ratio" : 2,
+      "suffix" : "@2x",
+      "size" : "{720.000000, 1280.000000}"
+    },
+    {
+      "ratio" : 2,
+      "suffix" : "@2x",
+      "size" : "{600.000000, 1024.000000}"
+    },
+    {
+      "ratio" : 2,
+      "suffix" : "@2x",
+      "size" : "{800.000000, 1280.000000}"
+    },
+    {
+      "ratio" : 4,
+      "suffix" : "@4x",
+      "size" : "{1200.000000, 1920.000000}"
+    },
+    {
+      "ratio" : 2,
+      "suffix" : "@2x",
+      "size" : "{600.000000, 1024.000000}"
+    },
+    {
+      "ratio" : 2,
+      "suffix" : "@2x",
+      "size" : "{600.000000, 1024.000000}"
+    },
+    {
+      "ratio" : 2,
+      "suffix" : "@2x",
+      "size" : "{720.000000, 1280.000000}"
+    },
+    {
+      "ratio" : 4,
+      "suffix" : "@4x",
+      "size" : "{1080.000000, 1920.000000}"
+    },
+    {
+      "ratio" : 2,
+      "suffix" : "@2x",
+      "size" : "{720.000000, 1280.000000}"
+    },
+    {
+      "ratio" : 4,
+      "suffix" : "@4x",
+      "size" : "{1080.000000, 1920.000000}"
+    }
+  ],
+  "useGlobalGravity" : true,
+  "nodeType" : "LHScene",
+  "sceneFormat" : 1,
+  "invisibleInEditor" : false,
+  "globalGravityDirection" : "{0.000000, -1.000000}"
+}
