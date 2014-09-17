@@ -10,6 +10,7 @@ local LHGameWorldNode = require('LevelHelper2-API.Nodes.LHGameWorldNode')
 local LHUINode = require('LevelHelper2-API.Nodes.LHUINode')
 local LHBackUINode = require('LevelHelper2-API.Nodes.LHBackUINode')
 local LHSprite = require('LevelHelper2-API.Nodes.LHSprite')
+local LHBezier = require('LevelHelper2-API.Nodes.LHBezier')
 
 --------------------------------------------------------------------------------
 --!@docBegin
@@ -204,6 +205,12 @@ function createLHNodeWithDictionaryWithParent(childInfo, prnt)
     	local pNode = LHSprite:nodeWithDictionary(childInfo, prnt);
     	return pNode;
     end
+    
+    if nodeType == "LHBezier" then    
+    	local pNode = LHBezier:nodeWithDictionary(childInfo, prnt);
+    	return pNode;
+    end
+    
     
     print("UNKNOWN NODE TYPE " .. nodeType);
     

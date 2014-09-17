@@ -284,3 +284,18 @@ function LHPrintObjectInfo(object)
     local jsonString = json.encode( object )
     print("OBJECT: " .. tostring(object) .. " INFO: " .. jsonString);
 end
+
+function LHPointOnCurve(p1, p2, p3, p4, t)
+	local var1
+	local var2
+	local var3
+    local vPoint = {x = 0.0, y = 0.0}
+    
+    var1 = 1 - t
+    var2 = var1 * var1 * var1
+    var3 = t * t * t
+    vPoint.x = var2*p1.x + 3*t*var1*var1*p2.x + 3*t*t*var1*p3.x + var3*p4.x
+    vPoint.y = var2*p1.y + 3*t*var1*var1*p2.y + 3*t*t*var1*p3.y + var3*p4.y
+
+	return vPoint;
+end
