@@ -12,6 +12,7 @@ local LHBackUINode = require('LevelHelper2-API.Nodes.LHBackUINode')
 local LHSprite = require('LevelHelper2-API.Nodes.LHSprite')
 local LHBezier = require('LevelHelper2-API.Nodes.LHBezier')
 
+local LHUtils = require("LevelHelper2-API.Utilities.LHUtils");
 --------------------------------------------------------------------------------
 --!@docBegin
 --!Loads json file and returns contents as a string.
@@ -58,6 +59,24 @@ function nodeWithUniqueName(selfNode, name)
 end
 
 --------------------------------------------------------------------------------
+--!@docBegin
+--!Get the node LHScene object
+function getScene(selfNode)
+--!@docEnd	
+	if(selfNode.nodeType == "LHScene")then
+		return selfNode;
+	end
+
+	local prnt = selfNode.parent;
+	if(prnt ~= nil)then
+		if prnt._isNodeProtocol == true then
+			return prnt:getScene();
+		end
+	end
+	return nil;
+end
+
+--------------------------------------------------------------------------------
 -- function batch_allSprites(selfBatch)--returns array with LHSprite objects
 
 -- 	--we only have to put the sprites from self to a table
@@ -87,8 +106,6 @@ end
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 function initNodeProtocolWithDictionary(dict, node)
-
-    local LHUtils = require("LevelHelper2-API.Utilities.LHUtils");
 
     local value = dict["generalPosition"]
     if value then
@@ -124,7 +141,7 @@ function initNodeProtocolWithDictionary(dict, node)
     --LevelHelper 2 node protocol functions
 	----------------------------------------------------------------------------
 	node.nodeWithUniqueName = nodeWithUniqueName;
-	
+	node.getScene 			= getScene;
 	--Load node protocol properties
 	----------------------------------------------------------------------------
 	node.lhUniqueName = dict["name"];

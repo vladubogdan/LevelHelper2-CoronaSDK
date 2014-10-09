@@ -4,19 +4,26 @@
 --
 --------------------------------------------------------------------------------
 
-local LHUtils = require('LevelHelper2-API.Utilities.LHUtils')
-local LHNodeProtocol = require('LevelHelper2-API.Protocols.LHNodeProtocol')
+local LHUtils = require("LevelHelper2-API.Utilities.LHUtils");
+local LHNodeProtocol = require("LevelHelper2-API.Protocols.LHNodeProtocol")
 
 --------------------------------------------------------------------------------
+--!@docBegin
+--!Get the back ui node from the scene.
 function getBackUINode(_sceneObj)
-    
+--!@docEnd
 end
 --------------------------------------------------------------------------------
+--!@docBegin
+--!Get the game world node from the scene.
 function getGameWorldNode(_sceneObj)
+--!@docEnd
 end
 --------------------------------------------------------------------------------
+--!@docBegin
+--!Get the front ui node from the scene.
 function getUINode(_sceneObj)
-
+--!@docEnd
     if(_sceneObj._uiNode == nil)then
         for i = 1, _sceneObj.numChildren do
 		    local node = _sceneObj[i]
@@ -29,6 +36,13 @@ function getUINode(_sceneObj)
     return _sceneObj._uiNode;
 end
 --------------------------------------------------------------------------------
+--!@docBegin
+--!Get the physical shape fixture information with a specific unique identifier.
+--!@param uuid The shape fixture unique identifier
+function tracedFixturesWithUUID(_sceneObj, uuid)
+--!@docEnd
+	return _sceneObj._tracedFixtures[uuid];
+end
 
 
 local LHScene = {}
@@ -44,9 +58,10 @@ function LHScene:initWithContentOfFile(jsonFile)
 	_scene.nodeType = "LHScene"
 	
 	--functions
-	_scene.getBackUINode 	= getBackUINode;
-	_scene.getGameWorldNode = getGameWorldNode;
-	_scene.getUINode 	    = getUINode;
+	_scene.getBackUINode 				= getBackUINode;
+	_scene.getGameWorldNode 			= getGameWorldNode;
+	_scene.getUINode 		 			= getUINode;
+	_scene.tracedFixturesWithUUID 		= tracedFixturesWithUUID;
 	
 	
 	local dict = nil;
@@ -57,6 +72,12 @@ function LHScene:initWithContentOfFile(jsonFile)
         dict = json.decode( jsonContent )
     end
 
+
+	local tracedFixInfo = dict["tracedFixtures"];
+	if(tracedFixInfo ~= nil)then
+		_scene._tracedFixtures = LHUtils.LHDeepCopy(tracedFixInfo);
+	end
+	
 	
 	local LHNodeProtocol = require('LevelHelper2-API.Protocols.LHNodeProtocol')
 	LHNodeProtocol.initNodeProtocolWithDictionary(dict, _scene);

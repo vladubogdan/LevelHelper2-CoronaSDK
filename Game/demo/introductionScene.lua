@@ -14,21 +14,6 @@ local LHUtils = require("LevelHelper2-API.Utilities.LHUtils");
 function scene:create( event )
 
 	local sceneGroup = scene.view
-
-	lhScene = LHScene:initWithContentOfFile("publishFolder/introduction.json");
-
-	sceneGroup:insert(lhScene);
-	
-	local myString = "INTRODUCTION\nUse the Previous and Next buttons to toggle between demos.\n"..
-						"Use the Restart button to start the current demo again.\n"..
-						"Investigate each demo source file and LevelHelper document file for more info on how it was done.\n"..
-						"You can find all scene files in the \"demo\" folder.\"";
-						
-	local myText = display.newText( myString, 240, 340, display.contentWidth - 20, display.contentHeight, native.systemFont, 12 )
-	myText:setFillColor( 0, 0, 0 )
-
-	local uiNode = lhScene:getUINode();
-	uiNode:insert( myText );
 end
 
 function scene:show( event )
@@ -37,6 +22,22 @@ function scene:show( event )
 	local phase = event.phase
 	
 	if phase == "will" then
+		
+		lhScene = LHScene:initWithContentOfFile("publishFolder/introduction.json");
+
+		sceneGroup:insert(lhScene);
+		
+		local myString = "INTRODUCTION\nUse the Previous and Next buttons to toggle between demos.\n"..
+							"Use the Restart button to start the current demo again.\n"..
+							"Investigate each demo source file and LevelHelper document file for more info on how it was done.\n"..
+							"You can find all scene files in the \"demo\" folder.\"";
+							
+		local myText = display.newText( myString, 240, 340, display.contentWidth - 20, display.contentHeight, native.systemFont, 12 )
+		myText:setFillColor( 0, 0, 0 )
+	
+		local uiNode = lhScene:getUINode();
+		uiNode:insert( myText );
+		
 		self.demoButtons = require("demo.demoButtons");
 		self.demoButtons:createButtonsWithComposerScene(self, "introductionScene");
 		-- Called when the scene is still off screen and is about to move on screen
@@ -56,6 +57,11 @@ function scene:hide( event )
 	local phase = event.phase
 	
 	if event.phase == "will" then
+		
+		self.demoButtons = nil;
+		lhScene:removeSelf();
+		lhScene = nil;
+
 		-- Called when the scene is on screen and is about to move off screen
 		--
 		-- INSERT code here to pause the scene
@@ -68,9 +74,6 @@ function scene:hide( event )
 end
 
 function scene:destroy( event )
-
-	self.demoButtons = nil;
-	lhScene = nil;
 
 	-- Called prior to the removal of scene's "view" (sceneGroup)
 	-- 

@@ -7,6 +7,10 @@ local widget = require( "widget" )
 local composer = require( "composer" )
 local scene = composer.newScene(); --require("demo.demoScene")
 
+local physics = require("physics")
+physics.setDrawMode( "hybrid" )
+physics.start();
+	
 --------------------------------------------
 local LHScene =  require("LevelHelper2-API.LHScene");
 local lhScene = nil;--forward declaration of lhScene in order to access it everywhere in this file
@@ -14,20 +18,7 @@ local lhScene = nil;--forward declaration of lhScene in order to access it every
 --------------------------------------------
 
 function scene:create( event )
-	
 	local sceneGroup = scene.view
-
-	lhScene = LHScene:initWithContentOfFile("publishFolder/level01.json");
-	
-	sceneGroup:insert(lhScene);
-
-	local myString = "BASIC LAYOUT";
-						
-	local myText = display.newText( myString, 240, 340, display.contentWidth - 20, display.contentHeight, native.systemFont, 12 )
-	myText:setFillColor( 0, 0, 0 )
-
-	local uiNode = lhScene:getUINode();
-	uiNode:insert( myText );
 end
 
 function scene:show( event )
@@ -36,6 +27,20 @@ function scene:show( event )
 	local phase = event.phase
 	
 	if phase == "will" then
+		
+		lhScene = LHScene:initWithContentOfFile("publishFolder/level01.json");
+	
+		sceneGroup:insert(lhScene);
+	
+		local myString = "BASIC LAYOUT";
+							
+		local myText = display.newText( myString, 240, 340, display.contentWidth - 20, display.contentHeight, native.systemFont, 12 )
+		myText:setFillColor( 0, 0, 0 )
+	
+		local uiNode = lhScene:getUINode();
+		uiNode:insert( myText );
+		
+	
 		self.demoButtons = require("demo.demoButtons");
 		self.demoButtons:createButtonsWithComposerScene(self, "basicLayout");
 		-- Called when the scene is still off screen and is about to move on screen
@@ -56,10 +61,15 @@ function scene:hide( event )
 	
 	if event.phase == "will" then
 		-- Called when the scene is on screen and is about to move off screen
+		self.demoButtons = nil;
+		
+		lhScene:removeSelf();
+		lhScene = nil;
 		--
+		physics.stop();
+		
 		-- INSERT code here to pause the scene
 		-- e.g. stop timers, stop animation, unload sounds, etc.)
-		physics.stop()
 	elseif phase == "did" then
 		-- Called when the scene is now off screen
 	end	
@@ -68,9 +78,6 @@ end
 
 function scene:destroy( event )
 
-	self.demoButtons = nil;
-	lhScene = nil;
-	
 	-- Called prior to the removal of scene's "view" (sceneGroup)
 	-- 
 	-- INSERT code here to cleanup the scene

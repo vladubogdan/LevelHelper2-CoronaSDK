@@ -192,7 +192,7 @@ function LHDeepCopy(t)
         local res = {}
         for k,v in pairs(t) do
             if type(v) == 'table' then
-            v = GHDeepCopy(v)
+            v = LHDeepCopy(v)
         end
         res[k] = v
     end

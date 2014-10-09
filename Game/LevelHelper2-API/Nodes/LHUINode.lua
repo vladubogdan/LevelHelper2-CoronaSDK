@@ -10,13 +10,13 @@ function LHUINode:nodeWithDictionary(dict, prnt)
 	
 	--add all LevelHelper 2 valid properties to the object
 	object.nodeType = "LHUINode"
-		
+
+	prnt:insert( object )
+	
 	local LHNodeProtocol = require('LevelHelper2-API.Protocols.LHNodeProtocol')
 	LHNodeProtocol.initNodeProtocolWithDictionary(dict, object);
 	LHNodeProtocol.loadChildrenForNodeFromDictionary(object, dict);
 
-    prnt:insert( object )
-	
 	return object
 end
 --------------------------------------------------------------------------------

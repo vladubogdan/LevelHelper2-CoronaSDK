@@ -1,3 +1,11 @@
+--------------------------------------------------------------------------------
+--!@docBegin
+--!Get the line points of the bezier shape.
+function linePoints(_bezierObj)
+--!@docEnd
+	return _bezierObj._linePoints;
+end
+
 local LHBezier = {}
 function LHBezier:nodeWithDictionary(dict, prnt)
 
@@ -7,6 +15,7 @@ function LHBezier:nodeWithDictionary(dict, prnt)
 				
 	local LHUtils = require("LevelHelper2-API.Utilities.LHUtils");
     local LHNodeProtocol = require('LevelHelper2-API.Protocols.LHNodeProtocol')
+    local LHPhysicsProtocol = require('LevelHelper2-API.Protocols.LHPhysicsProtocol')
     
     local object = display.newGroup();
     
@@ -16,7 +25,7 @@ function LHBezier:nodeWithDictionary(dict, prnt)
     local points = dict["points"];
     local closed = dict["closed"];
 
-    local linePoints = {};
+    object._linePoints = {};
         
     local convert = {x = 1.0, y = 1.0};
     
@@ -60,8 +69,8 @@ function LHBezier:nodeWithDictionary(dict, prnt)
                 
                 local vPoint = LHUtils.LHPointOnCurve(previousMainPt, control1, control2, mainPt, t);
                 
-                linePoints[#linePoints+1] = {x = vPoint.x*convert.x, 
-											 y = vPoint.y*convert.y}
+                object._linePoints[#object._linePoints+1] = {x = vPoint.x*convert.x, 
+											 				y = vPoint.y*convert.y}
 																	
                 if prevPt then
                     local line = display.newLine( object, prevPt.x, prevPt.y, vPoint.x, vPoint.y );
@@ -100,8 +109,8 @@ function LHBezier:nodeWithDictionary(dict, prnt)
                 
                 local vPoint = LHUtils.LHPointOnCurve(previousMainPt, control1, control2, mainPt, t);
                 
-                linePoints[#linePoints+1] = {x = vPoint.x*convert.x, 
-											 y = vPoint.y*convert.y}
+                object._linePoints[#object._linePoints+1] = {x = vPoint.x*convert.x, 
+											 				y = vPoint.y*convert.y}
 																	
                 if prevPt then
                     local line = display.newLine( object, prevPt.x, prevPt.y, vPoint.x, vPoint.y );
@@ -114,13 +123,16 @@ function LHBezier:nodeWithDictionary(dict, prnt)
             end
         end
     end
-
-
     
-    LHNodeProtocol.initNodeProtocolWithDictionary(dict, object);
-	LHNodeProtocol.loadChildrenForNodeFromDictionary(object, dict);
+    --add LevelHelper methods
+    object.linePoints = linePoints;
 
-    prnt:insert( object )
+
+	prnt:insert( object )
+	
+	LHNodeProtocol.initNodeProtocolWithDictionary(dict, object);
+	LHPhysicsProtocol.initPhysicsProtocolWithDictionary(dict["nodePhysics"], object, prnt:getScene());
+	LHNodeProtocol.loadChildrenForNodeFromDictionary(object, dict);
 
 	return object
 end
