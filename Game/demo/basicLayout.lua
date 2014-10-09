@@ -3,46 +3,41 @@
 -- level1.lua
 --
 -----------------------------------------------------------------------------------------
+local widget = require( "widget" )
 local composer = require( "composer" )
-local scene = composer.newScene()
-
--- include Corona's "physics" library
-local physics = require "physics"
-physics.start(); physics.pause()
-
+local scene = composer.newScene(); --require("demo.demoScene")
 
 --------------------------------------------
 local LHScene =  require("LevelHelper2-API.LHScene");
 local lhScene = nil;--forward declaration of lhScene in order to access it everywhere in this file
 --------------------------------------------
-
+--------------------------------------------
 
 function scene:create( event )
 	
 	local sceneGroup = scene.view
 
-    local lhScene = LHScene:initWithContentOfFile("publishFolder/level01.json");
+	lhScene = LHScene:initWithContentOfFile("publishFolder/level01.json");
+	
+	sceneGroup:insert(lhScene);
+
+	local myString = "BASIC LAYOUT";
+						
+	local myText = display.newText( myString, 240, 340, display.contentWidth - 20, display.contentHeight, native.systemFont, 12 )
+	myText:setFillColor( 0, 0, 0 )
 
 	local uiNode = lhScene:getUINode();
-	
-	local statue = uiNode:nodeWithUniqueName("object_statue");
-	
-	
-	print("STATUE1 " .. tostring(statue));
--- 	print("STATUE2 " .. tostring(lhScene:nodeWithUniqueName("object_statue")));
-
-    -- require('LevelHelper2-API.Utilities.LHUtils').LHPrintObjectInfo(statue);
-    
-    print("statue anchor " .. tostring(statue.anchorX) .. " " .. tostring(statue.anchorY));
-        
+	uiNode:insert( myText );
 end
 
-
 function scene:show( event )
+	
 	local sceneGroup = self.view
 	local phase = event.phase
 	
 	if phase == "will" then
+		self.demoButtons = require("demo.demoButtons");
+		self.demoButtons:createButtonsWithComposerScene(self, "basicLayout");
 		-- Called when the scene is still off screen and is about to move on screen
 	elseif phase == "did" then
 		-- Called when the scene is now on screen
@@ -54,6 +49,7 @@ function scene:show( event )
 end
 
 function scene:hide( event )
+	
 	local sceneGroup = self.view
 	
 	local phase = event.phase
@@ -72,6 +68,9 @@ end
 
 function scene:destroy( event )
 
+	self.demoButtons = nil;
+	lhScene = nil;
+	
 	-- Called prior to the removal of scene's "view" (sceneGroup)
 	-- 
 	-- INSERT code here to cleanup the scene
@@ -89,5 +88,4 @@ scene:addEventListener( "show", scene )
 scene:addEventListener( "hide", scene )
 scene:addEventListener( "destroy", scene )
 --------------------------------------------------------------------------------
-
 return scene

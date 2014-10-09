@@ -12,13 +12,13 @@
 			<key>ScaleRatio</key>
 			<real>1</real>
 			<key>ScreenHeight</key>
-			<integer>480</integer>
-			<key>ScreenWidth</key>
 			<integer>320</integer>
+			<key>ScreenWidth</key>
+			<integer>480</integer>
 			<key>SuffixName</key>
 			<string></string>
 			<key>color</key>
-			<string>{{0.94685918092727661, 0}, {0.052827715873718262, 1}}</string>
+			<string>{{0.98594826459884644, 0}, {0.026950567960739136, 1}}</string>
 		</dict>
 		<dict>
 			<key>DeviceName</key>
@@ -26,13 +26,13 @@
 			<key>ScaleRatio</key>
 			<real>2</real>
 			<key>ScreenHeight</key>
-			<integer>960</integer>
-			<key>ScreenWidth</key>
 			<integer>640</integer>
+			<key>ScreenWidth</key>
+			<integer>960</integer>
 			<key>SuffixName</key>
 			<string>@2x</string>
 			<key>color</key>
-			<string>{{0.94685918092727661, 0}, {0.052827715873718262, 1}}</string>
+			<string>{{0.98594826459884644, 0}, {0.026950567960739136, 1}}</string>
 		</dict>
 		<dict>
 			<key>DeviceName</key>
@@ -40,13 +40,13 @@
 			<key>ScaleRatio</key>
 			<real>2</real>
 			<key>ScreenHeight</key>
-			<integer>1136</integer>
-			<key>ScreenWidth</key>
 			<integer>640</integer>
+			<key>ScreenWidth</key>
+			<integer>1136</integer>
 			<key>SuffixName</key>
 			<string>@2x</string>
 			<key>color</key>
-			<string>{{1, 1}, {0.069278374314308167, 1}}</string>
+			<string>{{1, 1}, {0.041410073637962341, 1}}</string>
 		</dict>
 		<dict>
 			<key>DeviceName</key>
@@ -54,13 +54,13 @@
 			<key>ScaleRatio</key>
 			<real>2</real>
 			<key>ScreenHeight</key>
-			<integer>1024</integer>
-			<key>ScreenWidth</key>
 			<integer>768</integer>
+			<key>ScreenWidth</key>
+			<integer>1024</integer>
 			<key>SuffixName</key>
 			<string>@2x</string>
 			<key>color</key>
-			<string>{{0.94225907325744629, 0}, {0.99652361869812012, 1}}</string>
+			<string>{{0.98473900556564331, 0}, {0.99912577867507935, 1}}</string>
 		</dict>
 		<dict>
 			<key>DeviceName</key>
@@ -68,13 +68,13 @@
 			<key>ScaleRatio</key>
 			<real>4</real>
 			<key>ScreenHeight</key>
-			<integer>2048</integer>
-			<key>ScreenWidth</key>
 			<integer>1536</integer>
+			<key>ScreenWidth</key>
+			<integer>2048</integer>
 			<key>SuffixName</key>
 			<string>@4x</string>
 			<key>color</key>
-			<string>{{0.94225907325744629, 0}, {0.99652361869812012, 1}}</string>
+			<string>{{0.98473900556564331, 0}, {0.99912577867507935, 1}}</string>
 		</dict>
 		<dict>
 			<key>DeviceName</key>
@@ -82,13 +82,13 @@
 			<key>ScaleRatio</key>
 			<real>2</real>
 			<key>ScreenHeight</key>
-			<integer>960</integer>
-			<key>ScreenWidth</key>
 			<integer>540</integer>
+			<key>ScreenWidth</key>
+			<integer>960</integer>
 			<key>SuffixName</key>
 			<string>@2x</string>
 			<key>color</key>
-			<string>{{0.94225907325744629, 0}, {0.99652361869812012, 1}}</string>
+			<string>{{0.98473900556564331, 0}, {0.99912577867507935, 1}}</string>
 		</dict>
 		<dict>
 			<key>DeviceName</key>
@@ -96,13 +96,13 @@
 			<key>ScaleRatio</key>
 			<real>2</real>
 			<key>ScreenHeight</key>
-			<integer>854</integer>
-			<key>ScreenWidth</key>
 			<integer>480</integer>
+			<key>ScreenWidth</key>
+			<integer>854</integer>
 			<key>SuffixName</key>
 			<string>@2x</string>
 			<key>color</key>
-			<string>{{0.94225907325744629, 0}, {0.99652361869812012, 1}}</string>
+			<string>{{0.98473900556564331, 0}, {0.99912577867507935, 1}}</string>
 		</dict>
 		<dict>
 			<key>DeviceName</key>
@@ -110,13 +110,13 @@
 			<key>ScaleRatio</key>
 			<real>2</real>
 			<key>ScreenHeight</key>
-			<integer>800</integer>
-			<key>ScreenWidth</key>
 			<integer>480</integer>
+			<key>ScreenWidth</key>
+			<integer>800</integer>
 			<key>SuffixName</key>
 			<string>@2x</string>
 			<key>color</key>
-			<string>{{0.94225907325744629, 0}, {0.99652361869812012, 1}}</string>
+			<string>{{0.98473900556564331, 0}, {0.99912577867507935, 1}}</string>
 		</dict>
 		<dict>
 			<key>DeviceName</key>
@@ -124,13 +124,13 @@
 			<key>ScaleRatio</key>
 			<real>2</real>
 			<key>ScreenHeight</key>
-			<integer>1280</integer>
-			<key>ScreenWidth</key>
 			<integer>720</integer>
+			<key>ScreenWidth</key>
+			<integer>1280</integer>
 			<key>SuffixName</key>
 			<string>@2x</string>
 			<key>color</key>
-			<string>{{0.94225907325744629, 0}, {0.99652361869812012, 1}}</string>
+			<string>{{0.98473900556564331, 0}, {0.99912577867507935, 1}}</string>
 		</dict>
 		<dict>
 			<key>DeviceName</key>
@@ -138,13 +138,13 @@
 			<key>ScaleRatio</key>
 			<real>2</real>
 			<key>ScreenHeight</key>
-			<integer>1024</integer>
-			<key>ScreenWidth</key>
 			<integer>600</integer>
+			<key>ScreenWidth</key>
+			<integer>1024</integer>
 			<key>SuffixName</key>
 			<string>@2x</string>
 			<key>color</key>
-			<string>{{0.94225907325744629, 0}, {0.99652361869812012, 1}}</string>
+			<string>{{0.98473900556564331, 0}, {0.99912577867507935, 1}}</string>
 		</dict>
 		<dict>
 			<key>DeviceName</key>
@@ -152,13 +152,13 @@
 			<key>ScaleRatio</key>
 			<real>2</real>
 			<key>ScreenHeight</key>
-			<integer>1280</integer>
-			<key>ScreenWidth</key>
 			<integer>800</integer>
+			<key>ScreenWidth</key>
+			<integer>1280</integer>
 			<key>SuffixName</key>
 			<string>@2x</string>
 			<key>color</key>
-			<string>{{0.94225907325744629, 0}, {0.99652361869812012, 1}}</string>
+			<string>{{0.98473900556564331, 0}, {0.99912577867507935, 1}}</string>
 		</dict>
 		<dict>
 			<key>DeviceName</key>
@@ -166,13 +166,13 @@
 			<key>ScaleRatio</key>
 			<real>4</real>
 			<key>ScreenHeight</key>
-			<integer>1920</integer>
-			<key>ScreenWidth</key>
 			<integer>1200</integer>
+			<key>ScreenWidth</key>
+			<integer>1920</integer>
 			<key>SuffixName</key>
 			<string>@4x</string>
 			<key>color</key>
-			<string>{{0.94225907325744629, 0}, {0.99652361869812012, 1}}</string>
+			<string>{{0.98473900556564331, 0}, {0.99912577867507935, 1}}</string>
 		</dict>
 		<dict>
 			<key>DeviceName</key>
@@ -180,13 +180,13 @@
 			<key>ScaleRatio</key>
 			<real>2</real>
 			<key>ScreenHeight</key>
-			<integer>1024</integer>
-			<key>ScreenWidth</key>
 			<integer>600</integer>
+			<key>ScreenWidth</key>
+			<integer>1024</integer>
 			<key>SuffixName</key>
 			<string>@2x</string>
 			<key>color</key>
-			<string>{{0.94225907325744629, 0}, {0.99652361869812012, 1}}</string>
+			<string>{{0.98473900556564331, 0}, {0.99912577867507935, 1}}</string>
 		</dict>
 		<dict>
 			<key>DeviceName</key>
@@ -194,13 +194,13 @@
 			<key>ScaleRatio</key>
 			<real>2</real>
 			<key>ScreenHeight</key>
-			<integer>1024</integer>
-			<key>ScreenWidth</key>
 			<integer>600</integer>
+			<key>ScreenWidth</key>
+			<integer>1024</integer>
 			<key>SuffixName</key>
 			<string>@2x</string>
 			<key>color</key>
-			<string>{{0.94225907325744629, 0}, {0.99652361869812012, 1}}</string>
+			<string>{{0.98473900556564331, 0}, {0.99912577867507935, 1}}</string>
 		</dict>
 		<dict>
 			<key>DeviceName</key>
@@ -208,13 +208,13 @@
 			<key>ScaleRatio</key>
 			<real>2</real>
 			<key>ScreenHeight</key>
-			<integer>1280</integer>
-			<key>ScreenWidth</key>
 			<integer>720</integer>
+			<key>ScreenWidth</key>
+			<integer>1280</integer>
 			<key>SuffixName</key>
 			<string>@2x</string>
 			<key>color</key>
-			<string>{{0.94225907325744629, 0}, {0.99652361869812012, 1}}</string>
+			<string>{{0.98473900556564331, 0}, {0.99912577867507935, 1}}</string>
 		</dict>
 		<dict>
 			<key>DeviceName</key>
@@ -222,13 +222,13 @@
 			<key>ScaleRatio</key>
 			<real>4</real>
 			<key>ScreenHeight</key>
-			<integer>1920</integer>
-			<key>ScreenWidth</key>
 			<integer>1080</integer>
+			<key>ScreenWidth</key>
+			<integer>1920</integer>
 			<key>SuffixName</key>
 			<string>@4x</string>
 			<key>color</key>
-			<string>{{0.94225907325744629, 0}, {0.99652361869812012, 1}}</string>
+			<string>{{0.98473900556564331, 0}, {0.99912577867507935, 1}}</string>
 		</dict>
 		<dict>
 			<key>DeviceName</key>
@@ -236,13 +236,13 @@
 			<key>ScaleRatio</key>
 			<real>2</real>
 			<key>ScreenHeight</key>
-			<integer>1280</integer>
-			<key>ScreenWidth</key>
 			<integer>720</integer>
+			<key>ScreenWidth</key>
+			<integer>1280</integer>
 			<key>SuffixName</key>
 			<string>@2x</string>
 			<key>color</key>
-			<string>{{0.94225907325744629, 0}, {0.99652361869812012, 1}}</string>
+			<string>{{0.98473900556564331, 0}, {0.99912577867507935, 1}}</string>
 		</dict>
 		<dict>
 			<key>DeviceName</key>
@@ -250,13 +250,13 @@
 			<key>ScaleRatio</key>
 			<real>4</real>
 			<key>ScreenHeight</key>
-			<integer>1920</integer>
-			<key>ScreenWidth</key>
 			<integer>1080</integer>
+			<key>ScreenWidth</key>
+			<integer>1920</integer>
 			<key>SuffixName</key>
 			<string>@4x</string>
 			<key>color</key>
-			<string>{{0.94225907325744629, 0}, {0.99652361869812012, 1}}</string>
+			<string>{{0.98473900556564331, 0}, {0.99912577867507935, 1}}</string>
 		</dict>
 	</array>
 	<key>engine</key>
@@ -271,6 +271,11 @@
 		<dict>
 			<key>ScenesOptions</key>
 			<dict>
+				<key>introduction.lhs</key>
+				<dict>
+					<key>publish</key>
+					<true/>
+				</dict>
 				<key>level01.lhs</key>
 				<dict>
 					<key>publish</key>
