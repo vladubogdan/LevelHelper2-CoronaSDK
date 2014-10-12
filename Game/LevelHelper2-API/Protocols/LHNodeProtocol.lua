@@ -13,6 +13,7 @@ local LHSprite = require('LevelHelper2-API.Nodes.LHSprite')
 local LHBezier = require('LevelHelper2-API.Nodes.LHBezier')
 
 local LHUtils = require("LevelHelper2-API.Utilities.LHUtils");
+local LHUserProperties = require("LevelHelper2-API.Protocols.LHUserProperties");
 --------------------------------------------------------------------------------
 --!@docBegin
 --!Loads json file and returns contents as a string.
@@ -21,40 +22,67 @@ local LHUtils = require("LevelHelper2-API.Utilities.LHUtils");
 function loadChildrenForNodeFromDictionary( prntNode, dict )
 --!@docEnd
 
-    local childrenInfo = dict["children"];
-    if childrenInfo then    	
-    	for i = 1, #childrenInfo do    	
-    		local childInfo = childrenInfo[i];    			
-	    	local node = createLHNodeWithDictionaryWithParent(childInfo, prntNode);	    	
+	local childrenInfo = dict["children"];
+	if childrenInfo then    	
+		for i = 1, #childrenInfo do    	
+			local childInfo = childrenInfo[i];    			
+			local node = createLHNodeWithDictionaryWithParent(childInfo, prntNode);	    	
 		end
-    end
+	end
 
 end
 --------------------------------------------------------------------------------
 --!@docBegin
 --!Get the node with the unique name inside the current node.
 --!@param name The node unique name to look for inside the children of the current node.
-function nodeWithUniqueName(selfNode, name)
+function getChildNodeWithUniqueName(selfNode, name)
 --!@docEnd	
-    if selfNode.numChildren then
-        for i = 1, selfNode.numChildren do
-    		local node = selfNode[i]
-    		if node._isNodeProtocol == true then
-                local uName = node.lhUniqueName
-                
-            	if(uName ~= nil)then
-        			if(uName == name)then
-        				return node;
-        			end
-                end
-            
-    	        local childNode = node:nodeWithUniqueName(name);
-    	        if childNode ~= nil then
-    	            return childNode;
-    	        end
-    	    end
-        end
-    end
+	if selfNode.numChildren then
+		for i = 1, selfNode.numChildren do
+			local node = selfNode[i]
+			if node._isNodeProtocol == true then
+				local uName = node.lhUniqueName
+
+				if(uName ~= nil)then
+					if(uName == name)then
+						return node;
+					end
+				end
+
+				local childNode = node:nodeWithUniqueName(name);
+				if childNode ~= nil then
+					return childNode;
+				end
+			end
+		end
+	end
+	return nil;
+end
+--------------------------------------------------------------------------------
+--!@docBegin
+--!Get the node with the unique identifier inside the current node.
+--!@param _uuid_ The node unique identifier to look for inside the children of the current node.
+function getChildNodeWithUUID(selfNode, _uuid_)
+--!@docEnd	
+	if selfNode.numChildren then
+		for i = 1, selfNode.numChildren do
+			local node = selfNode[i]
+			if node._isNodeProtocol == true then
+				local uid = node.lhUuid
+
+				if(uid ~= nil)then
+					if(uid == _uuid_)then
+						return node;
+					end
+				end
+
+				local childNode = node:getChildNodeWithUUID(_uuid_);
+				if childNode ~= nil then
+					return childNode;
+				end
+			end
+		end
+	end
 	return nil;
 end
 
@@ -74,6 +102,61 @@ function getScene(selfNode)
 		end
 	end
 	return nil;
+end
+--------------------------------------------------------------------------------
+--!@docBegin
+--!Set the node position
+--!@param valueX The new x position value
+--!@param valueY The new y position value
+function setPosition(selfNode, valueX, valueY)
+--!@docEnd	
+	selfNode.x = valueX;
+	selfNode.y = valueY;
+	if(selfNode.lhChildren)then
+		selfNode.lhChildren.x = valueX;
+		selfNode.lhChildren.y = valueY;
+	end
+end
+--------------------------------------------------------------------------------
+--!@docBegin
+--!Set the node rotation
+--!@param angle The new rotation value
+function setRotation(selfNode, angle)
+--!@docEnd	
+	selfNode.rotation = angle;
+	if(selfNode.lhChildren)then
+		selfNode.lhChildren.rotation = angle;
+	end
+end
+--------------------------------------------------------------------------------
+--!@docBegin
+--!Set the node x and y scales values
+--!@param xScale The new x scale value
+--!@param yScale The new y scale value
+function setScale(selfNode, xScale, yScale)
+--!@docEnd	
+	selfNode.xScale = xScale;
+	selfNode.yScale = yScale;
+	
+	if(selfNode.lhChildren)then
+		selfNode.lhChildren.xScale = xScale;
+		selfNode.lhChildren.yScale = yScale;
+	end
+end
+--------------------------------------------------------------------------------
+--!@docBegin
+--!Set the node x and y anchor values
+--!@param x The new x anchor value
+--!@param y The new y anchor value
+function setAnchor(selfNode, x, y)
+--!@docEnd	
+	selfNode.anchorX = x;
+	selfNode.anchorY = y;
+	
+	if(selfNode.lhChildren)then
+		selfNode.lhChildren.anchorX = x;
+		selfNode.lhChildren.anchorY = y;
+	end
 end
 
 --------------------------------------------------------------------------------
@@ -107,14 +190,18 @@ end
 --------------------------------------------------------------------------------
 function initNodeProtocolWithDictionary(dict, node)
 
+	node.setPosition 	= setPosition;
+	node.setRotation 	= setRotation;
+	node.setScale 		= setScale;
+	node.setAnchor 		= setAnchor;
+	
     local value = dict["generalPosition"]
     if value then
         local unitPosition = LHUtils.pointFromString(value);
         local calculatedPos= LHUtils.positionForNodeFromUnit(node, unitPosition);
-            
-        node.x = calculatedPos.x;
-        node.y = calculatedPos.y;
-        
+
+		node:setPosition(calculatedPos.x, calculatedPos.y);
+		
         -- CGPoint unitPos = [dict pointForKey:@"generalPosition"];
         --     CGPoint pos = [LHUtils positionForNode:_node
         --                                   fromUnit:unitPos];
@@ -140,17 +227,22 @@ function initNodeProtocolWithDictionary(dict, node)
     
     --LevelHelper 2 node protocol functions
 	----------------------------------------------------------------------------
-	node.nodeWithUniqueName = nodeWithUniqueName;
-	node.getScene 			= getScene;
+	node.getChildNodeWithUniqueName = getChildNodeWithUniqueName;
+	node.getChildNodeWithUUID 		= getChildNodeWithUUID;
+	node.getScene 					= getScene;
 	--Load node protocol properties
 	----------------------------------------------------------------------------
 	node.lhUniqueName = dict["name"];
     node.lhUuid = dict["uuid"];
     node.lhTags = LHUtils.LHDeepCopy(dict["tags"]);
-        
-    value = dict["rotation"];
+
+	node.lhUserProperties = LHUserProperties.customClassInstanceWithNode(	node, 
+																			dict["userPropertyName"], 
+																			dict["userPropertyInfo"]);
+	
+	value = dict["rotation"];
     if(value)then
-        node.rotation = value;
+    	node:setRotation(value)
     end
         
     value = dict["alpha"];
@@ -161,33 +253,31 @@ function initNodeProtocolWithDictionary(dict, node)
     
     node.lhZOrder = dict["zOrder"];
     
-    value = dict["scale"];
-    if(value)then
-        local scl = LHUtils.pointFromString(value);
-        node.xScale = scl.x;
-        node.yScale = scl.y;
-    end
-        
-    
+	value = dict["scale"];
+	if(value)then
+		local scl = LHUtils.pointFromString(value);
+		node:setScale(scl.x, scl.y);
+	end
+
+
     -- if([dict objectForKey:@"anchor"] &&
     --       ![_node isKindOfClass:[LHUINode class]] &&
     --       ![_node isKindOfClass:[LHBackUINode class]] &&
     --       ![_node isKindOfClass:[LHGameWorldNode class]])
     --     {
     
-    value = dict["anchor"];
-    if(value)then
-        local anchor = LHUtils.pointFromString(value);
-        node.anchorX = anchor.x;
-        node.anchorY = anchor.y;
-    end
-    
-            -- CGPoint anchor = [dict pointForKey:@"anchor"];
-    --         anchor.y = 1.0f - anchor.y;
-    --         [_node setAnchorPoint:anchor];
-    --     }
-    
-        
+	value = dict["anchor"];
+	if(value)then
+		local anchor = LHUtils.pointFromString(value);
+		node:setAnchor(anchor.x, anchor.y);
+	end
+
+	-- CGPoint anchor = [dict pointForKey:@"anchor"];
+	--         anchor.y = 1.0f - anchor.y;
+	--         [_node setAnchorPoint:anchor];
+	--     }
+
+
 end
 --------------------------------------------------------------------------------
 function createLHNodeWithDictionaryWithParent(childInfo, prnt)

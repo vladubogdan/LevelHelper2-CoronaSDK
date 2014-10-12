@@ -11,21 +11,21 @@ function getSpriteSheetData()
 
 				--FRAME "object_hat"
 				{
-					x = 91,
-					y = 1,
+					x = 50,
+					y = 66,
 					width = 54,
 					height = 32,
 					sourceWidth = 61,
 					sourceHeight = 38,
-					sourceX = 3,
-					sourceY = 4
+					sourceX = 4,
+					sourceY = 3
 				},
 
 
 				--FRAME "object_backpack"
 				{
-					x = 50,
-					y = 1,
+					x = 1,
+					y = 72,
 					width = 40,
 					height = 48,
 					sourceWidth = 45,
@@ -37,8 +37,8 @@ function getSpriteSheetData()
 
 				--FRAME "number_1"
 				{
-					x = 112,
-					y = 87,
+					x = 116,
+					y = 1,
 					width = 11,
 					height = 18,
 					sourceWidth = 20,
@@ -50,8 +50,8 @@ function getSpriteSheetData()
 
 				--FRAME "number_2"
 				{
-					x = 97,
-					y = 86,
+					x = 99,
+					y = 106,
 					width = 14,
 					height = 18,
 					sourceWidth = 20,
@@ -63,8 +63,8 @@ function getSpriteSheetData()
 
 				--FRAME "object_banana"
 				{
-					x = 1,
-					y = 99,
+					x = 77,
+					y = 36,
 					width = 41,
 					height = 28,
 					sourceWidth = 46,
@@ -76,21 +76,21 @@ function getSpriteSheetData()
 
 				--FRAME "object_canteen"
 				{
-					x = 44,
-					y = 99,
+					x = 76,
+					y = 1,
 					width = 21,
 					height = 32,
 					sourceWidth = 30,
 					sourceHeight = 39,
-					sourceX = 3,
+					sourceX = 4,
 					sourceY = 4
 				},
 
 
 				--FRAME "object_bananabunch"
 				{
-					x = 82,
-					y = 58,
+					x = 43,
+					y = 100,
 					width = 39,
 					height = 27,
 					sourceWidth = 44,
@@ -102,8 +102,8 @@ function getSpriteSheetData()
 
 				--FRAME "number_3"
 				{
-					x = 66,
-					y = 71,
+					x = 106,
+					y = 65,
 					width = 13,
 					height = 19,
 					sourceWidth = 20,
@@ -115,8 +115,8 @@ function getSpriteSheetData()
 
 				--FRAME "number"
 				{
-					x = 81,
-					y = 86,
+					x = 84,
+					y = 99,
 					width = 14,
 					height = 19,
 					sourceWidth = 20,
@@ -128,8 +128,8 @@ function getSpriteSheetData()
 
 				--FRAME "number_4"
 				{
-					x = 49,
-					y = 51,
+					x = 99,
+					y = 1,
 					width = 14,
 					height = 18,
 					sourceWidth = 20,
@@ -141,8 +141,8 @@ function getSpriteSheetData()
 
 				--FRAME "number_5"
 				{
-					x = 65,
-					y = 50,
+					x = 105,
+					y = 86,
 					width = 14,
 					height = 19,
 					sourceWidth = 20,
@@ -167,18 +167,18 @@ function getSpriteSheetData()
 
 				--FRAME "object_pineapple"
 				{
-					x = 0,
-					y = 72,
+					x = 49,
+					y = 1,
 					width = 25,
 					height = 63,
 					sourceWidth = 30,
 					sourceHeight = 67,
-					sourceX = 1,
+					sourceX = 3,
 					sourceY = 3
 				},
 
 		},
-		sheetContentWidth = 123,
+		sheetContentWidth = 127,
 		sheetContentHeight = 127
 	}
 	return options

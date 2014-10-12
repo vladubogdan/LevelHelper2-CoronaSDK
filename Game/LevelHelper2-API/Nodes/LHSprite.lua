@@ -76,9 +76,25 @@ function LHSprite:nodeWithDictionary(dict, prnt)
 	local LHNodeProtocol = require('LevelHelper2-API.Protocols.LHNodeProtocol')
 	local LHPhysicsProtocol = require('LevelHelper2-API.Protocols.LHPhysicsProtocol')
 	
-	prnt:insert( object )
+	LHUtils.LHPrintObjectInfo(prnt);
+	
+	object.lhChildren = display.newGroup();
 	
 	LHNodeProtocol.initNodeProtocolWithDictionary(dict, object);
+	
+	
+	if(prnt.lhChildren ~= nil)then
+		print("we add child to the lhChildren");
+		prnt.lhChildren:insert( object )
+		prnt.lhChildren:insert( object.lhChildren);
+	else
+		prnt:insert( object )
+		prnt:insert( object.lhChildren);
+	end
+	
+	
+	
+	
 	LHPhysicsProtocol.initPhysicsProtocolWithDictionary(dict["nodePhysics"], object, prnt:getScene());
 	LHNodeProtocol.loadChildrenForNodeFromDictionary(object, dict);
 	
@@ -89,7 +105,6 @@ function LHSprite:nodeWithDictionary(dict, prnt)
 		local clr = LHUtils.colorFromString(value);
 		object:setFillColor(clr.red, clr.green, clr.blue);
 	end
-
 
 	return object
 end
