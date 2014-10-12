@@ -44,6 +44,12 @@ function tracedFixturesWithUUID(_sceneObj, uuid)
 	return _sceneObj._tracedFixtures[uuid];
 end
 
+function removeSelf(_sceneObj)
+	
+	Runtime:removeEventListener( "enterFrame", _sceneObj )
+	_sceneObj:_superRemoveSelf();
+	
+end
 
 local LHScene = {}
 function LHScene:initWithContentOfFile(jsonFile)
@@ -63,6 +69,8 @@ function LHScene:initWithContentOfFile(jsonFile)
 	_scene.getUINode 		 			= getUINode;
 	_scene.tracedFixturesWithUUID 		= tracedFixturesWithUUID;
 	
+	_scene._superRemoveSelf 			= _scene.removeSelf;
+	_scene.removeSelf 					= removeSelf;
 	
 	local dict = nil;
     if not base then base = system.ResourceDirectory; end
@@ -82,6 +90,8 @@ function LHScene:initWithContentOfFile(jsonFile)
 	local LHNodeProtocol = require('LevelHelper2-API.Protocols.LHNodeProtocol')
 	LHNodeProtocol.initNodeProtocolWithDictionary(dict, _scene);
 	LHNodeProtocol.loadChildrenForNodeFromDictionary(_scene, dict);
+	
+	Runtime:addEventListener( "enterFrame", _scene )
 	
 	return _scene
 end

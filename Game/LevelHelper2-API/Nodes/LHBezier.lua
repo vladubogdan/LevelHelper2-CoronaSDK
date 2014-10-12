@@ -127,8 +127,7 @@ function LHBezier:nodeWithDictionary(dict, prnt)
     --add LevelHelper methods
     object.linePoints = linePoints;
 
-
-	prnt:insert( object )
+	prnt:addChild(object);
 	
 	LHNodeProtocol.initNodeProtocolWithDictionary(dict, object);
 	LHPhysicsProtocol.initPhysicsProtocolWithDictionary(dict["nodePhysics"], object, prnt:getScene());

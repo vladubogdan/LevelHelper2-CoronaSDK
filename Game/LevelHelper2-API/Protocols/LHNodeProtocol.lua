@@ -103,6 +103,51 @@ function getScene(selfNode)
 	end
 	return nil;
 end
+
+function simulateModernObjectHierarchy(parent, child)
+	child.lhChildren = display.newGroup();
+	if(parent.lhChildren ~= nil)then
+		parent.lhChildren:insert( child.lhChildren);
+	else
+		parent:insert( child.lhChildren);
+	end
+end
+--------------------------------------------------------------------------------
+--!@docBegin
+--!Add a child node.
+--!@param child The node that will be added as child.
+function addChild(selfNode, child)
+--!@docEnd	
+	if(selfNode.lhChildren)then
+		selfNode.lhChildren:insert(child);
+	else
+		selfNode:insert(child);
+	end
+end
+--------------------------------------------------------------------------------
+--!@docBegin
+--!Removes a child node
+function removeChild(selfNode, child)
+--!@docEnd	
+	if(selfNode.lhChildren)then
+		return selfNode.lhChildren:remove(child);
+	end
+	return selfNode:remove(child);
+end
+--------------------------------------------------------------------------------
+--!@docBegin
+--!Returns the display group of this node (Retuns the children).
+--!Because corona does not have a modern children hierachy this is simulated using display groups.
+--!Each node its either a display group directly or has a display group added at a 0,0 position of the node.
+--!Via enterFrame notification children get updated with correct transformation.
+--!Maybe in the future Corona SDK will support a modern gaming objects hierarchy.
+function getChildren(selfNode)
+--!@docEnd	
+	if(selfNode.lhChildren ~= nil)then
+		return selfNode.lhChildren;
+	end
+	return selfNode;
+end
 --------------------------------------------------------------------------------
 --!@docBegin
 --!Set the node position
@@ -159,6 +204,36 @@ function setAnchor(selfNode, x, y)
 	end
 end
 
+function enterFrame(selfNode, event)
+
+	
+	if(selfNode._isNodeProtocol)then
+		
+		if(selfNode.lhChildren ~= nil)then
+			
+			selfNode.lhChildren.x = selfNode.x;
+			selfNode.lhChildren.y = selfNode.y;
+			
+			selfNode.lhChildren.rotation = selfNode.rotation;
+			
+			selfNode.lhChildren.xScale = selfNode.xScale;
+			selfNode.lhChildren.yScale = selfNode.yScale;
+		end
+		-- if(selfNode.lhUniqueName)then
+			-- print("enter frame " .. tostring(selfNode.lhUniqueName));
+		-- end
+	end
+	
+	local children = selfNode:getChildren();
+	if(children)then
+		for i = 1, children.numChildren do
+			local child = children[i];
+			if(child and child._isNodeProtocol ~= nil)then
+				child:enterFrame(event);
+			end
+		end
+	end
+end
 --------------------------------------------------------------------------------
 -- function batch_allSprites(selfBatch)--returns array with LHSprite objects
 
@@ -194,6 +269,12 @@ function initNodeProtocolWithDictionary(dict, node)
 	node.setRotation 	= setRotation;
 	node.setScale 		= setScale;
 	node.setAnchor 		= setAnchor;
+	node.enterFrame 	= enterFrame;
+	--Modern object hierarchy simulation
+	node.addChild 				= addChild;
+	node.getNumberOfChildren 	= getNumberOfChildren;
+	node.removeChild 			= removeChild;
+	node.getChildren 			= getChildren;
 	
     local value = dict["generalPosition"]
     if value then
@@ -284,7 +365,7 @@ function createLHNodeWithDictionaryWithParent(childInfo, prnt)
 
     local nodeType = childInfo["nodeType"];
     
-    local scene = nil;
+    -- local scene = nil;
 --    if([prnt isKindOfClass:[LHScene class]]){
 --        scene = (LHScene*)prnt;
 --    }

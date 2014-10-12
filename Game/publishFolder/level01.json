@@ -42,70 +42,6 @@
             "DEFAULT"
           ],
           "nodePhysics" : {
-            "bullet" : false,
-            "angularDamping" : 0,
-            "gravityScale" : 1,
-            "allowSleep" : true,
-            "angularVelocity" : 0,
-            "fixedRotation" : false,
-            "linearDamping" : 0,
-            "type" : 0,
-            "shape" : 3,
-            "genericFixture" : {
-              "category" : 1,
-              "sensor" : false,
-              "density" : 0.1,
-              "mask" : 65535,
-              "friction" : 0.2,
-              "restitution" : 0,
-              "name" : "GenericFixture",
-              "fixtureID" : 0
-            },
-            "linearVelocity" : "{0.000000, 0.000000}"
-          },
-          "generalPosition" : "{0.512500, 0.563928}",
-          "closed" : false,
-          "uuid" : "4B6F9C9C-ABE9-401D-B4AD-AA7B2A4A86A5",
-          "name" : "UntitledBezier",
-          "anchor" : "{0.500000, 0.500000}",
-          "size" : "{340.000000, 168.914108}",
-          "nodeType" : "LHBezier",
-          "alpha" : 255,
-          "points" : [
-            {
-              "ctrl2" : "{-170.000000, 106.042999}",
-              "hasCtrl1" : true,
-              "ctrl1" : "{-170.000000, 106.042999}",
-              "mainPt" : "{-170.000000, 6.042999}",
-              "hasCtrl2" : true
-            },
-            {
-              "ctrl2" : "{26.000000, -4.457020}",
-              "hasCtrl1" : true,
-              "ctrl1" : "{-32.988859, 85.751558}",
-              "mainPt" : "{-32.988859, 75.751558}",
-              "hasCtrl2" : true
-            },
-            {
-              "ctrl2" : "{173.906143, 11.987457}",
-              "hasCtrl1" : true,
-              "ctrl1" : "{173.906143, 11.987457}",
-              "mainPt" : "{170.000000, -84.457020}",
-              "hasCtrl2" : true
-            }
-          ],
-          "scale" : "{1.000000, 1.000000}",
-          "invisibleInEditor" : false,
-          "zOrder" : 0,
-          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
-        },
-        {
-          "rotation" : 0,
-          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
-          "tags" : [
-            "DEFAULT"
-          ],
-          "nodePhysics" : {
             "linearVelocity" : "{0.000000, 0.000000}",
             "fixedRotation" : false,
             "shape" : 4,
@@ -180,12 +116,12 @@
               "fixtureID" : 0
             },
             "angularDamping" : 0,
-            "gravityScale" : 1,
+            "gravityScale" : 0.1,
             "angularVelocity" : 0
           },
           "spriteUUID" : "D78AF2EE-072C-4690-9A29-B403F8564573",
           "spriteName" : "object_statue",
-          "generalPosition" : "{0.500397, 0.441722}",
+          "generalPosition" : "{0.755986, 0.259608}",
           "uuid" : "CA4D1AD2-6050-4D9A-9CF3-7F143F10EA4E",
           "children" : [
             {
@@ -237,13 +173,15 @@
             "DEFAULT"
           ],
           "nodePhysics" : {
-            "linearVelocity" : "{0.000000, 0.000000}",
-            "fixedRotation" : false,
-            "shape" : 5,
+            "bullet" : false,
+            "angularDamping" : 0,
+            "gravityScale" : 1,
             "allowSleep" : true,
-            "fixtureUUID" : "5091E41B-B8A8-4B16-A4FF-57825003825D",
+            "angularVelocity" : 0,
+            "fixedRotation" : false,
             "linearDamping" : 0,
-            "type" : 2,
+            "type" : 0,
+            "shape" : 3,
             "genericFixture" : {
               "category" : 1,
               "sensor" : false,
@@ -254,96 +192,36 @@
               "name" : "GenericFixture",
               "fixtureID" : 0
             },
-            "bullet" : false,
-            "angularDamping" : 0,
-            "gravityScale" : 1,
-            "angularVelocity" : 0
+            "linearVelocity" : "{0.000000, 0.000000}"
           },
-          "spriteUUID" : "7CCF5401-21A8-4FB1-B909-E4D3A0D728AE",
-          "spriteName" : "object_canteen",
-          "generalPosition" : "{0.422136, 0.501954}",
-          "uuid" : "137CADD8-3108-4C5A-BF03-E7CBC1227308",
-          "children" : [
+          "generalPosition" : "{0.535191, 0.575480}",
+          "closed" : false,
+          "uuid" : "DFEA7688-1C4F-40B2-B880-0C8513B93064",
+          "name" : "UntitledBezier",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{317.099701, 115.673233}",
+          "nodeType" : "LHBezier",
+          "alpha" : 255,
+          "points" : [
             {
-              "rotation" : 0,
-              "parentUUID" : "137CADD8-3108-4C5A-BF03-E7CBC1227308",
-              "tags" : [
-                "DEFAULT"
-              ],
-              "spriteUUID" : "0E725708-7B5F-465B-8300-DBEDC04CE6C1",
-              "spriteName" : "object_bananabunch",
-              "generalPosition" : "{0.002257, 0.077242}",
-              "uuid" : "961F95C8-B9FE-436B-97E9-56E6C81631DC",
-              "children" : [
-                {
-                  "rotation" : 38.54152,
-                  "parentUUID" : "961F95C8-B9FE-436B-97E9-56E6C81631DC",
-                  "tags" : [
-                    "DEFAULT"
-                  ],
-                  "spriteUUID" : "52159759-5A00-4D19-9753-018BA3A1C688",
-                  "spriteName" : "object_banana",
-                  "generalPosition" : "{-0.072478, -0.039092}",
-                  "uuid" : "CA93CA14-78AF-40FB-A8D4-9A0D95958602",
-                  "name" : "object_banana",
-                  "anchor" : "{0.500000, 0.500000}",
-                  "size" : "{46.000000, 32.000000}",
-                  "nodeType" : "LHSprite",
-                  "alpha" : 255,
-                  "scale" : "{1.000000, 1.000000}",
-                  "invisibleInEditor" : false,
-                  "relativeImagePath" : "publishFolder\/",
-                  "zOrder" : 0,
-                  "imageFileName" : "objects.png",
-                  "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
-                }
-              ],
-              "name" : "object_bananabunch",
-              "anchor" : "{0.500000, 0.500000}",
-              "size" : "{44.000000, 33.000000}",
-              "nodeType" : "LHSprite",
-              "alpha" : 255,
-              "scale" : "{1.000000, 1.000000}",
-              "invisibleInEditor" : false,
-              "relativeImagePath" : "publishFolder\/",
-              "zOrder" : 0,
-              "imageFileName" : "objects.png",
-              "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+              "ctrl2" : "{-158.549850, 108.322233}",
+              "hasCtrl1" : true,
+              "ctrl1" : "{-158.549850, 108.322233}",
+              "mainPt" : "{-158.549850, 8.322233}",
+              "hasCtrl2" : true
+            },
+            {
+              "ctrl2" : "{158.549858, 42.163420}",
+              "hasCtrl1" : true,
+              "ctrl1" : "{158.549858, 42.163420}",
+              "mainPt" : "{158.549858, -57.836580}",
+              "hasCtrl2" : true
             }
           ],
-          "name" : "object_canteen",
-          "anchor" : "{0.500000, 0.500000}",
-          "size" : "{30.000000, 39.000000}",
-          "nodeType" : "LHSprite",
-          "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
           "invisibleInEditor" : false,
-          "relativeImagePath" : "publishFolder\/",
           "zOrder" : 0,
-          "imageFileName" : "objects.png",
-          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
-        },
-        {
-          "rotation" : 0,
-          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
-          "tags" : [
-            "DEFAULT"
-          ],
-          "spriteUUID" : "B645ACE9-D0A6-4D06-9892-5C9990EB78E6",
-          "spriteName" : "object_pineapple",
-          "generalPosition" : "{0.267324, 0.495560}",
-          "uuid" : "ABFA886C-CF5A-4FA3-9D0D-660BE5B31370",
-          "name" : "object_pineapple",
-          "anchor" : "{0.500000, 0.500000}",
-          "size" : "{30.000000, 67.000000}",
-          "nodeType" : "LHSprite",
-          "alpha" : 255,
-          "scale" : "{1.000000, 1.000000}",
-          "invisibleInEditor" : false,
-          "relativeImagePath" : "publishFolder\/",
-          "zOrder" : 0,
-          "imageFileName" : "objects.png",
-          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+          "colorOverlay" : "{{0.000000, 0.000000}, {0.000000, 1.000000}}"
         }
       ],
       "name" : "GAME WORLD",
@@ -471,61 +349,5 @@
   "nodeType" : "LHScene",
   "sceneFormat" : 1,
   "invisibleInEditor" : false,
-  "globalGravityDirection" : "{0.000000, -1.000000}",
-  "tracedFixtures" : {
-    "5091E41B-B8A8-4B16-A4FF-57825003825D" : [
-      [
-        "{-7.375, -9.5}",
-        "{-4.875, -9.75}",
-        "{-9.875, -6.25}",
-        "{-9.125, -7.75}"
-      ],
-      [
-        "{7.375, -8.75}",
-        "{9.375, -1.5}",
-        "{9.625, 5.25}",
-        "{-9.875, -6.25}",
-        "{3.875, -10.75}"
-      ],
-      [
-        "{-3.875, -14.5}",
-        "{-2.625, -15.5}",
-        "{3.625, -15.25}",
-        "{-3.875, -10.5}"
-      ],
-      [
-        "{-9.875, 15}",
-        "{-10.625, 13.25}",
-        "{-11.125, 10}",
-        "{-11.125, 6}",
-        "{-9.875, -6.25}",
-        "{9.625, 5.25}",
-        "{1.125, 16.25}",
-        "{-8.375, 16.25}"
-      ],
-      [
-        "{7.375, 14.75}",
-        "{4.625, 15.75}",
-        "{1.125, 16.25}",
-        "{9.625, 5.25}"
-      ],
-      [
-        "{3.875, -10.75}",
-        "{-9.875, -6.25}",
-        "{-4.875, -9.75}",
-        "{3.625, -15.25}"
-      ],
-      [
-        "{2.625, -15.75}",
-        "{3.625, -15.25}",
-        "{-2.625, -15.5}",
-        "{-2.375, -15.75}"
-      ],
-      [
-        "{-4.875, -9.75}",
-        "{-3.875, -10.5}",
-        "{3.625, -15.25}"
-      ]
-    ]
-  }
+  "globalGravityDirection" : "{0.000000, -1.000000}"
 }

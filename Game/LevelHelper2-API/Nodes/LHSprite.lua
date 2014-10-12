@@ -76,23 +76,11 @@ function LHSprite:nodeWithDictionary(dict, prnt)
 	local LHNodeProtocol = require('LevelHelper2-API.Protocols.LHNodeProtocol')
 	local LHPhysicsProtocol = require('LevelHelper2-API.Protocols.LHPhysicsProtocol')
 	
-	LHUtils.LHPrintObjectInfo(prnt);
+	-- LHUtils.LHPrintObjectInfo(prnt);
 	
-	object.lhChildren = display.newGroup();
-	
+	prnt:addChild(object);
+	LHNodeProtocol.simulateModernObjectHierarchy(prnt, object);
 	LHNodeProtocol.initNodeProtocolWithDictionary(dict, object);
-	
-	
-	if(prnt.lhChildren ~= nil)then
-		print("we add child to the lhChildren");
-		prnt.lhChildren:insert( object )
-		prnt.lhChildren:insert( object.lhChildren);
-	else
-		prnt:insert( object )
-		prnt:insert( object.lhChildren);
-	end
-	
-	
 	
 	
 	LHPhysicsProtocol.initPhysicsProtocolWithDictionary(dict["nodePhysics"], object, prnt:getScene());
