@@ -76,9 +76,10 @@ function LHShape:nodeWithDictionary(dict, prnt)
  	--"tileTexture" : true,
  	
  	local relativeImagePath = dict["relativeImagePath"];
-
- 	polygon.fill = { type="image", filename="tile.png" }
- 	
+ 	if(relativeImagePath)then
+		polygon.fill = { type="image", filename=relativeImagePath }
+ 	end
+ 
  	object._shapeTriangles = {};
  	local triangles = dict["triangles"];
  	
