@@ -15,13 +15,17 @@ function LHSprite:nodeWithDictionary(dict, prnt)
 	local spriteName        = dict["spriteName"];
 	
 	local contentSize       = LHUtils.sizeFromString(dict["size"]);
-	    
 	
 	local isSprite = (nil ~= spriteName);
 	
 	local object = nil; --sprite sheet or newImage
 	
+	-- contentSize.width = contentSize.width*4;
+	-- contentSize.height= contentSize.height*4;
+	
 	-- print("image path " .. imageFilePath);
+	-- print("relativeImagePath " .. tostring(relativeImagePath));
+	-- print("imageFileName " .. imageFileName);
 	
 	-- print("ACTUAL CONTENT SIZE : " .. display.actualContentWidth .. " " .. display.actualContentHeight);
 	-- print("PIXEL SIZE : " .. display.pixelWidth .. " " .. display.pixelHeight);

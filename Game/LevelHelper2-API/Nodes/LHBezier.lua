@@ -32,7 +32,7 @@ function LHBezier:nodeWithDictionary(dict, prnt)
     local prevPt = nil;
     local previousPointDict = nil;
     
-    --Specific sprites properties
+    --Specific properties
     ----------------------------------------------------------------------------
     local value = dict["colorOverlay"];
     local color = nil;

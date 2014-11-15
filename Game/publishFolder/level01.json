@@ -173,6 +173,94 @@
             "DEFAULT"
           ],
           "nodePhysics" : {
+            "linearVelocity" : "{0.000000, 0.000000}",
+            "fixedRotation" : false,
+            "shape" : 5,
+            "allowSleep" : true,
+            "fixtureUUID" : "A41B5CD9-C308-4D34-B8B6-BA92D8E0E6E4",
+            "linearDamping" : 0,
+            "type" : 2,
+            "genericFixture" : {
+              "category" : 1,
+              "sensor" : false,
+              "density" : 0.1,
+              "mask" : 65535,
+              "friction" : 0.2,
+              "restitution" : 0,
+              "name" : "GenericFixture",
+              "fixtureID" : 0
+            },
+            "bullet" : false,
+            "angularDamping" : 0,
+            "gravityScale" : 1,
+            "angularVelocity" : 0
+          },
+          "generalPosition" : "{0.415468, 0.250732}",
+          "uuid" : "3F0C1B22-0B0D-4E9F-8AF9-EF171A1ABDF6",
+          "name" : "crateTest",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{23.000000, 23.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "invisibleInEditor" : false,
+          "relativeImagePath" : "",
+          "zOrder" : 0,
+          "imageFileName" : "crateTest.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "nodePhysics" : {
+            "linearVelocity" : "{0.000000, 0.000000}",
+            "fixedRotation" : false,
+            "shape" : 5,
+            "allowSleep" : true,
+            "fixtureUUID" : "67427946-285F-42D0-84D2-EA139B6BDD5C",
+            "linearDamping" : 0,
+            "type" : 2,
+            "genericFixture" : {
+              "category" : 1,
+              "sensor" : false,
+              "density" : 0.1,
+              "mask" : 65535,
+              "friction" : 0.2,
+              "restitution" : 0,
+              "name" : "GenericFixture",
+              "fixtureID" : 0
+            },
+            "bullet" : false,
+            "angularDamping" : 0,
+            "gravityScale" : 1,
+            "angularVelocity" : 0
+          },
+          "spriteUUID" : "7CCF5401-21A8-4FB1-B909-E4D3A0D728AE",
+          "spriteName" : "object_canteen",
+          "generalPosition" : "{0.517032, 0.503659}",
+          "uuid" : "131E24ED-C7D6-4B72-B3EC-217DF662C90A",
+          "name" : "object_canteen",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{30.000000, 39.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "invisibleInEditor" : false,
+          "relativeImagePath" : "publishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "objects.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "nodePhysics" : {
             "bullet" : false,
             "angularDamping" : 0,
             "gravityScale" : 1,
@@ -194,34 +282,279 @@
             },
             "linearVelocity" : "{0.000000, 0.000000}"
           },
-          "generalPosition" : "{0.535191, 0.575480}",
+          "generalPosition" : "{0.459857, 0.575480}",
           "closed" : false,
           "uuid" : "DFEA7688-1C4F-40B2-B880-0C8513B93064",
           "name" : "UntitledBezier",
           "anchor" : "{0.500000, 0.500000}",
-          "size" : "{317.099701, 115.673233}",
+          "size" : "{317.099701, 115.673225}",
           "nodeType" : "LHBezier",
           "alpha" : 255,
           "points" : [
             {
-              "ctrl2" : "{-158.549850, 108.322233}",
+              "ctrl2" : "{-158.549850, 108.322235}",
               "hasCtrl1" : true,
-              "ctrl1" : "{-158.549850, 108.322233}",
-              "mainPt" : "{-158.549850, 8.322233}",
+              "ctrl1" : "{-158.549850, 108.322235}",
+              "mainPt" : "{-158.549850, 8.322235}",
               "hasCtrl2" : true
             },
             {
-              "ctrl2" : "{158.549858, 42.163420}",
+              "ctrl2" : "{158.549858, 42.163422}",
               "hasCtrl1" : true,
-              "ctrl1" : "{158.549858, 42.163420}",
-              "mainPt" : "{158.549858, -57.836580}",
+              "ctrl1" : "{158.549858, 42.163422}",
+              "mainPt" : "{158.549858, -57.836578}",
               "hasCtrl2" : true
             }
           ],
-          "scale" : "{1.000000, 1.000000}",
+          "scale" : "{0.771931, 1.000000}",
           "invisibleInEditor" : false,
           "zOrder" : 0,
           "colorOverlay" : "{{0.000000, 0.000000}, {0.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "nodePhysics" : {
+            "linearVelocity" : "{0.000000, 0.000000}",
+            "fixedRotation" : false,
+            "shape" : 5,
+            "allowSleep" : true,
+            "fixtureUUID" : "F19E198D-EA34-43EB-A5CD-F0813721B711",
+            "linearDamping" : 0,
+            "type" : 2,
+            "genericFixture" : {
+              "category" : 1,
+              "sensor" : false,
+              "density" : 0.1,
+              "mask" : 65535,
+              "friction" : 0.2,
+              "restitution" : 0,
+              "name" : "GenericFixture",
+              "fixtureID" : 0
+            },
+            "bullet" : false,
+            "angularDamping" : 0,
+            "gravityScale" : 1,
+            "angularVelocity" : 0
+          },
+          "spriteUUID" : "B645ACE9-D0A6-4D06-9892-5C9990EB78E6",
+          "spriteName" : "object_pineapple",
+          "generalPosition" : "{0.651537, 0.305122}",
+          "uuid" : "97B0A659-53C8-4E99-9036-727194ED31F8",
+          "name" : "object_pineapple",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{30.000000, 67.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.870355, 1.000000}",
+          "invisibleInEditor" : false,
+          "relativeImagePath" : "publishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "objects.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "nodePhysics" : {
+            "bullet" : false,
+            "angularDamping" : 0,
+            "gravityScale" : 1,
+            "allowSleep" : true,
+            "angularVelocity" : 0,
+            "fixedRotation" : false,
+            "linearDamping" : 0,
+            "type" : 0,
+            "shape" : 0,
+            "genericFixture" : {
+              "category" : 1,
+              "sensor" : false,
+              "density" : 0.1,
+              "mask" : 65535,
+              "friction" : 0.2,
+              "restitution" : 0,
+              "name" : "GenericFixture",
+              "fixtureID" : 0
+            },
+            "linearVelocity" : "{0.000000, 0.000000}"
+          },
+          "generalPosition" : "{0.300000, 0.250000}",
+          "uuid" : "7E418EBA-2919-4DE7-93FC-6389082490FF",
+          "children" : [
+            {
+              "rotation" : 0,
+              "parentUUID" : "7E418EBA-2919-4DE7-93FC-6389082490FF",
+              "tags" : [
+                "DEFAULT"
+              ],
+              "generalPosition" : "{0.036446, 0.154347}",
+              "uuid" : "0738AC79-E212-4857-9A16-FC59065A667F",
+              "name" : "crate",
+              "anchor" : "{0.500000, 0.500000}",
+              "size" : "{23.000000, 23.000000}",
+              "nodeType" : "LHSprite",
+              "alpha" : 255,
+              "scale" : "{1.000000, 1.000000}",
+              "invisibleInEditor" : false,
+              "relativeImagePath" : "",
+              "zOrder" : 0,
+              "imageFileName" : "crate.png",
+              "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+            }
+          ],
+          "name" : "UntitledNode",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{32.000000, 32.000000}",
+          "nodeType" : "LHNode",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "invisibleInEditor" : false,
+          "zOrder" : 0,
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "nodePhysics" : {
+            "bullet" : false,
+            "angularDamping" : 0,
+            "gravityScale" : 1,
+            "allowSleep" : true,
+            "angularVelocity" : 0,
+            "fixedRotation" : false,
+            "linearDamping" : 0,
+            "type" : 0,
+            "shape" : 3,
+            "genericFixture" : {
+              "category" : 1,
+              "sensor" : false,
+              "density" : 0.1,
+              "mask" : 65535,
+              "friction" : 0.2,
+              "restitution" : 0,
+              "name" : "GenericFixture",
+              "fixtureID" : 0
+            },
+            "linearVelocity" : "{0.000000, 0.000000}"
+          },
+          "spriteUUID" : "0E725708-7B5F-465B-8300-DBEDC04CE6C1",
+          "spriteName" : "object_bananabunch",
+          "generalPosition" : "{0.516393, 0.388572}",
+          "uuid" : "C3E96387-D274-4708-BC3D-B3A527EF2C1E",
+          "name" : "object_bananabunch",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{44.000000, 33.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.758809, 1.000000}",
+          "invisibleInEditor" : false,
+          "relativeImagePath" : "publishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "objects.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tileTexture" : true,
+          "tags" : [
+            "DEFAULT"
+          ],
+          "triangles" : [
+            {
+              "color" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}",
+              "alpha" : 255,
+              "point" : "{154.640935, -9.403148}",
+              "uv" : "{0.890625, 0.500000}"
+            },
+            {
+              "color" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}",
+              "alpha" : 255,
+              "point" : "{178.268683, 36.694359}",
+              "uv" : "{0.304688, 0.838291}"
+            },
+            {
+              "color" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}",
+              "alpha" : 255,
+              "point" : "{-178.268691, 36.066777}",
+              "uv" : "{0.304688, 0.161709}"
+            },
+            {
+              "color" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}",
+              "alpha" : 255,
+              "point" : "{-72.194689, -36.694363}",
+              "uv" : "{0.000000, 0.000000}"
+            },
+            {
+              "color" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}",
+              "alpha" : 255,
+              "point" : "{154.640935, -9.403148}",
+              "uv" : "{0.347208, 0.654220}"
+            },
+            {
+              "color" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}",
+              "alpha" : 255,
+              "point" : "{-178.268691, 36.066777}",
+              "uv" : "{0.004228, 1.000000}"
+            },
+            {
+              "color" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}",
+              "alpha" : 255,
+              "point" : "{-167.616227, -36.247377}",
+              "uv" : "{0.000000, 0.000000}"
+            },
+            {
+              "color" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}",
+              "alpha" : 255,
+              "point" : "{-72.194689, -36.694363}",
+              "uv" : "{0.502567, 0.017822}"
+            },
+            {
+              "color" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}",
+              "alpha" : 255,
+              "point" : "{-178.268691, 36.066777}",
+              "uv" : "{0.554504, 0.713777}"
+            }
+          ],
+          "generalPosition" : "{0.549840, 0.626715}",
+          "uuid" : "E9A607E4-CD81-4EEE-B0AA-16E98483F300",
+          "name" : "UntitledTexturedShape",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{356.537384, 73.388725}",
+          "tileScale" : "{3.000000, 3.000000}",
+          "nodeType" : "LHTexturedShape",
+          "alpha" : 120.8119,
+          "points" : [
+            {
+              "point" : "{-72.194689, -36.694363}"
+            },
+            {
+              "point" : "{154.640935, -9.403148}"
+            },
+            {
+              "point" : "{178.268683, 36.694359}"
+            },
+            {
+              "point" : "{-178.268691, 36.066777}"
+            },
+            {
+              "point" : "{-167.616227, -36.247377}"
+            }
+          ],
+          "scale" : "{1.000665, 1.986639}",
+          "invisibleInEditor" : false,
+          "relativeImagePath" : "\/Game\/tile.png",
+          "zOrder" : 2,
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
         }
       ],
       "name" : "GAME WORLD",
@@ -349,5 +682,172 @@
   "nodeType" : "LHScene",
   "sceneFormat" : 1,
   "invisibleInEditor" : false,
-  "globalGravityDirection" : "{0.000000, -1.000000}"
+  "globalGravityDirection" : "{0.000000, -1.000000}",
+  "tracedFixtures" : {
+    "F19E198D-EA34-43EB-A5CD-F0813721B711" : [
+      [
+        "{-8.875, -16.875}",
+        "{-2.625, -15.375}",
+        "{-6.375, -13.375}"
+      ],
+      [
+        "{3.125, -24.625}",
+        "{2.375, -18.125}",
+        "{0.375, -21.625}"
+      ],
+      [
+        "{7.875, -9.625}",
+        "{6.625, -3.375}",
+        "{5.375, -1.375}",
+        "{4.875, -7.625}"
+      ],
+      [
+        "{-8.875, -4.875}",
+        "{-3.875, -5.625}",
+        "{-6.625, -3.625}"
+      ],
+      [
+        "{-6.625, -3.625}",
+        "{-3.875, -5.625}",
+        "{5.375, -1.375}",
+        "{6.625, -0.625}",
+        "{-4.125, -1.125}"
+      ],
+      [
+        "{-6.375, -13.375}",
+        "{-2.625, -15.375}",
+        "{2.375, -12.875}",
+        "{4.875, -7.625}",
+        "{5.375, -1.375}",
+        "{-3.875, -5.625}"
+      ],
+      [
+        "{2.375, -18.125}",
+        "{2.375, -12.875}",
+        "{-2.625, -15.375}",
+        "{0.375, -21.625}"
+      ],
+      [
+        "{10.875, 26.375}",
+        "{7.125, 30.625}",
+        "{-3.875, 31.625}",
+        "{-5.375, 31.125}",
+        "{-4.125, -1.125}",
+        "{6.625, -0.625}",
+        "{12.375, 8.875}",
+        "{12.375, 22.125}"
+      ],
+      [
+        "{9.875, 2.625}",
+        "{12.375, 8.875}",
+        "{6.625, -0.625}"
+      ],
+      [
+        "{-8.875, 27.625}",
+        "{-10.625, 24.125}",
+        "{-11.375, 21.375}",
+        "{-11.875, 12.125}",
+        "{-10.875, 9.375}",
+        "{-4.125, -1.125}",
+        "{-5.375, 31.125}"
+      ],
+      [
+        "{-8.625, 3.125}",
+        "{-5.875, -0.125}",
+        "{-4.125, -1.125}",
+        "{-10.875, 9.375}",
+        "{-10.625, 7.375}"
+      ],
+      [
+        "{7.125, -17.625}",
+        "{6.125, -15.875}",
+        "{2.375, -12.875}"
+      ],
+      [
+        "{6.125, -15.875}",
+        "{5.375, -13.375}",
+        "{2.375, -12.875}"
+      ],
+      [
+        "{5.375, -13.375}",
+        "{4.875, -7.625}",
+        "{2.375, -12.875}"
+      ],
+      [
+        "{4.875, 31.625}",
+        "{-3.875, 31.625}",
+        "{7.125, 30.625}"
+      ],
+      [
+        "{-2.875, -26.875}",
+        "{-1.625, -30.625}",
+        "{-1.375, -30.875}",
+        "{0.375, -21.625}",
+        "{-2.625, -15.375}"
+      ]
+    ],
+    "67427946-285F-42D0-84D2-EA139B6BDD5C" : [
+      [
+        "{-7.375, -9.5}",
+        "{-4.875, -9.75}",
+        "{-9.875, -6.25}",
+        "{-9.125, -7.75}"
+      ],
+      [
+        "{7.375, -8.75}",
+        "{9.375, -1.5}",
+        "{9.625, 5.25}",
+        "{-9.875, -6.25}",
+        "{3.875, -10.75}"
+      ],
+      [
+        "{-3.875, -14.5}",
+        "{-2.625, -15.5}",
+        "{3.625, -15.25}",
+        "{-3.875, -10.5}"
+      ],
+      [
+        "{-9.875, 15}",
+        "{-10.625, 13.25}",
+        "{-11.125, 10}",
+        "{-11.125, 6}",
+        "{-9.875, -6.25}",
+        "{9.625, 5.25}",
+        "{1.125, 16.25}",
+        "{-8.375, 16.25}"
+      ],
+      [
+        "{7.375, 14.75}",
+        "{4.625, 15.75}",
+        "{1.125, 16.25}",
+        "{9.625, 5.25}"
+      ],
+      [
+        "{3.875, -10.75}",
+        "{-9.875, -6.25}",
+        "{-4.875, -9.75}",
+        "{3.625, -15.25}"
+      ],
+      [
+        "{2.625, -15.75}",
+        "{3.625, -15.25}",
+        "{-2.625, -15.5}",
+        "{-2.375, -15.75}"
+      ],
+      [
+        "{-4.875, -9.75}",
+        "{-3.875, -10.5}",
+        "{3.625, -15.25}"
+      ]
+    ],
+    "A41B5CD9-C308-4D34-B8B6-BA92D8E0E6E4" : [
+      [
+        "{9.75, 9.75}",
+        "{-11.25, 9.75}",
+        "{-11.25, -10.25}",
+        "{-10.25, -11.25}",
+        "{9.75, -11.25}"
+      ]
+    ]
+  }
 }

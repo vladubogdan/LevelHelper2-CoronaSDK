@@ -11,6 +11,8 @@ local LHUINode = require('LevelHelper2-API.Nodes.LHUINode')
 local LHBackUINode = require('LevelHelper2-API.Nodes.LHBackUINode')
 local LHSprite = require('LevelHelper2-API.Nodes.LHSprite')
 local LHBezier = require('LevelHelper2-API.Nodes.LHBezier')
+local LHNode = require('LevelHelper2-API.Nodes.LHNode')
+local LHShape = require('LevelHelper2-API.Nodes.LHShape')
 
 local LHUtils = require("LevelHelper2-API.Utilities.LHUtils");
 local LHUserProperties = require("LevelHelper2-API.Protocols.LHUserProperties");
@@ -326,6 +328,18 @@ function initNodeProtocolWithDictionary(dict, node)
     	node:setRotation(value)
     end
         
+        
+    value = dict["size"];
+    if(value)then
+    	local sz = LHUtils.sizeFromString(value);
+    	
+    	node.width = sz.width;
+    	node.height= sz.height;
+    	
+    	--some corona nodes have width/height properties as read only - we still need the size
+    	node.lhContentSize = {width = sz.width, height = sz.height};
+    end
+    
     value = dict["alpha"];
     if(value)then
         node.alpha = value/255.0;
@@ -399,6 +413,15 @@ function createLHNodeWithDictionaryWithParent(childInfo, prnt)
     	return pNode;
     end
     
+	if nodeType == "LHNode" then    
+    	local pNode = LHNode:nodeWithDictionary(childInfo, prnt);
+    	return pNode;
+    end
+    
+    if nodeType == "LHTexturedShape" then    
+    	local pNode = LHShape:nodeWithDictionary(childInfo, prnt);
+    	return pNode;
+    end
     
     print("UNKNOWN NODE TYPE " .. nodeType);
     

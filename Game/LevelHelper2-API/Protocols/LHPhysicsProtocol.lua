@@ -89,6 +89,11 @@ function initPhysicsProtocolWithDictionary(dict, node, scene)
 
 	local sizet = {width = node.width, height = node.height}
 	
+	if(node.width == 0 and node.height == 0)then
+		--some corona nodes have width/height properties as read only - we retreive needed info from a lh variable
+		sizet = node.lhContentSize;
+	end
+	
 	local scaleX = node.xScale;
 	local scaleY = node.yScale;
 	
@@ -120,6 +125,62 @@ function initPhysicsProtocolWithDictionary(dict, node, scene)
 
 		physics.addBody( node, physicType, fixtureInfo )
 	
+	elseif(shapeType == 2)then --POLYGON
+	
+		if node.nodeType == "LHShape" then
+	
+			local bodyShapes = {}
+	
+			local triangles = node:trianglePoints();
+			
+			local i = 1;
+			while triangles[i] do
+				
+				local ptA = triangles[i];
+				ptA.x = ptA.x * scaleX;
+				ptA.y = ptA.y * scaleY;
+				
+				i = i+1;
+				local ptB = triangles[i];
+				ptB.x = ptB.x * scaleX;
+				ptB.y = ptB.y * scaleY;
+				
+				i = i+1;
+				local ptC = triangles[i];
+				ptC.x = ptC.x * scaleX;
+				ptC.y = ptC.y * scaleY;
+				
+				i = i+1;
+				
+				local shapePoints = {};
+				
+				shapePoints[#shapePoints+1] = ptA.x;
+				shapePoints[#shapePoints+1] = ptA.y;
+				
+				shapePoints[#shapePoints+1] = ptB.x;
+				shapePoints[#shapePoints+1] = ptB.y;
+				
+				shapePoints[#shapePoints+1] = ptC.x;
+				shapePoints[#shapePoints+1] = ptC.y;
+				
+				-- chainPoints[#chainPoints+1] = pt.x;
+				-- chainPoints[#chainPoints+1] = pt.y;
+				-- fixtureInfo.chain = chainPoints;
+				-- fixtureInfo.connectFirstAndLastChainVertex = false;
+			
+				local curShapeProperties = LHUtils.LHDeepCopy(fixtureInfo);
+				curShapeProperties.shape = shapePoints;
+					
+				bodyShapes[#bodyShapes+1] = curShapeProperties;
+				
+			
+			end
+		
+			physics.addBody( node, physicType, unpack(bodyShapes));
+		
+		end
+		    
+
 	elseif(shapeType == 4)then--OVAL
 
 		shapeFixturesInfo = dict["ovalShape"];
@@ -136,6 +197,9 @@ function initPhysicsProtocolWithDictionary(dict, node, scene)
 				
 				local pt = points[i];
 				
+				pt.x = pt.x * scaleX;
+				pt.y = pt.y * scaleY;
+				
 				chainPoints[#chainPoints+1] = pt.x;
 				chainPoints[#chainPoints+1] = pt.y;
 				
@@ -145,6 +209,49 @@ function initPhysicsProtocolWithDictionary(dict, node, scene)
 			
 			physics.addBody( node, physicType, fixtureInfo);
 			
+		elseif(node.nodeType == "LHShape") then
+			
+			local points = node:outlinePoints();
+			
+			local chainPoints = {}
+			
+			for i = 1, #points do
+				
+				local pt = points[i];
+				
+				pt.x = pt.x * scaleX;
+				pt.y = pt.y * scaleY;
+				
+				chainPoints[#chainPoints+1] = pt.x;
+				chainPoints[#chainPoints+1] = pt.y;
+				
+			end
+			fixtureInfo.chain = chainPoints;
+			fixtureInfo.connectFirstAndLastChainVertex = true;
+			
+			physics.addBody( node, physicType, fixtureInfo);
+			
+		else
+			
+			local chainPoints = {}
+			chainPoints[#chainPoints+1] = -sizet.width*0.5;
+			chainPoints[#chainPoints+1] = -sizet.height*0.5;
+			
+			chainPoints[#chainPoints+1] =  sizet.width*0.5;
+			chainPoints[#chainPoints+1] = -sizet.height*0.5;
+			
+			chainPoints[#chainPoints+1] =  sizet.width*0.5;
+			chainPoints[#chainPoints+1] =  sizet.height*0.5;
+			
+			chainPoints[#chainPoints+1] = -sizet.width*0.5;
+			chainPoints[#chainPoints+1] =  sizet.height*0.5;
+			
+
+			fixtureInfo.chain = chainPoints;
+			fixtureInfo.connectFirstAndLastChainVertex = true;
+			
+			physics.addBody( node, physicType, fixtureInfo )
+		
 		end
 
 	elseif(shapeType == 5)then --TRACED
@@ -192,6 +299,9 @@ function initPhysicsProtocolWithDictionary(dict, node, scene)
 					local pointStr = curShapeInfo[j];
 					local pt = LHUtils.pointFromString(pointStr);
 					
+					pt.x = pt.x * scaleX;
+					pt.y = pt.y * scaleY;
+				
 					shapePoints[#shapePoints+1] = pt.x;
 					shapePoints[#shapePoints+1] = pt.y;
 					
@@ -217,43 +327,3 @@ function initPhysicsProtocolWithDictionary(dict, node, scene)
 	
 	
 end
-
-
---     LHDictionary* fixInfo = dict->dictForKey("genericFixture");
---     LHArray* fixturesInfo = nullptr;
-    
---     else if(shapeType == 2)//POLYGON
---     {
---         if(LHShape::isLHShape(node))
---         {
---             LHShape* shape = (LHShape*)node;
-            
---             std::vector<Point> triangles = shape->trianglePoints();
-            
---             for(int i = 0;  i < triangles.size(); i=i+3)
---             {
---                 Point ptA = triangles[i];
---                 Point ptB = triangles[i+1];
---                 Point ptC = triangles[i+2];
-                
---                 b2Vec2 *verts = new b2Vec2[3];
-                
---                 verts[2] = scene->metersFromPoint(ptA);
---                 verts[1] = scene->metersFromPoint(ptB);
---                 verts[0] = scene->metersFromPoint(ptC);
-                
---                 b2PolygonShape shapeDef;
-                
---                 shapeDef.Set(verts, 3);
-                
---                 b2FixtureDef fixture;
-                
---                 setupFixtureWithInfo(&fixture, fixInfo);
-                
---                 fixture.shape = &shapeDef;
---                 _body->CreateFixture(&fixture);
---                 delete[] verts;
-                
---             }
---         }
---     }
