@@ -1,4 +1,8 @@
-
+--------------------------------------------------------------------------------
+--
+-- LHGameWorldNode.lua
+--
+--------------------------------------------------------------------------------
 local LHGameWorldNode = {}
 function LHGameWorldNode:nodeWithDictionary(dict, prnt)
 

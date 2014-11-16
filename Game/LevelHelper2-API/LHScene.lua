@@ -3,26 +3,26 @@
 -- LHScene.lua
 --
 --------------------------------------------------------------------------------
-
+--------------------------------------------------------------------------------
 local LHUtils = require("LevelHelper2-API.Utilities.LHUtils");
 local LHNodeProtocol = require("LevelHelper2-API.Protocols.LHNodeProtocol")
 
 --------------------------------------------------------------------------------
 --!@docBegin
 --!Get the back ui node from the scene.
-function getBackUINode(_sceneObj)
+local function getBackUINode(_sceneObj)
 --!@docEnd
 end
 --------------------------------------------------------------------------------
 --!@docBegin
 --!Get the game world node from the scene.
-function getGameWorldNode(_sceneObj)
+local function getGameWorldNode(_sceneObj)
 --!@docEnd
 end
 --------------------------------------------------------------------------------
 --!@docBegin
 --!Get the front ui node from the scene.
-function getUINode(_sceneObj)
+local function getUINode(_sceneObj)
 --!@docEnd
     if(_sceneObj._uiNode == nil)then
         for i = 1, _sceneObj.numChildren do
@@ -39,12 +39,14 @@ end
 --!@docBegin
 --!Get the physical shape fixture information with a specific unique identifier.
 --!@param uuid The shape fixture unique identifier
-function tracedFixturesWithUUID(_sceneObj, uuid)
+local function tracedFixturesWithUUID(_sceneObj, uuid)
 --!@docEnd
 	return _sceneObj._tracedFixtures[uuid];
 end
 
-function removeSelf(_sceneObj)
+local function removeSelf(_sceneObj)
+	
+	print("scene remove self");
 	
 	Runtime:removeEventListener( "enterFrame", _sceneObj )
 	_sceneObj:_superRemoveSelf();

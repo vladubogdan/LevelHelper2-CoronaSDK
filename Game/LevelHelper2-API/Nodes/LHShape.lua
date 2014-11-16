@@ -1,8 +1,12 @@
-
+--------------------------------------------------------------------------------
+--
+-- LHShape.lua
+--
+--------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 --!@docBegin
 --!Get the triangle points of the shape.
-function trianglePoints(_shapeObj)
+local function trianglePoints(_shapeObj)
 --!@docEnd
 	return _shapeObj._shapeTriangles;
 end
@@ -10,7 +14,7 @@ end
 --------------------------------------------------------------------------------
 --!@docBegin
 --!Get the outline points of the shape.
-function outlinePoints(_shapeObj)
+local function outlinePoints(_shapeObj)
 --!@docEnd
 	return _shapeObj._outlinePoints;
 end
@@ -32,10 +36,7 @@ function LHShape:nodeWithDictionary(dict, prnt)
     --add all LevelHelper 2 valid properties to the object
 	object.nodeType = "LHShape"
 	
-	
-	print("Creating LHShape object");
-	
-    --add LevelHelper methods
+	--add LevelHelper methods
     object.trianglePoints = trianglePoints;
     object.outlinePoints = outlinePoints;
     

@@ -3,16 +3,17 @@
 -- LHNodeProtocol.lua
 --
 -----------------------------------------------------------------------------------------
-
 module (..., package.seeall)
 
-local LHGameWorldNode = require('LevelHelper2-API.Nodes.LHGameWorldNode')
-local LHUINode = require('LevelHelper2-API.Nodes.LHUINode')
-local LHBackUINode = require('LevelHelper2-API.Nodes.LHBackUINode')
-local LHSprite = require('LevelHelper2-API.Nodes.LHSprite')
-local LHBezier = require('LevelHelper2-API.Nodes.LHBezier')
-local LHNode = require('LevelHelper2-API.Nodes.LHNode')
-local LHShape = require('LevelHelper2-API.Nodes.LHShape')
+local LHGameWorldNode = require('LevelHelper2-API.Nodes.LHGameWorldNode');
+local LHUINode = require('LevelHelper2-API.Nodes.LHUINode');
+local LHBackUINode = require('LevelHelper2-API.Nodes.LHBackUINode');
+local LHSprite = require('LevelHelper2-API.Nodes.LHSprite');
+local LHBezier = require('LevelHelper2-API.Nodes.LHBezier');
+local LHNode = require('LevelHelper2-API.Nodes.LHNode');
+local LHShape = require('LevelHelper2-API.Nodes.LHShape');
+local LHDistanceJoint = require('LevelHelper2-API.Nodes.LHDistanceJointNode');
+
 
 local LHUtils = require("LevelHelper2-API.Utilities.LHUtils");
 local LHUserProperties = require("LevelHelper2-API.Protocols.LHUserProperties");
@@ -37,7 +38,7 @@ end
 --!@docBegin
 --!Get the node with the unique name inside the current node.
 --!@param name The node unique name to look for inside the children of the current node.
-function getChildNodeWithUniqueName(selfNode, name)
+local function getChildNodeWithUniqueName(selfNode, name)
 --!@docEnd	
 	if selfNode.numChildren then
 		for i = 1, selfNode.numChildren do
@@ -51,7 +52,7 @@ function getChildNodeWithUniqueName(selfNode, name)
 					end
 				end
 
-				local childNode = node:nodeWithUniqueName(name);
+				local childNode = node:getChildNodeWithUniqueName(name);
 				if childNode ~= nil then
 					return childNode;
 				end
@@ -64,7 +65,7 @@ end
 --!@docBegin
 --!Get the node with the unique identifier inside the current node.
 --!@param _uuid_ The node unique identifier to look for inside the children of the current node.
-function getChildNodeWithUUID(selfNode, _uuid_)
+local function getChildNodeWithUUID(selfNode, _uuid_)
 --!@docEnd	
 	if selfNode.numChildren then
 		for i = 1, selfNode.numChildren do
@@ -87,11 +88,10 @@ function getChildNodeWithUUID(selfNode, _uuid_)
 	end
 	return nil;
 end
-
 --------------------------------------------------------------------------------
 --!@docBegin
 --!Get the node LHScene object
-function getScene(selfNode)
+local function getScene(selfNode)
 --!@docEnd	
 	if(selfNode.nodeType == "LHScene")then
 		return selfNode;
@@ -104,6 +104,13 @@ function getScene(selfNode)
 		end
 	end
 	return nil;
+end
+--------------------------------------------------------------------------------
+--!@docBegin
+--!Get the node parent object
+local function getParent(selfNode)
+--!@docEnd	
+	return selfNode.parent;
 end
 
 function simulateModernObjectHierarchy(parent, child)
@@ -118,7 +125,7 @@ end
 --!@docBegin
 --!Add a child node.
 --!@param child The node that will be added as child.
-function addChild(selfNode, child)
+local function addChild(selfNode, child)
 --!@docEnd	
 	if(selfNode.lhChildren)then
 		selfNode.lhChildren:insert(child);
@@ -129,7 +136,7 @@ end
 --------------------------------------------------------------------------------
 --!@docBegin
 --!Removes a child node
-function removeChild(selfNode, child)
+local function removeChild(selfNode, child)
 --!@docEnd	
 	if(selfNode.lhChildren)then
 		return selfNode.lhChildren:remove(child);
@@ -143,7 +150,7 @@ end
 --!Each node its either a display group directly or has a display group added at a 0,0 position of the node.
 --!Via enterFrame notification children get updated with correct transformation.
 --!Maybe in the future Corona SDK will support a modern gaming objects hierarchy.
-function getChildren(selfNode)
+local function getChildren(selfNode)
 --!@docEnd	
 	if(selfNode.lhChildren ~= nil)then
 		return selfNode.lhChildren;
@@ -155,7 +162,7 @@ end
 --!Set the node position
 --!@param valueX The new x position value
 --!@param valueY The new y position value
-function setPosition(selfNode, valueX, valueY)
+local function setPosition(selfNode, valueX, valueY)
 --!@docEnd	
 	selfNode.x = valueX;
 	selfNode.y = valueY;
@@ -168,7 +175,7 @@ end
 --!@docBegin
 --!Set the node rotation
 --!@param angle The new rotation value
-function setRotation(selfNode, angle)
+local function setRotation(selfNode, angle)
 --!@docEnd	
 	selfNode.rotation = angle;
 	if(selfNode.lhChildren)then
@@ -180,7 +187,7 @@ end
 --!Set the node x and y scales values
 --!@param xScale The new x scale value
 --!@param yScale The new y scale value
-function setScale(selfNode, xScale, yScale)
+local function setScale(selfNode, xScale, yScale)
 --!@docEnd	
 	selfNode.xScale = xScale;
 	selfNode.yScale = yScale;
@@ -195,7 +202,7 @@ end
 --!Set the node x and y anchor values
 --!@param x The new x anchor value
 --!@param y The new y anchor value
-function setAnchor(selfNode, x, y)
+local function setAnchor(selfNode, x, y)
 --!@docEnd	
 	selfNode.anchorX = x;
 	selfNode.anchorY = y;
@@ -206,9 +213,8 @@ function setAnchor(selfNode, x, y)
 	end
 end
 
-function enterFrame(selfNode, event)
+local function enterFrame(selfNode, event)
 
-	
 	if(selfNode._isNodeProtocol)then
 		
 		if(selfNode.lhChildren ~= nil)then
@@ -313,6 +319,8 @@ function initNodeProtocolWithDictionary(dict, node)
 	node.getChildNodeWithUniqueName = getChildNodeWithUniqueName;
 	node.getChildNodeWithUUID 		= getChildNodeWithUUID;
 	node.getScene 					= getScene;
+	node.getParent					= getParent;
+	
 	--Load node protocol properties
 	----------------------------------------------------------------------------
 	node.lhUniqueName = dict["name"];
@@ -422,6 +430,13 @@ function createLHNodeWithDictionaryWithParent(childInfo, prnt)
     	local pNode = LHShape:nodeWithDictionary(childInfo, prnt);
     	return pNode;
     end
+    
+    if nodeType == "LHDistanceJoint" then    
+    	local pNode = LHDistanceJoint:nodeWithDictionary(childInfo, prnt);
+    	return pNode;
+    end
+    
+    
     
     print("UNKNOWN NODE TYPE " .. nodeType);
     

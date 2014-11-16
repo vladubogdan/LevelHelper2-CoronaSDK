@@ -1,7 +1,12 @@
 --------------------------------------------------------------------------------
+--
+-- LHBezier.lua
+--
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 --!@docBegin
 --!Get the line points of the bezier shape.
-function linePoints(_bezierObj)
+local function linePoints(_bezierObj)
 --!@docEnd
 	return _bezierObj._linePoints;
 end

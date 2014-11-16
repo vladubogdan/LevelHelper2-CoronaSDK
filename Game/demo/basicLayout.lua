@@ -50,6 +50,16 @@ function scene:show( event )
 		-- INSERT code here to make the scene come alive
 		-- e.g. start timers, begin animation, play audio, etc.
 		physics.start()
+		
+		-- local dJoint = lhScene:getChildNodeWithUniqueName("UntitledDistanceJoint");
+		-- print("found d joint " .. tostring(dJoint) .. " type " .. dJoint.nodeType);
+		
+		-- print("joint " .. tostring(dJoint) .. " scene " .. tostring(lhScene));
+		
+		
+		-- dJoint:removeSelf();
+		-- dJoint = nil;
+		-- print("after joint remove self");
 	end
 end
 
@@ -62,6 +72,8 @@ function scene:hide( event )
 	if event.phase == "will" then
 		-- Called when the scene is on screen and is about to move off screen
 		self.demoButtons = nil;
+		
+		print("removing scene");
 		
 		lhScene:removeSelf();
 		lhScene = nil;
