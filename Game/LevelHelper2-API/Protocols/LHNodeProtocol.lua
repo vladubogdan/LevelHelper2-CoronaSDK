@@ -13,6 +13,7 @@ local LHBezier = require('LevelHelper2-API.Nodes.LHBezier');
 local LHNode = require('LevelHelper2-API.Nodes.LHNode');
 local LHShape = require('LevelHelper2-API.Nodes.LHShape');
 local LHDistanceJoint = require('LevelHelper2-API.Nodes.LHDistanceJointNode');
+local LHRevoluteJoint = require('LevelHelper2-API.Nodes.LHRevoluteJointNode');
 
 
 local LHUtils = require("LevelHelper2-API.Utilities.LHUtils");
@@ -436,7 +437,10 @@ function createLHNodeWithDictionaryWithParent(childInfo, prnt)
     	return pNode;
     end
     
-    
+    if nodeType == "LHRevoluteJoint" then    
+    	local pNode = LHRevoluteJoint:nodeWithDictionary(childInfo, prnt);
+    	return pNode;
+    end
     
     print("UNKNOWN NODE TYPE " .. nodeType);
     
