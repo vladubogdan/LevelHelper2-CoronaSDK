@@ -140,10 +140,6 @@ local function lateLoading(selfNode)
 		
 		coronaJoint:setRotationLimits(selfNode:getLowerAngle(), selfNode:getUpperAngle());
 			
-		        
-                -- self.coronaJoint.motorSpeed = (-1)*jointInfo:floatForKey("MotorSpeed") --for CORONA we inverse to be the same as 
-                -- self.coronaJoint:setRotationLimits( jointInfo:floatForKey("LowerAngle"), jointInfo:floatForKey("UpperAngle") )
-        
         selfNode.lhCoronaJoint = coronaJoint;
     end
 end
