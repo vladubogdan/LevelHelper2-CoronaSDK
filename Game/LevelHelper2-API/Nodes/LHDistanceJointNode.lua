@@ -8,14 +8,40 @@
 --!Get the distance joint damping ratio. A number value.
 local function getDamping(selfNode)
 --!@docEnd	
+	if(selfNode.lhCoronaJoint ~= nil)then
+ 		return selfNode.lhCoronaJoint.dampingRatio;
+ 	end
 	return selfNode.lhJointDampingRatio;
+end
+--------------------------------------------------------------------------------
+--!@docBegin
+--!Set the distance joint damping ratio.
+--!@param value A number value.
+local function setDamping(selfNode, value)
+--!@docEnd	
+	if(selfNode.lhCoronaJoint ~= nil)then
+ 		selfNode.lhCoronaJoint.dampingRatio = value;
+ 	end
 end
 --------------------------------------------------------------------------------
 --!@docBegin
 --!Get the distance joint frequency. A number value.
 local function getFrequency(selfNode)
 --!@docEnd	
+	if(selfNode.lhCoronaJoint ~= nil)then
+		return selfNode.lhCoronaJoint.frequency;
+	end
 	return selfNode.lhJointFrequency;
+end
+--------------------------------------------------------------------------------
+--!@docBegin
+--!Set the distance joint frequency.
+--!@param value A number value.
+local function setFrequency(selfNode, value)
+--!@docEnd	
+	if(selfNode.lhCoronaJoint ~= nil)then
+ 		selfNode.lhCoronaJoint.frequency = value;
+ 	end
 end
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
@@ -66,8 +92,6 @@ end
 --------------------------------------------------------------------------------
 local function removeSelf(selfNode)
 
-	print("remove self joint");
-
 	if(selfNode.lhCoronaJoint ~= nil)then
 		selfNode.lhCoronaJoint:removeSelf();
 		selfNode.lhCoronaJoint = nil;
@@ -104,10 +128,13 @@ function LHDistanceJointNode:nodeWithDictionary(dict, prnt)
     object.lhJointFrequency    = dict["frequency"];
 	
 	--add LevelHelper methods
-    object.getDamping 		= getDamping;
-    object.getFrequency 	= getFrequency;
-    object.lateLoading 		= lateLoading;
+	object.lateLoading 		= lateLoading;
     
+	--add LevelHelper joint info methods
+    object.getDamping 	= getDamping;
+    object.setDamping 	= setDamping;
+    object.getFrequency = getFrequency;
+    object.setFrequency	= setFrequency;
     
     --method overloading
     object.nodeProtocolEnterFrame 	= object.enterFrame;
