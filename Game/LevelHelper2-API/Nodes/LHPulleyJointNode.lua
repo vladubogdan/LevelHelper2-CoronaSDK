@@ -59,21 +59,7 @@ local function lateLoading(selfNode)
                                                 anchorB.x,
                                                 anchorB.y,
                                                 ratio);
-                                                
-		-- local groundAnchorA = jointInfo:pointForKey("GroundAnchorRelativeA");
-  --              local groundAnchorB = jointInfo:pointForKey("GroundAnchorRelativeB");
-        
-  --              self.coronaJoint = physics.newJoint( "pulley", objA, objB, 
-  --                                                                                      objA.x + groundAnchorA.x, objA.y + groundAnchorA.y, 
-  --                                                                                      objB.x + groundAnchorB.x, objB.y + groundAnchorB.y, 
-  --                                                                                      objA.x + anchorA.x,objA.y + anchorA.y, 
-  --                                                                                      objB.x + anchorB.x,objB.y + anchorB.y, 
-  --                                                                              jointInfo["Ratio"] )
-  --              self.lhJointType = "pulley";
-                
-		-- coronaJoint.frequency = selfNode:getFrequency();
-        -- coronaJoint.dampingRatio = selfNode:getDampingRatio();
-                                                
+
         selfNode.lhCoronaJoint = coronaJoint;
     end
 end
@@ -128,22 +114,6 @@ function LHPulleyJointNode:nodeWithDictionary(dict, prnt)
     object.lhJointGroundAnchorB = LHUtils.pointFromString(dict["groundAnchorB"]);
     object.lhJointRatio = dict["ratio"];
     
-	-- LHScene* scene      = (LHScene*)[prnt scene];
- --       CGSize designSize   = [scene designResolutionSize];
- --       CGPoint offset      = [scene designOffset];
-        -- {
-        --     _groundAnchorA = CGPointMake(_groundAnchorA.x, designSize.height - _groundAnchorA.y);
-        --     _groundAnchorA.x += offset.x;
-        --     _groundAnchorA.y += offset.y;
-        -- }
-        
-        -- _groundAnchorB = [dict pointForKey:@"groundAnchorB"];
-        -- {
-        --     _groundAnchorB = CGPointMake(_groundAnchorB.x, designSize.height - _groundAnchorB.y);
-        --     _groundAnchorB.x += offset.x;
-        --     _groundAnchorB.y += offset.y;
-        -- }
-        
     --add LevelHelper methods
     object.lateLoading 		= lateLoading;
     
