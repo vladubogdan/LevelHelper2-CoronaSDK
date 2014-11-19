@@ -24,6 +24,16 @@ local function setMaxLength(selfNode, value)
  	end
 end
 --------------------------------------------------------------------------------
+--!@docBegin
+--!Get the rope joint limit state. A string value. "inactive", "lower", "upper", or "equal".
+local function getLimitState(selfNode)
+--!@docEnd	
+	if(selfNode.lhCoronaJoint ~= nil)then
+ 		return selfNode.lhCoronaJoint.limitState;
+ 	end
+	return nil;
+end
+--------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 local function lateLoading(selfNode)
 	
@@ -149,6 +159,7 @@ function LHRopeJointNode:nodeWithDictionary(dict, prnt)
 	--add LevelHelper joint info methods
     object.getMaxLength 	= getMaxLength;
     object.setMaxLength 	= setMaxLength;
+    object.getLimitState 	= getLimitState;
     
     --method overloading
     object.nodeProtocolEnterFrame 	= object.enterFrame;

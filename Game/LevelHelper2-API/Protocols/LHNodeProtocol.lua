@@ -130,6 +130,20 @@ function simulateModernObjectHierarchy(parent, child)
 end
 --------------------------------------------------------------------------------
 --!@docBegin
+--!Get the node unique identifier. A string value.
+local function getUUID(selfNode)
+--!@docEnd	
+	return selfNode.lhUuid;
+end
+--------------------------------------------------------------------------------
+--!@docBegin
+--!Get the node unique name. A string value.
+local function getUniqueName(selfNode)
+--!@docEnd	
+	return selfNode.lhUniqueName;
+end
+--------------------------------------------------------------------------------
+--!@docBegin
 --!Add a child node.
 --!@param child The node that will be added as child.
 local function addChild(selfNode, child)
@@ -171,6 +185,7 @@ end
 --!@param valueY The new y position value
 local function setPosition(selfNode, valueX, valueY)
 --!@docEnd	
+
 	selfNode.x = valueX;
 	selfNode.y = valueY;
 	if(selfNode.lhChildren)then
@@ -327,6 +342,8 @@ function initNodeProtocolWithDictionary(dict, node)
 	node.getChildNodeWithUUID 		= getChildNodeWithUUID;
 	node.getScene 					= getScene;
 	node.getParent					= getParent;
+	node.getUUID					= getUUID;
+	node.getUniqueName				= getUniqueName;
 	
 	--Load node protocol properties
 	----------------------------------------------------------------------------

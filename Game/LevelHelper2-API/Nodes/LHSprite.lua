@@ -3,6 +3,15 @@
 -- LHSprite.lua
 --
 --------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+local function visit(selfNode, event)
+
+
+	selfNode:animationProtocolEnterFrame(event);
+	selfNode:nodeProtocolEnterFrame(event);
+end
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 local LHSprite = {}
 function LHSprite:nodeWithDictionary(dict, prnt)
 	
@@ -81,8 +90,9 @@ function LHSprite:nodeWithDictionary(dict, prnt)
 	--add all LevelHelper 2 valid properties to the object
 	object.nodeType = "LHSprite"
 	
-	local LHNodeProtocol = require('LevelHelper2-API.Protocols.LHNodeProtocol')
-	local LHPhysicsProtocol = require('LevelHelper2-API.Protocols.LHPhysicsProtocol')
+	local LHNodeProtocol = require('LevelHelper2-API.Protocols.LHNodeProtocol');
+	local LHAnimationsProtocol = require('LevelHelper2-API.Protocols.LHAnimationsProtocol');
+	local LHPhysicsProtocol = require('LevelHelper2-API.Protocols.LHPhysicsProtocol');
 	
 	-- LHUtils.LHPrintObjectInfo(prnt);
 	
@@ -90,9 +100,10 @@ function LHSprite:nodeWithDictionary(dict, prnt)
 	LHNodeProtocol.simulateModernObjectHierarchy(prnt, object);
 	LHNodeProtocol.initNodeProtocolWithDictionary(dict, object);
 	
-	
 	LHPhysicsProtocol.initPhysicsProtocolWithDictionary(dict["nodePhysics"], object, prnt:getScene());
 	LHNodeProtocol.loadChildrenForNodeFromDictionary(object, dict);
+	
+	LHAnimationsProtocol.initAnimationsProtocolWithDictionary(dict, object, prnt:getScene());
 	
 	--Specific sprites properties
 	----------------------------------------------------------------------------
@@ -102,6 +113,11 @@ function LHSprite:nodeWithDictionary(dict, prnt)
 		object:setFillColor(clr.red, clr.green, clr.blue);
 	end
 
+
+	object.nodeProtocolEnterFrame 	= object.enterFrame;
+	object.enterFrame = visit;
+	
+	
 	return object
 end
 --------------------------------------------------------------------------------
