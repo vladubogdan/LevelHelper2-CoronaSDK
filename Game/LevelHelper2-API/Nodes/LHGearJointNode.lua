@@ -87,8 +87,8 @@ local function lateLoading(selfNode)
 		local coronaJoint = physics.newJoint(	"gear", 
                                              	nodeA,
                                               	nodeB,
-												jointA,
-                                                jointB,
+												jointA.lhCoronaJoint,
+                                                jointB.lhCoronaJoint,
                                                 ratio);
                                                 
 		selfNode.lhCoronaJoint = coronaJoint;

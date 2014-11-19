@@ -5,6 +5,9 @@ local availableDemoScenes = {}
 
 availableDemoScenes[#availableDemoScenes+1] = {name= "introductionScene", scene= "demo.introductionScene"}
 availableDemoScenes[#availableDemoScenes+1] = {name= "basicLayout", scene= "demo.basicLayout"}
+availableDemoScenes[#availableDemoScenes+1] = {name= "gearJointsExample", scene= "demo.gearJointsExample"}
+
+
 
 local DemoButtons = {}
 function DemoButtons:createButtonsWithComposerScene(object, _curSceneName_)

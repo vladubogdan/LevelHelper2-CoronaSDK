@@ -18,7 +18,7 @@ local LHWeldJoint = require('LevelHelper2-API.Nodes.LHWeldJointNode');
 local LHPrismaticJoint = require('LevelHelper2-API.Nodes.LHPrismaticJointNode');
 local LHPulleyJoint = require('LevelHelper2-API.Nodes.LHPulleyJointNode');
 local LHWheelJoint	= require('LevelHelper2-API.Nodes.LHWheelJointNode');
-local LHGearJointNode	= require('LevelHelper2-API.Nodes.LHGearJointNode');
+local LHGearJoint	= require('LevelHelper2-API.Nodes.LHGearJointNode');
 
 
 local LHUtils = require("LevelHelper2-API.Utilities.LHUtils");
@@ -467,8 +467,8 @@ function createLHNodeWithDictionaryWithParent(childInfo, prnt)
     	return pNode;
     end
     
-    if nodeType == "LHGearJointNode" then
-    	local pNode = LHGearJointNode:nodeWithDictionary(childInfo, prnt);
+    if nodeType == "LHGearJoint" then
+    	local pNode = LHGearJoint:nodeWithDictionary(childInfo, prnt);
     	return pNode;
     end
     

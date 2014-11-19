@@ -18,7 +18,7 @@
 			<key>SuffixName</key>
 			<string></string>
 			<key>color</key>
-			<string>{{0.039423678070306778, 0}, {0.040748909115791321, 1}}</string>
+			<string>{{0.03942219540476799, 0}, {0.040748830884695053, 1}}</string>
 		</dict>
 		<dict>
 			<key>DeviceName</key>
@@ -32,7 +32,7 @@
 			<key>SuffixName</key>
 			<string>@2x</string>
 			<key>color</key>
-			<string>{{0.039423678070306778, 0}, {0.040748909115791321, 1}}</string>
+			<string>{{0.03942219540476799, 0}, {0.040748830884695053, 1}}</string>
 		</dict>
 		<dict>
 			<key>DeviceName</key>
@@ -60,7 +60,7 @@
 			<key>SuffixName</key>
 			<string>@2x</string>
 			<key>color</key>
-			<string>{{0.039311237633228302, 0}, {0.043196976184844971, 1}}</string>
+			<string>{{0.039356343448162079, 0}, {0.042141500860452652, 1}}</string>
 		</dict>
 		<dict>
 			<key>DeviceName</key>
@@ -74,7 +74,7 @@
 			<key>SuffixName</key>
 			<string>@4x</string>
 			<key>color</key>
-			<string>{{0.039311237633228302, 0}, {0.043196976184844971, 1}}</string>
+			<string>{{0.039356343448162079, 0}, {0.042141500860452652, 1}}</string>
 		</dict>
 		<dict>
 			<key>DeviceName</key>
@@ -88,7 +88,7 @@
 			<key>SuffixName</key>
 			<string>@2x</string>
 			<key>color</key>
-			<string>{{0.039311237633228302, 0}, {0.043196976184844971, 1}}</string>
+			<string>{{0.039356343448162079, 0}, {0.042141500860452652, 1}}</string>
 		</dict>
 		<dict>
 			<key>DeviceName</key>
@@ -102,7 +102,7 @@
 			<key>SuffixName</key>
 			<string>@2x</string>
 			<key>color</key>
-			<string>{{0.039311237633228302, 0}, {0.043196976184844971, 1}}</string>
+			<string>{{0.039356343448162079, 0}, {0.042141500860452652, 1}}</string>
 		</dict>
 		<dict>
 			<key>DeviceName</key>
@@ -116,7 +116,7 @@
 			<key>SuffixName</key>
 			<string>@2x</string>
 			<key>color</key>
-			<string>{{0.039311237633228302, 0}, {0.043196976184844971, 1}}</string>
+			<string>{{0.039356343448162079, 0}, {0.042141500860452652, 1}}</string>
 		</dict>
 		<dict>
 			<key>DeviceName</key>
@@ -130,7 +130,7 @@
 			<key>SuffixName</key>
 			<string>@2x</string>
 			<key>color</key>
-			<string>{{0.039311237633228302, 0}, {0.043196976184844971, 1}}</string>
+			<string>{{0.039356343448162079, 0}, {0.042141500860452652, 1}}</string>
 		</dict>
 		<dict>
 			<key>DeviceName</key>
@@ -144,7 +144,7 @@
 			<key>SuffixName</key>
 			<string>@2x</string>
 			<key>color</key>
-			<string>{{0.039311237633228302, 0}, {0.043196976184844971, 1}}</string>
+			<string>{{0.039356343448162079, 0}, {0.042141500860452652, 1}}</string>
 		</dict>
 		<dict>
 			<key>DeviceName</key>
@@ -158,7 +158,7 @@
 			<key>SuffixName</key>
 			<string>@2x</string>
 			<key>color</key>
-			<string>{{0.039311237633228302, 0}, {0.043196976184844971, 1}}</string>
+			<string>{{0.039356343448162079, 0}, {0.042141500860452652, 1}}</string>
 		</dict>
 		<dict>
 			<key>DeviceName</key>
@@ -172,7 +172,7 @@
 			<key>SuffixName</key>
 			<string>@4x</string>
 			<key>color</key>
-			<string>{{0.039311237633228302, 0}, {0.043196976184844971, 1}}</string>
+			<string>{{0.039356343448162079, 0}, {0.042141500860452652, 1}}</string>
 		</dict>
 		<dict>
 			<key>DeviceName</key>
@@ -186,7 +186,7 @@
 			<key>SuffixName</key>
 			<string>@2x</string>
 			<key>color</key>
-			<string>{{0.039311237633228302, 0}, {0.043196976184844971, 1}}</string>
+			<string>{{0.039356343448162079, 0}, {0.042141500860452652, 1}}</string>
 		</dict>
 		<dict>
 			<key>DeviceName</key>
@@ -200,7 +200,7 @@
 			<key>SuffixName</key>
 			<string>@2x</string>
 			<key>color</key>
-			<string>{{0.039311237633228302, 0}, {0.043196976184844971, 1}}</string>
+			<string>{{0.039356343448162079, 0}, {0.042141500860452652, 1}}</string>
 		</dict>
 		<dict>
 			<key>DeviceName</key>
@@ -214,7 +214,7 @@
 			<key>SuffixName</key>
 			<string>@2x</string>
 			<key>color</key>
-			<string>{{0.039311237633228302, 0}, {0.043196976184844971, 1}}</string>
+			<string>{{0.039356343448162079, 0}, {0.042141500860452652, 1}}</string>
 		</dict>
 		<dict>
 			<key>DeviceName</key>
@@ -228,7 +228,7 @@
 			<key>SuffixName</key>
 			<string>@4x</string>
 			<key>color</key>
-			<string>{{0.039311237633228302, 0}, {0.043196976184844971, 1}}</string>
+			<string>{{0.039356343448162079, 0}, {0.042141500860452652, 1}}</string>
 		</dict>
 		<dict>
 			<key>DeviceName</key>
@@ -242,7 +242,7 @@
 			<key>SuffixName</key>
 			<string>@2x</string>
 			<key>color</key>
-			<string>{{0.039311237633228302, 0}, {0.043196976184844971, 1}}</string>
+			<string>{{0.039356343448162079, 0}, {0.042141500860452652, 1}}</string>
 		</dict>
 		<dict>
 			<key>DeviceName</key>
@@ -256,7 +256,7 @@
 			<key>SuffixName</key>
 			<string>@4x</string>
 			<key>color</key>
-			<string>{{0.039311237633228302, 0}, {0.043196976184844971, 1}}</string>
+			<string>{{0.039356343448162079, 0}, {0.042141500860452652, 1}}</string>
 		</dict>
 	</array>
 	<key>engine</key>
@@ -276,6 +276,11 @@
 		<dict>
 			<key>ScenesOptions</key>
 			<dict>
+				<key>gearJointLevel.lhs</key>
+				<dict>
+					<key>publish</key>
+					<true/>
+				</dict>
 				<key>introduction.lhs</key>
 				<dict>
 					<key>publish</key>

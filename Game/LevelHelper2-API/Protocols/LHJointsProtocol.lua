@@ -22,6 +22,13 @@ local function getConnectedNodeB(selfNode)
 end
 --------------------------------------------------------------------------------
 --!@docBegin
+--!Get the actual corona joint object from the LevelHelper joint node.
+local function getCoronaJoint(selfNode)
+--!@docEnd	
+	return selfNode.lhCoronaJoint;
+end
+--------------------------------------------------------------------------------
+--!@docBegin
 --!Get the first joint local anchor.
 local function getLocalAnchorA(selfNode)
 --!@docEnd	
@@ -155,5 +162,6 @@ function initJointsProtocolWithDictionary(dict, node, scene)
 	node.getCollideConnected= getCollideConnected;
 	node.getContentAnchorA  = getContentAnchorA;
 	node.getContentAnchorB  = getContentAnchorB;
+	node.getCoronaJoint 	= getCoronaJoint;
 	
 end
