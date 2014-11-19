@@ -150,9 +150,7 @@ function initJointsProtocolWithDictionary(dict, node, scene)
     	node.lhJointCollideConnected = value;
     end
 
-
-
-	--LevelHelper 2 node physics protocol functions
+	--LevelHelper 2 node joints protocol functions
 	----------------------------------------------------------------------------
 	node.getConnectedNodeA 	= getConnectedNodeA;
 	node.getConnectedNodeB 	= getConnectedNodeB;
