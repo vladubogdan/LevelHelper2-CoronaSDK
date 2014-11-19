@@ -242,23 +242,27 @@ local function updateNodeWithAnimationProperty(selfObject, prop, time)
         --                       endFrame:endFrm
         --                           node:animNode];
     -- }
-	selfObject:animateNodePositionToTime(time, beginFrm, endFrm, animNode);
-    
+    if(prop.isAnimationPositionProperty == true)then
+		selfObject:animateNodePositionToTime(time, beginFrm, endFrm, animNode);
+	end
+	
+	if(prop.isAnimationRotationProperty == true)then
+		selfObject:animateNodeRotationToTime(time, beginFrm, endFrm, animNode);
+	end
+	
+	if(prop.isAnimationScaleProperty == true)then
+		selfObject:animateNodeScaleToTime(time, beginFrm, endFrm, animNode);
+	end
+	
+	if(prop.isAnimationOpacityProperty == true)then
+		selfObject:animateNodeOpacityToTime(time, beginFrm, endFrm, animNode);
+	end
+	
 end
-
+--------------------------------------------------------------------------------
 local function animateNodePositionToTime(selfObject, time, beginFrame, endFrame, animNode)
 
 	--here we handle positions
-	
-	-- print("BEGIN FRM NO ");
-	-- print(beginFrame:frameNumber());
-		
-	-- print("end FRM NO ");
-	-- print(endFrame:frameNumber());
-	
-	
-	
-	
 	if(beginFrame ~= nil and endFrame ~= nil)then
 	
 		local beginTime = beginFrame:frameNumber()*(1.0/selfObject._fps);
@@ -292,7 +296,89 @@ local function animateNodePositionToTime(selfObject, time, beginFrame, endFrame,
 		
 		animNode:setPosition(newPos.x, newPos.y);
 	end
+end
+--------------------------------------------------------------------------------
+local function animateNodeRotationToTime(selfObject, time, beginFrame, endFrame, animNode)
+
+	if(beginFrame ~= nil and endFrame ~= nil)then
 	
+		local beginTime = beginFrame:frameNumber()*(1.0/selfObject._fps);
+		local endTime = endFrame:frameNumber()*(1.0/selfObject._fps);
+	
+		local framesTimeDistance = endTime - beginTime;
+		local timeUnit = (time-beginTime)/framesTimeDistance; --a value between 0 and 1
+		
+		local beginRotation = beginFrame:rotationForUUID(animNode:getUUID());
+		local endRotation   = endFrame:rotationForUUID(animNode:getUUID());
+		
+		local shortest_angle = math.fmod( (math.fmod( (endRotation - beginRotation), 360.0) + 540.0), 360.0) - 180.0;
+
+		--lets calculate the new value based on the start - end and unit time
+		local newRotation = beginRotation + shortest_angle*timeUnit;
+		
+		animNode:setRotation(newRotation);
+	end
+	
+	if(beginFrame ~= nil and endFrame == nil)then
+	
+		--we only have begin frame so lets set value based on this frame
+		local beginRotation = beginFrame:rotationForUUID(animNode:getUUID());
+		animNode:setRotation(beginRotation);
+	end
+end
+--------------------------------------------------------------------------------
+local function animateNodeScaleToTime(selfObject, time, beginFrame, endFrame, animNode)
+
+    --here we handle scale
+    if(beginFrame ~= nil and endFrame ~= nil)then
+	
+		local beginTime = beginFrame:frameNumber()*(1.0/selfObject._fps);
+		local endTime = endFrame:frameNumber()*(1.0/selfObject._fps);
+	
+		local framesTimeDistance = endTime - beginTime;
+		local timeUnit = (time-beginTime)/framesTimeDistance; --a value between 0 and 1
+	    
+		local beginScale = beginFrame:scaleForUUID(animNode:getUUID());
+		local endScale = endFrame:scaleForUUID(animNode:getUUID());
+
+		--lets calculate the new node scale based on the start - end and unit time
+		local newX = beginScale.width + (endScale.width - beginScale.width)*timeUnit;
+		local newY = beginScale.height + (endScale.height - beginScale.height)*timeUnit;
+		
+		animNode:setScale(newX, newY);
+	end
+	if(beginFrame ~= nil and endFrame == nil)then
+
+		local beginScale = beginFrame:scaleForUUID(animNode:getUUID());
+		animNode:setScale(beginScale.width, beginScale.height);
+	end
+end
+--------------------------------------------------------------------------------
+local function animateNodeOpacityToTime(selfObject, time, beginFrame, endFrame, animNode)
+
+	--here we handle sprites opacity
+    if(beginFrame ~= nil and endFrame ~= nil)then
+	
+		local beginTime = beginFrame:frameNumber()*(1.0/selfObject._fps);
+		local endTime = endFrame:frameNumber()*(1.0/selfObject._fps);
+	
+		local framesTimeDistance = endTime - beginTime;
+		local timeUnit = (time-beginTime)/framesTimeDistance; --a value between 0 and 1
+	
+		local beginValue = beginFrame:opacityForUUID(animNode:getUUID());
+		local endValue = endFrame:opacityForUUID(animNode:getUUID());
+		
+		--lets calculate the new value based on the start - end and unit time
+		local newValue = beginValue + (endValue - beginValue)*timeUnit;
+
+		animNode.alpha = newValue/255.0;
+	end
+	if(beginFrame ~= nil and endFrame == nil)then
+
+		--we only have begin frame so lets set value based on this frame
+		local beginValue = beginFrame:opacityForUUID(animNode:getUUID());
+		animNode.alpha = beginValue/255.0;
+	end
 end
 --------------------------------------------------------------------------------
 local function getScene(selfObject)
@@ -388,6 +474,10 @@ function LHAnimation:animationWithDictionary(dict, node)
 	object.updateNodeWithAnimationProperty = updateNodeWithAnimationProperty;
 	
 	object.animateNodePositionToTime = animateNodePositionToTime;
+	object.animateNodeRotationToTime = animateNodeRotationToTime;
+	object.animateNodeScaleToTime = animateNodeScaleToTime;
+	object.animateNodeOpacityToTime = animateNodeOpacityToTime;
+	
 	object.convertFramePosition = convertFramePosition;
 	object.getScene = getScene;
 	

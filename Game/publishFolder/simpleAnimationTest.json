@@ -40,29 +40,27 @@
           "tags" : [
             "DEFAULT"
           ],
-          "nodePhysics" : {
-            "linearVelocity" : "{0.000000, 0.000000}",
-            "fixedRotation" : false,
-            "shape" : 5,
-            "allowSleep" : true,
-            "fixtureUUID" : "59976573-7C78-4E9F-A709-EBC143A1012B",
-            "linearDamping" : 0,
-            "type" : 0,
-            "genericFixture" : {
-              "category" : 1,
-              "sensor" : false,
-              "density" : 0.1,
-              "mask" : 65535,
-              "friction" : 0.2,
-              "restitution" : 0,
-              "name" : "GenericFixture",
-              "fixtureID" : 0
-            },
-            "bullet" : false,
-            "angularDamping" : 0,
-            "gravityScale" : 1,
-            "angularVelocity" : 0
-          },
+          "spriteUUID" : "52159759-5A00-4D19-9753-018BA3A1C688",
+          "spriteName" : "object_banana",
+          "generalPosition" : "{0.238415, 0.360262}",
+          "uuid" : "1D1738CD-7A93-4964-B2C6-FCAC72909547",
+          "name" : "object_banana",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{41.000000, 28.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "publishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "objects.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
           "spriteUUID" : "D78AF2EE-072C-4690-9A29-B403F8564573",
           "spriteName" : "object_statue",
           "generalPosition" : "{0.197958, 0.299396}",
@@ -72,7 +70,7 @@
           "size" : "{46.000000, 69.000000}",
           "animations" : [
             {
-              "active" : true,
+              "active" : false,
               "repetitions" : 0,
               "totalFrames" : 30,
               "fps" : 4,
@@ -102,32 +100,137 @@
                 }
               },
               "name" : "moveAnim"
+            },
+            {
+              "active" : false,
+              "repetitions" : 0,
+              "totalFrames" : 30,
+              "fps" : 10,
+              "properties" : {
+                "Rotation" : {
+                  "Frames" : [
+                    {
+                      "rotations" : {
+
+                      },
+                      "frameIndex" : 0
+                    },
+                    {
+                      "rotations" : {
+                        "4E53DFA9-9D25-4E90-980D-C41353460D51" : 110.8344
+                      },
+                      "frameIndex" : 9
+                    },
+                    {
+                      "rotations" : {
+                        "4E53DFA9-9D25-4E90-980D-C41353460D51" : 255.9371
+                      },
+                      "frameIndex" : 19
+                    },
+                    {
+                      "rotations" : {
+
+                      },
+                      "frameIndex" : 29
+                    }
+                  ],
+                  "type" : "LHRotationProperty"
+                }
+              },
+              "name" : "rotationAnim"
+            },
+            {
+              "active" : false,
+              "repetitions" : 0,
+              "totalFrames" : 30,
+              "fps" : 24,
+              "properties" : {
+                "Scale" : {
+                  "Frames" : [
+                    {
+                      "scales" : {
+                        "4E53DFA9-9D25-4E90-980D-C41353460D51" : "{1.000000, 0.963127}"
+                      },
+                      "frameIndex" : 0
+                    },
+                    {
+                      "scales" : {
+                        "4E53DFA9-9D25-4E90-980D-C41353460D51" : "{1.369608, 1.285447}"
+                      },
+                      "frameIndex" : 7
+                    },
+                    {
+                      "scales" : {
+                        "4E53DFA9-9D25-4E90-980D-C41353460D51" : "{0.653702, 0.476367}"
+                      },
+                      "frameIndex" : 14
+                    },
+                    {
+                      "scales" : {
+                        "4E53DFA9-9D25-4E90-980D-C41353460D51" : "{1.369608, 1.285447}"
+                      },
+                      "frameIndex" : 21
+                    },
+                    {
+                      "scales" : {
+                        "4E53DFA9-9D25-4E90-980D-C41353460D51" : "{1.000000, 0.963127}"
+                      },
+                      "frameIndex" : 29
+                    }
+                  ],
+                  "type" : "LHScaleProperty"
+                }
+              },
+              "name" : "scaleAnim"
+            },
+            {
+              "active" : true,
+              "repetitions" : 0,
+              "totalFrames" : 30,
+              "fps" : 4,
+              "properties" : {
+                "Opacity" : {
+                  "Frames" : [
+                    {
+                      "opacities" : {
+                        "4E53DFA9-9D25-4E90-980D-C41353460D51" : 255
+                      },
+                      "frameIndex" : 0
+                    },
+                    {
+                      "opacities" : {
+
+                      },
+                      "frameIndex" : 6
+                    },
+                    {
+                      "opacities" : {
+                        "4E53DFA9-9D25-4E90-980D-C41353460D51" : 146.065
+                      },
+                      "frameIndex" : 14
+                    },
+                    {
+                      "opacities" : {
+
+                      },
+                      "frameIndex" : 22
+                    },
+                    {
+                      "opacities" : {
+                        "4E53DFA9-9D25-4E90-980D-C41353460D51" : 255
+                      },
+                      "frameIndex" : 29
+                    }
+                  ],
+                  "type" : "LHOpacityProperty"
+                }
+              },
+              "name" : "opacityAnim"
             }
           ],
           "nodeType" : "LHSprite",
           "alpha" : 255,
-          "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "publishFolder\/",
-          "zOrder" : 0,
-          "imageFileName" : "objects.png",
-          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
-        },
-        {
-          "rotation" : 0,
-          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
-          "tags" : [
-            "DEFAULT"
-          ],
-          "spriteUUID" : "52159759-5A00-4D19-9753-018BA3A1C688",
-          "spriteName" : "object_banana",
-          "generalPosition" : "{0.706043, 0.255969}",
-          "uuid" : "1D1738CD-7A93-4964-B2C6-FCAC72909547",
-          "name" : "object_banana",
-          "anchor" : "{0.500000, 0.500000}",
-          "size" : "{41.000000, 28.000000}",
-          "nodeType" : "LHSprite",
-          "alpha" : 255,
-          "scale" : "{1.000000, 1.000000}",
+          "scale" : "{1.000000, 0.963127}",
           "relativeImagePath" : "publishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "objects.png",
@@ -256,54 +359,5 @@
   "useGlobalGravity" : true,
   "nodeType" : "LHScene",
   "sceneFormat" : 1,
-  "globalGravityDirection" : "{0.000000, -1.000000}",
-  "tracedFixtures" : {
-    "59976573-7C78-4E9F-A709-EBC143A1012B" : [
-      [
-        "{-21.25, 32.75}",
-        "{-22.75, 29.75}",
-        "{-23, -10.75}",
-        "{-2, -34.25}",
-        "{-1.75, -34.5}",
-        "{13.75, -33.25}",
-        "{16.5, -32.25}",
-        "{-19, 34.25}"
-      ],
-      [
-        "{-20.25, -29.5}",
-        "{-18, -31.5}",
-        "{-2, -34.25}",
-        "{-23, -10.75}",
-        "{-22.5, -22}",
-        "{-21.75, -26}"
-      ],
-      [
-        "{20.25, 33.25}",
-        "{18.5, 34.25}",
-        "{-19, 34.25}",
-        "{22, 18.25}",
-        "{22, 30}",
-        "{21.25, 32}"
-      ],
-      [
-        "{22, 18.25}",
-        "{-19, 34.25}",
-        "{16.5, -32.25}",
-        "{19, -30.75}",
-        "{22.5, -21.75}",
-        "{22.75, -3}"
-      ],
-      [
-        "{21, -28.75}",
-        "{22, -26.75}",
-        "{22.5, -21.75}",
-        "{19, -30.75}"
-      ],
-      [
-        "{5.75, -34.5}",
-        "{13.75, -33.25}",
-        "{-1.75, -34.5}"
-      ]
-    ]
-  }
+  "globalGravityDirection" : "{0.000000, -1.000000}"
 }

@@ -1,6 +1,6 @@
 --------------------------------------------------------------------------------
 --
--- LHPositionProperty.lua
+-- LHScaleProperty.lua
 --
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
@@ -16,23 +16,23 @@ local function loadDictionary(selfObject, dict)
 	
 	local framesInfo = dict["Frames"];
 	
-	local LHPositionFrame = require('LevelHelper2-API.Animations.AnimationFrames.LHPositionFrame');
+	local LHScaleFrame = require('LevelHelper2-API.Animations.AnimationFrames.LHScaleFrame');
 	
 	for i=1, #framesInfo do
 		local frmInfo = framesInfo[i];
 		
-		local frm = LHPositionFrame:frameWithDictionary(frmInfo, selfObject);
+		local frm = LHScaleFrame:frameWithDictionary(frmInfo, selfObject);
 		selfObject:addKeyFrame(frm);
 		
 	end
 end
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
-local LHPositionProperty = {}
-function LHPositionProperty:initAnimationPropertyWithDictionary(dict, anim)
+local LHScaleProperty = {}
+function LHScaleProperty:initAnimationPropertyWithDictionary(dict, anim)
 
 	if (nil == dict) then
-		print("Invalid LHPositionProperty initialization!")
+		print("Invalid LHScaleProperty initialization!")
 	end
 	local LHAnimationProperty = require('LevelHelper2-API.Animations.AnimationProperties.LHAnimationProperty');
 
@@ -41,9 +41,9 @@ function LHPositionProperty:initAnimationPropertyWithDictionary(dict, anim)
 	object.superLoadDictionary = object.loadDictionary;
 	object.loadDictionary = loadDictionary;
 	
-	object.isAnimationPositionProperty = true;
+	object.isAnimationScaleProperty = true;
 	
 	return object
 end
 --------------------------------------------------------------------------------
-return LHPositionProperty;
+return LHScaleProperty;
