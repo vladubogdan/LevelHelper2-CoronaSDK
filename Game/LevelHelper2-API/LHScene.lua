@@ -46,13 +46,94 @@ end
 
 local function removeSelf(_sceneObj)
 	
-	print("scene remove self");
-	
 	Runtime:removeEventListener( "enterFrame", _sceneObj )
 	_sceneObj:_superRemoveSelf();
 	
 end
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+local function loadPhysicsBoundariesFromDictionary(selfObject, dict)
+	
+	local phyBoundInfo = dict["physicsBoundaries"];
+	if(phyBoundInfo)then
+		
+		local scr = {width = display.pixelWidth, height = display.pixelHeight}
+		
+		local key = tostring(scr.width) .. "x" .. tostring(scr.height);
+		local rectInf = phyBoundInfo[key];
+		if(rectInf==nil)then
+			rectInf = phyBoundInfo["general"];
+		end
+		
+		if(rectInf~= nil)then
+			
+			local LHUtils = require("LevelHelper2-API.Utilities.LHUtils");
+			
+			local bRect = LHUtils.rectFromString(rectInf);
+			
+			local designSize = {width =display.contentWidth, 
+								height=display.contentHeight};
+							
+			local skBRect = {origin = { x = bRect.origin.x*designSize.width,
+										y = designSize.height - bRect.origin.y*designSize.height 
+										},
+							size = {width = bRect.size.width*designSize.width,
+									height = bRect.size.height*designSize.height}};
 
+			local from = {x = skBRect.origin.x, y = skBRect.origin.y};
+			local to = {x = skBRect.origin.x + skBRect.size.width,
+						y = skBRect.origin.y};
+					
+			selfObject:createPhysicsBoundarySection(from, to, "LHPhysicsBottomBoundary");
+			
+			from = 	{x = skBRect.origin.x + skBRect.size.width,
+					y = skBRect.origin.y};
+			to = 	{x = skBRect.origin.x + skBRect.size.width,
+					y = skBRect.origin.y + skBRect.size.height};
+					
+			selfObject:createPhysicsBoundarySection(from, to, "LHPhysicsRightBoundary");
+			
+			
+			from = 	{x = skBRect.origin.x + skBRect.size.width,
+					y = skBRect.origin.y + skBRect.size.height};
+			to = 	{x = skBRect.origin.x,
+					y = skBRect.origin.y + skBRect.size.height};
+					
+			selfObject:createPhysicsBoundarySection(from, to, "LHPhysicsTopBoundary");
+			
+			
+			from = 	{x = skBRect.origin.x,
+					y = skBRect.origin.y + skBRect.size.height};
+			to = 	{x = skBRect.origin.x,
+					y = skBRect.origin.y};
+					
+			selfObject:createPhysicsBoundarySection(from, to, "LHPhysicsLeftBoundary");
+		end
+	end
+end
+--------------------------------------------------------------------------------
+local function createPhysicsBoundarySection(selfObject, from, to, sectionName)
+
+	local fixtureInfo = {}
+	
+	local chainPoints = {}
+			
+	chainPoints[#chainPoints+1] = from.x;
+	chainPoints[#chainPoints+1] = from.y;
+	
+	chainPoints[#chainPoints+1] = to.x;
+	chainPoints[#chainPoints+1] = to.y;
+	
+	fixtureInfo.chain = chainPoints;
+	fixtureInfo.connectFirstAndLastChainVertex = false;
+			
+	local borderLine = display.newLine( 0,0, 0,0 )
+
+	physics.addBody( borderLine, "static", fixtureInfo);
+	
+end
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 local LHScene = {}
 function LHScene:initWithContentOfFile(jsonFile)
 
@@ -70,6 +151,9 @@ function LHScene:initWithContentOfFile(jsonFile)
 	_scene.getGameWorldNode 			= getGameWorldNode;
 	_scene.getUINode 		 			= getUINode;
 	_scene.tracedFixturesWithUUID 		= tracedFixturesWithUUID;
+	_scene.loadPhysicsBoundariesFromDictionary = loadPhysicsBoundariesFromDictionary;
+	_scene.createPhysicsBoundarySection = createPhysicsBoundarySection;
+	
 	
 	_scene._superRemoveSelf 			= _scene.removeSelf;
 	_scene.removeSelf 					= removeSelf;
@@ -92,6 +176,8 @@ function LHScene:initWithContentOfFile(jsonFile)
 	local LHNodeProtocol = require('LevelHelper2-API.Protocols.LHNodeProtocol')
 	LHNodeProtocol.initNodeProtocolWithDictionary(dict, _scene, nil);
 	LHNodeProtocol.loadChildrenForNodeFromDictionary(_scene, dict);
+	
+	_scene:loadPhysicsBoundariesFromDictionary(dict);
 	
 	Runtime:addEventListener( "enterFrame", _scene )
 	

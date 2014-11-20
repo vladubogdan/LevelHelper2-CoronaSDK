@@ -380,7 +380,7 @@
                   ],
                   "spriteUUID" : "D279AF55-F641-4024-8AAE-EA6215F74549",
                   "spriteName" : "neck_outline.png",
-                  "generalPosition" : "{-0.003585, 0.006913}",
+                  "generalPosition" : "{-0.002099, 0.010789}",
                   "uuid" : "31A309C4-8CE6-41F6-AC01-E5A4411C207A",
                   "children" : [
                     {
@@ -693,7 +693,7 @@
               "active" : true,
               "repetitions" : 0,
               "totalFrames" : 30,
-              "fps" : 4,
+              "fps" : 12,
               "properties" : {
                 "Children Rotations" : {
                   "subproperties" : {

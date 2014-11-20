@@ -11,6 +11,7 @@ function LHBackUINode:nodeWithDictionary(dict, prnt)
 	end
 				
 	local object = display.newGroup();
+
 	
 	--add all LevelHelper 2 valid properties to the object
 	object.nodeType = "LHBackUINode"

@@ -158,13 +158,33 @@ function sizeFromString(str)
 
     local wStr = 0;
 	local hStr = 0;
-	local function pointHelper(a,b)
+	local function sizeHelper(a,b)
 		wStr = tonumber(a)
 		hStr = tonumber(b)
 	end
 
-	string.gsub(str, "{(.*), (.*)}", pointHelper) 
+	string.gsub(str, "{(.*), (.*)}", sizeHelper) 
 	return  { width = wStr, height = hStr}
+end
+
+--!@docBegin
+--!Given a string like "{{500, 400},{100,100}}", returns a table like {origin={x = 500, y = 400},size={width = 100, height = 100}}
+--!@param str The string representing a rect value.
+function rectFromString(str)
+--!@docEnd
+	local xStr = 0;
+	local yStr = 0;
+	local wStr = 0;
+	local hStr = 0;
+	local function rectHelper(a,b, c, d)
+		xStr = tonumber(a)
+		yStr = tonumber(b)
+		wStr = tonumber(c)
+		hStr = tonumber(d)
+	end
+
+	string.gsub(str, "{{(.*), (.*)}, {(.*), (.*)}}", rectHelper) 
+	return  { origin={x = xStr, y = yStr}, size={width = wStr, height = hStr}};
 end
 
 --!@docBegin
@@ -176,14 +196,14 @@ function colorFromString(str)
 	local gStr = 255;
 	local bStr = 255;
 	local aStr = 255;
-	local function pointHelper(a,b,c, d)
+	local function colorHelper(a,b,c, d)
 		rStr = tonumber(a)
 		gStr = tonumber(b)
 		bStr = tonumber(c)
 		aStr = tonumber(d)
 	end
 
-	string.gsub(str, "{{(.*), (.*)}, {(.*), (.*)}}", pointHelper) 
+	string.gsub(str, "{{(.*), (.*)}, {(.*), (.*)}}", colorHelper) 
 	return  { red = rStr, green = gStr, blue = bStr, alpha = aStr}
 end
 
