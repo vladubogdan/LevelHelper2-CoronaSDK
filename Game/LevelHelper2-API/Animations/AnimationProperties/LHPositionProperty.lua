@@ -12,6 +12,8 @@ local function loadDictionary(selfObject, dict)
 		return
 	end
 	
+	print("position load dict");
+	
 	selfObject:superLoadDictionary(dict);
 	
 	local framesInfo = dict["Frames"];

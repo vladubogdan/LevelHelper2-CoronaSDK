@@ -36,6 +36,13 @@ local function allSubproperties(selfObject)
 	return nil;
 end
 --------------------------------------------------------------------------------
+local function subpropertyForUUID(selfObject, nodeUuid)
+	if(selfObject._subproperties ~= nil)then
+		return selfObject._subproperties[nodeUuid];
+	end
+	return nil;
+end
+--------------------------------------------------------------------------------
 local function isSubproperty(selfObject)
 	return selfObject._parentProperty ~= nil;
 end
@@ -64,6 +71,10 @@ local function loadDictionary(selfObject, dict)
 	
 	local subsInfo = dict["subproperties"];
 	
+	-- print("subs......................................");
+	-- local LHUtils = require("LevelHelper2-API.Utilities.LHUtils");
+	-- LHUtils.LHPrintObjectInfo(dict);
+	
 	if(subsInfo~=nil)then
 		
 		local parentNode = selfObject:getAnimation():getNode();
@@ -78,6 +89,8 @@ local function loadDictionary(selfObject, dict)
 				if(selfObject._subproperties == nil)then
 					selfObject._subproperties = {};
 				end
+				
+				print("load dictionary in order to create subproperty");
 				
 				local subProp = selfObject:newSubpropertyForNode(child);
 				
@@ -124,6 +137,7 @@ function LHAnimationProperty:initAnimationPropertyWithDictionary(dict, anim)
 	object.loadDictionary 	= loadDictionary;
 	object.addKeyFrame		= addKeyFrame;
 	object.allSubproperties = allSubproperties;
+	object.subpropertyForUUID = subpropertyForUUID;
 	
 	object.isSubproperty = isSubproperty;
 	object.subpropertyNode = subpropertyNode;

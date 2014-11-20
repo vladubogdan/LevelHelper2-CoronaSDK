@@ -113,6 +113,7 @@ function initJointsProtocolWithDictionary(dict, node, scene)
     local LHUtils = require("LevelHelper2-API.Utilities.LHUtils");
 
     node._isJointsProtocol = true;
+	node.protocolName = "LHJointsProtocol";
 
 	if(dict == nil)then return end;
 	

@@ -63,7 +63,7 @@ function initPhysicsProtocolWithDictionary(dict, node, scene)
 	
     local LHUtils = require("LevelHelper2-API.Utilities.LHUtils");
 
-
+	node.protocolName = "LHPhysicsProtocol";
     node._isPhysicsProtocol = true;
 
 	if(dict == nil)then return end;

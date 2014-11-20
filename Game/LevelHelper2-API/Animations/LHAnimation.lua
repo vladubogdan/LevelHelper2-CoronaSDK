@@ -242,24 +242,86 @@ local function updateNodeWithAnimationProperty(selfObject, prop, time)
         --                       endFrame:endFrm
         --                           node:animNode];
     -- }
-    if(prop.isAnimationPositionProperty == true)then
+    if(prop.isAnimationChildrenPositionsProperty == true)then
+	
+		selfObject:animateNodeChildrenPositionsToTime(time, beginFrm, endFrm, animNode, prop);
+	
+	elseif(prop.isAnimationPositionProperty == true)then
+		
 		selfObject:animateNodePositionToTime(time, beginFrm, endFrm, animNode);
-	end
-	
-	if(prop.isAnimationRotationProperty == true)then
+		
+	elseif(prop.isAnimationChildrenRotationsProperty == true)then
+		
+		selfObject:animateNodeChildrenRotationsToTime(time, beginFrm, endFrm, animNode, prop);
+		
+	elseif(prop.isAnimationRotationProperty == true)then
+		
 		selfObject:animateNodeRotationToTime(time, beginFrm, endFrm, animNode);
-	end
-	
-	if(prop.isAnimationScaleProperty == true)then
+		
+	elseif(prop.isAnimationScaleProperty == true)then
+		
 		selfObject:animateNodeScaleToTime(time, beginFrm, endFrm, animNode);
-	end
-	
-	if(prop.isAnimationOpacityProperty == true)then
+		
+	elseif(prop.isAnimationOpacityProperty == true)then
+		
 		selfObject:animateNodeOpacityToTime(time, beginFrm, endFrm, animNode);
+		
+	elseif(prop.isAnimationSpriteFrameProperty == true)then
+		
+		selfObject:animateSpriteFrameChangeWithFrame(beginFrm, animNode);
+		
+	else 
+		
 	end
 	
-	if(prop.isAnimationSpriteFrameProperty == true)then
-		selfObject:animateSpriteFrameChangeWithFrame(beginFrm, animNode);
+end
+--------------------------------------------------------------------------------
+local function animateNodeChildrenPositionsToTime(selfObject, time, beginFrame, endFrame, animNode, prop)
+
+	--here we handle positions
+	local children = animNode:getChildrenOfProtocol("LHAnimationsProtocol");
+
+	if(beginFrame ~= nil and endFrame ~= nil)then
+	
+		local beginTime = beginFrame:frameNumber()*(1.0/selfObject._fps);
+		local endTime = endFrame:frameNumber()*(1.0/selfObject._fps);
+
+		local framesTimeDistance = endTime - beginTime;
+		local timeUnit = (time-beginTime)/framesTimeDistance; --a value between 0 and 1
+	
+		for i=1, #children do
+			local child = children[i];
+			
+			if(prop:subpropertyForUUID(child:getUUID())==nil)then
+				
+				local beginPosition   = beginFrame:positionForUUID(child:getUUID());
+				local endPosition     = endFrame:positionForUUID(child:getUUID());
+					
+				--lets calculate the new node position based on the start - end and unit time
+				local newX = beginPosition.x + (endPosition.x - beginPosition.x)*timeUnit;
+				local newY = beginPosition.y + (endPosition.y - beginPosition.y)*timeUnit;
+				
+				local newPos = {x = newX, y = newY};
+		
+				newPos = selfObject:convertFramePosition(newPos, child);
+		
+				child:setPosition(newPos.x, newPos.y);
+			end
+		end
+	elseif(beginFrame) then
+		--we only have begin frame so lets set positions based on this frame
+		for i=1, #children do
+			local child = children[i];
+			if(prop:subpropertyForUUID(child:getUUID())==nil)then
+				local beginPosition   = beginFrame:positionForUUID(child:getUUID());
+				
+				local newPos = {x = beginPosition.x, y= beginPosition.y};
+		
+				newPos = selfObject:convertFramePosition(newPos, child);
+		
+				child:setPosition(newPos.x, newPos.y);
+			end
+		end
 	end
 end
 --------------------------------------------------------------------------------
@@ -298,6 +360,47 @@ local function animateNodePositionToTime(selfObject, time, beginFrame, endFrame,
 		newPos = selfObject:convertFramePosition(newPos, animNode);
 		
 		animNode:setPosition(newPos.x, newPos.y);
+	end
+end
+--------------------------------------------------------------------------------
+local function animateNodeChildrenRotationsToTime(selfObject, time, beginFrame, endFrame, animNode, prop)
+
+    local children = animNode:getChildrenOfProtocol("LHAnimationsProtocol");
+
+	if(beginFrame ~= nil and endFrame ~= nil)then
+	
+		local beginTime = beginFrame:frameNumber()*(1.0/selfObject._fps);
+		local endTime = endFrame:frameNumber()*(1.0/selfObject._fps);
+
+		local framesTimeDistance = endTime - beginTime;
+		local timeUnit = (time-beginTime)/framesTimeDistance; --a value between 0 and 1
+	
+		for i=1, #children do
+			local child = children[i];
+			
+			if(prop:subpropertyForUUID(child:getUUID())==nil)then
+	
+				local beginRotation = beginFrame:rotationForUUID(child:getUUID());
+				local endRotation   = endFrame:rotationForUUID(child:getUUID());
+		
+				local shortest_angle = math.fmod( (math.fmod( (endRotation - beginRotation), 360.0) + 540.0), 360.0) - 180.0;
+
+				--lets calculate the new value based on the start - end and unit time
+				local newRotation = beginRotation + shortest_angle*timeUnit;
+		
+				child:setRotation(newRotation);
+			end
+		end
+	elseif(beginFrame)then
+		for i=1, #children do
+			local child = children[i];
+			
+			if(prop:subpropertyForUUID(child:getUUID())==nil)then
+				--we only have begin frame so lets set value based on this frame
+				local beginRotation = beginFrame:rotationForUUID(child:getUUID());
+				child:setRotation(beginRotation);
+			end
+		end
 	end
 end
 --------------------------------------------------------------------------------
@@ -500,7 +603,9 @@ function LHAnimation:animationWithDictionary(dict, node)
 	object.didFinishAllRepetitions = didFinishAllRepetitions;
 	object.updateNodeWithAnimationProperty = updateNodeWithAnimationProperty;
 	
+	object.animateNodeChildrenPositionsToTime = animateNodeChildrenPositionsToTime;
 	object.animateNodePositionToTime = animateNodePositionToTime;
+	object.animateNodeChildrenRotationsToTime = animateNodeChildrenRotationsToTime;
 	object.animateNodeRotationToTime = animateNodeRotationToTime;
 	object.animateNodeScaleToTime = animateNodeScaleToTime;
 	object.animateNodeOpacityToTime = animateNodeOpacityToTime;

@@ -40,31 +40,54 @@
           "tags" : [
             "DEFAULT"
           ],
-          "spriteUUID" : "52159759-5A00-4D19-9753-018BA3A1C688",
-          "spriteName" : "object_banana",
-          "generalPosition" : "{0.518330, 0.649062}",
-          "uuid" : "1D1738CD-7A93-4964-B2C6-FCAC72909547",
-          "name" : "object_banana",
-          "anchor" : "{0.500000, 0.500000}",
-          "size" : "{41.000000, 28.000000}",
-          "nodeType" : "LHSprite",
-          "alpha" : 255,
-          "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "publishFolder\/",
-          "zOrder" : 0,
-          "imageFileName" : "objects.png",
-          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
-        },
-        {
-          "rotation" : 0,
-          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
-          "tags" : [
-            "DEFAULT"
-          ],
           "spriteUUID" : "D78AF2EE-072C-4690-9A29-B403F8564573",
           "spriteName" : "object_statue",
-          "generalPosition" : "{0.197958, 0.299396}",
+          "generalPosition" : "{0.260857, 0.320149}",
           "uuid" : "4E53DFA9-9D25-4E90-980D-C41353460D51",
+          "children" : [
+            {
+              "rotation" : 0,
+              "parentUUID" : "4E53DFA9-9D25-4E90-980D-C41353460D51",
+              "tags" : [
+                "DEFAULT"
+              ],
+              "spriteUUID" : "52159759-5A00-4D19-9753-018BA3A1C688",
+              "spriteName" : "object_banana",
+              "generalPosition" : "{0.065925, 0.140060}",
+              "uuid" : "1D1738CD-7A93-4964-B2C6-FCAC72909547",
+              "name" : "object_banana",
+              "anchor" : "{0.500000, 0.500000}",
+              "size" : "{41.000000, 28.000000}",
+              "nodeType" : "LHSprite",
+              "alpha" : 255,
+              "scale" : "{1.000000, 1.038285}",
+              "relativeImagePath" : "publishFolder\/",
+              "zOrder" : 0,
+              "imageFileName" : "objects.png",
+              "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+            },
+            {
+              "rotation" : 0,
+              "parentUUID" : "4E53DFA9-9D25-4E90-980D-C41353460D51",
+              "tags" : [
+                "DEFAULT"
+              ],
+              "spriteUUID" : "7CCF5401-21A8-4FB1-B909-E4D3A0D728AE",
+              "spriteName" : "object_canteen",
+              "generalPosition" : "{-0.090189, 0.162372}",
+              "uuid" : "031A1725-0380-4D8D-87E4-8C99A23E05A3",
+              "name" : "object_canteen",
+              "anchor" : "{0.500000, 0.500000}",
+              "size" : "{21.000000, 32.000000}",
+              "nodeType" : "LHSprite",
+              "alpha" : 255,
+              "scale" : "{1.000000, 1.038285}",
+              "relativeImagePath" : "publishFolder\/",
+              "zOrder" : 0,
+              "imageFileName" : "objects.png",
+              "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+            }
+          ],
           "name" : "object_statue",
           "anchor" : "{0.500000, 0.500000}",
           "size" : "{46.000000, 69.000000}",
@@ -79,19 +102,19 @@
                   "Frames" : [
                     {
                       "positions" : {
-                        "4E53DFA9-9D25-4E90-980D-C41353460D51" : "{95.019741, 95.806680}"
+                        "4E53DFA9-9D25-4E90-980D-C41353460D51" : "{125.211380, 102.447624}"
                       },
                       "frameIndex" : 0
                     },
                     {
                       "positions" : {
-                        "4E53DFA9-9D25-4E90-980D-C41353460D51" : "{398.810848, 236.357568}"
+                        "4E53DFA9-9D25-4E90-980D-C41353460D51" : "{429.002487, 242.998512}"
                       },
                       "frameIndex" : 14
                     },
                     {
                       "positions" : {
-                        "4E53DFA9-9D25-4E90-980D-C41353460D51" : "{95.019741, 95.806680}"
+                        "4E53DFA9-9D25-4E90-980D-C41353460D51" : "{125.211380, 102.447624}"
                       },
                       "frameIndex" : 29
                     }
@@ -228,7 +251,7 @@
               "name" : "opacityAnim"
             },
             {
-              "active" : true,
+              "active" : false,
               "repetitions" : 0,
               "totalFrames" : 30,
               "fps" : 24,
@@ -268,6 +291,125 @@
                 }
               },
               "name" : "frameAnim"
+            },
+            {
+              "active" : false,
+              "repetitions" : 0,
+              "totalFrames" : 30,
+              "fps" : 24,
+              "properties" : {
+                "Children Positions" : {
+                  "Frames" : [
+                    {
+                      "positions" : {
+                        "1D1738CD-7A93-4964-B2C6-FCAC72909547" : "{31.644054, 44.819091}",
+                        "031A1725-0380-4D8D-87E4-8C99A23E05A3" : "{-43.290708, 51.958994}"
+                      },
+                      "frameIndex" : 0
+                    },
+                    {
+                      "positions" : {
+                        "1D1738CD-7A93-4964-B2C6-FCAC72909547" : "{-46.655591, 45.253986}",
+                        "031A1725-0380-4D8D-87E4-8C99A23E05A3" : "{-46.499709, -38.057265}"
+                      },
+                      "frameIndex" : 14
+                    },
+                    {
+                      "positions" : {
+                        "1D1738CD-7A93-4964-B2C6-FCAC72909547" : "{31.644054, 44.819091}",
+                        "031A1725-0380-4D8D-87E4-8C99A23E05A3" : "{-43.290708, 51.958994}"
+                      },
+                      "frameIndex" : 29
+                    }
+                  ],
+                  "type" : "LHChildrenPositionsProperty"
+                },
+                "Position" : {
+                  "Frames" : [
+                    {
+                      "positions" : {
+                        "4E53DFA9-9D25-4E90-980D-C41353460D51" : "{125.211380, 102.447624}"
+                      },
+                      "frameIndex" : 0
+                    },
+                    {
+                      "positions" : {
+                        "4E53DFA9-9D25-4E90-980D-C41353460D51" : "{386.866623, 97.090281}"
+                      },
+                      "frameIndex" : 14
+                    },
+                    {
+                      "positions" : {
+                        "4E53DFA9-9D25-4E90-980D-C41353460D51" : "{125.211380, 102.447624}"
+                      },
+                      "frameIndex" : 29
+                    }
+                  ],
+                  "type" : "LHPositionProperty"
+                }
+              },
+              "name" : "childrenPosAnim"
+            },
+            {
+              "active" : true,
+              "repetitions" : 0,
+              "totalFrames" : 30,
+              "fps" : 24,
+              "properties" : {
+                "Rotation" : {
+                  "Frames" : [
+                    {
+                      "rotations" : {
+
+                      },
+                      "frameIndex" : 0
+                    },
+                    {
+                      "rotations" : {
+                        "4E53DFA9-9D25-4E90-980D-C41353460D51" : 194.5805
+                      },
+                      "frameIndex" : 14
+                    },
+                    {
+                      "rotations" : {
+
+                      },
+                      "frameIndex" : 29
+                    }
+                  ],
+                  "type" : "LHRotationProperty"
+                },
+                "Children Rotations" : {
+                  "Frames" : [
+                    {
+                      "rotations" : {
+
+                      },
+                      "frameIndex" : 0
+                    },
+                    {
+                      "rotations" : {
+                        "1D1738CD-7A93-4964-B2C6-FCAC72909547" : 107.8343
+                      },
+                      "frameIndex" : 9
+                    },
+                    {
+                      "rotations" : {
+                        "1D1738CD-7A93-4964-B2C6-FCAC72909547" : 203.8474
+                      },
+                      "frameIndex" : 19
+                    },
+                    {
+                      "rotations" : {
+
+                      },
+                      "frameIndex" : 29
+                    }
+                  ],
+                  "type" : "LHChildrenRotationsProperty"
+                }
+              },
+              "name" : "childrenRotAnim"
             }
           ],
           "nodeType" : "LHSprite",

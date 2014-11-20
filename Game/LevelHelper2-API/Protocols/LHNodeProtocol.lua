@@ -47,22 +47,21 @@ end
 --!@param name The node unique name to look for inside the children of the current node.
 local function getChildNodeWithUniqueName(selfNode, name)
 --!@docEnd	
-	if selfNode.numChildren then
-		for i = 1, selfNode.numChildren do
-			local node = selfNode[i]
-			if node._isNodeProtocol == true then
-				local uName = node.lhUniqueName
 
-				if(uName ~= nil)then
-					if(uName == name)then
-						return node;
-					end
-				end
+	for i = 1, selfNode:getNumberOfChildren() do
+		local node = selfNode:getChildrenAtIndex(i);
+		if node._isNodeProtocol == true then
+			local uName = node.lhUniqueName
 
-				local childNode = node:getChildNodeWithUniqueName(name);
-				if childNode ~= nil then
-					return childNode;
+			if(uName ~= nil)then
+				if(uName == name)then
+					return node;
 				end
+			end
+
+			local childNode = node:getChildNodeWithUniqueName(name);
+			if childNode ~= nil then
+				return childNode;
 			end
 		end
 	end
@@ -74,27 +73,80 @@ end
 --!@param _uuid_ The node unique identifier to look for inside the children of the current node.
 local function getChildNodeWithUUID(selfNode, _uuid_)
 --!@docEnd	
-	if selfNode.numChildren then
-		for i = 1, selfNode.numChildren do
-			local node = selfNode[i]
-			if node._isNodeProtocol == true then
-				local uid = node.lhUuid
 
-				if(uid ~= nil)then
-					if(uid == _uuid_)then
-						return node;
-					end
-				end
+	for i = 1, selfNode:getNumberOfChildren() do
+		local node = selfNode:getChildrenAtIndex(i);
+		if node._isNodeProtocol == true then
+			local uid = node.lhUuid
 
-				local childNode = node:getChildNodeWithUUID(_uuid_);
-				if childNode ~= nil then
-					return childNode;
+			if(uid ~= nil)then
+				if(uid == _uuid_)then
+					return node;
 				end
+			end
+
+			local childNode = node:getChildNodeWithUUID(_uuid_);
+			if childNode ~= nil then
+				return childNode;
 			end
 		end
 	end
 	return nil;
 end
+--------------------------------------------------------------------------------
+--!@docBegin
+--!Returns all children nodes that are of specified class type. A table with objects.
+--!@param objType A class type. A string value with the name of the type e.g "LHSprite", "LHNode"
+local function getChildrenOfType(selfNode, objType)
+--!@docEnd	
+	local temp = {};
+	
+	for i = 1, selfNode:getNumberOfChildren() do
+		local node = selfNode:getChildrenAtIndex(i);
+		if node._isNodeProtocol == true then
+			if(node:getType() == objType)then
+				temp[#temp+1] = node;
+			end
+			
+			local childArray = node:getChildrenOfType(objType);
+			if(childArray)then
+				for j=1, #childArray do
+					temp[#temp+1] = childArray[j];
+				end
+			end
+		end
+	end
+	return temp;
+end
+--------------------------------------------------------------------------------
+--!@docBegin
+--!Returns all children nodes that are of specified class type. A table with objects.
+--!@param protocolType A protocol class type. A string value with the name of one of the available protocols "LHNodeProtocol", "LHAnimationsProtocol", "LHJointsProtocol", "LHPhysicsProtocol"
+local function getChildrenOfProtocol(selfNode, protocolType)
+--!@docEnd	
+	local temp = {};
+	
+	for i = 1, selfNode:getNumberOfChildren() do
+		local node = selfNode:getChildrenAtIndex(i);
+		
+		if node._isNodeProtocol == true then
+			if(node:getProtocolName() == protocolType)then
+				temp[#temp+1] = node;
+			end
+			
+			local childArray = node:getChildrenOfProtocol(protocolType);
+			if(childArray)then
+				for j=1, #childArray do
+					temp[#temp+1] = childArray[j];
+				end
+			end
+		end
+	end
+	return temp;
+end
+
+
+
 --------------------------------------------------------------------------------
 --!@docBegin
 --!Get the node LHScene object
@@ -144,6 +196,13 @@ local function getType(selfNode)
 end
 --------------------------------------------------------------------------------
 --!@docBegin
+--!Get the node protocol type. A string value. e.g "LHNodeProtocol", "LHAnimationsProtocol", "LHJointsProtocol", "LHPhysicsProtocol"
+local function getProtocolName(selfNode)
+--!@docEnd	
+	return selfNode.protocolName;
+end
+--------------------------------------------------------------------------------
+--!@docBegin
 --!Get the node unique name. A string value.
 local function getUniqueName(selfNode)
 --!@docEnd	
@@ -184,6 +243,29 @@ local function getChildren(selfNode)
 		return selfNode.lhChildren;
 	end
 	return selfNode;
+end
+--------------------------------------------------------------------------------
+--!@docBegin
+--!Returns the number of children this node has. A number value
+local function getNumberOfChildren(selfNode)
+--!@docEnd	
+	local children = selfNode:getChildren();
+	if children.numChildren then
+		return children.numChildren;
+	end
+	return 0;
+end
+--------------------------------------------------------------------------------
+--!@docBegin
+--!Returns the children at a specific index
+--!@param index The index of the child to be returned
+local function getChildrenAtIndex(selfNode, index)
+--!@docEnd	
+	local children = selfNode:getChildren();
+	if index >= 1 and index <= children.numChildren then
+		return children[index];
+	end
+	return nil;
 end
 --------------------------------------------------------------------------------
 --!@docBegin
@@ -309,9 +391,13 @@ function initNodeProtocolWithDictionary(dict, node)
 	node.enterFrame 	= enterFrame;
 	--Modern object hierarchy simulation
 	node.addChild 				= addChild;
-	node.getNumberOfChildren 	= getNumberOfChildren;
 	node.removeChild 			= removeChild;
 	node.getChildren 			= getChildren;
+	node.getNumberOfChildren 	= getNumberOfChildren;
+	node.getChildrenAtIndex 	= getChildrenAtIndex;
+
+
+	node.protocolName = "LHNodeProtocol";
 	
     local value = dict["generalPosition"]
     if value then
@@ -347,11 +433,15 @@ function initNodeProtocolWithDictionary(dict, node)
 	----------------------------------------------------------------------------
 	node.getChildNodeWithUniqueName = getChildNodeWithUniqueName;
 	node.getChildNodeWithUUID 		= getChildNodeWithUUID;
+	node.getChildrenOfType			= getChildrenOfType;
+	node.getChildrenOfProtocol		= getChildrenOfProtocol;
 	node.getScene 					= getScene;
 	node.getParent					= getParent;
 	node.getUUID					= getUUID;
 	node.getUniqueName				= getUniqueName;
 	node.getType 					= getType;
+	node.getProtocolName			= getProtocolName;
+	
 	--Load node protocol properties
 	----------------------------------------------------------------------------
 	node.lhUniqueName = dict["name"];

@@ -61,6 +61,7 @@ function initAnimationsProtocolWithDictionary(dict, node, scene)
     local LHUtils = require("LevelHelper2-API.Utilities.LHUtils");
 
     node._isAnimationsProtocol = true;
+    node.protocolName = "LHAnimationsProtocol";
 
 	if(dict == nil)then return end;
 	
