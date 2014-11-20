@@ -24,16 +24,16 @@ end
 --!Get the front ui node from the scene.
 local function getUINode(_sceneObj)
 --!@docEnd
-    if(_sceneObj._uiNode == nil)then
-        for i = 1, _sceneObj.numChildren do
-		    local node = _sceneObj[i]
+	if(_sceneObj._uiNode == nil)then
+		for i = 1, _sceneObj.numChildren do
+			local node = _sceneObj[i]
 
-		    if node.nodeType == "LHUINode" then
-		        _sceneObj._uiNode = node;
-	        end
-        end
+			if node.nodeType == "LHUINode" then
+				_sceneObj._uiNode = node;
+			end
+		end
 	end
-    return _sceneObj._uiNode;
+	return _sceneObj._uiNode;
 end
 --------------------------------------------------------------------------------
 --!@docBegin
@@ -57,6 +57,24 @@ local function removeSelf(_sceneObj)
 	Runtime:removeEventListener( "enterFrame", _sceneObj )
 	_sceneObj:_superRemoveSelf();
 	
+end
+--------------------------------------------------------------------------------
+local function loadGlobalGravityFromDictionary(selfObject, dict)
+
+	if(dict["useGlobalGravity"])then
+		--more or less the same as box2d
+		local LHUtils = require("LevelHelper2-API.Utilities.LHUtils");
+		
+		local gravityVector = LHUtils.pointFromString(dict["globalGravityDirection"]);
+		local gravityForce = dict["globalGravityForce"];
+			
+		local gravity = {x = gravityVector.x*gravityForce,
+						y = gravityVector.y*gravityForce};
+					
+		local physics = require( "physics" )
+		physics.setGravity( gravity.x, -gravity.y );
+		
+	end
 end
 --------------------------------------------------------------------------------
 local function loadGameWorldInfoFromDictionary(selfObject, dict)
@@ -192,6 +210,7 @@ function LHScene:initWithContentOfFile(jsonFile)
 	_scene.loadPhysicsBoundariesFromDictionary 	= loadPhysicsBoundariesFromDictionary;
 	_scene.createPhysicsBoundarySection 		= createPhysicsBoundarySection;
 	_scene.loadGameWorldInfoFromDictionary 		= loadGameWorldInfoFromDictionary;
+	_scene.loadGlobalGravityFromDictionary 		= loadGlobalGravityFromDictionary;
 	
 	_scene.getGameWorldRect 					= getGameWorldRect;
 	
@@ -199,12 +218,12 @@ function LHScene:initWithContentOfFile(jsonFile)
 	_scene.removeSelf 							= removeSelf;
 	
 	local dict = nil;
-    if not base then base = system.ResourceDirectory; end
-    local jsonContent = LHUtils.jsonFileContent(jsonFile, base)    
-    if(jsonContent)then
-        local json = require "json"
-        dict = json.decode( jsonContent )
-    end
+	if not base then base = system.ResourceDirectory; end
+	local jsonContent = LHUtils.jsonFileContent(jsonFile, base)    
+	if(jsonContent)then
+		local json = require "json"
+		dict = json.decode( jsonContent )
+	end
 
 
 	local tracedFixInfo = dict["tracedFixtures"];
@@ -219,6 +238,7 @@ function LHScene:initWithContentOfFile(jsonFile)
 	LHNodeProtocol.loadChildrenForNodeFromDictionary(_scene, dict);
 	
 	_scene:loadPhysicsBoundariesFromDictionary(dict);
+	_scene:loadGlobalGravityFromDictionary(dict);
 	
 	Runtime:addEventListener( "enterFrame", _scene )
 	
