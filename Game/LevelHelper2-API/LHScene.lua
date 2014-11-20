@@ -43,7 +43,15 @@ local function tracedFixturesWithUUID(_sceneObj, uuid)
 --!@docEnd
 	return _sceneObj._tracedFixtures[uuid];
 end
-
+--------------------------------------------------------------------------------
+--!@docBegin
+--!Returns the game world rectangle or nil if it was not specified. A table of format {origin={x = 10, y = 10}, size={width=100, height=100}};
+local function getGameWorldRect(_sceneObj)
+--!@docEnd
+	return selfObject._gameWorldRect;
+end
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 local function removeSelf(_sceneObj)
 	
 	Runtime:removeEventListener( "enterFrame", _sceneObj )
@@ -51,6 +59,36 @@ local function removeSelf(_sceneObj)
 	
 end
 --------------------------------------------------------------------------------
+local function loadGameWorldInfoFromDictionary(selfObject, dict)
+	
+	local gameWorldInfo = dict["gameWorld"];
+	if(gameWorldInfo)then
+
+		local scr = {width = display.pixelWidth, height = display.pixelHeight}
+		local key = tostring(scr.width) .. "x" .. tostring(scr.height);
+		
+		local rectInf = gameWorldInfo[key];
+		if(nil == rectInf)then
+			rectInf = gameWorldInfo["general"];
+		end
+		
+		if(rectInf)then
+			local LHUtils = require("LevelHelper2-API.Utilities.LHUtils");
+			local bRect = LHUtils.rectFromString(rectInf);
+			
+			local designSize = {width =display.contentWidth, 
+								height=display.contentHeight};
+							
+
+			selfObject._gameWorldRect = {origin = { x = bRect.origin.x*designSize.width,
+													y = (1.0 - bRect.origin.y)*designSize.height 
+													},
+										size = {width = bRect.size.width*designSize.width,
+										height = bRect.size.height*designSize.height}};
+			
+		end
+	end
+end
 --------------------------------------------------------------------------------
 local function loadPhysicsBoundariesFromDictionary(selfObject, dict)
 	
@@ -147,16 +185,18 @@ function LHScene:initWithContentOfFile(jsonFile)
 	_scene.nodeType = "LHScene"
 	
 	--functions
-	_scene.getBackUINode 				= getBackUINode;
-	_scene.getGameWorldNode 			= getGameWorldNode;
-	_scene.getUINode 		 			= getUINode;
-	_scene.tracedFixturesWithUUID 		= tracedFixturesWithUUID;
-	_scene.loadPhysicsBoundariesFromDictionary = loadPhysicsBoundariesFromDictionary;
-	_scene.createPhysicsBoundarySection = createPhysicsBoundarySection;
+	_scene.getBackUINode 						= getBackUINode;
+	_scene.getGameWorldNode 					= getGameWorldNode;
+	_scene.getUINode 		 					= getUINode;
+	_scene.tracedFixturesWithUUID 				= tracedFixturesWithUUID;
+	_scene.loadPhysicsBoundariesFromDictionary 	= loadPhysicsBoundariesFromDictionary;
+	_scene.createPhysicsBoundarySection 		= createPhysicsBoundarySection;
+	_scene.loadGameWorldInfoFromDictionary 		= loadGameWorldInfoFromDictionary;
 	
+	_scene.getGameWorldRect 					= getGameWorldRect;
 	
-	_scene._superRemoveSelf 			= _scene.removeSelf;
-	_scene.removeSelf 					= removeSelf;
+	_scene._superRemoveSelf 					= _scene.removeSelf;
+	_scene.removeSelf 							= removeSelf;
 	
 	local dict = nil;
     if not base then base = system.ResourceDirectory; end
@@ -172,6 +212,7 @@ function LHScene:initWithContentOfFile(jsonFile)
 		_scene._tracedFixtures = LHUtils.LHDeepCopy(tracedFixInfo);
 	end
 	
+	_scene:loadGameWorldInfoFromDictionary(dict);
 	
 	local LHNodeProtocol = require('LevelHelper2-API.Protocols.LHNodeProtocol')
 	LHNodeProtocol.initNodeProtocolWithDictionary(dict, _scene, nil);
