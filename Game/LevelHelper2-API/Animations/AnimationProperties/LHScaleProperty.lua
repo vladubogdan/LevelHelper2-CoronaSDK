@@ -31,9 +31,9 @@ end
 local LHScaleProperty = {}
 function LHScaleProperty:initAnimationPropertyWithDictionary(dict, anim)
 
-	if (nil == dict) then
-		print("Invalid LHScaleProperty initialization!")
-	end
+	-- if (nil == dict) then
+	-- 	print("Invalid LHScaleProperty initialization!")
+	-- end
 	local LHAnimationProperty = require('LevelHelper2-API.Animations.AnimationProperties.LHAnimationProperty');
 
 	local object = LHAnimationProperty:initAnimationPropertyWithDictionary(dict, anim);

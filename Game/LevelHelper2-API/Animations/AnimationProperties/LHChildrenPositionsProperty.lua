@@ -12,6 +12,7 @@ local function newSubpropertyForNode(selfObject, node)
 
 	local prop = LHPositionProperty:initAnimationPropertyWithDictionary(nil, selfObject:getAnimation());
 	prop:setSubpropertyNode(node);
+	
 	return prop;
 end
 --------------------------------------------------------------------------------

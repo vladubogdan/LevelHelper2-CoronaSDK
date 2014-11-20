@@ -24,11 +24,9 @@ end
 local function allSubproperties(selfObject)
 
 	if(selfObject._subproperties ~= nil)then
-	
 		local allValues = {};
-		
-		for i,val in ipairs(selfObject._subproperties) do
-			allValues[#allValues+1] = val;
+		for key, value in pairs(selfObject._subproperties) do
+			allValues[#allValues+1] = value;
 		end
 		return allValues;
 	end
@@ -71,9 +69,6 @@ local function loadDictionary(selfObject, dict)
 	
 	local subsInfo = dict["subproperties"];
 	
-	-- print("subs......................................");
-	-- local LHUtils = require("LevelHelper2-API.Utilities.LHUtils");
-	-- LHUtils.LHPrintObjectInfo(dict);
 	
 	if(subsInfo~=nil)then
 		
@@ -89,8 +84,6 @@ local function loadDictionary(selfObject, dict)
 				if(selfObject._subproperties == nil)then
 					selfObject._subproperties = {};
 				end
-				
-				print("load dictionary in order to create subproperty");
 				
 				local subProp = selfObject:newSubpropertyForNode(child);
 				
@@ -122,9 +115,9 @@ end
 --------------------------------------------------------------------------------
 function LHAnimationProperty:initAnimationPropertyWithDictionary(dict, anim)
 
-	if (nil == dict) then
-		print("Invalid LHAnimationProperty initialization!")
-	end
+	-- if (nil == dict) then
+	-- 	print("Invalid LHAnimationProperty initialization!")
+	-- end
 	
 	local object = {_animation = anim,
 					_frames = {}

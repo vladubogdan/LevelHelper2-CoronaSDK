@@ -28,7 +28,8 @@ function scene:show( event )
 	
 	if phase == "will" then
 		
-		lhScene = LHScene:initWithContentOfFile("publishFolder/simpleAnimationTest.json");
+		-- lhScene = LHScene:initWithContentOfFile("publishFolder/simpleAnimationTest.json");
+		lhScene = LHScene:initWithContentOfFile("publishFolder/characterAnimation.json");
 	
 		sceneGroup:insert(lhScene);
 	

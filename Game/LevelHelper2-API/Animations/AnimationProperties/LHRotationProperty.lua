@@ -31,9 +31,9 @@ end
 local LHRotationProperty = {}
 function LHRotationProperty:initAnimationPropertyWithDictionary(dict, anim)
 
-	if (nil == dict) then
-		print("Invalid LHRotationProperty initialization!")
-	end
+	-- if (nil == dict) then
+	-- 	print("Invalid LHRotationProperty initialization!")
+	-- end
 	local LHAnimationProperty = require('LevelHelper2-API.Animations.AnimationProperties.LHAnimationProperty');
 
 	local object = LHAnimationProperty:initAnimationPropertyWithDictionary(dict, anim);

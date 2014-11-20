@@ -18,7 +18,7 @@ function LHGameWorldNode:nodeWithDictionary(dict, prnt)
 	prnt:addChild(object);
 	
 	local LHNodeProtocol = require('LevelHelper2-API.Protocols.LHNodeProtocol')
-	LHNodeProtocol.initNodeProtocolWithDictionary(dict, object);
+	LHNodeProtocol.initNodeProtocolWithDictionary(dict, object, prnt);
 	LHNodeProtocol.loadChildrenForNodeFromDictionary(object, dict);
 	
 	return object

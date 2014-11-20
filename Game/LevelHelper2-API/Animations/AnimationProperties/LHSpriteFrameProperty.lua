@@ -31,9 +31,9 @@ end
 local LHSpriteFrameProperty = {}
 function LHSpriteFrameProperty:initAnimationPropertyWithDictionary(dict, anim)
 
-	if (nil == dict) then
-		print("Invalid LHSpriteFrameProperty initialization!")
-	end
+	-- if (nil == dict) then
+	-- 	print("Invalid LHSpriteFrameProperty initialization!")
+	-- end
 	local LHAnimationProperty = require('LevelHelper2-API.Animations.AnimationProperties.LHAnimationProperty');
 
 	local object = LHAnimationProperty:initAnimationPropertyWithDictionary(dict, anim);

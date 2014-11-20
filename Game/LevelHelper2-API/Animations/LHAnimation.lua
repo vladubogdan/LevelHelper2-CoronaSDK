@@ -163,9 +163,17 @@ local function animateNodeToTime(selfObject, time)
 			local prop = selfObject._properties[i];
 		
 			local subproperties = prop:allSubproperties();
+			
+			-- print("has subproperties ");
+			-- print(subproperties);
+			
 			if(subproperties)then
 				for j=1, #subproperties do
 					local subprop = subproperties[j];
+					
+					-- print("update subproperty");
+					-- print(subprop);
+					
 					selfObject:updateNodeWithAnimationProperty(subprop, time);
 				end
 			end
@@ -616,14 +624,31 @@ local function convertFramePosition(selfObject, newPos, animNode)
     --     return CGPointMake(winSize.width*0.5  - newPos.x,
     --                       -winSize.height*0.5 - newPos.y);
     -- }
-    
+
     -- print("point is ");
     -- print(newPos.x);
     -- print(newPos.y);
-    
-    
-    local scene = selfObject:getScene();
-    
+
+
+	-- local scene = selfObject:getScene();
+
+	if(	animNode:getParent() == nil or 
+		(animNode:getParent():getType() == "LHScene") or
+		(animNode:getParent():getType() == "LHGameWorldNode") or
+		(animNode:getParent():getType() == "LHUINode") or
+		(animNode:getParent():getType() == "LHBackUINode") )then
+
+
+	else
+		local parent = animNode:getParent();
+		local pcontent = parent.lhContentSize;
+		
+		local prntAncX = parent.anchorX;
+		local prntAncY = parent.anchorY;
+		
+		newPos.x = newPos.x - pcontent.width*(prntAncX - 0.5);
+		newPos.y = newPos.y - pcontent.height*(prntAncY - 0.5);
+	end
     -- CGPoint offset = [scene designOffset];
 
     -- CCNode* p = [animNode parent];
@@ -637,12 +662,6 @@ local function convertFramePosition(selfObject, newPos, animNode)
     --     newPos.y += offset.y;
         
     --     newPos.y += scene.designResolutionSize.height;// p.contentSize.height;
-    -- }
-    -- else{
-    --     CGSize content = [p contentSizeInPoints];
-    
-    --     newPos.x += content.width*0.5;
-    --     newPos.y += content.height*0.5;
     -- }
     
 	return newPos;

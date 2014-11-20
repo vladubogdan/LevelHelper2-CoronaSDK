@@ -107,7 +107,7 @@ function LHPulleyJointNode:nodeWithDictionary(dict, prnt)
 	
     prnt:addChild(object);
 	
-	LHNodeProtocol.initNodeProtocolWithDictionary(dict, object);
+	LHNodeProtocol.initNodeProtocolWithDictionary(dict, object, prnt);
 	LHJointsProtocol.initJointsProtocolWithDictionary(dict, object, prnt:getScene());
 
     object.lhJointGroundAnchorA = LHUtils.pointFromString(dict["groundAnchorA"]);

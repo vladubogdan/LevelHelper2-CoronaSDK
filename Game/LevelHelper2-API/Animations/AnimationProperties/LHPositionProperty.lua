@@ -31,9 +31,10 @@ end
 local LHPositionProperty = {}
 function LHPositionProperty:initAnimationPropertyWithDictionary(dict, anim)
 
-	if (nil == dict) then
-		print("Invalid LHPositionProperty initialization!")
-	end
+	-- if (nil == dict) then
+	-- 	print("Invalid LHPositionProperty initialization!")
+	-- end
+	
 	local LHAnimationProperty = require('LevelHelper2-API.Animations.AnimationProperties.LHAnimationProperty');
 
 	local object = LHAnimationProperty:initAnimationPropertyWithDictionary(dict, anim);

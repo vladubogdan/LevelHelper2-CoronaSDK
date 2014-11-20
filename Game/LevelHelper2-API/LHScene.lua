@@ -90,7 +90,7 @@ function LHScene:initWithContentOfFile(jsonFile)
 	
 	
 	local LHNodeProtocol = require('LevelHelper2-API.Protocols.LHNodeProtocol')
-	LHNodeProtocol.initNodeProtocolWithDictionary(dict, _scene);
+	LHNodeProtocol.initNodeProtocolWithDictionary(dict, _scene, nil);
 	LHNodeProtocol.loadChildrenForNodeFromDictionary(_scene, dict);
 	
 	Runtime:addEventListener( "enterFrame", _scene )

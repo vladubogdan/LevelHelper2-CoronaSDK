@@ -3,6 +3,14 @@
 -- LHNode.lua
 --
 --------------------------------------------------------------------------------
+local function visit(selfNode, event)
+
+	selfNode:animationProtocolEnterFrame(event);
+	selfNode:nodeProtocolEnterFrame(event);
+	
+end
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 local LHNode = {}
 function LHNode:nodeWithDictionary(dict, prnt)
 
@@ -12,6 +20,7 @@ function LHNode:nodeWithDictionary(dict, prnt)
 				
 	local LHUtils = require("LevelHelper2-API.Utilities.LHUtils");
     local LHNodeProtocol = require('LevelHelper2-API.Protocols.LHNodeProtocol')
+    local LHAnimationsProtocol = require('LevelHelper2-API.Protocols.LHAnimationsProtocol');
     local LHPhysicsProtocol = require('LevelHelper2-API.Protocols.LHPhysicsProtocol')
     
     local object = display.newGroup();
@@ -23,10 +32,19 @@ function LHNode:nodeWithDictionary(dict, prnt)
     
     prnt:addChild(object);
 	
-	LHNodeProtocol.initNodeProtocolWithDictionary(dict, object);
+	LHNodeProtocol.initNodeProtocolWithDictionary(dict, object, prnt);
 	LHPhysicsProtocol.initPhysicsProtocolWithDictionary(dict["nodePhysics"], object, prnt:getScene());
 	LHNodeProtocol.loadChildrenForNodeFromDictionary(object, dict);
 
+	LHAnimationsProtocol.initAnimationsProtocolWithDictionary(dict, object, prnt:getScene());
+	
+	object.nodeProtocolEnterFrame 	= object.enterFrame;
+	object.enterFrame = visit;
+	
+	--Functions
+	----------------------------------------------------------------------------
+	
+	
 	return object
 end
 --------------------------------------------------------------------------------

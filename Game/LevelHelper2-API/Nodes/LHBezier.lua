@@ -134,7 +134,7 @@ function LHBezier:nodeWithDictionary(dict, prnt)
 
 	prnt:addChild(object);
 	
-	LHNodeProtocol.initNodeProtocolWithDictionary(dict, object);
+	LHNodeProtocol.initNodeProtocolWithDictionary(dict, object, prnt);
 	LHPhysicsProtocol.initPhysicsProtocolWithDictionary(dict["nodePhysics"], object, prnt:getScene());
 	LHNodeProtocol.loadChildrenForNodeFromDictionary(object, dict);
 

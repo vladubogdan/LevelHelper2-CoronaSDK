@@ -169,7 +169,7 @@ end
 --!Get the node parent object
 local function getParent(selfNode)
 --!@docEnd	
-	return selfNode.parent;
+	return selfNode._lhParent;
 end
 
 function simulateModernObjectHierarchy(parent, child)
@@ -277,6 +277,7 @@ local function setPosition(selfNode, valueX, valueY)
 
 	selfNode.x = valueX;
 	selfNode.y = valueY;
+	
 	if(selfNode.lhChildren)then
 		selfNode.lhChildren.x = valueX;
 		selfNode.lhChildren.y = valueY;
@@ -319,6 +320,8 @@ local function setAnchor(selfNode, x, y)
 	selfNode.anchorY = y;
 	
 	if(selfNode.lhChildren)then
+		
+		-- selfNode.lhChildren.anchorChildren = true;
 		selfNode.lhChildren.anchorX = x;
 		selfNode.lhChildren.anchorY = y;
 	end
@@ -382,7 +385,7 @@ end
 
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
-function initNodeProtocolWithDictionary(dict, node)
+function initNodeProtocolWithDictionary(dict, node, prnt)
 
 	node.setPosition 	= setPosition;
 	node.setRotation 	= setRotation;
@@ -398,36 +401,8 @@ function initNodeProtocolWithDictionary(dict, node)
 
 
 	node.protocolName = "LHNodeProtocol";
-	
-    local value = dict["generalPosition"]
-    if value then
-        local unitPosition = LHUtils.pointFromString(value);
-        local calculatedPos= LHUtils.positionForNodeFromUnit(node, unitPosition);
-
-		node:setPosition(calculatedPos.x, calculatedPos.y);
-		
-        -- CGPoint unitPos = [dict pointForKey:@"generalPosition"];
-        --     CGPoint pos = [LHUtils positionForNode:_node
-        --                                   fromUnit:unitPos];
-            
-        --     NSDictionary* devPositions = [dict objectForKey:@"devicePositions"];
-        --     if(devPositions)
-        --     {
-                
-        --         NSString* unitPosStr = [LHUtils devicePosition:devPositions
-        --                                               forSize:LH_SCREEN_RESOLUTION];
-                
-        --         if(unitPosStr){
-        --             CGPoint unitPos = LHPointFromString(unitPosStr);
-        --             pos = [LHUtils positionForNode:_node
-        --                                   fromUnit:unitPos];
-        --         }
-        -- }
-        
-    end
-    
-    
-    node._isNodeProtocol = true;
+	node._isNodeProtocol = true;
+    node._lhParent = prnt;
     
     --LevelHelper 2 node protocol functions
 	----------------------------------------------------------------------------
@@ -452,55 +427,117 @@ function initNodeProtocolWithDictionary(dict, node)
 																			dict["userPropertyName"], 
 																			dict["userPropertyInfo"]);
 	
-	value = dict["rotation"];
-    if(value)then
-    	node:setRotation(value)
-    end
-        
-        
-    value = dict["size"];
-    if(value)then
-    	local sz = LHUtils.sizeFromString(value);
-    	
-    	node.width = sz.width;
-    	node.height= sz.height;
-    	
-    	--some corona nodes have width/height properties as read only - we still need the size
-    	node.lhContentSize = {width = sz.width, height = sz.height};
-    end
-    
-    value = dict["alpha"];
-    if(value)then
-        node.alpha = value/255.0;
-    end
+	local value = dict["rotation"];
+	if(value)then
+		node:setRotation(value)
+	end
 
-    
-    node.lhZOrder = dict["zOrder"];
-    
+
+	value = dict["size"];
+	if(value)then
+		local sz = LHUtils.sizeFromString(value);
+		
+		node.width = sz.width;
+		node.height= sz.height;
+		
+		--some corona nodes have width/height properties as read only - we still need the size
+		node.lhContentSize = {width = sz.width, height = sz.height};
+	end
+	
+	value = dict["alpha"];
+	if(value)then
+		node.alpha = value/255.0;
+	end
+
+	
+	node.lhZOrder = dict["zOrder"];
+	
 	value = dict["scale"];
 	if(value)then
 		local scl = LHUtils.pointFromString(value);
 		node:setScale(scl.x, scl.y);
 	end
 
-
-    -- if([dict objectForKey:@"anchor"] &&
-    --       ![_node isKindOfClass:[LHUINode class]] &&
-    --       ![_node isKindOfClass:[LHBackUINode class]] &&
-    --       ![_node isKindOfClass:[LHGameWorldNode class]])
-    --     {
-    
 	value = dict["anchor"];
 	if(value)then
 		local anchor = LHUtils.pointFromString(value);
 		node:setAnchor(anchor.x, anchor.y);
 	end
+	
+	value = dict["generalPosition"]
+	if value then
+		local unitPosition = LHUtils.pointFromString(value);	
+		local calculatedPos= LHUtils.positionForNodeFromUnit(node, unitPosition);
 
-	-- CGPoint anchor = [dict pointForKey:@"anchor"];
-	--         anchor.y = 1.0f - anchor.y;
-	--         [_node setAnchorPoint:anchor];
-	--     }
-
+		
+		-- print(x);
+		-- print(y);
+		
+		-- print("TEST THIS-------------------");
+		-- print(node);
+		-- print(node:getParent():getUniqueName());
+		-- print(node:getParent():getType());
+			
+		-- local parent = node:getParent();
+		
+		-- if(parent)then
+			-- print("WE HAVE PARENT-------------");
+			-- print(parent:getUniqueName());
+			
+			if(	node:getParent()~= nil and 
+				(node:getParent():getType() ~= "LHScene") and
+				(node:getParent():getType() ~= "LHGameWorldNode") and
+				(node:getParent():getType() ~= "LHUINode") and
+				(node:getParent():getType() ~= "LHBackUINode") )then
+			
+				-- print("IS CHILD----------------------------------------------");
+				-- print(node:getUniqueName());
+				-- print(node:getParent():getUniqueName());
+				-- print(node:getParent():getType());
+				-- print(node:getParent():getUniqueName());
+				
+				local parent = node:getParent();
+				
+				local prntAncX = parent.anchorX;
+				local prntAncY = parent.anchorY;
+				
+				local x = (parent.lhContentSize.width)*(prntAncX - 0.5);
+				local y = (parent.lhContentSize.height)*(prntAncY - 0.5);
+			
+				-- print(x);
+				-- print(y);
+				
+				calculatedPos.x = calculatedPos.x - x;
+				calculatedPos.y = calculatedPos.y - y;
+			end
+		-- end
+		
+		-- node:setPosition(calculatedPos.x, calculatedPos.y);
+		node:setPosition(calculatedPos.x, calculatedPos.y);
+		
+		-- print("position for sprite " .. node:getUniqueName());
+		-- print(calculatedPos.x);
+		-- print(calculatedPos.y);
+		
+        -- CGPoint unitPos = [dict pointForKey:@"generalPosition"];
+        --     CGPoint pos = [LHUtils positionForNode:_node
+        --                                   fromUnit:unitPos];
+            
+        --     NSDictionary* devPositions = [dict objectForKey:@"devicePositions"];
+        --     if(devPositions)
+        --     {
+                
+        --         NSString* unitPosStr = [LHUtils devicePosition:devPositions
+        --                                               forSize:LH_SCREEN_RESOLUTION];
+                
+        --         if(unitPosStr){
+        --             CGPoint unitPos = LHPointFromString(unitPosStr);
+        --             pos = [LHUtils positionForNode:_node
+        --                                   fromUnit:unitPos];
+        --         }
+        -- }
+        
+    end
 
 end
 --------------------------------------------------------------------------------

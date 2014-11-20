@@ -121,7 +121,7 @@ function LHDistanceJointNode:nodeWithDictionary(dict, prnt)
 	
     prnt:addChild(object);
 	
-	LHNodeProtocol.initNodeProtocolWithDictionary(dict, object);
+	LHNodeProtocol.initNodeProtocolWithDictionary(dict, object, prnt);
 	LHJointsProtocol.initJointsProtocolWithDictionary(dict, object, prnt:getScene());
 
     object.lhJointDampingRatio = dict["dampingRatio"];

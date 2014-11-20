@@ -43,7 +43,7 @@ function LHShape:nodeWithDictionary(dict, prnt)
     prnt:addChild(object);
 	
 	
-	LHNodeProtocol.initNodeProtocolWithDictionary(dict, object);
+	LHNodeProtocol.initNodeProtocolWithDictionary(dict, object, prnt);
 	
 	local convert = {x = 1.0, y = 1.0};
 	
