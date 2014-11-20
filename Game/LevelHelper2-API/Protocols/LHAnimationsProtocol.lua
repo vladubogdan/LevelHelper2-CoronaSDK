@@ -12,7 +12,9 @@ module (..., package.seeall)
 local function setActiveAnimation(selfNode, animObj)
 --!@docEnd	
 	selfNode.lhActiveAnimation = animObj;
-	animObj:setAnimating(true);
+	if(animObj)then
+		animObj:setAnimating(true);
+	end
 end
 --------------------------------------------------------------------------------
 --!@docBegin

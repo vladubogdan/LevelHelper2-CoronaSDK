@@ -53,7 +53,7 @@
               ],
               "spriteUUID" : "52159759-5A00-4D19-9753-018BA3A1C688",
               "spriteName" : "object_banana",
-              "generalPosition" : "{0.065925, 0.140060}",
+              "generalPosition" : "{0.075331, 0.154876}",
               "uuid" : "1D1738CD-7A93-4964-B2C6-FCAC72909547",
               "name" : "object_banana",
               "anchor" : "{0.500000, 0.500000}",
@@ -74,7 +74,7 @@
               ],
               "spriteUUID" : "7CCF5401-21A8-4FB1-B909-E4D3A0D728AE",
               "spriteName" : "object_canteen",
-              "generalPosition" : "{-0.090189, 0.162372}",
+              "generalPosition" : "{-0.065478, 0.151217}",
               "uuid" : "031A1725-0380-4D8D-87E4-8C99A23E05A3",
               "name" : "object_canteen",
               "anchor" : "{0.500000, 0.500000}",
@@ -93,8 +93,8 @@
           "size" : "{46.000000, 69.000000}",
           "animations" : [
             {
-              "active" : false,
-              "repetitions" : 0,
+              "active" : true,
+              "repetitions" : 2,
               "totalFrames" : 30,
               "fps" : 4,
               "properties" : {
@@ -303,21 +303,24 @@
                     {
                       "positions" : {
                         "1D1738CD-7A93-4964-B2C6-FCAC72909547" : "{31.644054, 44.819091}",
-                        "031A1725-0380-4D8D-87E4-8C99A23E05A3" : "{-43.290708, 51.958994}"
+                        "031A1725-0380-4D8D-87E4-8C99A23E05A3" : "{-43.290708, 51.958994}",
+                        "4E53DFA9-9D25-4E90-980D-C41353460D51" : "{114.825123, 97.980490}"
                       },
                       "frameIndex" : 0
                     },
                     {
                       "positions" : {
                         "1D1738CD-7A93-4964-B2C6-FCAC72909547" : "{-46.655591, 45.253986}",
-                        "031A1725-0380-4D8D-87E4-8C99A23E05A3" : "{-46.499709, -38.057265}"
+                        "031A1725-0380-4D8D-87E4-8C99A23E05A3" : "{-46.499709, -38.057265}",
+                        "4E53DFA9-9D25-4E90-980D-C41353460D51" : "{114.825123, 97.980490}"
                       },
                       "frameIndex" : 14
                     },
                     {
                       "positions" : {
                         "1D1738CD-7A93-4964-B2C6-FCAC72909547" : "{31.644054, 44.819091}",
-                        "031A1725-0380-4D8D-87E4-8C99A23E05A3" : "{-43.290708, 51.958994}"
+                        "031A1725-0380-4D8D-87E4-8C99A23E05A3" : "{-43.290708, 51.958994}",
+                        "4E53DFA9-9D25-4E90-980D-C41353460D51" : "{114.825123, 97.980490}"
                       },
                       "frameIndex" : 29
                     }
@@ -351,7 +354,7 @@
               "name" : "childrenPosAnim"
             },
             {
-              "active" : true,
+              "active" : false,
               "repetitions" : 0,
               "totalFrames" : 30,
               "fps" : 24,
@@ -410,6 +413,142 @@
                 }
               },
               "name" : "childrenRotAnim"
+            },
+            {
+              "active" : false,
+              "repetitions" : 0,
+              "totalFrames" : 30,
+              "fps" : 24,
+              "properties" : {
+                "Scale" : {
+                  "Frames" : [
+                    {
+                      "scales" : {
+                        "4E53DFA9-9D25-4E90-980D-C41353460D51" : "{1.000000, 0.963127}"
+                      },
+                      "frameIndex" : 0
+                    },
+                    {
+                      "scales" : {
+                        "4E53DFA9-9D25-4E90-980D-C41353460D51" : "{2.046523, 1.564793}"
+                      },
+                      "frameIndex" : 14
+                    },
+                    {
+                      "scales" : {
+                        "4E53DFA9-9D25-4E90-980D-C41353460D51" : "{1.000000, 0.963127}"
+                      },
+                      "frameIndex" : 29
+                    }
+                  ],
+                  "type" : "LHScaleProperty"
+                },
+                "Children Scales" : {
+                  "Frames" : [
+                    {
+                      "scales" : {
+                        "1D1738CD-7A93-4964-B2C6-FCAC72909547" : "{1.000000, 1.038285}",
+                        "031A1725-0380-4D8D-87E4-8C99A23E05A3" : "{1.000000, 1.038285}"
+                      },
+                      "frameIndex" : 0
+                    },
+                    {
+                      "scales" : {
+                        "1D1738CD-7A93-4964-B2C6-FCAC72909547" : "{0.395573, 0.553453}",
+                        "031A1725-0380-4D8D-87E4-8C99A23E05A3" : "{1.000000, 1.038285}"
+                      },
+                      "frameIndex" : 9
+                    },
+                    {
+                      "scales" : {
+                        "1D1738CD-7A93-4964-B2C6-FCAC72909547" : "{0.758229, 0.844352}",
+                        "031A1725-0380-4D8D-87E4-8C99A23E05A3" : "{3.025042, 2.437085}"
+                      },
+                      "frameIndex" : 21
+                    },
+                    {
+                      "scales" : {
+                        "1D1738CD-7A93-4964-B2C6-FCAC72909547" : "{1.000000, 1.038285}",
+                        "031A1725-0380-4D8D-87E4-8C99A23E05A3" : "{1.000000, 1.038285}"
+                      },
+                      "frameIndex" : 29
+                    }
+                  ],
+                  "type" : "LHChildrenScalesProperty"
+                }
+              },
+              "name" : "childrenScaleAnim"
+            },
+            {
+              "active" : false,
+              "repetitions" : 0,
+              "totalFrames" : 30,
+              "fps" : 24,
+              "properties" : {
+                "Opacity" : {
+                  "Frames" : [
+                    {
+                      "opacities" : {
+                        "4E53DFA9-9D25-4E90-980D-C41353460D51" : 255
+                      },
+                      "frameIndex" : 0
+                    },
+                    {
+                      "opacities" : {
+                        "4E53DFA9-9D25-4E90-980D-C41353460D51" : 65.03991
+                      },
+                      "frameIndex" : 14
+                    },
+                    {
+                      "opacities" : {
+                        "4E53DFA9-9D25-4E90-980D-C41353460D51" : 255
+                      },
+                      "frameIndex" : 29
+                    }
+                  ],
+                  "type" : "LHOpacityProperty"
+                },
+                "Children Opacities" : {
+                  "Frames" : [
+                    {
+                      "opacities" : {
+                        "1D1738CD-7A93-4964-B2C6-FCAC72909547" : 255,
+                        "031A1725-0380-4D8D-87E4-8C99A23E05A3" : 255
+                      },
+                      "frameIndex" : 0
+                    },
+                    {
+                      "opacities" : {
+                        "1D1738CD-7A93-4964-B2C6-FCAC72909547" : 141.9469,
+                        "031A1725-0380-4D8D-87E4-8C99A23E05A3" : 50.24899
+                      },
+                      "frameIndex" : 7
+                    },
+                    {
+                      "opacities" : {
+                        "031A1725-0380-4D8D-87E4-8C99A23E05A3" : 255
+                      },
+                      "frameIndex" : 19
+                    },
+                    {
+                      "opacities" : {
+                        "1D1738CD-7A93-4964-B2C6-FCAC72909547" : 30.12646,
+                        "031A1725-0380-4D8D-87E4-8C99A23E05A3" : 62.50309
+                      },
+                      "frameIndex" : 24
+                    },
+                    {
+                      "opacities" : {
+                        "1D1738CD-7A93-4964-B2C6-FCAC72909547" : 255,
+                        "031A1725-0380-4D8D-87E4-8C99A23E05A3" : 255
+                      },
+                      "frameIndex" : 29
+                    }
+                  ],
+                  "type" : "LHChildrenOpacitiesProperty"
+                }
+              },
+              "name" : "childrenOpacityAnim"
             }
           ],
           "nodeType" : "LHSprite",

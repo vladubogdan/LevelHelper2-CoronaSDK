@@ -258,10 +258,18 @@ local function updateNodeWithAnimationProperty(selfObject, prop, time)
 		
 		selfObject:animateNodeRotationToTime(time, beginFrm, endFrm, animNode);
 		
+	elseif(prop.isAnimationChildrenScalesProperty == true)then
+	
+		selfObject:animateNodeChildrenScalesToTime(time, beginFrm, endFrm, animNode, prop);
+		
 	elseif(prop.isAnimationScaleProperty == true)then
 		
 		selfObject:animateNodeScaleToTime(time, beginFrm, endFrm, animNode);
 		
+	elseif(prop.isAnimationChildrenOpacitiesProperty == true)then
+	
+		selfObject:animateNodeChildrenOpacitiesToTime(time, beginFrm, endFrm, animNode, prop);
+	
 	elseif(prop.isAnimationOpacityProperty == true)then
 		
 		selfObject:animateNodeOpacityToTime(time, beginFrm, endFrm, animNode);
@@ -433,10 +441,52 @@ local function animateNodeRotationToTime(selfObject, time, beginFrame, endFrame,
 	end
 end
 --------------------------------------------------------------------------------
+local function animateNodeChildrenScalesToTime(selfObject, time, beginFrame, endFrame, animNode, prop)
+
+	--here we handle positions
+	local children = animNode:getChildrenOfProtocol("LHAnimationsProtocol");
+
+	if(beginFrame ~= nil and endFrame ~= nil)then
+	
+		local beginTime = beginFrame:frameNumber()*(1.0/selfObject._fps);
+		local endTime = endFrame:frameNumber()*(1.0/selfObject._fps);
+
+		local framesTimeDistance = endTime - beginTime;
+		local timeUnit = (time-beginTime)/framesTimeDistance; --a value between 0 and 1
+	
+		for i=1, #children do
+			local child = children[i];
+			
+			if(prop:subpropertyForUUID(child:getUUID())==nil)then
+				
+				local beginScale = beginFrame:scaleForUUID(child:getUUID());
+				local endScale = endFrame:scaleForUUID(child:getUUID());
+
+				--lets calculate the new node scale based on the start - end and unit time
+				local newX = beginScale.width + (endScale.width - beginScale.width)*timeUnit;
+				local newY = beginScale.height + (endScale.height - beginScale.height)*timeUnit;
+		
+				child:setScale(newX, newY);
+			end
+		end
+	elseif(beginFrame) then
+		--we only have begin frame so lets set positions based on this frame
+		for i=1, #children do
+			local child = children[i];
+			if(prop:subpropertyForUUID(child:getUUID())==nil)then
+				
+				local beginScale = beginFrame:scaleForUUID(child:getUUID());
+				child:setScale(beginScale.width, beginScale.height);
+				
+			end
+		end
+	end
+end
+--------------------------------------------------------------------------------
 local function animateNodeScaleToTime(selfObject, time, beginFrame, endFrame, animNode)
 
-    --here we handle scale
-    if(beginFrame ~= nil and endFrame ~= nil)then
+	--here we handle scale
+	if(beginFrame ~= nil and endFrame ~= nil)then
 	
 		local beginTime = beginFrame:frameNumber()*(1.0/selfObject._fps);
 		local endTime = endFrame:frameNumber()*(1.0/selfObject._fps);
@@ -457,6 +507,48 @@ local function animateNodeScaleToTime(selfObject, time, beginFrame, endFrame, an
 
 		local beginScale = beginFrame:scaleForUUID(animNode:getUUID());
 		animNode:setScale(beginScale.width, beginScale.height);
+	end
+end
+--------------------------------------------------------------------------------
+local function animateNodeChildrenOpacitiesToTime(selfObject, time, beginFrame, endFrame, animNode, prop)
+
+	--here we handle positions
+	local children = animNode:getChildrenOfProtocol("LHAnimationsProtocol");
+
+	if(beginFrame ~= nil and endFrame ~= nil)then
+	
+		local beginTime = beginFrame:frameNumber()*(1.0/selfObject._fps);
+		local endTime = endFrame:frameNumber()*(1.0/selfObject._fps);
+
+		local framesTimeDistance = endTime - beginTime;
+		local timeUnit = (time-beginTime)/framesTimeDistance; --a value between 0 and 1
+	
+		for i=1, #children do
+			local child = children[i];
+			
+			if(prop:subpropertyForUUID(child:getUUID())==nil)then
+				
+				local beginValue = beginFrame:opacityForUUID(child:getUUID());
+				local endValue = endFrame:opacityForUUID(child:getUUID());
+		
+				--lets calculate the new value based on the start - end and unit time
+				local newValue = beginValue + (endValue - beginValue)*timeUnit;
+
+				child.alpha = newValue/255.0;
+			end
+		end
+	elseif(beginFrame) then
+		--we only have begin frame so lets set positions based on this frame
+		for i=1, #children do
+			local child = children[i];
+			if(prop:subpropertyForUUID(child:getUUID())==nil)then
+				
+				--we only have begin frame so lets set value based on this frame
+				local beginValue = beginFrame:opacityForUUID(child:getUUID());
+				child.alpha = beginValue/255.0;
+				
+			end
+		end
 	end
 end
 --------------------------------------------------------------------------------
@@ -564,9 +656,6 @@ function LHAnimation:animationWithDictionary(dict, node)
 		print("Invalid LHAnimation initialization!")
 	end
 	
-	print("loading animation for node " .. node:getUniqueName());
-		
-	
 	local object = {_repetitions = dict["repetitions"],
 					_totalFrames = dict["totalFrames"],
 					_name = dict["name"],
@@ -606,8 +695,10 @@ function LHAnimation:animationWithDictionary(dict, node)
 	object.animateNodeChildrenPositionsToTime = animateNodeChildrenPositionsToTime;
 	object.animateNodePositionToTime = animateNodePositionToTime;
 	object.animateNodeChildrenRotationsToTime = animateNodeChildrenRotationsToTime;
+	object.animateNodeChildrenScalesToTime = animateNodeChildrenScalesToTime;
 	object.animateNodeRotationToTime = animateNodeRotationToTime;
 	object.animateNodeScaleToTime = animateNodeScaleToTime;
+	object.animateNodeChildrenOpacitiesToTime = animateNodeChildrenOpacitiesToTime;
 	object.animateNodeOpacityToTime = animateNodeOpacityToTime;
 	object.animateSpriteFrameChangeWithFrame = animateSpriteFrameChangeWithFrame;
 	
@@ -625,8 +716,6 @@ function LHAnimation:animationWithDictionary(dict, node)
 	
 	for key,value in pairs(propDictInfo) do 
 		
-		print("loading anim prop " .. key);
-			
 		local prop = LHAnimationProperty:animationPropertyWithDictionary(value, object);
 		object._properties[#object._properties +1] = prop;
 	end
