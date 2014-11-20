@@ -4,6 +4,20 @@
 --
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
+--!@docBegin
+--!Changes the sprite texture rectangle based on the new sprite name.
+--!@param spriteName A name from the sprite sheet this sprite belongs to. A string value.
+function setSpriteFrameWithName( selfNode, spriteName )
+--!@docEnd
+	if(selfNode.frameNamesMap ~= nil)then
+		local frame = selfNode.frameNamesMap[spriteName];
+		if(frame)then
+			selfNode:setFrame(frame);
+		end
+	end
+end
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 local function visit(selfNode, event)
 
 
@@ -117,6 +131,9 @@ function LHSprite:nodeWithDictionary(dict, prnt)
 	object.nodeProtocolEnterFrame 	= object.enterFrame;
 	object.enterFrame = visit;
 	
+	--Functions
+	----------------------------------------------------------------------------
+	object.setSpriteFrameWithName = setSpriteFrameWithName;
 	
 	return object
 end

@@ -5,11 +5,11 @@
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 local function setWasShot(selfObject, value)
-    selfObject.wasShot = value;
+    selfObject._wasShot = value;
 end
 --------------------------------------------------------------------------------
 local function wasShot(selfObject)
-    return selfObject.wasShot;
+    return selfObject._wasShot;
 end
 --------------------------------------------------------------------------------
 local function frameNumber(selfObject)
@@ -30,13 +30,13 @@ function LHFrame:frameWithDictionary(dict, prop)
 	
 	local object = {_frameNumber = dict["frameIndex"],
 					_property = prop,
-					wasShot = false
+					_wasShot = false
 				}
 	setmetatable(object, { __index = LHFrame })  -- Inheritance
 
 	--add methods
 	object.setWasShot	= setWasShot;
-	object.wasSho		= wasShot;
+	object.wasShot		= wasShot;
 	object.frameNumber 	= frameNumber;
 	object.property 	= property;
 	

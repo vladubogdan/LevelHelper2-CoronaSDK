@@ -258,6 +258,9 @@ local function updateNodeWithAnimationProperty(selfObject, prop, time)
 		selfObject:animateNodeOpacityToTime(time, beginFrm, endFrm, animNode);
 	end
 	
+	if(prop.isAnimationSpriteFrameProperty == true)then
+		selfObject:animateSpriteFrameChangeWithFrame(beginFrm, animNode);
+	end
 end
 --------------------------------------------------------------------------------
 local function animateNodePositionToTime(selfObject, time, beginFrame, endFrame, animNode)
@@ -381,6 +384,30 @@ local function animateNodeOpacityToTime(selfObject, time, beginFrame, endFrame, 
 	end
 end
 --------------------------------------------------------------------------------
+local function animateSpriteFrameChangeWithFrame(selfObject, beginFrame, animNode)
+	
+	local sprite = nil;
+	if(animNode:getType() == "LHSprite") then
+		sprite = animNode;
+	end
+	
+	if(sprite == nil)then
+		return;
+	end
+	
+	if(beginFrame and sprite)then
+		
+		if(selfObject:animating())then
+			if(beginFrame:wasShot() == false)then
+ 				sprite:setSpriteFrameWithName(beginFrame:spriteFrameName());
+ 				beginFrame:setWasShot(true);
+ 	 		end
+ 		else
+ 			sprite:setSpriteFrameWithName(beginFrame:spriteFrameName());
+ 		end
+	 end
+end
+--------------------------------------------------------------------------------
 local function getScene(selfObject)
 	if selfObject._scene == nil then
 		selfObject._scene = selfObject:getNode():getScene();
@@ -477,6 +504,7 @@ function LHAnimation:animationWithDictionary(dict, node)
 	object.animateNodeRotationToTime = animateNodeRotationToTime;
 	object.animateNodeScaleToTime = animateNodeScaleToTime;
 	object.animateNodeOpacityToTime = animateNodeOpacityToTime;
+	object.animateSpriteFrameChangeWithFrame = animateSpriteFrameChangeWithFrame;
 	
 	object.convertFramePosition = convertFramePosition;
 	object.getScene = getScene;

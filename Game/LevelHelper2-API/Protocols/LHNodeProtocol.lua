@@ -137,6 +137,13 @@ local function getUUID(selfNode)
 end
 --------------------------------------------------------------------------------
 --!@docBegin
+--!Get the node type. A string value. e.g "LHSprite", "LHNode", "LHBezier" ...
+local function getType(selfNode)
+--!@docEnd	
+	return selfNode.nodeType;
+end
+--------------------------------------------------------------------------------
+--!@docBegin
 --!Get the node unique name. A string value.
 local function getUniqueName(selfNode)
 --!@docEnd	
@@ -344,7 +351,7 @@ function initNodeProtocolWithDictionary(dict, node)
 	node.getParent					= getParent;
 	node.getUUID					= getUUID;
 	node.getUniqueName				= getUniqueName;
-	
+	node.getType 					= getType;
 	--Load node protocol properties
 	----------------------------------------------------------------------------
 	node.lhUniqueName = dict["name"];

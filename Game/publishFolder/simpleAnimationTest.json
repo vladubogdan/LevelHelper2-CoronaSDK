@@ -42,7 +42,7 @@
           ],
           "spriteUUID" : "52159759-5A00-4D19-9753-018BA3A1C688",
           "spriteName" : "object_banana",
-          "generalPosition" : "{0.238415, 0.360262}",
+          "generalPosition" : "{0.518330, 0.649062}",
           "uuid" : "1D1738CD-7A93-4964-B2C6-FCAC72909547",
           "name" : "object_banana",
           "anchor" : "{0.500000, 0.500000}",
@@ -184,7 +184,7 @@
               "name" : "scaleAnim"
             },
             {
-              "active" : true,
+              "active" : false,
               "repetitions" : 0,
               "totalFrames" : 30,
               "fps" : 4,
@@ -226,6 +226,48 @@
                 }
               },
               "name" : "opacityAnim"
+            },
+            {
+              "active" : true,
+              "repetitions" : 0,
+              "totalFrames" : 30,
+              "fps" : 24,
+              "properties" : {
+                "Sprite Frame" : {
+                  "Frames" : [
+                    {
+                      "spriteSheetName" : "object_statue",
+                      "frameIndex" : 0
+                    },
+                    {
+                      "spriteSheetName" : "number_1",
+                      "frameIndex" : 4
+                    },
+                    {
+                      "spriteSheetName" : "object_backpack",
+                      "frameIndex" : 9
+                    },
+                    {
+                      "spriteSheetName" : "object_banana",
+                      "frameIndex" : 14
+                    },
+                    {
+                      "spriteSheetName" : "object_canteen",
+                      "frameIndex" : 19
+                    },
+                    {
+                      "spriteSheetName" : "object_hat",
+                      "frameIndex" : 24
+                    },
+                    {
+                      "spriteSheetName" : "object_pineapple",
+                      "frameIndex" : 27
+                    }
+                  ],
+                  "type" : "LHSpriteFrameProperty"
+                }
+              },
+              "name" : "frameAnim"
             }
           ],
           "nodeType" : "LHSprite",
