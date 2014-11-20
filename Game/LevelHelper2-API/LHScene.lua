@@ -59,6 +59,38 @@ local function removeSelf(_sceneObj)
 	
 end
 --------------------------------------------------------------------------------
+local function assetInfoForFile(selfObject, assetFileName)
+
+	if(selfObject._loadedAssetsInformations == nil)then
+		selfObject._loadedAssetsInformations = {};
+	end
+	
+	local info = selfObject._loadedAssetsInformations[assetFileName];
+	if(nil == info)then
+		
+		print(selfObject._relativePath);
+		print(assetFileName);
+		
+		local path = selfObject._relativePath .. assetFileName .. ".json";
+		
+		if(path)then
+		
+			if not base then base = system.ResourceDirectory; end
+			local jsonContent = LHUtils.jsonFileContent(path, base)    
+			if(jsonContent)then
+				local json = require "json"
+				info = json.decode( jsonContent )
+				
+				if(info)then
+					selfObject._loadedAssetsInformations[assetFileName] = info;
+				end
+			end
+		end
+	end
+	
+	return info;
+end
+--------------------------------------------------------------------------------
 local function loadGlobalGravityFromDictionary(selfObject, dict)
 
 	if(dict["useGlobalGravity"])then
@@ -212,6 +244,8 @@ function LHScene:initWithContentOfFile(jsonFile)
 	_scene.loadGameWorldInfoFromDictionary 		= loadGameWorldInfoFromDictionary;
 	_scene.loadGlobalGravityFromDictionary 		= loadGlobalGravityFromDictionary;
 	
+	_scene.assetInfoForFile 					= assetInfoForFile;
+	
 	_scene.getGameWorldRect 					= getGameWorldRect;
 	
 	_scene._superRemoveSelf 					= _scene.removeSelf;
@@ -224,6 +258,8 @@ function LHScene:initWithContentOfFile(jsonFile)
 		local json = require "json"
 		dict = json.decode( jsonContent )
 	end
+
+	_scene._relativePath = LHUtils.getPathFromFilename(jsonFile);
 
 
 	local tracedFixInfo = dict["tracedFixtures"];

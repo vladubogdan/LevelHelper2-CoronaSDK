@@ -1,0 +1,242 @@
+{
+  "tracedFixtures" : {
+    "3F0CD6E8-CA32-4E61-B8B1-65FC1CF58A58" : [
+      [
+        "{-6.75, -9.875}",
+        "{-4.25, -10.125}",
+        "{-9.25, -6.625}",
+        "{-8.5, -8.125}"
+      ],
+      [
+        "{8, -9.125}",
+        "{10, -1.875}",
+        "{10.25, 4.875}",
+        "{-9.25, -6.625}",
+        "{4.5, -11.125}"
+      ],
+      [
+        "{-3.25, -14.875}",
+        "{-2, -15.875}",
+        "{4.25, -15.625}",
+        "{-3.25, -10.875}"
+      ],
+      [
+        "{-9.25, 14.625}",
+        "{-10, 12.875}",
+        "{-10.5, 9.625}",
+        "{-10.5, 5.625}",
+        "{-9.25, -6.625}",
+        "{10.25, 4.875}",
+        "{1.75, 15.875}",
+        "{-7.75, 15.875}"
+      ],
+      [
+        "{8, 14.375}",
+        "{5.25, 15.375}",
+        "{1.75, 15.875}",
+        "{10.25, 4.875}"
+      ],
+      [
+        "{4.5, -11.125}",
+        "{-9.25, -6.625}",
+        "{-4.25, -10.125}",
+        "{4.25, -15.625}"
+      ],
+      [
+        "{3.25, -16.125}",
+        "{4.25, -15.625}",
+        "{-2, -15.875}",
+        "{-1.75, -16.125}"
+      ],
+      [
+        "{-4.25, -10.125}",
+        "{-3.25, -10.875}",
+        "{4.25, -15.625}"
+      ]
+    ],
+    "E08AE22F-3E6D-468F-B967-6E4FA43CE97E" : [
+      [
+        "{14.5, -12.875}",
+        "{14.75, -8.375}",
+        "{0.5, -5.125}",
+        "{12, -13.375}"
+      ],
+      [
+        "{-13, -11.625}",
+        "{-12.75, -7.125}",
+        "{-17.75, -5.625}",
+        "{-17.75, -13.375}",
+        "{-17.5, -13.625}",
+        "{-15.75, -13.625}"
+      ],
+      [
+        "{17.5, -7.625}",
+        "{18.25, -5.875}",
+        "{19, 1.375}",
+        "{17.75, 4.375}",
+        "{14.25, 8.625}",
+        "{8.75, 11.875}",
+        "{0.5, -5.125}",
+        "{14.75, -8.375}"
+      ],
+      [
+        "{-19.25, -7.625}",
+        "{-19.25, -10.625}",
+        "{-18.75, -12.125}",
+        "{-17.75, -13.375}",
+        "{-17.75, -5.625}"
+      ],
+      [
+        "{-19, 1.125}",
+        "{-17.75, -5.625}",
+        "{-9, -4.875}",
+        "{-6.25, -4.125}",
+        "{-9.5, 11.875}",
+        "{-13.75, 9.375}",
+        "{-17.5, 5.125}"
+      ],
+      [
+        "{8.75, 11.875}",
+        "{2.25, 13.375}",
+        "{-3.5, 13.375}",
+        "{-6.5, 12.875}",
+        "{-9.5, 11.875}",
+        "{-3.25, -4.125}",
+        "{0.5, -5.125}"
+      ],
+      [
+        "{-3.25, -4.125}",
+        "{-9.5, 11.875}",
+        "{-6.25, -4.125}"
+      ],
+      [
+        "{-9, -4.875}",
+        "{-17.75, -5.625}",
+        "{-12.75, -7.125}"
+      ]
+    ]
+  },
+  "rotation" : 0,
+  "parentUUID" : "4CEAEEC0-6BAC-46B1-A17B-4B233E3D8FE6",
+  "tags" : [
+    "DEFAULT"
+  ],
+  "generalPosition" : "{0.133333, 0.200000}",
+  "uuid" : "2619E6BC-131D-4E94-A823-59A087D13D29",
+  "children" : [
+    {
+      "rotation" : 0,
+      "parentUUID" : "2619E6BC-131D-4E94-A823-59A087D13D29",
+      "tags" : [
+        "DEFAULT"
+      ],
+      "nodePhysics" : {
+        "linearVelocity" : "{0.000000, 0.000000}",
+        "fixedRotation" : false,
+        "shape" : 5,
+        "allowSleep" : true,
+        "fixtureUUID" : "E08AE22F-3E6D-468F-B967-6E4FA43CE97E",
+        "linearDamping" : 0,
+        "type" : 0,
+        "genericFixture" : {
+          "category" : 1,
+          "sensor" : false,
+          "density" : 0.1,
+          "mask" : 65535,
+          "friction" : 0.2,
+          "restitution" : 0,
+          "name" : "GenericFixture",
+          "fixtureID" : 0
+        },
+        "bullet" : false,
+        "angularDamping" : 0,
+        "gravityScale" : 1,
+        "angularVelocity" : 0
+      },
+      "spriteUUID" : "0E725708-7B5F-465B-8300-DBEDC04CE6C1",
+      "spriteName" : "object_bananabunch",
+      "generalPosition" : "{0.014632, -0.118560}",
+      "uuid" : "C3E96387-D274-4708-BC3D-B3A527EF2C1E",
+      "name" : "object_bananabunch",
+      "anchor" : "{0.500000, 0.500000}",
+      "size" : "{39.000000, 27.000000}",
+      "nodeType" : "LHSprite",
+      "alpha" : 255,
+      "scale" : "{2.713922, 1.469697}",
+      "relativeImagePath" : "publishFolder\/",
+      "zOrder" : 0,
+      "imageFileName" : "objects.png",
+      "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+    },
+    {
+      "rotation" : 0,
+      "parentUUID" : "2619E6BC-131D-4E94-A823-59A087D13D29",
+      "tags" : [
+        "DEFAULT"
+      ],
+      "nodePhysics" : {
+        "linearVelocity" : "{0.000000, 0.000000}",
+        "fixedRotation" : false,
+        "shape" : 5,
+        "allowSleep" : true,
+        "fixtureUUID" : "3F0CD6E8-CA32-4E61-B8B1-65FC1CF58A58",
+        "linearDamping" : 0,
+        "type" : 2,
+        "genericFixture" : {
+          "category" : 1,
+          "sensor" : false,
+          "density" : 0.1,
+          "mask" : 65535,
+          "friction" : 0.2,
+          "restitution" : 0,
+          "name" : "GenericFixture",
+          "fixtureID" : 0
+        },
+        "bullet" : false,
+        "angularDamping" : 0,
+        "gravityScale" : 1,
+        "angularVelocity" : 0
+      },
+      "spriteUUID" : "7CCF5401-21A8-4FB1-B909-E4D3A0D728AE",
+      "spriteName" : "object_canteen",
+      "generalPosition" : "{-0.076955, 0.098752}",
+      "uuid" : "131E24ED-C7D6-4B72-B3EC-217DF662C90A",
+      "name" : "object_canteen",
+      "anchor" : "{0.500000, 0.500000}",
+      "size" : "{21.000000, 32.000000}",
+      "nodeType" : "LHSprite",
+      "alpha" : 255,
+      "scale" : "{2.000000, 1.500000}",
+      "relativeImagePath" : "publishFolder\/",
+      "zOrder" : 0,
+      "imageFileName" : "objects.png",
+      "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+    },
+    {
+      "needsCopyReasignment" : false,
+      "parentUUID" : "2619E6BC-131D-4E94-A823-59A087D13D29",
+      "dampingRatio" : 0,
+      "tags" : [
+        "DEFAULT"
+      ],
+      "uuid" : "CABDB63C-C907-4EE2-B1E8-48313807A626",
+      "name" : "UntitledDistanceJoint",
+      "collideConnected" : false,
+      "spriteBUUID" : "131E24ED-C7D6-4B72-B3EC-217DF662C90A",
+      "spriteAUUID" : "C3E96387-D274-4708-BC3D-B3A527EF2C1E",
+      "nodeType" : "LHDistanceJoint",
+      "relativePosB" : "{-2.059534, -11.162126}",
+      "relativePosA" : "{-15.275458, -6.634779}",
+      "frequency" : 0
+    }
+  ],
+  "name" : "Untitled",
+  "anchor" : "{0.500000, 0.500000}",
+  "size" : "{128.000000, 128.000000}",
+  "assetUUID" : "63C35814-7494-41D3-9A04-EAEC0B8E80B6",
+  "nodeType" : "LHAsset",
+  "alpha" : 255,
+  "scale" : "{1.000000, 1.000000}",
+  "zOrder" : 0,
+  "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+}
