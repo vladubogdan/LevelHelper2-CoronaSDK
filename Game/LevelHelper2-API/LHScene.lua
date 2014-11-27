@@ -163,7 +163,7 @@ local function loadPhysicsBoundariesFromDictionary(selfObject, dict)
 								height=display.contentHeight};
 							
 			local skBRect = {origin = { x = bRect.origin.x*designSize.width,
-										y = designSize.height - bRect.origin.y*designSize.height 
+										y = bRect.origin.y*designSize.height 
 										},
 							size = {width = bRect.size.width*designSize.width,
 									height = bRect.size.height*designSize.height}};

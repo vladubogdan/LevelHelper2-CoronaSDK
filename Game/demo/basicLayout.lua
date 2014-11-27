@@ -40,7 +40,7 @@ function scene:show( event )
 		local uiNode = lhScene:getUINode();
 		uiNode:insert( myText );
 		
-	
+		
 		self.demoButtons = require("demo.demoButtons");
 		self.demoButtons:createButtonsWithComposerScene(self, "basicLayout");
 		-- Called when the scene is still off screen and is about to move on screen
@@ -51,16 +51,26 @@ function scene:show( event )
 		-- e.g. start timers, begin animation, play audio, etc.
 		physics.start()
 		
+		Runtime:addEventListener( "enterFrame", self )
+		
 		-- local dJoint = lhScene:getChildNodeWithUniqueName("UntitledDistanceJoint");
 		-- print("found d joint " .. tostring(dJoint) .. " type " .. dJoint.nodeType);
 		
 		-- print("joint " .. tostring(dJoint) .. " scene " .. tostring(lhScene));
-		
+		local sceneGroup = scene.view
 		
 		-- dJoint:removeSelf();
 		-- dJoint = nil;
 		-- print("after joint remove self");
 	end
+end
+
+function scene:enterFrame(event)
+	
+	local sceneGroup = scene.view
+	
+	lhScene.x = lhScene.x + 0.3;
+	
 end
 
 function scene:hide( event )

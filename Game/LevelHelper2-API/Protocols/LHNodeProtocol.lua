@@ -21,6 +21,7 @@ local LHWheelJoint	= require('LevelHelper2-API.Nodes.LHWheelJointNode');
 local LHGearJoint	= require('LevelHelper2-API.Nodes.LHGearJointNode');
 local LHRopeJoint	= require('LevelHelper2-API.Nodes.LHRopeJointNode');
 local LHAsset	= require('LevelHelper2-API.Nodes.LHAsset');
+local LHCamera	= require('LevelHelper2-API.Nodes.LHCamera');
 
 local LHUtils = require("LevelHelper2-API.Utilities.LHUtils");
 local LHUserProperties = require("LevelHelper2-API.Protocols.LHUserProperties");
@@ -49,7 +50,7 @@ local function getChildNodeWithUniqueName(selfNode, name)
 --!@docEnd	
 
 	for i = 1, selfNode:getNumberOfChildren() do
-		local node = selfNode:getChildrenAtIndex(i);
+		local node = selfNode:getChildAtIndex(i);
 		if node._isNodeProtocol == true then
 			local uName = node.lhUniqueName
 
@@ -75,7 +76,7 @@ local function getChildNodeWithUUID(selfNode, _uuid_)
 --!@docEnd	
 
 	for i = 1, selfNode:getNumberOfChildren() do
-		local node = selfNode:getChildrenAtIndex(i);
+		local node = selfNode:getChildAtIndex(i);
 		if node._isNodeProtocol == true then
 			local uid = node.lhUuid
 
@@ -102,7 +103,7 @@ local function getChildrenOfType(selfNode, objType)
 	local temp = {};
 	
 	for i = 1, selfNode:getNumberOfChildren() do
-		local node = selfNode:getChildrenAtIndex(i);
+		local node = selfNode:getChildAtIndex(i);
 		if node._isNodeProtocol == true then
 			if(node:getType() == objType)then
 				temp[#temp+1] = node;
@@ -127,7 +128,7 @@ local function getChildrenOfProtocol(selfNode, protocolType)
 	local temp = {};
 	
 	for i = 1, selfNode:getNumberOfChildren() do
-		local node = selfNode:getChildrenAtIndex(i);
+		local node = selfNode:getChildAtIndex(i);
 		
 		if node._isNodeProtocol == true then
 			if(node:getProtocolName() == protocolType)then
@@ -259,7 +260,7 @@ end
 --!@docBegin
 --!Returns the children at a specific index
 --!@param index The index of the child to be returned
-local function getChildrenAtIndex(selfNode, index)
+local function getChildAtIndex(selfNode, index)
 --!@docEnd	
 	local children = selfNode:getChildren();
 	if index >= 1 and index <= children.numChildren then
@@ -282,6 +283,13 @@ local function setPosition(selfNode, valueX, valueY)
 		selfNode.lhChildren.x = valueX;
 		selfNode.lhChildren.y = valueY;
 	end
+end
+--------------------------------------------------------------------------------
+--!@docBegin
+--!Get the node position as a table {x = 100, y = 100}
+local function getPosition(selfNode)
+--!@docEnd	
+	return {x = selfNode.x, y = selfNode.y}
 end
 --------------------------------------------------------------------------------
 --!@docBegin
@@ -388,6 +396,7 @@ end
 function initNodeProtocolWithDictionary(dict, node, prnt)
 
 	node.setPosition 	= setPosition;
+	node.getPosition	= getPosition;
 	node.setRotation 	= setRotation;
 	node.setScale 		= setScale;
 	node.setAnchor 		= setAnchor;
@@ -397,7 +406,7 @@ function initNodeProtocolWithDictionary(dict, node, prnt)
 	node.removeChild 			= removeChild;
 	node.getChildren 			= getChildren;
 	node.getNumberOfChildren 	= getNumberOfChildren;
-	node.getChildrenAtIndex 	= getChildrenAtIndex;
+	node.getChildAtIndex 	= getChildAtIndex;
 
 
 	node.protocolName = "LHNodeProtocol";
@@ -633,6 +642,12 @@ function createLHNodeWithDictionaryWithParent(childInfo, prnt)
     	local pNode = LHAsset:nodeWithDictionary(childInfo, prnt);
     	return pNode;
     end
+    
+    if nodeType == "LHCamera" then
+    	local pNode = LHCamera:nodeWithDictionary(childInfo, prnt);
+    	return pNode;
+    end
+    
     
     print("UNKNOWN NODE TYPE " .. nodeType);
     

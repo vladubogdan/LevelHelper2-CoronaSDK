@@ -1,6 +1,6 @@
 {
   "tracedFixtures" : {
-    "3F0CD6E8-CA32-4E61-B8B1-65FC1CF58A58" : [
+    "1F399805-259F-42C0-B086-B5FF73C14E5D" : [
       [
         "{-6.75, -9.875}",
         "{-4.25, -10.125}",
@@ -54,7 +54,7 @@
         "{4.25, -15.625}"
       ]
     ],
-    "E08AE22F-3E6D-468F-B967-6E4FA43CE97E" : [
+    "E207EB2F-EB4B-42A0-85CE-458D40AB6BB7" : [
       [
         "{14.5, -12.875}",
         "{14.75, -8.375}",
@@ -122,11 +122,11 @@
     "DEFAULT"
   ],
   "generalPosition" : "{0.133333, 0.200000}",
-  "uuid" : "2619E6BC-131D-4E94-A823-59A087D13D29",
+  "uuid" : "5BB7810B-4552-4A08-8128-026679091188",
   "children" : [
     {
       "rotation" : 0,
-      "parentUUID" : "2619E6BC-131D-4E94-A823-59A087D13D29",
+      "parentUUID" : "5BB7810B-4552-4A08-8128-026679091188",
       "tags" : [
         "DEFAULT"
       ],
@@ -135,7 +135,7 @@
         "fixedRotation" : false,
         "shape" : 5,
         "allowSleep" : true,
-        "fixtureUUID" : "E08AE22F-3E6D-468F-B967-6E4FA43CE97E",
+        "fixtureUUID" : "E207EB2F-EB4B-42A0-85CE-458D40AB6BB7",
         "linearDamping" : 0,
         "type" : 0,
         "genericFixture" : {
@@ -155,7 +155,7 @@
       },
       "spriteUUID" : "0E725708-7B5F-465B-8300-DBEDC04CE6C1",
       "spriteName" : "object_bananabunch",
-      "generalPosition" : "{0.014632, -0.118560}",
+      "generalPosition" : "{0.009573, -0.124251}",
       "uuid" : "C3E96387-D274-4708-BC3D-B3A527EF2C1E",
       "name" : "object_bananabunch",
       "anchor" : "{0.500000, 0.500000}",
@@ -170,7 +170,7 @@
     },
     {
       "rotation" : 0,
-      "parentUUID" : "2619E6BC-131D-4E94-A823-59A087D13D29",
+      "parentUUID" : "5BB7810B-4552-4A08-8128-026679091188",
       "tags" : [
         "DEFAULT"
       ],
@@ -179,7 +179,7 @@
         "fixedRotation" : false,
         "shape" : 5,
         "allowSleep" : true,
-        "fixtureUUID" : "3F0CD6E8-CA32-4E61-B8B1-65FC1CF58A58",
+        "fixtureUUID" : "1F399805-259F-42C0-B086-B5FF73C14E5D",
         "linearDamping" : 0,
         "type" : 2,
         "genericFixture" : {
@@ -199,7 +199,7 @@
       },
       "spriteUUID" : "7CCF5401-21A8-4FB1-B909-E4D3A0D728AE",
       "spriteName" : "object_canteen",
-      "generalPosition" : "{-0.076955, 0.098752}",
+      "generalPosition" : "{-0.063816, 0.013889}",
       "uuid" : "131E24ED-C7D6-4B72-B3EC-217DF662C90A",
       "name" : "object_canteen",
       "anchor" : "{0.500000, 0.500000}",
@@ -214,7 +214,7 @@
     },
     {
       "needsCopyReasignment" : false,
-      "parentUUID" : "2619E6BC-131D-4E94-A823-59A087D13D29",
+      "parentUUID" : "5BB7810B-4552-4A08-8128-026679091188",
       "dampingRatio" : 0,
       "tags" : [
         "DEFAULT"
@@ -225,8 +225,8 @@
       "spriteBUUID" : "131E24ED-C7D6-4B72-B3EC-217DF662C90A",
       "spriteAUUID" : "C3E96387-D274-4708-BC3D-B3A527EF2C1E",
       "nodeType" : "LHDistanceJoint",
-      "relativePosB" : "{-2.059534, -11.162126}",
-      "relativePosA" : "{-15.275458, -6.634779}",
+      "relativePosB" : "{-6.005167, 12.062265}",
+      "relativePosA" : "{-0.202517, 10.853537}",
       "frequency" : 0
     }
   ],

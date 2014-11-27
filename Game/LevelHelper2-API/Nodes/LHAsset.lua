@@ -52,6 +52,43 @@ function LHAsset:nodeWithDictionary(dict, prnt)
 			end
 
 			LHNodeProtocol.loadChildrenForNodeFromDictionary(object, assetInfo);
+			
+			for i=1, object:getNumberOfChildren() do
+				
+				local child = object:getChildAtIndex(i);
+				
+				--object:contentToLocal( xContent, yContent )
+				--object:localToContent( x, y )
+				
+				print(child);
+				if(child)then
+					
+					local contentX, contentY = child:localToContent(0,0);
+				
+					local localX, localY = prnt:contentToLocal(contentX, contentY);
+					
+					prnt:insert(child);
+					
+					child:setPosition(localX, localY);
+					
+					local xScale = child.xScale;
+					local yScale = child.yScale;
+					
+					child:setScale(xScale*object.xScale, yScale*object.yScale);
+					
+					local localRot = child.rotation;
+					
+					child:setRotation(localRot+object.rotation);
+
+					print("new rotation");
+					print(object.rotation);
+					print(localRot*object.rotation);
+					
+				end
+				-- print("child");
+				-- 
+			end
+			
 		end
 	end
 	if(false == fileExists)then

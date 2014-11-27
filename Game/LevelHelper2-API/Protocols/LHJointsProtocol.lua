@@ -57,7 +57,7 @@ local function getContentAnchorA(selfNode)
 --!@docEnd
 	
 	local object = selfNode:getConnectedNodeA();
-	local pt = selfNode.lhJointRelativePosA;
+	local pt = selfNode:getLocalAnchorA();
 	
 	local contentX, contentY = object:localToContent( pt.x, pt.y );
 	
@@ -70,7 +70,7 @@ local function getContentAnchorB(selfNode)
 --!@docEnd
 	
 	local object = selfNode:getConnectedNodeB();
-	local pt = selfNode.lhJointRelativePosB;
+	local pt = selfNode:getLocalAnchorB();
 	
 	local contentX, contentY = object:localToContent( pt.x, pt.y );
 	
