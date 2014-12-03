@@ -301,6 +301,11 @@
 					<key>publish</key>
 					<true/>
 				</dict>
+				<key>parallaxDemo.lhs</key>
+				<dict>
+					<key>publish</key>
+					<true/>
+				</dict>
 				<key>simpleAnimationTest.lhs</key>
 				<dict>
 					<key>publish</key>

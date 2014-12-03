@@ -22,6 +22,8 @@ local LHGearJoint	= require('LevelHelper2-API.Nodes.LHGearJointNode');
 local LHRopeJoint	= require('LevelHelper2-API.Nodes.LHRopeJointNode');
 local LHAsset	= require('LevelHelper2-API.Nodes.LHAsset');
 local LHCamera	= require('LevelHelper2-API.Nodes.LHCamera');
+local LHParallax	= require('LevelHelper2-API.Nodes.LHParallax');
+local LHParallaxLayer	= require('LevelHelper2-API.Nodes.LHParallaxLayer');
 
 local LHUtils = require("LevelHelper2-API.Utilities.LHUtils");
 local LHUserProperties = require("LevelHelper2-API.Protocols.LHUserProperties");
@@ -48,11 +50,14 @@ end
 --!@param name The node unique name to look for inside the children of the current node.
 local function getChildNodeWithUniqueName(selfNode, name)
 --!@docEnd	
-
+	if(selfNode:getUniqueName() ~= nil and selfNode:getUniqueName() == name)then
+		return selfNode;
+	end
+	
 	for i = 1, selfNode:getNumberOfChildren() do
 		local node = selfNode:getChildAtIndex(i);
 		if node._isNodeProtocol == true then
-			local uName = node.lhUniqueName
+			local uName = node:getUniqueName();
 
 			if(uName ~= nil)then
 				if(uName == name)then
@@ -74,11 +79,14 @@ end
 --!@param _uuid_ The node unique identifier to look for inside the children of the current node.
 local function getChildNodeWithUUID(selfNode, _uuid_)
 --!@docEnd	
-
+	if(selfNode:getUUID() ~= nil and selfNode:getUUID() == _uuid_)then
+		return selfNode;
+	end
+	
 	for i = 1, selfNode:getNumberOfChildren() do
 		local node = selfNode:getChildAtIndex(i);
 		if node._isNodeProtocol == true then
-			local uid = node.lhUuid
+			local uid = node:getUUID();
 
 			if(uid ~= nil)then
 				if(uid == _uuid_)then
@@ -451,9 +459,10 @@ function initNodeProtocolWithDictionary(dict, node, prnt)
 		node:setRotation(value)
 	end
 
+	node.lhContentSize = {width = 0, height = 0};
 
 	value = dict["size"];
-	if(value)then
+	if(value~= nil)then
 		local sz = LHUtils.sizeFromString(value);
 		
 		node.width = sz.width;
@@ -561,104 +570,93 @@ end
 --------------------------------------------------------------------------------
 function createLHNodeWithDictionaryWithParent(childInfo, prnt)
 
-    local nodeType = childInfo["nodeType"];
-    
-    -- local scene = nil;
---    if([prnt isKindOfClass:[LHScene class]]){
---        scene = (LHScene*)prnt;
---    }
---    else if([[prnt scene] isKindOfClass:[LHScene class]]){
---        scene = (LHScene*)[prnt scene];
---    }
-    
-    if nodeType =="LHGameWorldNode" then
-	    local pNode = LHGameWorldNode:nodeWithDictionary(childInfo, prnt);
-        return pNode;
-    end
-    
-    if nodeType == "LHBackUINode" then
-	    local pNode = LHBackUINode:nodeWithDictionary(childInfo, prnt);
-        return pNode;
-    end
-    
-    
-    if nodeType == "LHUINode" then
-		local pNode = LHUINode:nodeWithDictionary(childInfo, prnt);
-		return pNode;
+	local nodeType = childInfo["nodeType"];
+	
+	-- local scene = nil;
+	--    if([prnt isKindOfClass:[LHScene class]]){
+	--        scene = (LHScene*)prnt;
+	--    }
+	--    else if([[prnt scene] isKindOfClass:[LHScene class]]){
+	--        scene = (LHScene*)[prnt scene];
+	--    }
+
+	if nodeType =="LHGameWorldNode" then
+		return LHGameWorldNode:nodeWithDictionary(childInfo, prnt);
+	end
+	
+	if nodeType == "LHBackUINode" then
+		return LHBackUINode:nodeWithDictionary(childInfo, prnt);
+	end
+	
+	if nodeType == "LHUINode" then
+		return LHUINode:nodeWithDictionary(childInfo, prnt);
 	end 
 	
 	if nodeType == "LHSprite" then    
-    	local pNode = LHSprite:nodeWithDictionary(childInfo, prnt);
-    	return pNode;
-    end
-    
-    if nodeType == "LHBezier" then    
-    	local pNode = LHBezier:nodeWithDictionary(childInfo, prnt);
-    	return pNode;
-    end
-    
+		return LHSprite:nodeWithDictionary(childInfo, prnt);
+	end
+	
+	if nodeType == "LHBezier" then    
+		return LHBezier:nodeWithDictionary(childInfo, prnt);
+	end
+	
 	if nodeType == "LHNode" then    
-    	local pNode = LHNode:nodeWithDictionary(childInfo, prnt);
-    	return pNode;
-    end
-    
-    if nodeType == "LHTexturedShape" then    
-    	local pNode = LHShape:nodeWithDictionary(childInfo, prnt);
-    	return pNode;
-    end
-    
-    if nodeType == "LHDistanceJoint" then    
-    	local pNode = LHDistanceJoint:nodeWithDictionary(childInfo, prnt);
-    	return pNode;
-    end
-    
-    if nodeType == "LHRevoluteJoint" then    
-    	local pNode = LHRevoluteJoint:nodeWithDictionary(childInfo, prnt);
-    	return pNode;
-    end
-    
-    if nodeType == "LHWeldJoint" then    
-    	local pNode = LHWeldJoint:nodeWithDictionary(childInfo, prnt);
-    	return pNode;
-    end
-    
-    if nodeType == "LHPrismaticJoint" then
-    	local pNode = LHPrismaticJoint:nodeWithDictionary(childInfo, prnt);
-    	return pNode;
-    end
-    
-    if nodeType == "LHPulleyJoint" then
-    	local pNode = LHPulleyJoint:nodeWithDictionary(childInfo, prnt);
-    	return pNode;
-    end
-    
-    if nodeType == "LHWheelJoint" then
-    	local pNode = LHWheelJoint:nodeWithDictionary(childInfo, prnt);
-    	return pNode;
-    end
-    
-    if nodeType == "LHGearJoint" then
-    	local pNode = LHGearJoint:nodeWithDictionary(childInfo, prnt);
-    	return pNode;
-    end
-    
-    if nodeType == "LHRopeJoint" then
-    	local pNode = LHRopeJoint:nodeWithDictionary(childInfo, prnt);
-    	return pNode;
-    end
-    
-    if nodeType == "LHAsset" then
-    	local pNode = LHAsset:nodeWithDictionary(childInfo, prnt);
-    	return pNode;
-    end
-    
-    if nodeType == "LHCamera" then
-    	local pNode = LHCamera:nodeWithDictionary(childInfo, prnt);
-    	return pNode;
-    end
-    
-    
-    print("UNKNOWN NODE TYPE " .. nodeType);
-    
-    return nil
+		return LHNode:nodeWithDictionary(childInfo, prnt);
+	end
+	
+	if nodeType == "LHTexturedShape" then    
+		return LHShape:nodeWithDictionary(childInfo, prnt);
+	end
+	
+	if nodeType == "LHDistanceJoint" then    
+		return LHDistanceJoint:nodeWithDictionary(childInfo, prnt);
+	end
+	
+	if nodeType == "LHRevoluteJoint" then    
+		return LHRevoluteJoint:nodeWithDictionary(childInfo, prnt);
+	end
+	
+	if nodeType == "LHWeldJoint" then    
+		return LHWeldJoint:nodeWithDictionary(childInfo, prnt);
+	end
+	
+	if nodeType == "LHPrismaticJoint" then
+		return LHPrismaticJoint:nodeWithDictionary(childInfo, prnt);
+	end
+	
+	if nodeType == "LHPulleyJoint" then
+		return LHPulleyJoint:nodeWithDictionary(childInfo, prnt);
+	end
+	
+	if nodeType == "LHWheelJoint" then
+		return LHWheelJoint:nodeWithDictionary(childInfo, prnt);
+	end
+	
+	if nodeType == "LHGearJoint" then
+		return LHGearJoint:nodeWithDictionary(childInfo, prnt);
+	end
+	
+	if nodeType == "LHRopeJoint" then
+		return LHRopeJoint:nodeWithDictionary(childInfo, prnt);
+	end
+	
+	if nodeType == "LHAsset" then
+		return LHAsset:nodeWithDictionary(childInfo, prnt);
+	end
+	
+	if nodeType == "LHCamera" then
+		return LHCamera:nodeWithDictionary(childInfo, prnt);
+	end
+	
+	if nodeType == "LHParallaxLayer" then
+		return LHParallaxLayer:nodeWithDictionary(childInfo, prnt);
+	end
+	
+	if nodeType == "LHParallax" then
+		return LHParallax:nodeWithDictionary(childInfo, prnt);
+	end
+	
+	print("UNKNOWN NODE TYPE " .. nodeType);
+	
+	return nil
 end

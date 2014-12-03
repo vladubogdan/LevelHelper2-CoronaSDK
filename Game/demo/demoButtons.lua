@@ -8,7 +8,7 @@ availableDemoScenes[#availableDemoScenes+1] = {name= "simpleAnimationTest", scen
 availableDemoScenes[#availableDemoScenes+1] = {name= "basicLayout", scene= "demo.basicLayout"}
 availableDemoScenes[#availableDemoScenes+1] = {name= "gearJointsExample", scene= "demo.gearJointsExample"}
 availableDemoScenes[#availableDemoScenes+1] = {name= "cameraFollow", scene= "demo.cameraFollow"}
-
+availableDemoScenes[#availableDemoScenes+1] = {name= "parallaxDemo", scene= "demo.parallaxDemo"}
 
 local DemoButtons = {}
 function DemoButtons:createButtonsWithComposerScene(object, _curSceneName_)

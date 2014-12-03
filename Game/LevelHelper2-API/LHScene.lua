@@ -353,7 +353,7 @@ function LHScene:initWithContentOfFile(jsonFile)
 	_scene:loadPhysicsBoundariesFromDictionary(dict);
 	_scene:loadGlobalGravityFromDictionary(dict);
 	
-
+	_scene.lhUniqueName = jsonFile;
 	
 	Runtime:addEventListener( "enterFrame", _scene )
 	

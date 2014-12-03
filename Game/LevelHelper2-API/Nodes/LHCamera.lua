@@ -33,7 +33,6 @@ end
 local function getFollowedNode(selfNode)
 --!@docEnd
 	if(selfNode._followedNodeUUID ~= nil and selfNode._followedNode == nil)then
-		
 		selfNode._followedNode = selfNode:getScene():getChildNodeWithUUID(selfNode._followedNodeUUID);
 		if(selfNode._followedNode)then
 			selfNode._followedNodeUUID = nil;
@@ -371,7 +370,7 @@ local function transformToRestrictivePosition(selfNode, position)
 	local worldRect = scene:getGameWorldRect();
 	
 	if(selfNode:getRestrictedToGameWorld() and 
-		(worldRect.origin.x ~= 0 and worldRect.origin.y ~= 0 and worldRect.size.width ~= 0 and worldRect.size.height ~= 0))then
+		(worldRect.origin.x ~= 0 or worldRect.origin.y ~= 0 or worldRect.size.width ~= 0 or worldRect.size.height ~= 0))then
 	
 		x = math.max(x, winSize.width*0.5 - (worldRect.origin.x + worldRect.size.width - winSize.width * 0.5));
 		x = math.min(x, winSize.width*0.5 - worldRect.origin.x - winSize.width*0.5);
