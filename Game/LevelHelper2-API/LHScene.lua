@@ -294,6 +294,10 @@ function LHScene:initWithContentOfFile(jsonFile)
 
 	_scene._relativePath = LHUtils.getPathFromFilename(jsonFile);
 
+	local bkgrColor = LHUtils.colorFromString(dict["backgroundColor"]);
+	display.setDefault( "background", bkgrColor.red, bkgrColor.green, bkgrColor.blue);
+	
+	
 
 	local tracedFixInfo = dict["tracedFixtures"];
 	if(tracedFixInfo ~= nil)then
@@ -308,6 +312,8 @@ function LHScene:initWithContentOfFile(jsonFile)
 	
 	_scene:loadPhysicsBoundariesFromDictionary(dict);
 	_scene:loadGlobalGravityFromDictionary(dict);
+	
+
 	
 	Runtime:addEventListener( "enterFrame", _scene )
 	

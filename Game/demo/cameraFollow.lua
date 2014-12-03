@@ -11,24 +11,33 @@ local physics = require("physics")
 -- physics.setDrawMode( "hybrid" )
 physics.start();
 	
+local performance = require('performancemeter.performance')
+performance:newPerformanceMeter()
+
 --------------------------------------------
 local LHScene =  require("LevelHelper2-API.LHScene");
 local lhScene = nil;--forward declaration of lhScene in order to access it everywhere in this file
 --------------------------------------------
 --------------------------------------------
-local myText = display.newText(display.fps, display.contentWidth - 30, display.contentHeight - 30, native.systemFont, 16)
-
 function scene:create( event )
 	local sceneGroup = scene.view
 end
 
-local function enterFrame()
-	myText.txt = display.fps;
-	
+local changeX = false;
+
+function didTap(event)
+	print("changing gravity");
+	local gx, gy = physics.getGravity();
+
+	if(changeX)then	
+		physics.setGravity( -gx, gy );
+		
+		changeX = false;
+	else
+		physics.setGravity( gx, -gy );
+		changeX = true;
+	end
 end
- 
-
-
 
 function scene:show( event )
 	
@@ -60,18 +69,10 @@ function scene:show( event )
 		-- e.g. start timers, begin animation, play audio, etc.
 		physics.start()
 		
-		Runtime:addEventListener("enterFrame", enterFrame)
-
-
-		-- local dJoint = lhScene:getChildNodeWithUniqueName("UntitledDistanceJoint");
-		-- print("found d joint " .. tostring(dJoint) .. " type " .. dJoint.nodeType);
-		
-		-- print("joint " .. tostring(dJoint) .. " scene " .. tostring(lhScene));
 		local sceneGroup = scene.view
 		
-		-- dJoint:removeSelf();
-		-- dJoint = nil;
-		-- print("after joint remove self");
+		Runtime:addEventListener( "tap", didTap )
+		
 	end
 end
 
@@ -90,7 +91,7 @@ function scene:hide( event )
 		--
 		physics.stop();
 		
-		Runtime:removeEventListener("enterFrame", enterFrame)
+		Runtime:removeEventListener( "tap", didTap )
 		
 		-- INSERT code here to pause the scene
 		-- e.g. stop timers, stop animation, unload sounds, etc.)
