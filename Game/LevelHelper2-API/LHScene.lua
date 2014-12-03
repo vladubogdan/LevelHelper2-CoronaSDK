@@ -6,18 +6,48 @@
 --------------------------------------------------------------------------------
 local LHUtils = require("LevelHelper2-API.Utilities.LHUtils");
 local LHNodeProtocol = require("LevelHelper2-API.Protocols.LHNodeProtocol")
-
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+local function getDesignResolutionSize()
+	return {width =display.contentWidth, height=display.contentHeight};
+end
+--------------------------------------------------------------------------------
+local function getDeviceSize()
+	return {width = display.pixelWidth, height = display.pixelHeight}
+end
 --------------------------------------------------------------------------------
 --!@docBegin
 --!Get the back ui node from the scene.
 local function getBackUINode(_sceneObj)
 --!@docEnd
+	if(_sceneObj._backUINode == nil)then
+		for i = 1, _sceneObj.numChildren do
+			local node = _sceneObj[i]
+
+			if node.nodeType == "LHBackUINode" then
+				_sceneObj._backUINode = node;
+			end
+		end
+	end
+	return _sceneObj._backUINode;
+	
 end
 --------------------------------------------------------------------------------
 --!@docBegin
 --!Get the game world node from the scene.
 local function getGameWorldNode(_sceneObj)
 --!@docEnd
+	if(_sceneObj._gwNode == nil)then
+		for i = 1, _sceneObj.numChildren do
+			local node = _sceneObj[i]
+
+			if node.nodeType == "LHGameWorldNode" then
+				_sceneObj._gwNode = node;
+			end
+		end
+	end
+	return _sceneObj._gwNode;
+	
 end
 --------------------------------------------------------------------------------
 --!@docBegin
@@ -68,8 +98,8 @@ local function assetInfoForFile(selfObject, assetFileName)
 	local info = selfObject._loadedAssetsInformations[assetFileName];
 	if(nil == info)then
 		
-		print(selfObject._relativePath);
-		print(assetFileName);
+		-- print(selfObject._relativePath);
+		-- print(assetFileName);
 		
 		local path = selfObject._relativePath .. assetFileName .. ".json";
 		
@@ -238,6 +268,9 @@ function LHScene:initWithContentOfFile(jsonFile)
 	_scene.getBackUINode 						= getBackUINode;
 	_scene.getGameWorldNode 					= getGameWorldNode;
 	_scene.getUINode 		 					= getUINode;
+	_scene.getDeviceSize						= getDeviceSize;
+	_scene.getDesignResolutionSize				= getDesignResolutionSize;
+	
 	_scene.tracedFixturesWithUUID 				= tracedFixturesWithUUID;
 	_scene.loadPhysicsBoundariesFromDictionary 	= loadPhysicsBoundariesFromDictionary;
 	_scene.createPhysicsBoundarySection 		= createPhysicsBoundarySection;

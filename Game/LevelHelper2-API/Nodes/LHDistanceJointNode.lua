@@ -61,11 +61,11 @@ local function lateLoading(selfNode)
 		if(nil == physics)then	return end
 		physics.start();
 
-		print("creating distance joint");
-		print(anchorA.x);
-		print(anchorA.y);
-		print(anchorB.x);
-		print(anchorB.y);
+		-- print("creating distance joint");
+		-- print(anchorA.x);
+		-- print(anchorA.y);
+		-- print(anchorB.x);
+		-- print(anchorB.y);
 		
 -- 2014-11-21 08:01:50.584 Corona Simulator[21403:5109592] 38.984874725342
 -- 2014-11-21 08:01:50.584 Corona Simulator[21403:5109592] 32.306484222412

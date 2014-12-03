@@ -321,7 +321,7 @@ local function animateNodeChildrenPositionsToTime(selfObject, time, beginFrame, 
 		
 				newPos = selfObject:convertFramePosition(newPos, child);
 		
-				child:setPosition(newPos.x, newPos.y);
+				child:setPosition({x = newPos.x, y = newPos.y});
 			end
 		end
 	elseif(beginFrame) then
@@ -335,7 +335,7 @@ local function animateNodeChildrenPositionsToTime(selfObject, time, beginFrame, 
 		
 				newPos = selfObject:convertFramePosition(newPos, child);
 		
-				child:setPosition(newPos.x, newPos.y);
+				child:setPosition({x = newPos.x, y = newPos.y});
 			end
 		end
 	end
@@ -363,7 +363,7 @@ local function animateNodePositionToTime(selfObject, time, beginFrame, endFrame,
 		
 		newPos = selfObject:convertFramePosition(newPos, animNode);
 		
-		animNode:setPosition(newPos.x, newPos.y);
+		animNode:setPosition({x = newPos.x, y = newPos.y});
 	end
 
 	if(beginFrame ~= nil and endFrame == nil)then
@@ -375,7 +375,7 @@ local function animateNodePositionToTime(selfObject, time, beginFrame, endFrame,
 		
 		newPos = selfObject:convertFramePosition(newPos, animNode);
 		
-		animNode:setPosition(newPos.x, newPos.y);
+		animNode:setPosition({x = newPos.x, y = newPos.y});
 	end
 end
 --------------------------------------------------------------------------------
@@ -619,6 +619,12 @@ local function getScene(selfObject)
 end
 local function convertFramePosition(selfObject, newPos, animNode)
 
+	if(animNode:getType() == "LHCamera")then
+		local winSize = selfObject:getScene():getDesignResolutionSize();
+		return {x = winSize.width*0.5 - newPos.x,
+				y = winSize.height*0.5 - newPos.y};
+	end
+	
     -- if([animNode isKindOfClass:[LHCamera class]]){
     --     CGSize winSize = [[self scene] designResolutionSize];
     --     return CGPointMake(winSize.width*0.5  - newPos.x,

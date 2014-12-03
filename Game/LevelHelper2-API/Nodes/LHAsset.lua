@@ -60,7 +60,6 @@ function LHAsset:nodeWithDictionary(dict, prnt)
 				--object:contentToLocal( xContent, yContent )
 				--object:localToContent( x, y )
 				
-				print(child);
 				if(child)then
 					
 					local contentX, contentY = child:localToContent(0,0);
@@ -69,7 +68,7 @@ function LHAsset:nodeWithDictionary(dict, prnt)
 					
 					prnt:insert(child);
 					
-					child:setPosition(localX, localY);
+					child:setPosition({x = localX, y = localY});
 					
 					local xScale = child.xScale;
 					local yScale = child.yScale;
@@ -79,14 +78,8 @@ function LHAsset:nodeWithDictionary(dict, prnt)
 					local localRot = child.rotation;
 					
 					child:setRotation(localRot+object.rotation);
-
-					print("new rotation");
-					print(object.rotation);
-					print(localRot*object.rotation);
 					
 				end
-				-- print("child");
-				-- 
 			end
 			
 		end

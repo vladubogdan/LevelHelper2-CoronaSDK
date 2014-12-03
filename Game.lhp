@@ -276,6 +276,11 @@
 		<dict>
 			<key>ScenesOptions</key>
 			<dict>
+				<key>cameraFollow.lhs</key>
+				<dict>
+					<key>publish</key>
+					<true/>
+				</dict>
 				<key>characterAnimation.lhs</key>
 				<dict>
 					<key>publish</key>

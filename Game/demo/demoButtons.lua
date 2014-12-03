@@ -7,7 +7,7 @@ availableDemoScenes[#availableDemoScenes+1] = {name= "introductionScene", scene=
 availableDemoScenes[#availableDemoScenes+1] = {name= "simpleAnimationTest", scene= "demo.simpleAnimationExample"}
 availableDemoScenes[#availableDemoScenes+1] = {name= "basicLayout", scene= "demo.basicLayout"}
 availableDemoScenes[#availableDemoScenes+1] = {name= "gearJointsExample", scene= "demo.gearJointsExample"}
-
+availableDemoScenes[#availableDemoScenes+1] = {name= "cameraFollow", scene= "demo.cameraFollow"}
 
 
 local DemoButtons = {}

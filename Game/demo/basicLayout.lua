@@ -51,8 +51,6 @@ function scene:show( event )
 		-- e.g. start timers, begin animation, play audio, etc.
 		physics.start()
 		
-		Runtime:addEventListener( "enterFrame", self )
-		
 		-- local dJoint = lhScene:getChildNodeWithUniqueName("UntitledDistanceJoint");
 		-- print("found d joint " .. tostring(dJoint) .. " type " .. dJoint.nodeType);
 		
@@ -65,14 +63,6 @@ function scene:show( event )
 	end
 end
 
-function scene:enterFrame(event)
-	
-	local sceneGroup = scene.view
-	
-	lhScene.x = lhScene.x + 0.3;
-	
-end
-
 function scene:hide( event )
 	
 	local sceneGroup = self.view
@@ -82,8 +72,6 @@ function scene:hide( event )
 	if event.phase == "will" then
 		-- Called when the scene is on screen and is about to move off screen
 		self.demoButtons = nil;
-		
-		print("removing scene");
 		
 		lhScene:removeSelf();
 		lhScene = nil;

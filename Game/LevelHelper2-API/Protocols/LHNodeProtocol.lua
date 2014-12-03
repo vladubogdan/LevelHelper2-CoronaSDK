@@ -271,17 +271,16 @@ end
 --------------------------------------------------------------------------------
 --!@docBegin
 --!Set the node position
---!@param valueX The new x position value
---!@param valueY The new y position value
-local function setPosition(selfNode, valueX, valueY)
+--!@param value The new position value. A table like {x =100, y = 200}
+local function setPosition(selfNode, value)
 --!@docEnd	
 
-	selfNode.x = valueX;
-	selfNode.y = valueY;
+	selfNode.x = value.x;
+	selfNode.y = value.y;
 	
 	if(selfNode.lhChildren)then
-		selfNode.lhChildren.x = valueX;
-		selfNode.lhChildren.y = valueY;
+		selfNode.lhChildren.x = value.x;
+		selfNode.lhChildren.y = value.y;
 	end
 end
 --------------------------------------------------------------------------------
@@ -333,6 +332,14 @@ local function setAnchor(selfNode, x, y)
 		selfNode.lhChildren.anchorX = x;
 		selfNode.lhChildren.anchorY = y;
 	end
+end
+local function convertToWorldSpace(selfNode, position)
+	local contentX, contentY = selfNode:localToContent(position.x, position.y);
+	return {x = contentX, y = contentY};
+end
+local function convertToNodeSpace(selfNode, position)
+	local localX, localY = selfNode:contentToLocal(position.x, position.y);
+	return {x = localX, y = localY};
 end
 
 local function enterFrame(selfNode, event)
@@ -425,6 +432,9 @@ function initNodeProtocolWithDictionary(dict, node, prnt)
 	node.getUniqueName				= getUniqueName;
 	node.getType 					= getType;
 	node.getProtocolName			= getProtocolName;
+	
+	node.convertToWorldSpace = convertToWorldSpace;
+	node.convertToNodeSpace = convertToNodeSpace;
 	
 	--Load node protocol properties
 	----------------------------------------------------------------------------
@@ -521,8 +531,7 @@ function initNodeProtocolWithDictionary(dict, node, prnt)
 			end
 		-- end
 		
-		-- node:setPosition(calculatedPos.x, calculatedPos.y);
-		node:setPosition(calculatedPos.x, calculatedPos.y);
+		node:setPosition({x = calculatedPos.x, y = calculatedPos.y});
 		
 		-- print("position for sprite " .. node:getUniqueName());
 		-- print(calculatedPos.x);

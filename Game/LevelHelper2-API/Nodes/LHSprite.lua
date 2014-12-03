@@ -7,7 +7,7 @@
 --!@docBegin
 --!Changes the sprite texture rectangle based on the new sprite name.
 --!@param spriteName A name from the sprite sheet this sprite belongs to. A string value.
-function setSpriteFrameWithName( selfNode, spriteName )
+local function setSpriteFrameWithName( selfNode, spriteName )
 --!@docEnd
 	if(selfNode.frameNamesMap ~= nil)then
 		local frame = selfNode.frameNamesMap[spriteName];
@@ -20,9 +20,9 @@ end
 --------------------------------------------------------------------------------
 local function visit(selfNode, event)
 
-
 	selfNode:animationProtocolEnterFrame(event);
 	selfNode:nodeProtocolEnterFrame(event);
+	
 end
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
