@@ -78,7 +78,7 @@ end
 --!Returns the game world rectangle or nil if it was not specified. A table of format {origin={x = 10, y = 10}, size={width=100, height=100}};
 local function getGameWorldRect(_sceneObj)
 --!@docEnd
-	return selfObject._gameWorldRect;
+	return _sceneObj._gameWorldRect;
 end
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
@@ -144,7 +144,7 @@ local function loadGameWorldInfoFromDictionary(selfObject, dict)
 	local gameWorldInfo = dict["gameWorld"];
 	if(gameWorldInfo)then
 
-		local scr = {width = display.pixelWidth, height = display.pixelHeight}
+		local scr = selfObject:getDeviceSize();
 		local key = tostring(scr.width) .. "x" .. tostring(scr.height);
 		
 		local rectInf = gameWorldInfo[key];
@@ -156,15 +156,54 @@ local function loadGameWorldInfoFromDictionary(selfObject, dict)
 			local LHUtils = require("LevelHelper2-API.Utilities.LHUtils");
 			local bRect = LHUtils.rectFromString(rectInf);
 			
-			local designSize = {width =display.contentWidth, 
-								height=display.contentHeight};
-							
+			local designSize = selfObject:getDesignResolutionSize();
 
 			selfObject._gameWorldRect = {origin = { x = bRect.origin.x*designSize.width,
-													y = (1.0 - bRect.origin.y)*designSize.height 
+													y = (bRect.origin.y)*designSize.height 
 													},
 										size = {width = bRect.size.width*designSize.width,
-										height = bRect.size.height*designSize.height}};
+												height = (bRect.size.height)*designSize.height}};
+			
+			-- local skBRect = selfObject._gameWorldRect;
+			
+			-- local from = {x = skBRect.origin.x, y = skBRect.origin.y};
+			-- local to = {x = skBRect.origin.x + skBRect.size.width,
+			-- 			y = skBRect.origin.y};
+			
+			-- local borderLine = display.newLine( from.x,from.y, to.x,to.y );
+			-- borderLine:setStrokeColor( 1, 0, 0, 1 )
+			-- borderLine.strokeWidth = 8
+			-- selfObject:getGameWorldNode():addChild(borderLine);
+			
+			-- from = 	{x = skBRect.origin.x + skBRect.size.width,
+			-- 		y = skBRect.origin.y};
+			-- to = 	{x = skBRect.origin.x + skBRect.size.width,
+			-- 		y = skBRect.origin.y + skBRect.size.height};
+					
+			-- borderLine = display.newLine( from.x,from.y, to.x,to.y );
+			-- borderLine:setStrokeColor( 1, 0, 0, 1 )
+			-- borderLine.strokeWidth = 8
+			-- selfObject:getGameWorldNode():addChild(borderLine);
+
+			-- from = 	{x = skBRect.origin.x + skBRect.size.width,
+			-- 		y = skBRect.origin.y + skBRect.size.height};
+			-- to = 	{x = skBRect.origin.x,
+			-- 		y = skBRect.origin.y + skBRect.size.height};
+					
+			-- borderLine = display.newLine( from.x,from.y, to.x,to.y );
+			-- borderLine:setStrokeColor( 1, 0, 0, 1 )
+			-- borderLine.strokeWidth = 8
+			-- selfObject:getGameWorldNode():addChild(borderLine);
+			
+			-- from = 	{x = skBRect.origin.x,
+			-- 		y = skBRect.origin.y + skBRect.size.height};
+			-- to = 	{x = skBRect.origin.x,
+			-- 		y = skBRect.origin.y};
+				
+			-- borderLine = display.newLine( from.x,from.y, to.x,to.y );
+			-- borderLine:setStrokeColor( 1, 0, 0, 1 )
+			-- borderLine.strokeWidth = 8
+			-- selfObject:getGameWorldNode():addChild(borderLine);
 			
 		end
 	end
@@ -304,11 +343,12 @@ function LHScene:initWithContentOfFile(jsonFile)
 		_scene._tracedFixtures = LHUtils.LHDeepCopy(tracedFixInfo);
 	end
 	
-	_scene:loadGameWorldInfoFromDictionary(dict);
 	
 	local LHNodeProtocol = require('LevelHelper2-API.Protocols.LHNodeProtocol')
 	LHNodeProtocol.initNodeProtocolWithDictionary(dict, _scene, nil);
 	LHNodeProtocol.loadChildrenForNodeFromDictionary(_scene, dict);
+	
+	_scene:loadGameWorldInfoFromDictionary(dict);
 	
 	_scene:loadPhysicsBoundariesFromDictionary(dict);
 	_scene:loadGlobalGravityFromDictionary(dict);

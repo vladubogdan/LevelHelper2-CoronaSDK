@@ -347,7 +347,8 @@ local function transformToRestrictivePosition(selfNode, position)
 		end
 		
 		local scaledMidpoint = {x = gwNodePos.x, y = gwNodePos.y};
-		local followedPos = {x = (halfWinSize.x - scaledMidpoint.x), y = (halfWinSize.y - scaledMidpoint.y)};
+		local followedPos = {	x = (halfWinSize.x - scaledMidpoint.x), 
+								y = (halfWinSize.y - scaledMidpoint.y)};
 
 		if(selfNode:getLockX() == false)then
 			transPoint.x = followedPos.x;
@@ -363,6 +364,24 @@ local function transformToRestrictivePosition(selfNode, position)
 		transPoint.y = transPoint.y + selfNode.offset.y*winSize.height;
 		
 	end
+	
+	
+	local x = transPoint.x;
+	local y = transPoint.y;
+	local worldRect = scene:getGameWorldRect();
+	
+	if(selfNode:getRestrictedToGameWorld() and 
+		(worldRect.origin.x ~= 0 and worldRect.origin.y ~= 0 and worldRect.size.width ~= 0 and worldRect.size.height ~= 0))then
+	
+		x = math.max(x, winSize.width*0.5 - (worldRect.origin.x + worldRect.size.width - winSize.width * 0.5));
+		x = math.min(x, winSize.width*0.5 - worldRect.origin.x - winSize.width*0.5);
+		
+		y = math.max(y, winSize.height*0.5 - (worldRect.origin.y + worldRect.size.height - (winSize.height*0.5)));
+		y = math.min(y, winSize.height*0.5 - (worldRect.origin.y + winSize.height*0.5));
+	end
+	
+	transPoint.x = x;
+	transPoint.y = y;
 
 	return transPoint;
 end

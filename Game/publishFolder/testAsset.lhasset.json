@@ -1,6 +1,6 @@
 {
   "tracedFixtures" : {
-    "7B9C6948-38CF-4D82-8D94-AED2D02B7B5F" : [
+    "9D58E7F4-A3C1-4611-B82F-97C47827A259" : [
       [
         "{-6.75, -9.875}",
         "{-4.25, -10.125}",
@@ -54,7 +54,7 @@
         "{4.25, -15.625}"
       ]
     ],
-    "E512FA93-9809-4B4C-A7B9-E93FADAAD5E9" : [
+    "609C879E-E1E5-4D36-A814-99C984823ADC" : [
       [
         "{14.5, -12.875}",
         "{14.75, -8.375}",
@@ -122,11 +122,11 @@
     "DEFAULT"
   ],
   "generalPosition" : "{0.133333, 0.200000}",
-  "uuid" : "775FCDC8-79EB-4047-B106-6190D510D5C4",
+  "uuid" : "E1328C15-A0EB-461D-A77D-304A3A87E3F5",
   "children" : [
     {
       "rotation" : 0,
-      "parentUUID" : "775FCDC8-79EB-4047-B106-6190D510D5C4",
+      "parentUUID" : "E1328C15-A0EB-461D-A77D-304A3A87E3F5",
       "tags" : [
         "DEFAULT"
       ],
@@ -135,7 +135,7 @@
         "fixedRotation" : false,
         "shape" : 5,
         "allowSleep" : true,
-        "fixtureUUID" : "E512FA93-9809-4B4C-A7B9-E93FADAAD5E9",
+        "fixtureUUID" : "609C879E-E1E5-4D36-A814-99C984823ADC",
         "linearDamping" : 0,
         "type" : 0,
         "genericFixture" : {
@@ -170,7 +170,7 @@
     },
     {
       "rotation" : 0,
-      "parentUUID" : "775FCDC8-79EB-4047-B106-6190D510D5C4",
+      "parentUUID" : "E1328C15-A0EB-461D-A77D-304A3A87E3F5",
       "tags" : [
         "DEFAULT"
       ],
@@ -179,7 +179,7 @@
         "fixedRotation" : false,
         "shape" : 5,
         "allowSleep" : true,
-        "fixtureUUID" : "7B9C6948-38CF-4D82-8D94-AED2D02B7B5F",
+        "fixtureUUID" : "9D58E7F4-A3C1-4611-B82F-97C47827A259",
         "linearDamping" : 0,
         "type" : 2,
         "genericFixture" : {
@@ -214,7 +214,7 @@
     },
     {
       "needsCopyReasignment" : false,
-      "parentUUID" : "775FCDC8-79EB-4047-B106-6190D510D5C4",
+      "parentUUID" : "E1328C15-A0EB-461D-A77D-304A3A87E3F5",
       "dampingRatio" : 0,
       "tags" : [
         "DEFAULT"
