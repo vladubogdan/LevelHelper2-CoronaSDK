@@ -1,0 +1,3109 @@
+{
+  "designResolution" : "{960.000000, 640.000000}",
+  "globalGravityForce" : 8,
+  "tags" : [
+    "DEFAULT"
+  ],
+  "aspect" : 5,
+  "backgroundColor" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}",
+  "gameWorld" : {
+    "2208x1242" : "{{-0.829397, -1.133695}, {3.054424, 3.175860}}",
+    "general" : "{{-0.829397, -1.133695}, {3.054424, 3.175860}}",
+    "1334x750" : "{{-0.829397, -1.133695}, {3.054424, 3.175860}}",
+    "1136x640" : "{{-0.829397, -1.133695}, {3.054424, 3.175860}}",
+    "1024x600" : "{{-0.829397, -1.133695}, {3.054424, 3.175860}}",
+    "2048x1536" : "{{-0.829397, -1.133695}, {3.054424, 3.175860}}",
+    "960x640" : "{{-0.829397, -1.133695}, {3.054424, 3.175860}}"
+  },
+  "uuid" : "FB6B55A0-96E1-4CAB-B067-7FD3FBCE8141",
+  "children" : [
+    {
+      "rotation" : 0,
+      "parentUUID" : "FB6B55A0-96E1-4CAB-B067-7FD3FBCE8141",
+      "tags" : [
+        "DEFAULT"
+      ],
+      "generalPosition" : "{0.000000, 0.000000}",
+      "uuid" : "D9686265-1B27-4EF9-82BD-612EADAF7B12",
+      "children" : [
+        {
+          "rotation" : 0,
+          "parentUUID" : "_BACK_USER_INTERFACE_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "generalPosition" : "{0.500000, 0.500000}",
+          "uuid" : "B5A022F8-3717-4731-BE5E-21B42D2B19DE",
+          "name" : "sky",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{1204.000000, 903.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoBackgrounds\/",
+          "zOrder" : 0,
+          "imageFileName" : "sky.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        }
+      ],
+      "name" : "BACK USER INTERFACE",
+      "anchor" : "{0.500000, 0.500000}",
+      "size" : "{128.000000, 128.000000}",
+      "nodeType" : "LHBackUINode",
+      "alpha" : 255,
+      "scale" : "{1.000000, 1.000000}",
+      "zOrder" : -1,
+      "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+    },
+    {
+      "rotation" : 0,
+      "parentUUID" : "FB6B55A0-96E1-4CAB-B067-7FD3FBCE8141",
+      "tags" : [
+        "DEFAULT"
+      ],
+      "generalPosition" : "{0.000000, 0.000000}",
+      "uuid" : "C8517493-B59D-420F-8ECA-6DC4F46CB4EC",
+      "children" : [
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{-0.766667, 0.750000}",
+          "uuid" : "8F8F90BE-3334-4A95-8B82-143D97FBC2A0",
+          "name" : "brick",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{-0.766667, 0.950000}",
+          "uuid" : "FC4039BE-7C67-436C-8804-890AF9E06B20",
+          "name" : "brick_1",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{-0.766667, 1.150000}",
+          "uuid" : "BFAEAD0F-9146-41B5-9231-50597B16B7AD",
+          "name" : "brick_2",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{-0.766667, 1.350000}",
+          "uuid" : "8D632CA7-9586-49C9-BDB5-5E9E45DF1C13",
+          "name" : "brick_3",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{-0.766667, 1.550000}",
+          "uuid" : "3252BE00-BCF1-412A-BEE2-A6B8CAF65348",
+          "name" : "brick_4",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{-0.766667, 1.750000}",
+          "uuid" : "1C238777-394B-48FC-9FE4-488FBE333DE6",
+          "name" : "brick_5",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{-0.766667, 1.950000}",
+          "uuid" : "50638A9A-AF01-4027-ACAD-ED45712860A1",
+          "name" : "brick_6",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{-0.633334, 1.950000}",
+          "uuid" : "6381F74E-E6A9-45AF-BF17-7A0B5BA0FF1B",
+          "name" : "brick_7",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{-0.500000, 1.950000}",
+          "uuid" : "F13C7474-22B5-4D8B-A2F6-63120B089270",
+          "name" : "brick_8",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{-0.366667, 1.950000}",
+          "uuid" : "D5771FBC-4D16-40D2-A312-C9436EAE586E",
+          "name" : "brick_9",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{-0.233334, 1.950000}",
+          "uuid" : "C20871FA-8FE9-4BC9-AA13-7CB99910E8B1",
+          "name" : "brick_10",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{-0.100000, 1.950000}",
+          "uuid" : "4640D4EF-EEB3-4065-88B2-AB732E2AE053",
+          "name" : "brick_11",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{0.033333, 1.950000}",
+          "uuid" : "A1A1C87E-B452-474E-B69F-7262D7DFF299",
+          "name" : "brick_12",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{0.166666, 1.950000}",
+          "uuid" : "EF005102-774C-451F-8D85-85A18BB478DB",
+          "name" : "brick_13",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{0.300000, 1.950000}",
+          "uuid" : "52E7D8AF-E319-4264-90BC-F57941260A45",
+          "name" : "brick_14",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{0.433333, 1.950000}",
+          "uuid" : "4E4212B0-EEE2-4FAB-B53A-77256FFAC67C",
+          "name" : "brick_15",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{0.566666, 1.950000}",
+          "uuid" : "82AA5848-0644-4251-BA9B-821EA6760DA5",
+          "name" : "brick_16",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{0.700000, 1.950000}",
+          "uuid" : "B1513BB5-667E-4677-9E78-5C16F9FA25A3",
+          "name" : "brick_17",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{0.833333, 1.950000}",
+          "uuid" : "519B93DF-285F-4EBE-ACCA-00C852464463",
+          "name" : "brick_18",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{0.966666, 1.950000}",
+          "uuid" : "1B0AB8BF-0D47-414C-B57C-39CE5400D008",
+          "name" : "brick_19",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{1.100000, 1.950000}",
+          "uuid" : "5BE328F8-5B0F-4B0D-A99C-A046EB09AAAF",
+          "name" : "brick_20",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{1.233333, 1.950000}",
+          "uuid" : "7F0D949A-FAD8-48E6-AD58-4FF33E6FBE7F",
+          "name" : "brick_21",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{1.366666, 1.950000}",
+          "uuid" : "C88E438B-3C5E-4C77-A0E4-2E9842414FA9",
+          "name" : "brick_22",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{1.500000, 1.950000}",
+          "uuid" : "49BBEDE3-1824-4FFB-9CDD-A681ADC279E7",
+          "name" : "brick_23",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{1.633333, 1.950000}",
+          "uuid" : "C683C5EB-5B7D-4473-B3B6-4820791C8365",
+          "name" : "brick_24",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{1.766666, 1.950000}",
+          "uuid" : "755D7E58-938F-4E70-B8E5-840C7C28516F",
+          "name" : "brick_25",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{1.900000, 1.950000}",
+          "uuid" : "31F980FB-542E-4EF4-8B87-E30431E1B419",
+          "name" : "brick_26",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{2.033333, 1.950000}",
+          "uuid" : "B016A835-15EF-40F8-87E7-21F1A36A5664",
+          "name" : "brick_27",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{2.166666, 1.950000}",
+          "uuid" : "943A3395-F326-45A3-B455-33143994DE6E",
+          "name" : "brick_28",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{2.166666, 1.750000}",
+          "uuid" : "DE773EFA-CD76-4DEB-830C-F33F6E468B81",
+          "name" : "brick_29",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{2.166666, 1.550000}",
+          "uuid" : "0C680033-7621-46A7-ADED-36EC0D2169B8",
+          "name" : "brick_30",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{2.166666, 1.350000}",
+          "uuid" : "D2D6879A-D930-45C4-B222-0902A4BB0634",
+          "name" : "brick_31",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{2.166666, 1.150000}",
+          "uuid" : "472851A8-5D8D-4A3D-A4C8-CA4D6AAE3E68",
+          "name" : "brick_32",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{2.166666, 0.950000}",
+          "uuid" : "9A626AA6-8A02-4974-90AD-229A0EA253BF",
+          "name" : "brick_33",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{2.166666, 0.750000}",
+          "uuid" : "C00C81B5-BE3E-4293-8D92-1618BB9BE407",
+          "name" : "brick_34",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{2.166666, 0.550000}",
+          "uuid" : "AE6C73EA-E041-45E0-A105-5EFCCA2E260D",
+          "name" : "brick_35",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{2.166666, 0.350000}",
+          "uuid" : "71328CDA-E6F6-4E0F-BF83-CF358D9CE3D2",
+          "name" : "brick_36",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{2.166666, 0.150000}",
+          "uuid" : "833C4D09-9978-4558-A797-A892F865F5DF",
+          "name" : "brick_37",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{2.166666, -0.050000}",
+          "uuid" : "7B28BC56-E286-4074-8348-0217C6789CAA",
+          "name" : "brick_38",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{2.166666, -0.250000}",
+          "uuid" : "17787634-BEF9-41D5-A421-457CF94565A0",
+          "name" : "brick_39",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{2.166666, -0.450000}",
+          "uuid" : "EDF0F16B-A1F1-46E8-878B-C4073659F9EA",
+          "name" : "brick_40",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{2.166666, -0.650000}",
+          "uuid" : "7506404C-9F9B-4389-B9F6-65887B5A2734",
+          "name" : "brick_41",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{2.166666, -0.850000}",
+          "uuid" : "C5CB3B66-1435-449F-989C-BE1444770628",
+          "name" : "brick_42",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{2.166666, -1.050000}",
+          "uuid" : "53D3581C-FFCE-4F87-8C7E-8A8D610CED83",
+          "name" : "brick_51",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{2.033333, -1.050000}",
+          "uuid" : "2FCAA2E4-EAE4-4202-8978-84F85FB3A49D",
+          "name" : "brick_52",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{1.900000, -1.050000}",
+          "uuid" : "5ABF2938-FCDF-4950-8CD0-95107AED7C1D",
+          "name" : "brick_53",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{1.766666, -1.050000}",
+          "uuid" : "D4A27590-376E-4F38-84C5-2F879EA8338C",
+          "name" : "brick_54",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{1.633333, -1.050000}",
+          "uuid" : "28203908-781A-4CD6-B054-731DF3233AD4",
+          "name" : "brick_55",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{1.500000, -1.050000}",
+          "uuid" : "CACE12C9-E902-457B-9134-A530977D124E",
+          "name" : "brick_56",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{1.366666, -1.050000}",
+          "uuid" : "F13BD140-1665-4BDF-B218-5023624EFA07",
+          "name" : "brick_57",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{1.233333, -1.050000}",
+          "uuid" : "877C4C9D-0CDC-4673-B1F1-2311218A1E58",
+          "name" : "brick_58",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{1.100000, -1.050000}",
+          "uuid" : "E949EEA9-10A7-4CA1-A527-27CC8FBFA282",
+          "name" : "brick_59",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{0.966666, -1.050000}",
+          "uuid" : "682588E7-7DCD-443E-BFC5-2D7B2CCC59F6",
+          "name" : "brick_60",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{0.833333, -1.050000}",
+          "uuid" : "DC0CA1BF-F862-4EB8-A7EF-E04D293497FD",
+          "name" : "brick_61",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{0.700000, -1.050000}",
+          "uuid" : "F8122B9A-9BAD-4C01-9252-3E359DE781BE",
+          "name" : "brick_62",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{0.566666, -1.050000}",
+          "uuid" : "D2418685-657E-47FB-A052-FA2033EB834B",
+          "name" : "brick_63",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{0.433333, -1.050000}",
+          "uuid" : "4D2EEEED-1526-44C3-BE94-1FEF79F2E9F8",
+          "name" : "brick_64",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{0.300000, -1.050000}",
+          "uuid" : "AFC48328-E17B-420D-9AD1-B08054A83654",
+          "name" : "brick_65",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{0.166666, -1.050000}",
+          "uuid" : "EC1A190F-0943-42B0-8056-C923F2D52499",
+          "name" : "brick_66",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{0.033333, -1.050000}",
+          "uuid" : "4F179345-683F-48D1-8308-B04CD5FA0784",
+          "name" : "brick_67",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{-0.100000, -1.050000}",
+          "uuid" : "65EE0866-D07C-486C-9A70-F3C79F60BF9B",
+          "name" : "brick_68",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{-0.233334, -1.050000}",
+          "uuid" : "FE15CEE0-EC6E-4D91-B831-3BC194457F90",
+          "name" : "brick_69",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{-0.366667, -1.050000}",
+          "uuid" : "3122F38F-6A59-41A5-B156-B40D563160F6",
+          "name" : "brick_70",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{-0.500000, -1.050000}",
+          "uuid" : "ADC9A93A-D54F-474B-A753-F9B6963348BF",
+          "name" : "brick_71",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{-0.633334, -1.050000}",
+          "uuid" : "55525028-155A-4C77-9170-E5BE5533E150",
+          "name" : "brick_72",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{-0.766667, -1.050000}",
+          "uuid" : "9216FF16-BA4B-4C4E-B89A-0A002F119996",
+          "name" : "brick_73",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{-0.766667, -0.850000}",
+          "uuid" : "844FE31E-9F42-4CFB-9130-44F389DCCE78",
+          "name" : "brick_79",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{-0.766667, -0.650000}",
+          "uuid" : "D97BAE75-ACD6-4434-810A-DCA7B501F00F",
+          "name" : "brick_80",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{-0.766667, -0.450000}",
+          "uuid" : "ABCD856A-70C1-4046-A164-DEF8BE4B911A",
+          "name" : "brick_81",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{-0.766667, -0.250000}",
+          "uuid" : "9DEBCFC9-9CAE-4ACC-ACC7-004CB37273CB",
+          "name" : "brick_82",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{-0.766667, -0.050000}",
+          "uuid" : "8C96E0D3-18E7-4AA5-BB54-A11E44BD6197",
+          "name" : "brick_83",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{-0.766667, 0.150000}",
+          "uuid" : "5304724C-0E74-4D8C-BE4D-11B10B742B79",
+          "name" : "brick_84",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{-0.766667, 0.350000}",
+          "uuid" : "4AA97D22-D3E4-4C6D-8778-F0C683838ED7",
+          "name" : "brick_85",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{-0.766667, 0.550000}",
+          "uuid" : "CC313099-64AE-4381-AE06-D349BCD41E70",
+          "name" : "brick_86",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 341.0407,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "nodePhysics" : {
+            "bullet" : false,
+            "angularDamping" : 0,
+            "gravityScale" : 1,
+            "allowSleep" : true,
+            "angularVelocity" : 0,
+            "fixedRotation" : false,
+            "linearDamping" : 0,
+            "type" : 0,
+            "shape" : 0,
+            "genericFixture" : {
+              "category" : 1,
+              "sensor" : false,
+              "density" : 0.1,
+              "mask" : 65535,
+              "friction" : 0.2,
+              "restitution" : 0,
+              "name" : "GenericFixture",
+              "fixtureID" : 0
+            },
+            "linearVelocity" : "{0.000000, 0.000000}"
+          },
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{1.306477, 1.399615}",
+          "uuid" : "6B191710-0400-4BE2-8266-4FED4E5DCF6A",
+          "name" : "brick_90",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 341.0407,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "nodePhysics" : {
+            "bullet" : false,
+            "angularDamping" : 0,
+            "gravityScale" : 1,
+            "allowSleep" : true,
+            "angularVelocity" : 0,
+            "fixedRotation" : false,
+            "linearDamping" : 0,
+            "type" : 0,
+            "shape" : 0,
+            "genericFixture" : {
+              "category" : 1,
+              "sensor" : false,
+              "density" : 0.1,
+              "mask" : 65535,
+              "friction" : 0.2,
+              "restitution" : 0,
+              "name" : "GenericFixture",
+              "fixtureID" : 0
+            },
+            "linearVelocity" : "{0.000000, 0.000000}"
+          },
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{0.576780, 0.962953}",
+          "uuid" : "22213E99-61FD-4923-B62D-E9D9625E9E9C",
+          "name" : "brick_78",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 341.0407,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "nodePhysics" : {
+            "bullet" : false,
+            "angularDamping" : 0,
+            "gravityScale" : 1,
+            "allowSleep" : true,
+            "angularVelocity" : 0,
+            "fixedRotation" : false,
+            "linearDamping" : 0,
+            "type" : 0,
+            "shape" : 0,
+            "genericFixture" : {
+              "category" : 1,
+              "sensor" : false,
+              "density" : 0.1,
+              "mask" : 65535,
+              "friction" : 0.2,
+              "restitution" : 0,
+              "name" : "GenericFixture",
+              "fixtureID" : 0
+            },
+            "linearVelocity" : "{0.000000, 0.000000}"
+          },
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{0.166845, 0.186209}",
+          "uuid" : "1A0DB90A-16F2-4AE7-8F4C-34FB36AB6220",
+          "name" : "brick_77",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 341.0407,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "nodePhysics" : {
+            "bullet" : false,
+            "angularDamping" : 0,
+            "gravityScale" : 1,
+            "allowSleep" : true,
+            "angularVelocity" : 0,
+            "fixedRotation" : false,
+            "linearDamping" : 0,
+            "type" : 0,
+            "shape" : 0,
+            "genericFixture" : {
+              "category" : 1,
+              "sensor" : false,
+              "density" : 0.1,
+              "mask" : 65535,
+              "friction" : 0.2,
+              "restitution" : 0,
+              "name" : "GenericFixture",
+              "fixtureID" : 0
+            },
+            "linearVelocity" : "{0.000000, 0.000000}"
+          },
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{0.543086, -0.037264}",
+          "uuid" : "3A4FAA15-AE14-48DA-8F3B-BB8EB54DF312",
+          "name" : "brick_76",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 341.0407,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "nodePhysics" : {
+            "bullet" : false,
+            "angularDamping" : 0,
+            "gravityScale" : 1,
+            "allowSleep" : true,
+            "angularVelocity" : 0,
+            "fixedRotation" : false,
+            "linearDamping" : 0,
+            "type" : 0,
+            "shape" : 0,
+            "genericFixture" : {
+              "category" : 1,
+              "sensor" : false,
+              "density" : 0.1,
+              "mask" : 65535,
+              "friction" : 0.2,
+              "restitution" : 0,
+              "name" : "GenericFixture",
+              "fixtureID" : 0
+            },
+            "linearVelocity" : "{0.000000, 0.000000}"
+          },
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{0.818467, 0.273380}",
+          "uuid" : "9849BC0B-C596-47F8-B5D6-CBE367D9BE9E",
+          "name" : "brick_75",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 341.0407,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "nodePhysics" : {
+            "bullet" : false,
+            "angularDamping" : 0,
+            "gravityScale" : 1,
+            "allowSleep" : true,
+            "angularVelocity" : 0,
+            "fixedRotation" : false,
+            "linearDamping" : 0,
+            "type" : 0,
+            "shape" : 0,
+            "genericFixture" : {
+              "category" : 1,
+              "sensor" : false,
+              "density" : 0.1,
+              "mask" : 65535,
+              "friction" : 0.2,
+              "restitution" : 0,
+              "name" : "GenericFixture",
+              "fixtureID" : 0
+            },
+            "linearVelocity" : "{0.000000, 0.000000}"
+          },
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{-0.300000, -0.475000}",
+          "uuid" : "AAE3F448-0406-4E0D-8245-5E0C5CE3A1CC",
+          "name" : "brick_74",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 341.0407,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "nodePhysics" : {
+            "bullet" : false,
+            "angularDamping" : 0,
+            "gravityScale" : 1,
+            "allowSleep" : true,
+            "angularVelocity" : 0,
+            "fixedRotation" : false,
+            "linearDamping" : 0,
+            "type" : 0,
+            "shape" : 0,
+            "genericFixture" : {
+              "category" : 1,
+              "sensor" : false,
+              "density" : 0.1,
+              "mask" : 65535,
+              "friction" : 0.2,
+              "restitution" : 0,
+              "name" : "GenericFixture",
+              "fixtureID" : 0
+            },
+            "linearVelocity" : "{0.000000, 0.000000}"
+          },
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{1.750000, 0.925000}",
+          "uuid" : "9C1073C1-1551-4CB9-91DE-E588E34A9D7B",
+          "name" : "brick_50",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 341.0407,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "nodePhysics" : {
+            "bullet" : false,
+            "angularDamping" : 0,
+            "gravityScale" : 1,
+            "allowSleep" : true,
+            "angularVelocity" : 0,
+            "fixedRotation" : false,
+            "linearDamping" : 0,
+            "type" : 0,
+            "shape" : 0,
+            "genericFixture" : {
+              "category" : 1,
+              "sensor" : false,
+              "density" : 0.1,
+              "mask" : 65535,
+              "friction" : 0.2,
+              "restitution" : 0,
+              "name" : "GenericFixture",
+              "fixtureID" : 0
+            },
+            "linearVelocity" : "{0.000000, 0.000000}"
+          },
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{-0.383333, 0.950000}",
+          "uuid" : "1237B376-7DDA-4A52-881E-7608269CEA4C",
+          "name" : "brick_49",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 341.0407,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "nodePhysics" : {
+            "bullet" : false,
+            "angularDamping" : 0,
+            "gravityScale" : 1,
+            "allowSleep" : true,
+            "angularVelocity" : 0,
+            "fixedRotation" : false,
+            "linearDamping" : 0,
+            "type" : 0,
+            "shape" : 0,
+            "genericFixture" : {
+              "category" : 1,
+              "sensor" : false,
+              "density" : 0.1,
+              "mask" : 65535,
+              "friction" : 0.2,
+              "restitution" : 0,
+              "name" : "GenericFixture",
+              "fixtureID" : 0
+            },
+            "linearVelocity" : "{0.000000, 0.000000}"
+          },
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{-0.344712, 0.238969}",
+          "uuid" : "7D129B5A-7ADC-4840-B383-83225657E4F9",
+          "name" : "brick_48",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 341.0407,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "nodePhysics" : {
+            "bullet" : false,
+            "angularDamping" : 0,
+            "gravityScale" : 1,
+            "allowSleep" : true,
+            "angularVelocity" : 0,
+            "fixedRotation" : false,
+            "linearDamping" : 0,
+            "type" : 0,
+            "shape" : 0,
+            "genericFixture" : {
+              "category" : 1,
+              "sensor" : false,
+              "density" : 0.1,
+              "mask" : 65535,
+              "friction" : 0.2,
+              "restitution" : 0,
+              "name" : "GenericFixture",
+              "fixtureID" : 0
+            },
+            "linearVelocity" : "{0.000000, 0.000000}"
+          },
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{0.143501, 1.281931}",
+          "uuid" : "80C6D748-B665-403A-8F7C-3E6ABE8A022E",
+          "name" : "brick_47",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 341.0407,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "nodePhysics" : {
+            "bullet" : false,
+            "angularDamping" : 0,
+            "gravityScale" : 1,
+            "allowSleep" : true,
+            "angularVelocity" : 0,
+            "fixedRotation" : false,
+            "linearDamping" : 0,
+            "type" : 0,
+            "shape" : 0,
+            "genericFixture" : {
+              "category" : 1,
+              "sensor" : false,
+              "density" : 0.1,
+              "mask" : 65535,
+              "friction" : 0.2,
+              "restitution" : 0,
+              "name" : "GenericFixture",
+              "fixtureID" : 0
+            },
+            "linearVelocity" : "{0.000000, 0.000000}"
+          },
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{1.419166, 0.040767}",
+          "uuid" : "FF0974E2-CB3A-4F95-BCB8-186D20271484",
+          "name" : "brick_46",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 341.0407,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "nodePhysics" : {
+            "bullet" : false,
+            "angularDamping" : 0,
+            "gravityScale" : 1,
+            "allowSleep" : true,
+            "angularVelocity" : 0,
+            "fixedRotation" : false,
+            "linearDamping" : 0,
+            "type" : 0,
+            "shape" : 0,
+            "genericFixture" : {
+              "category" : 1,
+              "sensor" : false,
+              "density" : 0.1,
+              "mask" : 65535,
+              "friction" : 0.2,
+              "restitution" : 0,
+              "name" : "GenericFixture",
+              "fixtureID" : 0
+            },
+            "linearVelocity" : "{0.000000, 0.000000}"
+          },
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{1.633334, -0.500000}",
+          "uuid" : "DAEBA1B4-72B9-4984-95F4-FE45B3DFCBCA",
+          "name" : "brick_45",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 341.0407,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "nodePhysics" : {
+            "bullet" : false,
+            "angularDamping" : 0,
+            "gravityScale" : 1,
+            "allowSleep" : true,
+            "angularVelocity" : 0,
+            "fixedRotation" : false,
+            "linearDamping" : 0,
+            "type" : 0,
+            "shape" : 0,
+            "genericFixture" : {
+              "category" : 1,
+              "sensor" : false,
+              "density" : 0.1,
+              "mask" : 65535,
+              "friction" : 0.2,
+              "restitution" : 0,
+              "name" : "GenericFixture",
+              "fixtureID" : 0
+            },
+            "linearVelocity" : "{0.000000, 0.000000}"
+          },
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{1.219105, -0.352344}",
+          "uuid" : "CC9C0938-3119-4FC2-9A06-DEDED1921DC1",
+          "name" : "brick_44",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 341.0407,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "nodePhysics" : {
+            "bullet" : false,
+            "angularDamping" : 0,
+            "gravityScale" : 1,
+            "allowSleep" : true,
+            "angularVelocity" : 0,
+            "fixedRotation" : false,
+            "linearDamping" : 0,
+            "type" : 0,
+            "shape" : 0,
+            "genericFixture" : {
+              "category" : 1,
+              "sensor" : false,
+              "density" : 0.1,
+              "mask" : 65535,
+              "friction" : 0.2,
+              "restitution" : 0,
+              "name" : "GenericFixture",
+              "fixtureID" : 0
+            },
+            "linearVelocity" : "{0.000000, 0.000000}"
+          },
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{0.119440, -0.326804}",
+          "uuid" : "62962838-BCEB-4C90-B3B5-58039383D5F3",
+          "name" : "brick_43",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 315.5044,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "nodePhysics" : {
+            "bullet" : false,
+            "angularDamping" : 0,
+            "gravityScale" : 1,
+            "allowSleep" : true,
+            "angularVelocity" : 0,
+            "fixedRotation" : false,
+            "linearDamping" : 0,
+            "type" : 0,
+            "shape" : 0,
+            "genericFixture" : {
+              "category" : 1,
+              "sensor" : false,
+              "density" : 0.1,
+              "mask" : 65535,
+              "friction" : 0.2,
+              "restitution" : 0,
+              "name" : "GenericFixture",
+              "fixtureID" : 0
+            },
+            "linearVelocity" : "{0.000000, 0.000000}"
+          },
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{0.982008, 1.303442}",
+          "uuid" : "CCED2192-FC75-44BA-89DE-3DA948C2ED1A",
+          "name" : "brick_101",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 338.5455,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "nodePhysics" : {
+            "bullet" : false,
+            "angularDamping" : 0,
+            "gravityScale" : 1,
+            "allowSleep" : true,
+            "angularVelocity" : 0,
+            "fixedRotation" : false,
+            "linearDamping" : 0,
+            "type" : 0,
+            "shape" : 0,
+            "genericFixture" : {
+              "category" : 1,
+              "sensor" : false,
+              "density" : 0.1,
+              "mask" : 65535,
+              "friction" : 0.2,
+              "restitution" : 0,
+              "name" : "GenericFixture",
+              "fixtureID" : 0
+            },
+            "linearVelocity" : "{0.000000, 0.000000}"
+          },
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{0.754768, 0.650149}",
+          "uuid" : "0395BDC5-17C3-407D-BAC8-8BE1C132E621",
+          "name" : "brick_100",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 347.478,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "nodePhysics" : {
+            "bullet" : false,
+            "angularDamping" : 0,
+            "gravityScale" : 1,
+            "allowSleep" : true,
+            "angularVelocity" : 0,
+            "fixedRotation" : false,
+            "linearDamping" : 0,
+            "type" : 0,
+            "shape" : 0,
+            "genericFixture" : {
+              "category" : 1,
+              "sensor" : false,
+              "density" : 0.1,
+              "mask" : 65535,
+              "friction" : 0.2,
+              "restitution" : 0,
+              "name" : "GenericFixture",
+              "fixtureID" : 0
+            },
+            "linearVelocity" : "{0.000000, 0.000000}"
+          },
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{1.565313, 1.290975}",
+          "uuid" : "9D1B21DB-97E4-4C75-9E38-7A9C8221724F",
+          "name" : "brick_99",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 10.51912,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "nodePhysics" : {
+            "bullet" : false,
+            "angularDamping" : 0,
+            "gravityScale" : 1,
+            "allowSleep" : true,
+            "angularVelocity" : 0,
+            "fixedRotation" : false,
+            "linearDamping" : 0,
+            "type" : 0,
+            "shape" : 0,
+            "genericFixture" : {
+              "category" : 1,
+              "sensor" : false,
+              "density" : 0.1,
+              "mask" : 65535,
+              "friction" : 0.2,
+              "restitution" : 0,
+              "name" : "GenericFixture",
+              "fixtureID" : 0
+            },
+            "linearVelocity" : "{0.000000, 0.000000}"
+          },
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{1.603172, 0.556298}",
+          "uuid" : "4D3D6D29-7753-4886-BDB6-E2F35EC1B226",
+          "name" : "brick_98",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 347.478,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "nodePhysics" : {
+            "bullet" : false,
+            "angularDamping" : 0,
+            "gravityScale" : 1,
+            "allowSleep" : true,
+            "angularVelocity" : 0,
+            "fixedRotation" : false,
+            "linearDamping" : 0,
+            "type" : 0,
+            "shape" : 0,
+            "genericFixture" : {
+              "category" : 1,
+              "sensor" : false,
+              "density" : 0.1,
+              "mask" : 65535,
+              "friction" : 0.2,
+              "restitution" : 0,
+              "name" : "GenericFixture",
+              "fixtureID" : 0
+            },
+            "linearVelocity" : "{0.000000, 0.000000}"
+          },
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{-0.201353, 1.365975}",
+          "uuid" : "8B26D0FE-A322-4BEB-814B-32EFBDC445CA",
+          "name" : "brick_97",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 10.51912,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "nodePhysics" : {
+            "bullet" : false,
+            "angularDamping" : 0,
+            "gravityScale" : 1,
+            "allowSleep" : true,
+            "angularVelocity" : 0,
+            "fixedRotation" : false,
+            "linearDamping" : 0,
+            "type" : 0,
+            "shape" : 0,
+            "genericFixture" : {
+              "category" : 1,
+              "sensor" : false,
+              "density" : 0.1,
+              "mask" : 65535,
+              "friction" : 0.2,
+              "restitution" : 0,
+              "name" : "GenericFixture",
+              "fixtureID" : 0
+            },
+            "linearVelocity" : "{0.000000, 0.000000}"
+          },
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{-0.163495, 0.631298}",
+          "uuid" : "9188C1E3-DA02-4A8C-84B4-6AB39B6A89EE",
+          "name" : "brick_96",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 347.478,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "nodePhysics" : {
+            "bullet" : false,
+            "angularDamping" : 0,
+            "gravityScale" : 1,
+            "allowSleep" : true,
+            "angularVelocity" : 0,
+            "fixedRotation" : false,
+            "linearDamping" : 0,
+            "type" : 0,
+            "shape" : 0,
+            "genericFixture" : {
+              "category" : 1,
+              "sensor" : false,
+              "density" : 0.1,
+              "mask" : 65535,
+              "friction" : 0.2,
+              "restitution" : 0,
+              "name" : "GenericFixture",
+              "fixtureID" : 0
+            },
+            "linearVelocity" : "{0.000000, 0.000000}"
+          },
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{0.998647, 0.165975}",
+          "uuid" : "C22C9AD7-7153-46D2-A717-20D22A3342A0",
+          "name" : "brick_95",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 334.3963,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "nodePhysics" : {
+            "bullet" : false,
+            "angularDamping" : 0,
+            "gravityScale" : 1,
+            "allowSleep" : true,
+            "angularVelocity" : 0,
+            "fixedRotation" : false,
+            "linearDamping" : 0,
+            "type" : 0,
+            "shape" : 0,
+            "genericFixture" : {
+              "category" : 1,
+              "sensor" : false,
+              "density" : 0.1,
+              "mask" : 65535,
+              "friction" : 0.2,
+              "restitution" : 0,
+              "name" : "GenericFixture",
+              "fixtureID" : 0
+            },
+            "linearVelocity" : "{0.000000, 0.000000}"
+          },
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{1.238971, 0.348676}",
+          "uuid" : "BBB558B9-33A5-4506-BCAB-465190B5A5E2",
+          "name" : "brick_87",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 28.25561,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "nodePhysics" : {
+            "bullet" : false,
+            "angularDamping" : 0,
+            "gravityScale" : 1,
+            "allowSleep" : true,
+            "angularVelocity" : 0,
+            "fixedRotation" : false,
+            "linearDamping" : 0,
+            "type" : 0,
+            "shape" : 0,
+            "genericFixture" : {
+              "category" : 1,
+              "sensor" : false,
+              "density" : 0.1,
+              "mask" : 65535,
+              "friction" : 0.2,
+              "restitution" : 0,
+              "name" : "GenericFixture",
+              "fixtureID" : 0
+            },
+            "linearVelocity" : "{0.000000, 0.000000}"
+          },
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{1.700000, 0.000000}",
+          "uuid" : "2B3D0A40-DEB7-44C2-BCAC-FFD34A4817BA",
+          "name" : "brick_88",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 329.6031,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "nodePhysics" : {
+            "bullet" : false,
+            "angularDamping" : 0,
+            "gravityScale" : 1,
+            "allowSleep" : true,
+            "angularVelocity" : 0,
+            "fixedRotation" : false,
+            "linearDamping" : 0,
+            "type" : 0,
+            "shape" : 0,
+            "genericFixture" : {
+              "category" : 1,
+              "sensor" : false,
+              "density" : 0.1,
+              "mask" : 65535,
+              "friction" : 0.2,
+              "restitution" : 0,
+              "name" : "GenericFixture",
+              "fixtureID" : 0
+            },
+            "linearVelocity" : "{0.000000, 0.000000}"
+          },
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{0.750000, -0.350000}",
+          "uuid" : "389D7700-A425-4DEA-BE57-2C36B326E94F",
+          "name" : "brick_89",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 341.0407,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "nodePhysics" : {
+            "bullet" : false,
+            "angularDamping" : 0,
+            "gravityScale" : 1,
+            "allowSleep" : true,
+            "angularVelocity" : 0,
+            "fixedRotation" : false,
+            "linearDamping" : 0,
+            "type" : 0,
+            "shape" : 0,
+            "genericFixture" : {
+              "category" : 1,
+              "sensor" : false,
+              "density" : 0.1,
+              "mask" : 65535,
+              "friction" : 0.2,
+              "restitution" : 0,
+              "name" : "GenericFixture",
+              "fixtureID" : 0
+            },
+            "linearVelocity" : "{0.000000, 0.000000}"
+          },
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{-0.251013, -0.161845}",
+          "uuid" : "4D7CE3F2-07EC-4BBA-BAA8-3C8D24339279",
+          "name" : "brick_91",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 6.980896,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "nodePhysics" : {
+            "bullet" : false,
+            "angularDamping" : 0,
+            "gravityScale" : 1,
+            "allowSleep" : true,
+            "angularVelocity" : 0,
+            "fixedRotation" : false,
+            "linearDamping" : 0,
+            "type" : 0,
+            "shape" : 0,
+            "genericFixture" : {
+              "category" : 1,
+              "sensor" : false,
+              "density" : 0.1,
+              "mask" : 65535,
+              "friction" : 0.2,
+              "restitution" : 0,
+              "name" : "GenericFixture",
+              "fixtureID" : 0
+            },
+            "linearVelocity" : "{0.000000, 0.000000}"
+          },
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{0.491862, 1.387798}",
+          "uuid" : "2B9C48EE-1A44-423B-9F37-1CE7FCFE82AC",
+          "name" : "brick_92",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 6.648034,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "nodePhysics" : {
+            "bullet" : false,
+            "angularDamping" : 0,
+            "gravityScale" : 1,
+            "allowSleep" : true,
+            "angularVelocity" : 0,
+            "fixedRotation" : false,
+            "linearDamping" : 0,
+            "type" : 0,
+            "shape" : 0,
+            "genericFixture" : {
+              "category" : 1,
+              "sensor" : false,
+              "density" : 0.1,
+              "mask" : 65535,
+              "friction" : 0.2,
+              "restitution" : 0,
+              "name" : "GenericFixture",
+              "fixtureID" : 0
+            },
+            "linearVelocity" : "{0.000000, 0.000000}"
+          },
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{0.326353, 0.550183}",
+          "uuid" : "CA010830-9C0C-4253-9C98-53514B9D2BBB",
+          "name" : "brick_93",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 15.00345,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "nodePhysics" : {
+            "bullet" : false,
+            "angularDamping" : 0,
+            "gravityScale" : 1,
+            "allowSleep" : true,
+            "angularVelocity" : 0,
+            "fixedRotation" : false,
+            "linearDamping" : 0,
+            "type" : 0,
+            "shape" : 0,
+            "genericFixture" : {
+              "category" : 1,
+              "sensor" : false,
+              "density" : 0.1,
+              "mask" : 65535,
+              "friction" : 0.2,
+              "restitution" : 0,
+              "name" : "GenericFixture",
+              "fixtureID" : 0
+            },
+            "linearVelocity" : "{0.000000, 0.000000}"
+          },
+          "spriteUUID" : "1A242F3B-4105-4E4E-874D-21056CF0944B",
+          "spriteName" : "brick",
+          "generalPosition" : "{1.333617, 0.818831}",
+          "uuid" : "AFACC1B7-6AC6-4132-931D-0441A20CEA87",
+          "name" : "brick_94",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 128.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "platformer.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "zoomOnPinchOrScroll" : true,
+          "tags" : [
+            "DEFAULT"
+          ],
+          "zoomValue" : 2.192614,
+          "lockX" : false,
+          "activeCamera" : true,
+          "generalPosition" : "{0.583333, 0.250000}",
+          "smoothMovement" : true,
+          "uuid" : "28462BA5-C032-49DB-BCA7-ABDC7C89239D",
+          "importantArea" : "{0.500000, 0.500000}",
+          "name" : "UntitledCamera",
+          "followedNodeUUID" : "D4CFAD31-346D-4ECF-B039-1CB4F49A80B3",
+          "nodeType" : "LHCamera",
+          "offset" : "{0.000000, 0.000000}",
+          "restrictToGameWorld" : true,
+          "lockY" : false
+        },
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "nodePhysics" : {
+            "bullet" : false,
+            "angularDamping" : 0,
+            "gravityScale" : 1,
+            "allowSleep" : true,
+            "angularVelocity" : 0,
+            "fixedRotation" : false,
+            "linearDamping" : 0,
+            "type" : 0,
+            "shape" : 3,
+            "genericFixture" : {
+              "category" : 1,
+              "sensor" : false,
+              "density" : 0.1,
+              "mask" : 65535,
+              "friction" : 0.2,
+              "restitution" : 0,
+              "name" : "GenericFixture",
+              "fixtureID" : 0
+            },
+            "linearVelocity" : "{0.000000, 0.000000}"
+          },
+          "generalPosition" : "{0.682301, 0.428168}",
+          "closed" : false,
+          "uuid" : "00F25C45-6CBF-4A9D-98CA-884137492712",
+          "name" : "UntitledBezier",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{2504.652588, 1753.332520}",
+          "nodeType" : "LHBezier",
+          "alpha" : 255,
+          "points" : [
+            {
+              "ctrl2" : "{-1439.009012, 1293.972288}",
+              "hasCtrl1" : true,
+              "ctrl1" : "{-1207.051861, -150.914979}",
+              "mainPt" : "{-1199.009012, -242.027712}",
+              "hasCtrl2" : true
+            },
+            {
+              "ctrl2" : "{1040.990988, 957.972288}",
+              "hasCtrl1" : true,
+              "ctrl1" : "{-848.912412, 748.727325}",
+              "mainPt" : "{32.990988, 781.972288}",
+              "hasCtrl2" : true
+            },
+            {
+              "ctrl2" : "{1392.990988, -1234.027712}",
+              "hasCtrl1" : true,
+              "ctrl1" : "{1415.189993, 1010.136899}",
+              "mainPt" : "{1184.990988, -178.027712}",
+              "hasCtrl2" : true
+            },
+            {
+              "ctrl2" : "{-1178.711538, -659.730654}",
+              "hasCtrl1" : true,
+              "ctrl1" : "{1157.288462, -819.730654}",
+              "mainPt" : "{-63.009012, -674.027712}",
+              "hasCtrl2" : true
+            },
+            {
+              "ctrl2" : "{-1182.700521, -142.515768}",
+              "hasCtrl1" : true,
+              "ctrl1" : "{-1247.009012, -1154.027712}",
+              "mainPt" : "{-1199.009012, -258.027712}",
+              "hasCtrl2" : true
+            }
+          ],
+          "scale" : "{1.000000, 1.000000}",
+          "zOrder" : 19,
+          "colorOverlay" : "{{0.000000, 0.000000}, {0.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "nodePhysics" : {
+            "bullet" : false,
+            "angularDamping" : 0,
+            "gravityScale" : 1,
+            "allowSleep" : true,
+            "angularVelocity" : 0,
+            "fixedRotation" : false,
+            "linearDamping" : 0,
+            "type" : 2,
+            "shape" : 1,
+            "genericFixture" : {
+              "category" : 1,
+              "sensor" : false,
+              "density" : 0.1,
+              "mask" : 65535,
+              "friction" : 0.2,
+              "restitution" : 0,
+              "name" : "GenericFixture",
+              "fixtureID" : 0
+            },
+            "linearVelocity" : "{0.000000, 0.000000}"
+          },
+          "spriteUUID" : "986AA138-7C74-479B-A627-5BBF982B2605",
+          "spriteName" : "carTyre",
+          "generalPosition" : "{0.833333, 0.000000}",
+          "uuid" : "D4CFAD31-346D-4ECF-B039-1CB4F49A80B3",
+          "name" : "carTyre",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{43.000000, 43.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "DemoPublishFolder\/",
+          "zOrder" : 20,
+          "imageFileName" : "carParts.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        }
+      ],
+      "name" : "GAME WORLD",
+      "anchor" : "{0.500000, 0.500000}",
+      "size" : "{128.000000, 128.000000}",
+      "nodeType" : "LHGameWorldNode",
+      "alpha" : 255,
+      "scale" : "{1.000000, 1.000000}",
+      "zOrder" : 0,
+      "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+    },
+    {
+      "rotation" : 0,
+      "parentUUID" : "FB6B55A0-96E1-4CAB-B067-7FD3FBCE8141",
+      "tags" : [
+        "DEFAULT"
+      ],
+      "generalPosition" : "{0.000000, 0.000000}",
+      "uuid" : "6D926BBE-AB3B-467F-9728-5FD7C75155EC",
+      "name" : "FRONT USER INTERFACE",
+      "anchor" : "{0.500000, 0.500000}",
+      "size" : "{128.000000, 128.000000}",
+      "nodeType" : "LHUINode",
+      "alpha" : 255,
+      "scale" : "{1.000000, 1.000000}",
+      "zOrder" : 1,
+      "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+    }
+  ],
+  "devices" : [
+    {
+      "ratio" : 1,
+      "suffix" : "",
+      "size" : "{960.000000, 640.000000}"
+    },
+    {
+      "ratio" : 1,
+      "suffix" : "",
+      "size" : "{1136.000000, 640.000000}"
+    },
+    {
+      "ratio" : 1,
+      "suffix" : "",
+      "size" : "{1334.000000, 750.000000}"
+    },
+    {
+      "ratio" : 2,
+      "suffix" : "@2x",
+      "size" : "{2208.000000, 1242.000000}"
+    },
+    {
+      "ratio" : 2,
+      "suffix" : "@2x",
+      "size" : "{2048.000000, 1536.000000}"
+    },
+    {
+      "ratio" : 1,
+      "suffix" : "",
+      "size" : "{1024.000000, 768.000000}"
+    },
+    {
+      "ratio" : 1,
+      "suffix" : "",
+      "size" : "{960.000000, 540.000000}"
+    },
+    {
+      "ratio" : 1,
+      "suffix" : "",
+      "size" : "{800.000000, 480.000000}"
+    },
+    {
+      "ratio" : 1,
+      "suffix" : "",
+      "size" : "{1280.000000, 720.000000}"
+    },
+    {
+      "ratio" : 2,
+      "suffix" : "@2x",
+      "size" : "{1920.000000, 1080.000000}"
+    },
+    {
+      "ratio" : 1,
+      "suffix" : "",
+      "size" : "{1024.000000, 600.000000}"
+    },
+    {
+      "ratio" : 1,
+      "suffix" : "",
+      "size" : "{1280.000000, 800.000000}"
+    },
+    {
+      "ratio" : 2,
+      "suffix" : "@2x",
+      "size" : "{1920.000000, 1200.000000}"
+    },
+    {
+      "ratio" : 1,
+      "suffix" : "",
+      "size" : "{1024.000000, 600.000000}"
+    },
+    {
+      "ratio" : 1,
+      "suffix" : "",
+      "size" : "{1024.000000, 600.000000}"
+    },
+    {
+      "ratio" : 1,
+      "suffix" : "",
+      "size" : "{1280.000000, 720.000000}"
+    },
+    {
+      "ratio" : 2,
+      "suffix" : "@2x",
+      "size" : "{1920.000000, 1080.000000}"
+    },
+    {
+      "ratio" : 1,
+      "suffix" : "",
+      "size" : "{1280.000000, 720.000000}"
+    },
+    {
+      "ratio" : 2,
+      "suffix" : "@2x",
+      "size" : "{1920.000000, 1080.000000}"
+    },
+    {
+      "ratio" : 1,
+      "suffix" : "",
+      "size" : "{800.000000, 480.000000}"
+    },
+    {
+      "ratio" : 1,
+      "suffix" : "",
+      "size" : "{1280.000000, 768.000000}"
+    },
+    {
+      "ratio" : 1,
+      "suffix" : "",
+      "size" : "{1280.000000, 720.000000}"
+    }
+  ],
+  "useGlobalGravity" : true,
+  "nodeType" : "LHScene",
+  "sceneFormat" : 1,
+  "globalGravityDirection" : "{0.000000, -1.000000}"
+}
