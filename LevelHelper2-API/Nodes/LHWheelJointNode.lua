@@ -2,6 +2,10 @@
 --
 -- LHWheelJointNode.lua
 --
+--!@docBegin
+--!LHWheelJointNode class is used to load a LevelHelper wheel joint.
+--!
+--!@docEnd
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 --!@docBegin

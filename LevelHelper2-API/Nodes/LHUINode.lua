@@ -2,6 +2,10 @@
 --
 -- LHUINode.lua
 --
+--!@docBegin
+--!LHUINode class is used to load the front UI elements. Game elements that won't move with the camera.
+--!
+--!@docEnd
 --------------------------------------------------------------------------------
 local LHUINode = {}
 function LHUINode:nodeWithDictionary(dict, prnt)

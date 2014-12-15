@@ -2,6 +2,10 @@
 --
 -- LHWeldJointNode.lua
 --
+--!@docBegin
+--!LHWeldJointNode class is used to load a LevelHelper weld joint.
+--!
+--!@docEnd
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 --!@docBegin

@@ -2,6 +2,10 @@
 --
 -- LHRevoluteJointNode.lua
 --
+--!@docBegin
+--!LHRevoluteJointNode class is used to load a LevelHelper revolute joint or as they are called in Corona SDK, pivot joints.
+--!
+--!@docEnd
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 --!@docBegin

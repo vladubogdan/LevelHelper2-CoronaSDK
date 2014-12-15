@@ -2,6 +2,10 @@
 --
 -- LHBezier.lua
 --
+--!@docBegin
+--!LHBezier class is used to load and display a bezier from a level file.
+--!
+--!@docEnd
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 --!@docBegin

@@ -2,6 +2,10 @@
 --
 -- LHDistanceJointNode.lua
 --
+--!@docBegin
+--!LHDistanceJointNode class is used to load a LevelHelper 2 distance joint node.
+--!
+--!@docEnd
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 --!@docBegin

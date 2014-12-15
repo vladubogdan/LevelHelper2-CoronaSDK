@@ -1,7 +1,11 @@
 --------------------------------------------------------------------------------
 --
--- LHAsset.lua
+--LHAsset.lua
 --
+--!@docBegin
+--!LHAsset class is used to load an asset object from a level file or from the resources folder.
+--!
+--!@docEnd
 --------------------------------------------------------------------------------
 local function visit(selfNode, event)
 

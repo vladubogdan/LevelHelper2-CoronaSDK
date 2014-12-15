@@ -2,14 +2,12 @@
 --
 -- LHUtils.lua
 --
---------------------------------------------------------------------------------
-module (..., package.seeall)
-
 --!@docBegin
---!This file contains helper methods needed by the GameDevHelper API. Users should also find this methods useful.
+--!This file contains helper methods needed by the LevelHelper 2 API. Users should also find this methods useful.
 --! 
 --!@docEnd
-
+--------------------------------------------------------------------------------
+module (..., package.seeall)
 --------------------------------------------------------------------------------
 --!@docBegin
 --!Loads json file and returns contents as a string.

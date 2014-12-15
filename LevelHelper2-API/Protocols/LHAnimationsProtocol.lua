@@ -2,6 +2,10 @@
 --
 -- LHAnimationsProtocol.lua
 --
+--!@docBegin
+--!LevelHelper 2 nodes that can be animated conform to this protocol.
+--!
+--!@docEnd
 --------------------------------------------------------------------------------
 module (..., package.seeall)
 --------------------------------------------------------------------------------

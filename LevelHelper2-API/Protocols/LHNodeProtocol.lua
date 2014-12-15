@@ -2,6 +2,10 @@
 --
 -- LHNodeProtocol.lua
 --
+--!@docBegin
+--!Most of the LevelHelper 2 nodes conforms to this protocol.
+--!
+--!@docEnd
 -----------------------------------------------------------------------------------------
 module (..., package.seeall)
 

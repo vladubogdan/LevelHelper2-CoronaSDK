@@ -2,6 +2,10 @@
 --
 -- LHBackUINode.lua
 --
+--!@docBegin
+--!LHBackUINode class is used to load the UI elements.
+--!
+--!@docEnd
 --------------------------------------------------------------------------------
 local LHBackUINode = {}
 function LHBackUINode:nodeWithDictionary(dict, prnt)

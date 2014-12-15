@@ -4,6 +4,16 @@
 --
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
+--!@docBegin
+--!LHScene is used to load a level file into Corona SDK engine.
+--!End users will have to use this class in order to load a level done with LevelHelper 2 into Corona SDK.
+--!@code
+--!    local LHScene =  require("LevelHelper2-API.LHScene");
+--!    local lhScene = LHScene:initWithContentOfFile("publishFolder/level01.json");
+--!@endcode
+--!
+--!@docEnd
+
 local LHUtils = require("LevelHelper2-API.Utilities.LHUtils");
 local LHNodeProtocol = require("LevelHelper2-API.Protocols.LHNodeProtocol")
 --------------------------------------------------------------------------------
@@ -292,7 +302,12 @@ end
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 local LHScene = {}
+
+--!@docBegin
+--!This functions creates the LHScene object that loads the level file from a json specified by the path.
+--!@param jsonFile The path to the json file.
 function LHScene:initWithContentOfFile(jsonFile)
+--!@docEnd
 
 	if (nil == jsonFile) then
 		print("Invalid Json file.")

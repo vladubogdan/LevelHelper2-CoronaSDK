@@ -2,6 +2,10 @@
 --
 -- LHPulleyJointNode.lua
 --
+--!@docBegin
+--!LHPulleyJointNode class is used to load a LevelHelper pulley joint.
+--!
+--!@docEnd
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 --!@docBegin

@@ -2,6 +2,10 @@
 --
 -- LHGameWorldNode.lua
 --
+--!@docBegin
+--!LHGameWorldNode is used to load all the elements that should move with the camera.
+--!
+--!@docEnd
 --------------------------------------------------------------------------------
 local LHGameWorldNode = {}
 function LHGameWorldNode:nodeWithDictionary(dict, prnt)

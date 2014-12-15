@@ -2,6 +2,10 @@
 --
 -- LHJointsProtocol.lua
 --
+--!@docBegin
+--!LevelHelper 2 joint nodes conform to this protocol.
+--!
+--!@docEnd
 --------------------------------------------------------------------------------
 module (..., package.seeall)
 --------------------------------------------------------------------------------

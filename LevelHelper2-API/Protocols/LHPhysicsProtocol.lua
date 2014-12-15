@@ -2,6 +2,10 @@
 --
 -- LHPhysicsProtocol.lua
 --
+--!@docBegin
+--!LevelHelper 2 nodes that can have physics conforms to this protocol.
+--!
+--!@docEnd
 -----------------------------------------------------------------------------------------
 module (..., package.seeall)
 

@@ -2,6 +2,10 @@
 --
 -- LHGearJointNode.lua
 --
+--!@docBegin
+--!LHGearJointNode class is used to load a LevelHelper gear joint.
+--!
+--!@docEnd
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 --!@docBegin

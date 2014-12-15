@@ -2,6 +2,10 @@
 --
 -- LHParallaxLayer.lua
 --
+--!@docBegin
+--!LHParallaxLayer class is used to load a parallax layer object from a level file.
+--!
+--!@docEnd
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 --!@docBegin

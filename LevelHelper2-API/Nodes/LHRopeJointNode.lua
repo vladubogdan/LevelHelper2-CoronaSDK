@@ -2,6 +2,10 @@
 --
 -- LHRopeJointNode.lua
 --
+--!@docBegin
+--!LHRopeJointNode class is used to load a LevelHelper rope joint.
+--!
+--!@docEnd
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 --!@docBegin
