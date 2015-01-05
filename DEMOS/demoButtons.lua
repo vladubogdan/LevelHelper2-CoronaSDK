@@ -3,12 +3,8 @@ local composer = require( "composer" )
 
 local availableDemoScenes = {}
 
--- availableDemoScenes[#availableDemoScenes+1] = {name= "introductionScene", scene= "demo.introductionScene"}
-availableDemoScenes[#availableDemoScenes+1] = {name= "cameraFollow", scene= "demo.cameraFollow"}
-availableDemoScenes[#availableDemoScenes+1] = {name= "simpleNonSpriteSheetAnimation", scene= "demo.simpleNonSpriteSheetAnimation"}
--- availableDemoScenes[#availableDemoScenes+1] = {name= "basicLayout", scene= "demo.basicLayout"}
--- availableDemoScenes[#availableDemoScenes+1] = {name= "gearJointsExample", scene= "demo.gearJointsExample"}
--- availableDemoScenes[#availableDemoScenes+1] = {name= "parallaxDemo", scene= "demo.parallaxDemo"}
+availableDemoScenes[#availableDemoScenes+1] = {name= "cameraFollow", scene= "cameraFollow"}
+availableDemoScenes[#availableDemoScenes+1] = {name= "simpleNonSpriteSheetAnimation", scene= "simpleNonSpriteSheetAnimation"}
 
 local DemoButtons = {}
 function DemoButtons:createButtonsWithComposerScene(object, _curSceneName_)

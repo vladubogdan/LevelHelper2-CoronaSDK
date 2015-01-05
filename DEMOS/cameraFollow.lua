@@ -45,7 +45,7 @@ function scene:show( event )
 	
 	if phase == "will" then
 		
-		lhScene = LHScene:initWithContentOfFile("DemoPublishFolder/cameraFollow.json");
+		lhScene = LHScene:initWithContentOfFile("PublishFolder/cameraFollow.json");
 	
 		sceneGroup:insert(lhScene);
 	
@@ -70,7 +70,7 @@ function scene:show( event )
 		uiNode:insert( myText );
 		
 		
-		self.demoButtons = require("demo.demoButtons");
+		self.demoButtons = require("demoButtons");
 		self.demoButtons:createButtonsWithComposerScene(self, "cameraFollow");
 		-- Called when the scene is still off screen and is about to move on screen
 	elseif phase == "did" then

@@ -144,6 +144,7 @@ local function loadGlobalGravityFromDictionary(selfObject, dict)
 						y = gravityVector.y*gravityForce};
 					
 		local physics = require( "physics" )
+		physics.start();
 		physics.setGravity( gravity.x, -gravity.y );
 		
 	end

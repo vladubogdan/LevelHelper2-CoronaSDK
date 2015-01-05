@@ -27,7 +27,7 @@ function scene:show( event )
 	
 	if phase == "will" then
 		
-		lhScene = LHScene:initWithContentOfFile("DemoPublishFolder/characterAnimation.json");
+		lhScene = LHScene:initWithContentOfFile("PublishFolder/characterAnimation.json");
 	
 		sceneGroup:insert(lhScene);
 	
@@ -52,7 +52,7 @@ function scene:show( event )
 		uiNode:insert( myText );
 
 	
-		self.demoButtons = require("Demo.demoButtons");
+		self.demoButtons = require("demoButtons");
 		self.demoButtons:createButtonsWithComposerScene(self, "simpleNonSpriteSheetAnimation");
 		-- Called when the scene is still off screen and is about to move on screen
 	elseif phase == "did" then

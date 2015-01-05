@@ -40,7 +40,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoBackgrounds\/",
+          "relativeImagePath" : "Backgrounds\/",
           "zOrder" : 0,
           "imageFileName" : "sky.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -80,7 +80,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -101,7 +101,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -122,7 +122,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -143,7 +143,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -164,7 +164,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -185,7 +185,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -206,7 +206,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -227,7 +227,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -248,7 +248,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -269,7 +269,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -290,7 +290,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -311,7 +311,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -332,7 +332,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -353,7 +353,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -374,7 +374,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -395,7 +395,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -416,7 +416,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -437,7 +437,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -458,7 +458,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -479,7 +479,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -500,7 +500,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -521,7 +521,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -542,7 +542,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -563,7 +563,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -584,7 +584,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -605,7 +605,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -626,7 +626,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -647,7 +647,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -668,7 +668,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -689,7 +689,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -710,7 +710,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -731,7 +731,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -752,7 +752,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -773,7 +773,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -794,7 +794,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -815,7 +815,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -836,7 +836,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -857,7 +857,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -878,7 +878,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -899,7 +899,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -920,7 +920,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -941,7 +941,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -962,7 +962,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -983,7 +983,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -1004,7 +1004,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -1025,7 +1025,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -1046,7 +1046,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -1067,7 +1067,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -1088,7 +1088,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -1109,7 +1109,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -1130,7 +1130,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -1151,7 +1151,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -1172,7 +1172,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -1193,7 +1193,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -1214,7 +1214,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -1235,7 +1235,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -1256,7 +1256,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -1277,7 +1277,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -1298,7 +1298,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -1319,7 +1319,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -1340,7 +1340,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -1361,7 +1361,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -1382,7 +1382,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -1403,7 +1403,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -1424,7 +1424,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -1445,7 +1445,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -1466,7 +1466,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -1487,7 +1487,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -1508,7 +1508,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -1529,7 +1529,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -1550,7 +1550,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -1571,7 +1571,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -1592,7 +1592,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -1613,7 +1613,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -1656,7 +1656,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -1699,7 +1699,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -1742,7 +1742,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -1785,7 +1785,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -1828,7 +1828,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -1871,7 +1871,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -1914,7 +1914,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -1957,7 +1957,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -2000,7 +2000,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -2043,7 +2043,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -2086,7 +2086,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -2129,7 +2129,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -2172,7 +2172,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -2215,7 +2215,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -2258,7 +2258,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -2301,7 +2301,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -2344,7 +2344,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -2387,7 +2387,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -2430,7 +2430,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -2473,7 +2473,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -2516,7 +2516,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -2559,7 +2559,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -2602,7 +2602,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -2645,7 +2645,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -2688,7 +2688,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -2731,7 +2731,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -2774,7 +2774,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -2817,14 +2817,14 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "platformer.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
         },
         {
           "parentUUID" : "_GAME_WORLD_NODE_UUID_",
-          "zoomOnPinchOrScroll" : true,
+          "zoomOnPinchOrScroll" : false,
           "tags" : [
             "DEFAULT"
           ],
@@ -2880,38 +2880,38 @@
           "alpha" : 255,
           "points" : [
             {
-              "ctrl2" : "{-1439.009012, 1293.972288}",
+              "ctrl2" : "{-1439.009012, 1293.972319}",
               "hasCtrl1" : true,
-              "ctrl1" : "{-1207.051861, -150.914979}",
-              "mainPt" : "{-1199.009012, -242.027712}",
+              "ctrl1" : "{-1207.051861, -150.914948}",
+              "mainPt" : "{-1199.009012, -242.027681}",
               "hasCtrl2" : true
             },
             {
-              "ctrl2" : "{1040.990988, 957.972288}",
+              "ctrl2" : "{1040.990988, 957.972319}",
               "hasCtrl1" : true,
-              "ctrl1" : "{-848.912412, 748.727325}",
-              "mainPt" : "{32.990988, 781.972288}",
+              "ctrl1" : "{-848.912412, 748.727356}",
+              "mainPt" : "{32.990988, 781.972319}",
               "hasCtrl2" : true
             },
             {
-              "ctrl2" : "{1392.990988, -1234.027712}",
+              "ctrl2" : "{1392.990988, -1234.027681}",
               "hasCtrl1" : true,
-              "ctrl1" : "{1415.189993, 1010.136899}",
-              "mainPt" : "{1184.990988, -178.027712}",
+              "ctrl1" : "{1415.189993, 1010.136930}",
+              "mainPt" : "{1184.990988, -178.027681}",
               "hasCtrl2" : true
             },
             {
-              "ctrl2" : "{-1178.711538, -659.730654}",
+              "ctrl2" : "{-1178.711538, -659.730623}",
               "hasCtrl1" : true,
-              "ctrl1" : "{1157.288462, -819.730654}",
-              "mainPt" : "{-63.009012, -674.027712}",
+              "ctrl1" : "{1157.288462, -819.730623}",
+              "mainPt" : "{-63.009012, -674.027681}",
               "hasCtrl2" : true
             },
             {
-              "ctrl2" : "{-1182.700521, -142.515768}",
+              "ctrl2" : "{-1182.700521, -142.515737}",
               "hasCtrl1" : true,
-              "ctrl1" : "{-1247.009012, -1154.027712}",
-              "mainPt" : "{-1199.009012, -258.027712}",
+              "ctrl1" : "{-1247.009012, -1154.027681}",
+              "mainPt" : "{-1199.009012, -258.027681}",
               "hasCtrl2" : true
             }
           ],
@@ -2957,7 +2957,7 @@
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "DemoPublishFolder\/",
+          "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 20,
           "imageFileName" : "carParts.png",
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
@@ -3007,7 +3007,7 @@
       "size" : "{1334.000000, 750.000000}"
     },
     {
-      "ratio" : 2,
+      "ratio" : 1.6,
       "suffix" : "@2x",
       "size" : "{2208.000000, 1242.000000}"
     },

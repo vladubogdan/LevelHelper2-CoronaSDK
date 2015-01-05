@@ -28,11 +28,67 @@ function scene:show( event )
 	if phase == "will" then
 		
 		--1 -> load your level file from the published subfolder (dont forget to publish the level first)
-		--lhScene = LHScene:initWithContentOfFile("publishFolder/level01.json");
+		lhScene = LHScene:initWithContentOfFile("LH2-Published/example.json");
 	
 		--2 - > add your new loaded level to the scene group
-		--sceneGroup:insert(lhScene);
+		sceneGroup:insert(lhScene);
 	
+		
+		local welcomeOptions = 
+		{		    
+		    text = "Welcome to",     
+		    x = 480,
+		    y = 540,
+		    width = display.contentWidth - 20,
+		    height= display.contentHeight,
+		    font = native.systemFontBold,   
+		    fontSize = 20,
+		    align = "center"  --new alignment parameter
+		}
+
+		local welcomeText = display.newText( welcomeOptions);
+		welcomeText:setFillColor( 0, 0, 0 )
+	
+		local uiNode = lhScene:getUINode();
+		uiNode:insert( welcomeText );
+	
+		local lhOptions = 
+		{		    
+		    text = "LevelHelper 2",     
+		    x = 480,
+		    y = 580,
+		    width = display.contentWidth - 20,
+		    height= display.contentHeight,
+		    font = native.systemFontBold,   
+		    fontSize = 40,
+		    align = "center"  --new alignment parameter
+		}
+
+		local lhText = display.newText( lhOptions);
+		lhText:setFillColor( 0, 0, 0 )
+	
+		local uiNode = lhScene:getUINode();
+		uiNode:insert( lhText );
+
+		local infOptions = 
+		{		    
+		    text = "Run the DEMOS project for examples.\nCheck myScene.lua to learn how to load a level.\nVisit www.gamedevhelper.com for more learn resources.",     
+		    x = 480,
+		    y = 640,
+		    width = display.contentWidth - 20,
+		    height= display.contentHeight,
+		    font = native.systemFontBold,   
+		    fontSize = 20,
+		    align = "center"  --new alignment parameter
+		}
+
+		local infText = display.newText( infOptions);
+		infText:setFillColor( 0, 0, 0 )
+	
+		local uiNode = lhScene:getUINode();
+		uiNode:insert( infText );
+
+
 
 	-- Called when the scene is still off screen and is about to move on screen
 	elseif phase == "did" then
@@ -58,8 +114,8 @@ function scene:hide( event )
 		-- Called when the scene is on screen and is about to move off screen
 		
 		--3 remove the level from memory when you are changing to a new scene
-		--lhScene:removeSelf();
-		--lhScene = nil;
+		lhScene:removeSelf();
+		lhScene = nil;
 		
 		physics.stop();
 		
