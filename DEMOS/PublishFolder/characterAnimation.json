@@ -375,7 +375,7 @@
                   ],
                   "spriteUUID" : "0686CE2D-8B8B-4279-BACD-B8503E330CD8",
                   "spriteName" : "neck_outline",
-                  "generalPosition" : "{-0.005329, -0.028687}",
+                  "generalPosition" : "{-0.004752, -0.003430}",
                   "uuid" : "2900405F-669C-4011-BE35-B72498811127",
                   "children" : [
                     {
@@ -397,7 +397,7 @@
                           ],
                           "spriteUUID" : "F752A2A6-610F-430D-93C9-0929AC6EB050",
                           "spriteName" : "mouth",
-                          "generalPosition" : "{0.025909, 0.042598}",
+                          "generalPosition" : "{0.021695, 0.034787}",
                           "uuid" : "FF5ED9EB-1D42-42E7-976A-EF9DE1436ACB",
                           "name" : "mouth.png",
                           "anchor" : "{0.500000, 0.500000}",
@@ -439,7 +439,7 @@
                           ],
                           "spriteUUID" : "F8C044E6-FDC2-476F-90A7-18D4F90CB5D2",
                           "spriteName" : "hair",
-                          "generalPosition" : "{-0.002758, -0.035478}",
+                          "generalPosition" : "{-0.003011, -0.032081}",
                           "uuid" : "26D48421-5CC1-49F3-A53D-6B9BEBFA485A",
                           "name" : "hair.png",
                           "anchor" : "{0.500000, 0.500000}",
