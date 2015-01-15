@@ -114,7 +114,7 @@
             "gravityScale" : 1,
             "angularVelocity" : 0
           },
-          "generalPosition" : "{0.524794, 0.570649}",
+          "generalPosition" : "{0.427094, 0.584219}",
           "uuid" : "7CB3886A-EF00-4EAC-B3EA-29D56EC07F64",
           "children" : [
             {
@@ -1051,7 +1051,7 @@
                         "B636C641-DA3B-4014-B1B2-4FFA23A6BB28" : "{12.829013, 16.191175}",
                         "818B58E0-B65E-471F-AD14-9CBA937AAFB2" : "{-22.291909, 16.099456}",
                         "1C98F498-447F-4E96-9243-F3F6EFCD3E6D" : "{14.444283, -41.872054}",
-                        "7CB3886A-EF00-4EAC-B3EA-29D56EC07F64" : "{503.802096, 365.215493}",
+                        "7CB3886A-EF00-4EAC-B3EA-29D56EC07F64" : "{410.010592, 373.900046}",
                         "B7576E7F-7D61-4677-9248-9A400F13E62E" : "{2.679425, 42.091570}",
                         "19BC1A48-8C84-47B8-A269-2AE8E04C38B5" : "{-15.984279, -37.829607}",
                         "2900405F-669C-4011-BE35-B72498811127" : "{-4.749597, 0.702195}",
@@ -1083,7 +1083,7 @@
                         "B636C641-DA3B-4014-B1B2-4FFA23A6BB28" : "{12.829013, 16.191175}",
                         "818B58E0-B65E-471F-AD14-9CBA937AAFB2" : "{-22.291909, 20.995505}",
                         "1C98F498-447F-4E96-9243-F3F6EFCD3E6D" : "{14.444283, -41.872054}",
-                        "7CB3886A-EF00-4EAC-B3EA-29D56EC07F64" : "{503.802096, 365.215493}",
+                        "7CB3886A-EF00-4EAC-B3EA-29D56EC07F64" : "{410.010592, 373.900046}",
                         "B7576E7F-7D61-4677-9248-9A400F13E62E" : "{2.679425, 42.091570}",
                         "19BC1A48-8C84-47B8-A269-2AE8E04C38B5" : "{-15.984279, -37.829607}",
                         "2900405F-669C-4011-BE35-B72498811127" : "{-4.749597, 0.702195}",
@@ -1115,7 +1115,7 @@
                         "B636C641-DA3B-4014-B1B2-4FFA23A6BB28" : "{12.829013, 16.191175}",
                         "818B58E0-B65E-471F-AD14-9CBA937AAFB2" : "{-22.291909, 16.099456}",
                         "1C98F498-447F-4E96-9243-F3F6EFCD3E6D" : "{14.444283, -41.872054}",
-                        "7CB3886A-EF00-4EAC-B3EA-29D56EC07F64" : "{503.802096, 365.215493}",
+                        "7CB3886A-EF00-4EAC-B3EA-29D56EC07F64" : "{410.010592, 373.900046}",
                         "B7576E7F-7D61-4677-9248-9A400F13E62E" : "{2.679425, 42.091570}",
                         "19BC1A48-8C84-47B8-A269-2AE8E04C38B5" : "{-15.984279, -37.829607}",
                         "2900405F-669C-4011-BE35-B72498811127" : "{-4.749597, 0.702195}",
@@ -1363,6 +1363,113 @@
           "scale" : "{1.000000, 1.000000}",
           "zOrder" : -2,
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "needsCopyReasignment" : false,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "maxMotorTorque" : 20,
+          "tags" : [
+            "DEFAULT"
+          ],
+          "enableLimit" : false,
+          "uuid" : "861DB1C1-61F0-472F-9D79-C8DB1C216424",
+          "name" : "UntitledRevoluteJoint",
+          "collideConnected" : false,
+          "spriteBUUID" : "CAE68DBB-76E6-4EA4-8A5C-3EA90BF179CC",
+          "spriteAUUID" : "87C14335-613C-44BD-9D46-2DEE8A877BA1",
+          "nodeType" : "LHRevoluteJoint",
+          "lowerAngle" : 0,
+          "motorSpeed" : 1,
+          "relativePosA" : "{0.000000, 0.000000}",
+          "upperAngle" : 90,
+          "enableMotor" : true
+        },
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "nodePhysics" : {
+            "bullet" : false,
+            "angularDamping" : 0,
+            "gravityScale" : 1,
+            "allowSleep" : true,
+            "angularVelocity" : 0,
+            "fixedRotation" : false,
+            "linearDamping" : 0,
+            "type" : 0,
+            "shape" : 1,
+            "genericFixture" : {
+              "category" : 1,
+              "sensor" : false,
+              "density" : 0.1,
+              "mask" : 65535,
+              "friction" : 0.2,
+              "restitution" : 0,
+              "name" : "GenericFixture",
+              "fixtureID" : 0
+            },
+            "linearVelocity" : "{0.000000, 0.000000}"
+          },
+          "spriteUUID" : "986AA138-7C74-479B-A627-5BBF982B2605",
+          "spriteName" : "carTyre",
+          "generalPosition" : "{0.729309, 0.582550}",
+          "uuid" : "87C14335-613C-44BD-9D46-2DEE8A877BA1",
+          "name" : "carTyre",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{43.000000, 43.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "PublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "carParts.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "nodePhysics" : {
+            "linearVelocity" : "{0.000000, 0.000000}",
+            "fixedRotation" : false,
+            "shape" : 5,
+            "allowSleep" : true,
+            "fixtureUUID" : "92D14067-6FA6-420B-8699-0C954A17B23E",
+            "linearDamping" : 0,
+            "type" : 2,
+            "genericFixture" : {
+              "category" : 1,
+              "sensor" : false,
+              "density" : 0.1,
+              "mask" : 65535,
+              "friction" : 0.2,
+              "restitution" : 0,
+              "name" : "GenericFixture",
+              "fixtureID" : 0
+            },
+            "bullet" : false,
+            "angularDamping" : 0,
+            "gravityScale" : 1,
+            "angularVelocity" : 0
+          },
+          "spriteUUID" : "98D7378C-BDD3-47B2-A31E-D1A2771124FE",
+          "spriteName" : "wood",
+          "generalPosition" : "{0.791586, 0.584413}",
+          "uuid" : "CAE68DBB-76E6-4EA4-8A5C-3EA90BF179CC",
+          "name" : "wood",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 32.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "PublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "carParts.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
         }
       ],
       "name" : "GAME WORLD",
@@ -1515,5 +1622,31 @@
     "1136x640" : "{{0.000000, -0.004584}, {0.993187, 0.997052}}",
     "general" : "{{0.000000, -0.004584}, {0.993187, 0.997052}}"
   },
-  "globalGravityDirection" : "{0.000000, -1.000000}"
+  "globalGravityDirection" : "{0.000000, -1.000000}",
+  "tracedFixtures" : {
+    "92D14067-6FA6-420B-8699-0C954A17B23E" : [
+      [
+        "{-50.75, 10.25}",
+        "{-51.25, 6.75}",
+        "{-51.25, -11.25}",
+        "{-40.25, -12.25}",
+        "{50.75, -7.25}",
+        "{50.75, 12.25}",
+        "{-35.25, 12.25}",
+        "{-49.25, 11.25}"
+      ],
+      [
+        "{49.75, -11.25}",
+        "{50.75, -7.25}",
+        "{-40.25, -12.25}",
+        "{-39.75, -12.75}",
+        "{48.25, -12.25}"
+      ],
+      [
+        "{-49.75, -12.25}",
+        "{-40.25, -12.25}",
+        "{-51.25, -11.25}"
+      ]
+    ]
+  }
 }
