@@ -483,6 +483,14 @@ function getSpriteSheetData()
 	return options
 end
 
+function getPhysicsData()
+	local physics =
+	{
+	}
+	return physics;
+end
+
+
 function getFrameNamesMap()
 	local frameIndexes =
 	{

@@ -108,7 +108,7 @@
               "friction" : 0.2,
               "restitution" : 0,
               "name" : "GenericFixture",
-              "fixtureID" : 0
+              "shapeID" : 0
             },
             "angularDamping" : 0,
             "gravityScale" : 1,
@@ -1365,104 +1365,18 @@
           "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
         },
         {
-          "needsCopyReasignment" : false,
-          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
-          "maxMotorTorque" : 20,
-          "tags" : [
-            "DEFAULT"
-          ],
-          "enableLimit" : false,
-          "uuid" : "861DB1C1-61F0-472F-9D79-C8DB1C216424",
-          "name" : "UntitledRevoluteJoint",
-          "collideConnected" : false,
-          "spriteBUUID" : "CAE68DBB-76E6-4EA4-8A5C-3EA90BF179CC",
-          "spriteAUUID" : "87C14335-613C-44BD-9D46-2DEE8A877BA1",
-          "nodeType" : "LHRevoluteJoint",
-          "lowerAngle" : 0,
-          "motorSpeed" : 1,
-          "relativePosA" : "{0.000000, 0.000000}",
-          "upperAngle" : 90,
-          "enableMotor" : true
-        },
-        {
           "rotation" : 0,
           "parentUUID" : "_GAME_WORLD_NODE_UUID_",
           "tags" : [
             "DEFAULT"
           ],
-          "nodePhysics" : {
-            "bullet" : false,
-            "angularDamping" : 0,
-            "gravityScale" : 1,
-            "allowSleep" : true,
-            "angularVelocity" : 0,
-            "fixedRotation" : false,
-            "linearDamping" : 0,
-            "type" : 0,
-            "shape" : 1,
-            "genericFixture" : {
-              "category" : 1,
-              "sensor" : false,
-              "density" : 0.1,
-              "mask" : 65535,
-              "friction" : 0.2,
-              "restitution" : 0,
-              "name" : "GenericFixture",
-              "fixtureID" : 0
-            },
-            "linearVelocity" : "{0.000000, 0.000000}"
-          },
           "spriteUUID" : "986AA138-7C74-479B-A627-5BBF982B2605",
           "spriteName" : "carTyre",
-          "generalPosition" : "{0.729309, 0.582550}",
-          "uuid" : "87C14335-613C-44BD-9D46-2DEE8A877BA1",
+          "generalPosition" : "{0.146274, 0.364725}",
+          "uuid" : "DF57079E-C242-4358-B5AE-F68211831A12",
           "name" : "carTyre",
           "anchor" : "{0.500000, 0.500000}",
           "size" : "{43.000000, 43.000000}",
-          "nodeType" : "LHSprite",
-          "alpha" : 255,
-          "scale" : "{1.000000, 1.000000}",
-          "relativeImagePath" : "PublishFolder\/",
-          "zOrder" : 0,
-          "imageFileName" : "carParts.png",
-          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
-        },
-        {
-          "rotation" : 0,
-          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
-          "tags" : [
-            "DEFAULT"
-          ],
-          "nodePhysics" : {
-            "linearVelocity" : "{0.000000, 0.000000}",
-            "fixedRotation" : false,
-            "shape" : 5,
-            "allowSleep" : true,
-            "fixtureUUID" : "92D14067-6FA6-420B-8699-0C954A17B23E",
-            "linearDamping" : 0,
-            "type" : 2,
-            "genericFixture" : {
-              "category" : 1,
-              "sensor" : false,
-              "density" : 0.1,
-              "mask" : 65535,
-              "friction" : 0.2,
-              "restitution" : 0,
-              "name" : "GenericFixture",
-              "fixtureID" : 0
-            },
-            "bullet" : false,
-            "angularDamping" : 0,
-            "gravityScale" : 1,
-            "angularVelocity" : 0
-          },
-          "spriteUUID" : "98D7378C-BDD3-47B2-A31E-D1A2771124FE",
-          "spriteName" : "wood",
-          "generalPosition" : "{0.791586, 0.584413}",
-          "uuid" : "CAE68DBB-76E6-4EA4-8A5C-3EA90BF179CC",
-          "name" : "wood",
-          "anchor" : "{0.500000, 0.500000}",
-          "size" : "{128.000000, 32.000000}",
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
@@ -1516,7 +1430,7 @@
       "size" : "{1334.000000, 750.000000}"
     },
     {
-      "ratio" : 1.6,
+      "ratio" : 2,
       "suffix" : "@2x",
       "size" : "{2208.000000, 1242.000000}"
     },
@@ -1615,38 +1529,13 @@
   "nodeType" : "LHScene",
   "sceneFormat" : 1,
   "physicsBoundaries" : {
-    "960x640" : "{{0.000000, -0.004584}, {0.993187, 0.997052}}",
     "2208x1242" : "{{0.000000, -0.004584}, {0.993187, 0.997052}}",
-    "2048x1536" : "{{0.000000, -0.004584}, {0.993187, 0.997052}}",
-    "1334x750" : "{{0.000000, -0.004584}, {0.993187, 0.997052}}",
+    "general" : "{{0.000000, -0.268285}, {1.227886, 1.260753}}",
+    "1334x750" : "{{0.000000, -0.268285}, {1.227886, 1.260753}}",
     "1136x640" : "{{0.000000, -0.004584}, {0.993187, 0.997052}}",
-    "general" : "{{0.000000, -0.004584}, {0.993187, 0.997052}}"
+    "2048x1536" : "{{0.000000, -0.004584}, {0.993187, 0.997052}}",
+    "960x640" : "{{0.000000, -0.004584}, {0.993187, 0.997052}}",
+    "1024x768" : "{{0.000000, -0.004584}, {0.993187, 0.997052}}"
   },
-  "globalGravityDirection" : "{0.000000, -1.000000}",
-  "tracedFixtures" : {
-    "92D14067-6FA6-420B-8699-0C954A17B23E" : [
-      [
-        "{-50.75, 10.25}",
-        "{-51.25, 6.75}",
-        "{-51.25, -11.25}",
-        "{-40.25, -12.25}",
-        "{50.75, -7.25}",
-        "{50.75, 12.25}",
-        "{-35.25, 12.25}",
-        "{-49.25, 11.25}"
-      ],
-      [
-        "{49.75, -11.25}",
-        "{50.75, -7.25}",
-        "{-40.25, -12.25}",
-        "{-39.75, -12.75}",
-        "{48.25, -12.25}"
-      ],
-      [
-        "{-49.75, -12.25}",
-        "{-40.25, -12.25}",
-        "{-51.25, -11.25}"
-      ]
-    ]
-  }
+  "globalGravityDirection" : "{0.000000, -1.000000}"
 }

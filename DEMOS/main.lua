@@ -11,4 +11,4 @@ display.setStatusBar( display.HiddenStatusBar )
 local composer = require "composer"
 
 --demo scenes - use buttons to switch to other demo scenes
-composer.gotoScene( "cameraFollow" )
+composer.gotoScene( "complexPhysicsShapes" )

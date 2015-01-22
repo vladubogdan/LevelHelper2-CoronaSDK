@@ -301,6 +301,134 @@ local function createPhysicsBoundarySection(selfObject, from, to, sectionName)
 	
 end
 --------------------------------------------------------------------------------
+local function getInfoForCollisionEvent(event)
+	
+	local info = {}
+	
+	info.nodeA = event.object1;
+	info.nodeB = event.object2;
+	
+	if(info.nodeA)then
+		
+		local aShapes = info.nodeA.lhBodyShapes;
+		if(aShapes)then
+			for i = 1, #aShapes do
+				local fixture = aShapes[i];
+				if(fixture)then
+					if(	event.element1 >= fixture._minFixtureIdForThisObject and 
+	 					event.element1 <= fixture._maxFixtureIdForThisObject)then
+	
+					   	info.nodeAShapeName = fixture._shapeName;
+			   			info.nodeAShapeID 	= fixture._shapeID;
+		   				break;
+	 				end
+				end
+			end
+		end
+ 	end
+ 
+ 	if(info.nodeB)then
+		
+		local aShapes = info.nodeB.lhBodyShapes;
+		if(aShapes)then
+			for i = 1, #aShapes do
+				local fixture = aShapes[i];
+				if(fixture)then
+					if(	event.element2 >= fixture._minFixtureIdForThisObject and 
+	 					event.element2 <= fixture._maxFixtureIdForThisObject)then
+	
+					   	info.nodeBShapeName = fixture._shapeName;
+			   			info.nodeBShapeID 	= fixture._shapeID;
+		   				break;
+	 				end
+				end
+			end
+		end
+ 	end
+ 
+ 	
+ 	return info;
+end
+--------------------------------------------------------------------------------
+--!@docBegin
+--!Enable the use of LevelHelper API collision handling
+--|The following events will be available once you register to them
+--!<yourLHSceneObject>:addEventListener("didBeginContact", <yourCoronaSceneObject>);
+--!<yourLHSceneObject>:addEventListener("didEndContact", <yourCoronaSceneObject>);
+--!@code
+--!   lhScene:addEventListener("didBeginContact", scene);
+--!   lhScene:addEventListener("didEndContact", scene);
+--!
+--!
+--!function scene:didBeginContact(event)
+--!	
+--!	local contactInfo = event.object;
+--!	
+--!	print("did BEGIN contact with info......................................................");
+--!	print("Node A: " .. tostring(contactInfo.nodeA));
+--!	print("Node A Shape name: " .. contactInfo.nodeAShapeName);
+--!	print("Node A Shape id: " .. contactInfo.nodeAShapeID);
+--!	print("Node B: " .. tostring(contactInfo.nodeB));
+--!	print("Node B Shape name: " .. contactInfo.nodeBShapeName);
+--!	print("Node B Shape id: " .. contactInfo.nodeBShapeID);
+--!	
+--!end
+--!function scene:didEndContact(event)
+--!	
+--!	local contactInfo = event.object;
+--!	
+--!	print("did END contact with info......................................................");
+--!	print("Node A: " .. tostring(contactInfo.nodeA));
+--!	print("Node A Shape name: " .. contactInfo.nodeAShapeName);
+--!	print("Node A Shape id: " .. contactInfo.nodeAShapeID);
+--!	print("Node B: " .. tostring(contactInfo.nodeB));
+--!	print("Node B Shape name: " .. contactInfo.nodeBShapeName);
+--!	print("Node B Shape id: " .. contactInfo.nodeBShapeID);
+--!	
+--!end
+--!@endcode
+--!
+local function enableCollisionHandling(selfNode)
+--!@docEnd
+	Runtime:addEventListener( "collision", selfNode);
+	Runtime:addEventListener( "postCollision", selfNode );
+	Runtime:addEventListener( "preCollision", selfNode );
+end
+--------------------------------------------------------------------------------
+--!@docBegin
+--!Disable the use of LevelHelper API collision handling
+local function disableCollisionHandling(selfNode)
+--!@docEnd
+	Runtime:removeEventListener( "collision", selfNode);
+	Runtime:removeEventListener( "postCollision", selfNode );
+	Runtime:removeEventListener( "preCollision", selfNode );
+end
+--------------------------------------------------------------------------------
+local function collision(selfNode, event)
+	if ( event.phase == "began" ) then	
+		
+		local collisionEvent = { 	name="didBeginContact", 
+								  		object= getInfoForCollisionEvent(event) };
+		selfNode:dispatchEvent(collisionEvent);
+			
+	elseif ( event.phase == "ended" ) then
+	
+		local collisionEvent = { 	name="didEndContact", 
+								  		object= getInfoForCollisionEvent(event) };
+		selfNode:dispatchEvent(collisionEvent);
+    end
+end
+--------------------------------------------------------------------------------
+local function postCollision(selfNode, event)
+	-- print("postCollision " .. tostring(selfNode) .. " event: " .. tostring(event));
+end
+--------------------------------------------------------------------------------
+local function preCollision(selfNode, event)
+
+	-- print("preCollision " .. tostring(selfNode) .. " event: " .. tostring(event));
+	
+end
+--------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 local LHScene = {}
 
@@ -370,6 +498,12 @@ function LHScene:initWithContentOfFile(jsonFile)
 	_scene:loadGlobalGravityFromDictionary(dict);
 	
 	_scene.lhUniqueName = jsonFile;
+	
+	_scene.collision 			= collision;
+	_scene.postCollision 		= postCollision;
+	_scene.preCollision 		= preCollision;
+	_scene.enableCollisionHandling = enableCollisionHandling;
+	_scene.disableCollisionHandling = disableCollisionHandling;
 	
 	Runtime:addEventListener( "enterFrame", _scene )
 	

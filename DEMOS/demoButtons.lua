@@ -5,6 +5,8 @@ local availableDemoScenes = {}
 
 availableDemoScenes[#availableDemoScenes+1] = {name= "cameraFollow", scene= "cameraFollow"}
 availableDemoScenes[#availableDemoScenes+1] = {name= "simpleNonSpriteSheetAnimation", scene= "simpleNonSpriteSheetAnimation"}
+availableDemoScenes[#availableDemoScenes+1] = {name= "complexPhysicsShapes", scene= "complexPhysicsShapes"}
+
 
 local DemoButtons = {}
 function DemoButtons:createButtonsWithComposerScene(object, _curSceneName_)
