@@ -25,6 +25,7 @@ function scene:didBeginContact(event)
 	local contactInfo = event.object;
 	
 	print("did BEGIN contact with info......................................................");
+	print("Actual corona event : " .. tostring(contactInfo.event));
 	print("Node A: " .. tostring(contactInfo.nodeA));
 	print("Node A Shape name: " .. contactInfo.nodeAShapeName);
 	print("Node A Shape id: " .. contactInfo.nodeAShapeID);
@@ -39,6 +40,7 @@ function scene:didEndContact(event)
 	local contactInfo = event.object;
 	
 	print("did END contact with info......................................................");
+	print("Actual corona event : " .. tostring(contactInfo.event));
 	print("Node A: " .. tostring(contactInfo.nodeA));
 	print("Node A Shape name: " .. contactInfo.nodeAShapeName);
 	print("Node A Shape id: " .. contactInfo.nodeAShapeID);
@@ -48,6 +50,39 @@ function scene:didEndContact(event)
 	
 end
 
+function scene:postCollisionContact(event)
+	
+	local contactInfo = event.object;
+	
+	print("POST-COLLISION contact with info......................................................");
+	print("Actual corona event : " .. tostring(contactInfo.event));
+	print("Force : " .. contactInfo.event.force);
+	print("Friction : " .. contactInfo.event.friction);
+			
+	print("Node A: " .. tostring(contactInfo.nodeA));
+	print("Node A Shape name: " .. contactInfo.nodeAShapeName);
+	print("Node A Shape id: " .. contactInfo.nodeAShapeID);
+	print("Node B: " .. tostring(contactInfo.nodeB));
+	print("Node B Shape name: " .. contactInfo.nodeBShapeName);
+	print("Node B Shape id: " .. contactInfo.nodeBShapeID);
+	
+	    	
+end
+
+function scene:preCollisionContact(event)
+	
+	local contactInfo = event.object;
+	
+	print("PRE-COLLISION contact with info......................................................");
+	print("Actual corona event : " .. tostring(contactInfo.event));
+	print("Node A: " .. tostring(contactInfo.nodeA));
+	print("Node A Shape name: " .. contactInfo.nodeAShapeName);
+	print("Node A Shape id: " .. contactInfo.nodeAShapeID);
+	print("Node B: " .. tostring(contactInfo.nodeB));
+	print("Node B Shape name: " .. contactInfo.nodeBShapeName);
+	print("Node B Shape id: " .. contactInfo.nodeBShapeID);
+	
+end
 
 function scene:show( event )
 	
@@ -94,7 +129,8 @@ function scene:show( event )
 		lhScene:enableCollisionHandling();
 		lhScene:addEventListener("didBeginContact", scene);
 		lhScene:addEventListener("didEndContact", scene);
-		
+		-- lhScene:addEventListener("postCollisionContact", scene);
+		-- lhScene:addEventListener("preCollisionContact", scene);
 	end
 end
 

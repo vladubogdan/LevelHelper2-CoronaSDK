@@ -16,6 +16,7 @@
 
 local LHUtils = require("LevelHelper2-API.Utilities.LHUtils");
 local LHNodeProtocol = require("LevelHelper2-API.Protocols.LHNodeProtocol")
+require("LevelHelper2-API.Protocols.LHBodyShape")
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 local function getDesignResolutionSize()
@@ -96,7 +97,7 @@ local function removeSelf(_sceneObj)
 	
 	Runtime:removeEventListener( "enterFrame", _sceneObj )
 	_sceneObj:_superRemoveSelf();
-	
+	_sceneObj:disableCollisionHandling();
 end
 --------------------------------------------------------------------------------
 local function assetInfoForFile(selfObject, assetFileName)
@@ -252,7 +253,7 @@ local function loadPhysicsBoundariesFromDictionary(selfObject, dict)
 			local to = {x = skBRect.origin.x + skBRect.size.width,
 						y = skBRect.origin.y};
 					
-			selfObject:createPhysicsBoundarySection(from, to, "LHPhysicsBottomBoundary");
+			selfObject:createPhysicsBoundarySection(from, to, "LHPhysicsTopBoundary");
 			
 			from = 	{x = skBRect.origin.x + skBRect.size.width,
 					y = skBRect.origin.y};
@@ -267,7 +268,7 @@ local function loadPhysicsBoundariesFromDictionary(selfObject, dict)
 			to = 	{x = skBRect.origin.x,
 					y = skBRect.origin.y + skBRect.size.height};
 					
-			selfObject:createPhysicsBoundarySection(from, to, "LHPhysicsTopBoundary");
+			selfObject:createPhysicsBoundarySection(from, to, "LHPhysicsBottomBoundary");
 			
 			
 			from = 	{x = skBRect.origin.x,
@@ -282,29 +283,37 @@ end
 --------------------------------------------------------------------------------
 local function createPhysicsBoundarySection(selfObject, from, to, sectionName)
 
-	local fixtureInfo = {}
+	local node = display.newLine( 0,0, 0,0 )
+	node.lhUniqueName = sectionName;
 	
-	local chainPoints = {}
-			
-	chainPoints[#chainPoints+1] = from.x;
-	chainPoints[#chainPoints+1] = from.y;
-	
-	chainPoints[#chainPoints+1] = to.x;
-	chainPoints[#chainPoints+1] = to.y;
-	
-	fixtureInfo.chain = chainPoints;
-	fixtureInfo.connectFirstAndLastChainVertex = false;
-			
-	local borderLine = display.newLine( 0,0, 0,0 )
+	local function getUniqueName(selfNode)
+		return selfNode.lhUniqueName;
+	end
+	node.getUniqueName = getUniqueName;
 
-	physics.addBody( borderLine, "static", fixtureInfo);
+
+	local allBodyFixtures = {};
+	node.lhBodyShapes = {};
 	
+	local minFixId = #allBodyFixtures;
+	local bodyShape = LHBodyShape:createWithName(sectionName, node, selfObject, from, to, allBodyFixtures);
+			
+	bodyShape._minFixtureIdForThisObject = minFixId +1;
+ 	bodyShape._maxFixtureIdForThisObject = #allBodyFixtures;
+ 		 		
+	node.lhBodyShapes[#node.lhBodyShapes +1] = bodyShape;
+		
+	physics.addBody(node, 
+					"static",
+					unpack(allBodyFixtures))
+
 end
 --------------------------------------------------------------------------------
 local function getInfoForCollisionEvent(event)
 	
 	local info = {}
 	
+	info.event = event;
 	info.nodeA = event.object1;
 	info.nodeB = event.object2;
 	
@@ -420,13 +429,17 @@ local function collision(selfNode, event)
 end
 --------------------------------------------------------------------------------
 local function postCollision(selfNode, event)
-	-- print("postCollision " .. tostring(selfNode) .. " event: " .. tostring(event));
+	
+	local collisionEvent = { 	name="postCollisionContact", 
+								object= getInfoForCollisionEvent(event) };
+	selfNode:dispatchEvent(collisionEvent);
 end
 --------------------------------------------------------------------------------
 local function preCollision(selfNode, event)
 
-	-- print("preCollision " .. tostring(selfNode) .. " event: " .. tostring(event));
-	
+	local collisionEvent = { 	name="preCollisionContact", 
+								object= getInfoForCollisionEvent(event) };
+	selfNode:dispatchEvent(collisionEvent);
 end
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------

@@ -88,6 +88,33 @@ function LHBodyShape:createCircleWithDictionary(dictionary, node, scene, size, a
 	return object;
 end
 --------------------------------------------------------------------------------
+function LHBodyShape:createWithName(name, node, scene, from, to, allBodyFixtures)
+
+	local object = {_shapeName = name,
+					_shapeID   = 0,
+					_minFixtureIdForThisObject = 1,
+					_maxFixtureIdForThisObject = 1,
+					_subShape = {},
+					}
+	setmetatable(object, { __index = LHBodyShape })  -- Inheritance	
+	
+	local chainPoints = {}
+			
+	chainPoints[#chainPoints+1] = from.x;
+	chainPoints[#chainPoints+1] = from.y;
+	
+	chainPoints[#chainPoints+1] = to.x;
+	chainPoints[#chainPoints+1] = to.y;
+	
+	fixtureInfo.chain = chainPoints;
+	fixtureInfo.connectFirstAndLastChainVertex = false;
+	
+	object._subShape[#object._subShape+1] = fixtureInfo;
+	allBodyFixtures[#allBodyFixtures+1] = object._subShape[#object._subShape];
+	
+	return object;
+end
+--------------------------------------------------------------------------------
 function LHBodyShape:createRectangleWithDictionary(dictionary, node, scene, size, allBodyFixtures)
 
 	local object = {_shapeName = dictionary["name"],
@@ -407,8 +434,6 @@ function LHBodyShape:createComplexShapeWithDictionary(dictionary, node, scene, a
 									filter  = collisionFilter,
 									shape 	= shapePoints
 								}
-		
-			LHUtils.LHPrintObjectInfo(shapePoints);
 		
 			object._subShape[#object._subShape+1] = fixtureInfo;
 			allBodyFixtures[#allBodyFixtures+1] = object._subShape[#object._subShape];
