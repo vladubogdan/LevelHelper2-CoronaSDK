@@ -16,6 +16,7 @@
 
 local LHUtils = require("LevelHelper2-API.Utilities.LHUtils");
 local LHNodeProtocol = require("LevelHelper2-API.Protocols.LHNodeProtocol")
+require("LevelHelper2-API.Protocols.LHBodyShape")
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 local function getDesignResolutionSize()
@@ -96,7 +97,7 @@ local function removeSelf(_sceneObj)
 	
 	Runtime:removeEventListener( "enterFrame", _sceneObj )
 	_sceneObj:_superRemoveSelf();
-	
+	_sceneObj:disableCollisionHandling();
 end
 --------------------------------------------------------------------------------
 local function assetInfoForFile(selfObject, assetFileName)
@@ -144,6 +145,7 @@ local function loadGlobalGravityFromDictionary(selfObject, dict)
 						y = gravityVector.y*gravityForce};
 					
 		local physics = require( "physics" )
+		physics.start();
 		physics.setGravity( gravity.x, -gravity.y );
 		
 	end
@@ -251,7 +253,7 @@ local function loadPhysicsBoundariesFromDictionary(selfObject, dict)
 			local to = {x = skBRect.origin.x + skBRect.size.width,
 						y = skBRect.origin.y};
 					
-			selfObject:createPhysicsBoundarySection(from, to, "LHPhysicsBottomBoundary");
+			selfObject:createPhysicsBoundarySection(from, to, "LHPhysicsTopBoundary");
 			
 			from = 	{x = skBRect.origin.x + skBRect.size.width,
 					y = skBRect.origin.y};
@@ -266,7 +268,7 @@ local function loadPhysicsBoundariesFromDictionary(selfObject, dict)
 			to = 	{x = skBRect.origin.x,
 					y = skBRect.origin.y + skBRect.size.height};
 					
-			selfObject:createPhysicsBoundarySection(from, to, "LHPhysicsTopBoundary");
+			selfObject:createPhysicsBoundarySection(from, to, "LHPhysicsBottomBoundary");
 			
 			
 			from = 	{x = skBRect.origin.x,
@@ -281,23 +283,163 @@ end
 --------------------------------------------------------------------------------
 local function createPhysicsBoundarySection(selfObject, from, to, sectionName)
 
-	local fixtureInfo = {}
+	local node = display.newLine( 0,0, 0,0 )
+	node.lhUniqueName = sectionName;
 	
-	local chainPoints = {}
-			
-	chainPoints[#chainPoints+1] = from.x;
-	chainPoints[#chainPoints+1] = from.y;
-	
-	chainPoints[#chainPoints+1] = to.x;
-	chainPoints[#chainPoints+1] = to.y;
-	
-	fixtureInfo.chain = chainPoints;
-	fixtureInfo.connectFirstAndLastChainVertex = false;
-			
-	local borderLine = display.newLine( 0,0, 0,0 )
+	local function getUniqueName(selfNode)
+		return selfNode.lhUniqueName;
+	end
+	node.getUniqueName = getUniqueName;
 
-	physics.addBody( borderLine, "static", fixtureInfo);
+
+	local allBodyFixtures = {};
+	node.lhBodyShapes = {};
 	
+	local minFixId = #allBodyFixtures;
+	local bodyShape = LHBodyShape:createWithName(sectionName, node, selfObject, from, to, allBodyFixtures);
+			
+	bodyShape._minFixtureIdForThisObject = minFixId +1;
+ 	bodyShape._maxFixtureIdForThisObject = #allBodyFixtures;
+ 		 		
+	node.lhBodyShapes[#node.lhBodyShapes +1] = bodyShape;
+		
+	physics.addBody(node, 
+					"static",
+					unpack(allBodyFixtures))
+
+end
+--------------------------------------------------------------------------------
+local function getInfoForCollisionEvent(event)
+	
+	local info = {}
+	
+	info.event = event;
+	info.nodeA = event.object1;
+	info.nodeB = event.object2;
+	
+	if(info.nodeA)then
+		
+		local aShapes = info.nodeA.lhBodyShapes;
+		if(aShapes)then
+			for i = 1, #aShapes do
+				local fixture = aShapes[i];
+				if(fixture)then
+					if(	event.element1 >= fixture._minFixtureIdForThisObject and 
+	 					event.element1 <= fixture._maxFixtureIdForThisObject)then
+	
+					   	info.nodeAShapeName = fixture._shapeName;
+			   			info.nodeAShapeID 	= fixture._shapeID;
+		   				break;
+	 				end
+				end
+			end
+		end
+ 	end
+ 
+ 	if(info.nodeB)then
+		
+		local aShapes = info.nodeB.lhBodyShapes;
+		if(aShapes)then
+			for i = 1, #aShapes do
+				local fixture = aShapes[i];
+				if(fixture)then
+					if(	event.element2 >= fixture._minFixtureIdForThisObject and 
+	 					event.element2 <= fixture._maxFixtureIdForThisObject)then
+	
+					   	info.nodeBShapeName = fixture._shapeName;
+			   			info.nodeBShapeID 	= fixture._shapeID;
+		   				break;
+	 				end
+				end
+			end
+		end
+ 	end
+ 
+ 	
+ 	return info;
+end
+--------------------------------------------------------------------------------
+--!@docBegin
+--!Enable the use of LevelHelper API collision handling
+--|The following events will be available once you register to them
+--!<yourLHSceneObject>:addEventListener("didBeginContact", <yourCoronaSceneObject>);
+--!<yourLHSceneObject>:addEventListener("didEndContact", <yourCoronaSceneObject>);
+--!@code
+--!   lhScene:addEventListener("didBeginContact", scene);
+--!   lhScene:addEventListener("didEndContact", scene);
+--!
+--!
+--!function scene:didBeginContact(event)
+--!	
+--!	local contactInfo = event.object;
+--!	
+--!	print("did BEGIN contact with info......................................................");
+--!	print("Node A: " .. tostring(contactInfo.nodeA));
+--!	print("Node A Shape name: " .. contactInfo.nodeAShapeName);
+--!	print("Node A Shape id: " .. contactInfo.nodeAShapeID);
+--!	print("Node B: " .. tostring(contactInfo.nodeB));
+--!	print("Node B Shape name: " .. contactInfo.nodeBShapeName);
+--!	print("Node B Shape id: " .. contactInfo.nodeBShapeID);
+--!	
+--!end
+--!function scene:didEndContact(event)
+--!	
+--!	local contactInfo = event.object;
+--!	
+--!	print("did END contact with info......................................................");
+--!	print("Node A: " .. tostring(contactInfo.nodeA));
+--!	print("Node A Shape name: " .. contactInfo.nodeAShapeName);
+--!	print("Node A Shape id: " .. contactInfo.nodeAShapeID);
+--!	print("Node B: " .. tostring(contactInfo.nodeB));
+--!	print("Node B Shape name: " .. contactInfo.nodeBShapeName);
+--!	print("Node B Shape id: " .. contactInfo.nodeBShapeID);
+--!	
+--!end
+--!@endcode
+--!
+local function enableCollisionHandling(selfNode)
+--!@docEnd
+	Runtime:addEventListener( "collision", selfNode);
+	Runtime:addEventListener( "postCollision", selfNode );
+	Runtime:addEventListener( "preCollision", selfNode );
+end
+--------------------------------------------------------------------------------
+--!@docBegin
+--!Disable the use of LevelHelper API collision handling
+local function disableCollisionHandling(selfNode)
+--!@docEnd
+	Runtime:removeEventListener( "collision", selfNode);
+	Runtime:removeEventListener( "postCollision", selfNode );
+	Runtime:removeEventListener( "preCollision", selfNode );
+end
+--------------------------------------------------------------------------------
+local function collision(selfNode, event)
+	if ( event.phase == "began" ) then	
+		
+		local collisionEvent = { 	name="didBeginContact", 
+								  		object= getInfoForCollisionEvent(event) };
+		selfNode:dispatchEvent(collisionEvent);
+			
+	elseif ( event.phase == "ended" ) then
+	
+		local collisionEvent = { 	name="didEndContact", 
+								  		object= getInfoForCollisionEvent(event) };
+		selfNode:dispatchEvent(collisionEvent);
+    end
+end
+--------------------------------------------------------------------------------
+local function postCollision(selfNode, event)
+	
+	local collisionEvent = { 	name="postCollisionContact", 
+								object= getInfoForCollisionEvent(event) };
+	selfNode:dispatchEvent(collisionEvent);
+end
+--------------------------------------------------------------------------------
+local function preCollision(selfNode, event)
+
+	local collisionEvent = { 	name="preCollisionContact", 
+								object= getInfoForCollisionEvent(event) };
+	selfNode:dispatchEvent(collisionEvent);
 end
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
@@ -369,6 +511,12 @@ function LHScene:initWithContentOfFile(jsonFile)
 	_scene:loadGlobalGravityFromDictionary(dict);
 	
 	_scene.lhUniqueName = jsonFile;
+	
+	_scene.collision 			= collision;
+	_scene.postCollision 		= postCollision;
+	_scene.preCollision 		= preCollision;
+	_scene.enableCollisionHandling = enableCollisionHandling;
+	_scene.disableCollisionHandling = disableCollisionHandling;
 	
 	Runtime:addEventListener( "enterFrame", _scene )
 	

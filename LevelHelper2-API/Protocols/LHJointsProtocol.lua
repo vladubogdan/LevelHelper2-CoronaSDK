@@ -29,6 +29,10 @@ end
 --!Get the actual corona joint object from the LevelHelper joint node.
 local function getCoronaJoint(selfNode)
 --!@docEnd	
+	if(selfNode.lhCoronaJoint == nil)then
+		selfNode:lateLoading();
+	end
+
 	return selfNode.lhCoronaJoint;
 end
 --------------------------------------------------------------------------------

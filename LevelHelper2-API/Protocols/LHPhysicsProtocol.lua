@@ -9,57 +9,9 @@
 -----------------------------------------------------------------------------------------
 module (..., package.seeall)
 
-function LHDot(a, b)
-	return a.x * b.x + a.y * b.y
-end
+require("LevelHelper2-API.Protocols.LHBodyShape")
 
-function LHDistanceSquared(a, b)
-	local c = {x = a.x - b.x, y = a.y - b.y}
-	return LHDot(c, c);
-end
 
-function LHValidateCentroid(vs)
-
-	local count = #vs;
-	
-	if(count < 3 or count > 8)then
-		return false;
-	end
-
-	local n = math.min(count, 8);
-
-	local ps = {};
-	local tempCount = 0;
-	for i = 1, n do
-		local v = vs[i];
-		
-		local unique = true;
-		if(tempCount > 0)then
-			
-			for j = 1, tempCount do
-				local curPs = ps[j];
-				local squared = LHDistanceSquared(v, curPs);
-				
-				if squared < 0.5 * 0.005 then
-					unique = false;
-					break;
-				end
-			end
-		end
-		
-		if (unique)then
-			ps[tempCount+1] = v;
-			tempCount = tempCount+1;
-		end
-	end
-    
-	n = tempCount;
-	if (n < 3)then
-        return false;
-	end
-    
-    return true;
-end
 
 --------------------------------------------------------------------------------
 function initPhysicsProtocolWithDictionary(dict, node, scene)
@@ -92,176 +44,113 @@ function initPhysicsProtocolWithDictionary(dict, node, scene)
 	end
 
 	local sizet = {width = node.width, height = node.height}
-	
 	if(node.width == 0 and node.height == 0)then
 		--some corona nodes have width/height properties as read only - we retreive needed info from a lh variable
 		sizet = node.lhContentSize;
 	end
 	
-	local scaleX = node.xScale;
-	local scaleY = node.yScale;
-	
-	sizet.width  = sizet.width*scaleX;
-	sizet.height = sizet.height*scaleY;
-
-	local shapeFixturesInfo = nil;
-
 	local genFixture = dict["genericFixture"];
 
-	local fixtureInfo = {	friction=genFixture["friction"],
-						 	bounce	=genFixture["restitution"], 
-							density =genFixture["density"],
-							filter  ={	
-										categoryBits = genFixture["category"],
-										maskBits = genFixture["mask"]
-									}
-						}
+	local allBodyFixtures = {};
+	node.lhBodyShapes = {};
 	
 	if(shapeType == 0)then --RECTANGLE
 
-		fixtureInfo.box = {halfWidth = sizet.width*0.5, halfHeight=sizet.height*0.5};
-
-		physics.addBody( node, physicType, fixtureInfo )
-
+		local minFixId = #allBodyFixtures;
+		local bodyShape = LHBodyShape:createRectangleWithDictionary(genFixture, node, scene, sizet, allBodyFixtures);
+			
+		bodyShape._minFixtureIdForThisObject = minFixId +1;
+ 		bodyShape._maxFixtureIdForThisObject = #allBodyFixtures;
+ 		 		
+		node.lhBodyShapes[#node.lhBodyShapes +1] = bodyShape;	
+		
 	elseif(shapeType == 1)then --CIRCLE
 
-		fixtureInfo.radius = sizet.width*0.5;
-
-		physics.addBody( node, physicType, fixtureInfo )
-	
+		local minFixId = #allBodyFixtures;
+		local bodyShape = LHBodyShape:createCircleWithDictionary(genFixture, node, scene, sizet, allBodyFixtures);
+			
+		bodyShape._minFixtureIdForThisObject = minFixId +1;
+ 		bodyShape._maxFixtureIdForThisObject = #allBodyFixtures;
+ 		 		
+		node.lhBodyShapes[#node.lhBodyShapes +1] = bodyShape;	
+ 		
 	elseif(shapeType == 2)then --POLYGON
 	
 		if node.nodeType == "LHShape" then
-	
-			local bodyShapes = {}
-	
+
 			local triangles = node:trianglePoints();
+
+			local minFixId = #allBodyFixtures;
+			local bodyShape = LHBodyShape:createTrianglesWithDictionary(genFixture, triangles, node, scene, allBodyFixtures);
 			
-			local i = 1;
-			while triangles[i] do
-				
-				local ptA = triangles[i];
-				ptA.x = ptA.x * scaleX;
-				ptA.y = ptA.y * scaleY;
-				
-				i = i+1;
-				local ptB = triangles[i];
-				ptB.x = ptB.x * scaleX;
-				ptB.y = ptB.y * scaleY;
-				
-				i = i+1;
-				local ptC = triangles[i];
-				ptC.x = ptC.x * scaleX;
-				ptC.y = ptC.y * scaleY;
-				
-				i = i+1;
-				
-				local shapePoints = {};
-				
-				shapePoints[#shapePoints+1] = ptA.x;
-				shapePoints[#shapePoints+1] = ptA.y;
-				
-				shapePoints[#shapePoints+1] = ptB.x;
-				shapePoints[#shapePoints+1] = ptB.y;
-				
-				shapePoints[#shapePoints+1] = ptC.x;
-				shapePoints[#shapePoints+1] = ptC.y;
-				
-				-- chainPoints[#chainPoints+1] = pt.x;
-				-- chainPoints[#chainPoints+1] = pt.y;
-				-- fixtureInfo.chain = chainPoints;
-				-- fixtureInfo.connectFirstAndLastChainVertex = false;
-			
-				local curShapeProperties = LHUtils.LHDeepCopy(fixtureInfo);
-				curShapeProperties.shape = shapePoints;
-					
-				bodyShapes[#bodyShapes+1] = curShapeProperties;
-				
-			
-			end
-		
-			physics.addBody( node, physicType, unpack(bodyShapes));
-		
+			bodyShape._minFixtureIdForThisObject = minFixId +1;
+ 			bodyShape._maxFixtureIdForThisObject = #allBodyFixtures;
+ 		 		
+			node.lhBodyShapes[#node.lhBodyShapes +1] = bodyShape;	
+ 		
 		end
-		    
 
 	elseif(shapeType == 4)then--OVAL
 
-		shapeFixturesInfo = dict["ovalShape"];
-
+		local shapeFixturesInfo = dict["ovalShape"];
+		
+		local minFixId = #allBodyFixtures;
+		local bodyShape = LHBodyShape:createShapeFixturesWithDictionary(genFixture, shapeFixturesInfo, node, scene, allBodyFixtures);
+		
+		bodyShape._minFixtureIdForThisObject = minFixId +1;
+ 		bodyShape._maxFixtureIdForThisObject = #allBodyFixtures;
+ 	 		
+		node.lhBodyShapes[#node.lhBodyShapes +1] = bodyShape;
+			
 	elseif(shapeType == 3)then--CHAIN
 	
 		if node.nodeType == "LHBezier" then
 	
 			local points = node:linePoints();
 			
-			local chainPoints = {}
+			local minFixId = #allBodyFixtures;
+			local bodyShape = LHBodyShape:createChainWithDictionary(genFixture, points, false, node, scene, allBodyFixtures)
 			
-			for i = 1, #points do
-				
-				local pt = points[i];
-				
-				pt.x = pt.x * scaleX;
-				pt.y = pt.y * scaleY;
-				
-				chainPoints[#chainPoints+1] = pt.x;
-				chainPoints[#chainPoints+1] = pt.y;
-				
-			end
-			fixtureInfo.chain = chainPoints;
-			fixtureInfo.connectFirstAndLastChainVertex = false;
-			
-			physics.addBody( node, physicType, fixtureInfo);
-			
+			bodyShape._minFixtureIdForThisObject = minFixId +1;
+ 			bodyShape._maxFixtureIdForThisObject = #allBodyFixtures;
+ 		 		
+			node.lhBodyShapes[#node.lhBodyShapes +1] = bodyShape;
+		
 		elseif(node.nodeType == "LHShape") then
 			
 			local points = node:outlinePoints();
 			
-			local chainPoints = {}
+			local minFixId = #allBodyFixtures;
+			local bodyShape = LHBodyShape:createChainWithDictionary(genFixture, points, true, node, scene, allBodyFixtures)
 			
-			for i = 1, #points do
-				
-				local pt = points[i];
-				
-				pt.x = pt.x * scaleX;
-				pt.y = pt.y * scaleY;
-				
-				chainPoints[#chainPoints+1] = pt.x;
-				chainPoints[#chainPoints+1] = pt.y;
-				
-			end
-			fixtureInfo.chain = chainPoints;
-			fixtureInfo.connectFirstAndLastChainVertex = true;
-			
-			physics.addBody( node, physicType, fixtureInfo);
-			
+			bodyShape._minFixtureIdForThisObject = minFixId +1;
+ 			bodyShape._maxFixtureIdForThisObject = #allBodyFixtures;
+ 		 		
+			node.lhBodyShapes[#node.lhBodyShapes +1] = bodyShape;
+		
 		else
 			
 			local chainPoints = {}
-			chainPoints[#chainPoints+1] = -sizet.width*0.5;
-			chainPoints[#chainPoints+1] = -sizet.height*0.5;
-			
-			chainPoints[#chainPoints+1] =  sizet.width*0.5;
-			chainPoints[#chainPoints+1] = -sizet.height*0.5;
-			
-			chainPoints[#chainPoints+1] =  sizet.width*0.5;
-			chainPoints[#chainPoints+1] =  sizet.height*0.5;
-			
-			chainPoints[#chainPoints+1] = -sizet.width*0.5;
-			chainPoints[#chainPoints+1] =  sizet.height*0.5;
+			chainPoints[#chainPoints+1] = {x = -sizet.width*0.5, y = -sizet.height*0.5}
+			chainPoints[#chainPoints+1] = {x = sizet.width*0.5, y = -sizet.height*0.5}
+			chainPoints[#chainPoints+1] = {x = sizet.width*0.5, y= sizet.height*0.5}
+			chainPoints[#chainPoints+1] = { x= -sizet.width*0.5, y = sizet.height*0.5}
 			
 
-			fixtureInfo.chain = chainPoints;
-			fixtureInfo.connectFirstAndLastChainVertex = true;
+			local minFixId = #allBodyFixtures;
+			local bodyShape = LHBodyShape:createChainWithDictionary(genFixture, chainPoints, true, node, scene, allBodyFixtures)
 			
-			physics.addBody( node, physicType, fixtureInfo )
+			bodyShape._minFixtureIdForThisObject = minFixId +1;
+ 			bodyShape._maxFixtureIdForThisObject = #allBodyFixtures;
+ 		 		
+			node.lhBodyShapes[#node.lhBodyShapes +1] = bodyShape;
 		
 		end
 
 	elseif(shapeType == 5)then --TRACED
 		
 		local fixUUID = dict["fixtureUUID"];
-		shapeFixturesInfo = scene:tracedFixturesWithUUID(fixUUID);        
+		local shapeFixturesInfo = scene:tracedFixturesWithUUID(fixUUID);        
 		
 		if shapeFixturesInfo == nil then
             -- local asset = this->assetParent();
@@ -269,65 +158,61 @@ function initPhysicsProtocolWithDictionary(dict, node, scene)
             --     shapeFixturesInfo = (LHArray*)asset->tracedFixturesWithUUID(fixUUID);
             -- }
 		end
+		
+		local minFixId = #allBodyFixtures;
+		local bodyShape = LHBodyShape:createShapeFixturesWithDictionary(genFixture, shapeFixturesInfo, node, scene, allBodyFixtures);
+		
+		bodyShape._minFixtureIdForThisObject = minFixId +1;
+ 		bodyShape._maxFixtureIdForThisObject = #allBodyFixtures;
+ 	 		
+		node.lhBodyShapes[#node.lhBodyShapes +1] = bodyShape;
+			
+	elseif(shapeType == 6)then -- editor
+	
+		--this shapey type is available only on sprites
+		
+		local spriteFrameName = node:getSpriteFrameName();
+		local spriteSheetPath = node:getSpriteSheetPath();
+		
+		-- require the sprite sheet information file
+		local sheetInfo = require(spriteSheetPath); 
+		
+		local bodyInfo = sheetInfo.getPhysicsData()[spriteFrameName];
+		
+		local shapesInfo = bodyInfo["shapes"];
+		if(shapesInfo ~= nil)then
+			
+			for i=1, #shapesInfo do
+					
+				local shapeInfo = shapesInfo[i];
+			
+				local minFixId = #allBodyFixtures;
+				local bodyShape = LHBodyShape:createComplexShapeWithDictionary(shapeInfo, node, scene, allBodyFixtures);
+				bodyShape._minFixtureIdForThisObject = minFixId +1;
+	 			bodyShape._maxFixtureIdForThisObject = #allBodyFixtures;
+	 	 		
+				node.lhBodyShapes[#node.lhBodyShapes +1] = bodyShape;
+				
+        	end
+        end
+        
 	end
 
+	physics.addBody(node, 
+					physicType,
+					unpack(allBodyFixtures))
+			
+			
 	node.isFixedRotation	= dict["fixedRotation"];
 	node.isBullet 			= dict["bullet"];
 	node.isSleepingAllowe	= dict["allowSleep"];
 	node.gravityScale		= dict["gravityScale"];
-	
-	node.isSensor 			= genFixture["sensor"];
-
 	node.linearDamping 		= dict["linearDamping"];
 	node.angularVelocity 	= dict["angularVelocity"];
 	node.angularDamping 	= dict["angularDamping"];
 	
 	
-	if (shapeFixturesInfo ~= nil) then
-		
-		local bodyShapes = {}
-		
-		for i=1, #shapeFixturesInfo do
-			local curShapeInfo = shapeFixturesInfo[i];
-			
-			local count = #curShapeInfo
-
-			if(count > 2)then
-		
-				local shapePoints = {}
-				
-				local centroidTest = {};
-				
-				for j = 1, #curShapeInfo do
-					
-					local pointStr = curShapeInfo[j];
-					local pt = LHUtils.pointFromString(pointStr);
-					
-					pt.x = pt.x * scaleX;
-					pt.y = pt.y * scaleY;
-				
-					shapePoints[#shapePoints+1] = pt.x;
-					shapePoints[#shapePoints+1] = pt.y;
-					
-					centroidTest[#centroidTest+1] = pt;
-				end
-				
-				if(LHValidateCentroid(centroidTest))then
-				
-					local curShapeProperties = LHUtils.LHDeepCopy(fixtureInfo);
-					curShapeProperties.shape = shapePoints;
-					
-					bodyShapes[#bodyShapes+1] = curShapeProperties;
-				end
-			end
-		end
-		
-		physics.addBody( node, physicType,unpack(bodyShapes));
-			
-	end
-	
 	--LevelHelper 2 node physics protocol functions
 	----------------------------------------------------------------------------
-	
 	
 end

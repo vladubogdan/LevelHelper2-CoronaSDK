@@ -259,48 +259,6 @@ function positionForNodeFromUnit(node, unitPos)
     return designPos;
 end
 
-
---function lh_sizeFromString(str)
---
---	local wStr = 0;
---	local hStr = 0;
---	
---	local function sizeHelper(a, b)
---		wStr = tonumber(a)
---		hStr = tonumber(b)
---	end
---	local retinaRatio = 1; --should be added shortly in LHSettings
---	
---	string.gsub(str, "{(.*), (.*)}", sizeHelper) 
---	return  { width = wStr/retinaRatio, height = hStr/retinaRatio}				
---end
---function lh_printSize(obj)
---
---	print("{ size = { width: " .. tostring(obj.width) .. " height: " .. tostring(obj.height) .. " }}");
---end
-
---------------------------------------------------------------------------------
---function lh_rectFromString(str)
---
---	local xStr = 0;
---	local yStr = 0;
---	local wStr = 0;
---	local hStr = 0;
---
---	local function rectHelper(a, b, c, d)
---		xStr = tonumber(a)
---		yStr = tonumber(b)
---		wStr = tonumber(c)
---		hStr= tonumber(d)
---	end
---
---	local retinaRatio = 1; --should be added shortly in LHSettings
---
---	string.gsub(str, "{{(.*), (.*)}, {(.*), (.*)}}", rectHelper)
---	return { origin = {x = xStr*retinaRatio, y = yStr*retinaRatio}, 
---			   size = {width = wStr*retinaRatio, height = hStr*retinaRatio}}
---end
-
 function LHPrintObjectInfo(object)
     local json = require "json"
     local jsonString = json.encode( object )

@@ -1,0 +1,1541 @@
+{
+  "designResolution" : "{960.000000, 640.000000}",
+  "globalGravityForce" : 8,
+  "tags" : [
+    "DEFAULT"
+  ],
+  "aspect" : 0,
+  "backgroundColor" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}",
+  "uuid" : "A89204FD-2EF5-4B2B-9540-71D0C417EC3D",
+  "children" : [
+    {
+      "rotation" : 0,
+      "parentUUID" : "A89204FD-2EF5-4B2B-9540-71D0C417EC3D",
+      "tags" : [
+        "DEFAULT"
+      ],
+      "generalPosition" : "{0.000000, 0.000000}",
+      "uuid" : "BE31D313-32CD-4904-ACC4-17B49CCC72F5",
+      "name" : "BACK USER INTERFACE",
+      "anchor" : "{0.500000, 0.500000}",
+      "size" : "{128.000000, 128.000000}",
+      "nodeType" : "LHBackUINode",
+      "alpha" : 255,
+      "scale" : "{1.000000, 1.000000}",
+      "zOrder" : -1,
+      "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+    },
+    {
+      "rotation" : 0,
+      "parentUUID" : "A89204FD-2EF5-4B2B-9540-71D0C417EC3D",
+      "tags" : [
+        "DEFAULT"
+      ],
+      "generalPosition" : "{0.000000, 0.000000}",
+      "uuid" : "B1406B0C-F81A-4DB1-A911-AB326D37E6D2",
+      "children" : [
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "nodePhysics" : {
+            "linearVelocity" : "{0.000000, 0.000000}",
+            "fixedRotation" : false,
+            "shape" : 4,
+            "allowSleep" : true,
+            "linearDamping" : 0,
+            "type" : 2,
+            "ovalShape" : [
+              [
+                "{-1.7794356347569304e-14, -173.31326293945312}",
+                "{18.898002624511719, -169.98309326171875}",
+                "{37.069766998291016, -160.12057495117188}",
+                "{53.816959381103516, -144.10470581054688}",
+                "{68.495994567871094, -122.55098724365234}",
+                "{-53.816959381103516, -144.10470581054688}",
+                "{-37.069766998291016, -160.12057495117188}",
+                "{-18.898002624511719, -169.98309326171875}"
+              ],
+              [
+                "{5.9314523982007504e-15, 173.31326293945312}",
+                "{-18.898002624511719, 169.98309326171875}",
+                "{-37.069766998291016, 160.12057495117188}",
+                "{-53.816959381103516, 144.10470581054688}",
+                "{68.495994567871094, 122.55098724365234}",
+                "{53.816959381103516, 144.10470581054688}",
+                "{37.069766998291016, 160.12057495117188}",
+                "{18.898002624511719, 169.98309326171875}"
+              ],
+              [
+                "{-53.816959381103516, -144.10470581054688}",
+                "{68.495994567871094, -122.55098724365234}",
+                "{80.542770385742188, -96.287689208984375}",
+                "{89.494331359863281, -66.324111938476562}",
+                "{95.006675720214844, -33.811740875244141}",
+                "{-89.494331359863281, -66.324111938476562}",
+                "{-80.542770385742188, -96.287689208984375}",
+                "{-68.495994567871094, -122.55098724365234}"
+              ],
+              [
+                "{-89.494331359863281, -66.324111938476562}",
+                "{95.006675720214844, -33.811740875244141}",
+                "{96.867965698242188, 0}",
+                "{95.006675720214844, 33.811740875244141}",
+                "{-89.494331359863281, 66.324111938476562}",
+                "{-95.006675720214844, 33.811740875244141}",
+                "{-96.867965698242188, 2.12247533865886e-14}",
+                "{-95.006675720214844, -33.811740875244141}"
+              ],
+              [
+                "{95.006675720214844, 33.811740875244141}",
+                "{89.494331359863281, 66.324111938476562}",
+                "{80.542770385742188, 96.287689208984375}",
+                "{68.495994567871094, 122.55098724365234}",
+                "{-53.816959381103516, 144.10470581054688}",
+                "{-68.495994567871094, 122.55098724365234}",
+                "{-80.542770385742188, 96.287689208984375}",
+                "{-89.494331359863281, 66.324111938476562}"
+              ]
+            ],
+            "bullet" : false,
+            "genericFixture" : {
+              "category" : 1,
+              "sensor" : false,
+              "density" : 0.1,
+              "mask" : 65535,
+              "friction" : 0.2,
+              "restitution" : 0,
+              "name" : "GenericFixture",
+              "shapeID" : 0
+            },
+            "angularDamping" : 0,
+            "gravityScale" : 1,
+            "angularVelocity" : 0
+          },
+          "generalPosition" : "{0.427094, 0.584219}",
+          "uuid" : "7CB3886A-EF00-4EAC-B3EA-29D56EC07F64",
+          "children" : [
+            {
+              "rotation" : -11.89795,
+              "parentUUID" : "7CB3886A-EF00-4EAC-B3EA-29D56EC07F64",
+              "tags" : [
+                "DEFAULT"
+              ],
+              "spriteUUID" : "20B9EE9E-9B0C-4476-880F-8D01178DE374",
+              "spriteName" : "shoulder_L_outline",
+              "generalPosition" : "{-0.002693, -0.079127}",
+              "uuid" : "B240887F-D9F9-42BA-A24E-29A3A6B9FC00",
+              "children" : [
+                {
+                  "rotation" : 7.165001,
+                  "parentUUID" : "B240887F-D9F9-42BA-A24E-29A3A6B9FC00",
+                  "tags" : [
+                    "DEFAULT"
+                  ],
+                  "spriteUUID" : "FE6B2E82-9E0D-4C19-90DA-B8E50686EFBB",
+                  "spriteName" : "forearm_L_outline",
+                  "generalPosition" : "{0.013364, 0.025299}",
+                  "uuid" : "B636C641-DA3B-4014-B1B2-4FFA23A6BB28",
+                  "children" : [
+                    {
+                      "rotation" : 8.464942,
+                      "parentUUID" : "B636C641-DA3B-4014-B1B2-4FFA23A6BB28",
+                      "tags" : [
+                        "DEFAULT"
+                      ],
+                      "spriteUUID" : "2E07EFEC-8A2D-4B69-A34F-5E708B01C8FC",
+                      "spriteName" : "hand_L_outline",
+                      "generalPosition" : "{0.013529, -0.001263}",
+                      "uuid" : "DEC74035-6B2D-4151-B9B9-10C132A718E2",
+                      "name" : "hand_L_outline.png",
+                      "anchor" : "{0.240796, 0.457780}",
+                      "size" : "{31.000000, 35.000000}",
+                      "nodeType" : "LHSprite",
+                      "alpha" : 255,
+                      "scale" : "{1.000000, 1.000000}",
+                      "relativeImagePath" : "PublishFolder\/",
+                      "zOrder" : 0,
+                      "imageFileName" : "officer.png",
+                      "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                    }
+                  ],
+                  "name" : "forearm_L_outline.png",
+                  "anchor" : "{0.139088, 0.287134}",
+                  "size" : "{50.000000, 29.000000}",
+                  "nodeType" : "LHSprite",
+                  "alpha" : 255,
+                  "scale" : "{1.000000, 1.000000}",
+                  "relativeImagePath" : "PublishFolder\/",
+                  "zOrder" : 0,
+                  "imageFileName" : "officer.png",
+                  "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                }
+              ],
+              "name" : "shoulder_L_outline.png",
+              "anchor" : "{0.228572, 0.151891}",
+              "size" : "{43.000000, 62.000000}",
+              "nodeType" : "LHSprite",
+              "alpha" : 255,
+              "scale" : "{1.000000, 1.000000}",
+              "relativeImagePath" : "PublishFolder\/",
+              "zOrder" : -2,
+              "imageFileName" : "officer.png",
+              "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+            },
+            {
+              "rotation" : 0.5736903,
+              "parentUUID" : "7CB3886A-EF00-4EAC-B3EA-29D56EC07F64",
+              "tags" : [
+                "DEFAULT"
+              ],
+              "generalPosition" : "{-0.015198, 0.032704}",
+              "uuid" : "0CF72417-694F-40FF-ACA8-A95C45FB753B",
+              "children" : [
+                {
+                  "rotation" : 0,
+                  "parentUUID" : "0CF72417-694F-40FF-ACA8-A95C45FB753B",
+                  "tags" : [
+                    "DEFAULT"
+                  ],
+                  "spriteUUID" : "C1243817-027E-4759-AA72-86C67FD8E00A",
+                  "spriteName" : "pelvis",
+                  "generalPosition" : "{-0.001909, -0.082381}",
+                  "uuid" : "EA336653-E4F0-4906-ADC5-62E6F8E2F655",
+                  "name" : "pelvis.png",
+                  "anchor" : "{0.500000, 0.500000}",
+                  "size" : "{67.000000, 50.000000}",
+                  "nodeType" : "LHSprite",
+                  "alpha" : 255,
+                  "scale" : "{1.000000, 1.000000}",
+                  "relativeImagePath" : "PublishFolder\/",
+                  "zOrder" : -1,
+                  "imageFileName" : "officer.png",
+                  "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                },
+                {
+                  "rotation" : 356.0632,
+                  "parentUUID" : "0CF72417-694F-40FF-ACA8-A95C45FB753B",
+                  "tags" : [
+                    "DEFAULT"
+                  ],
+                  "spriteUUID" : "B1B9257F-6E94-4835-A313-8DFBB8559BC1",
+                  "spriteName" : "leg_upper_L_outline",
+                  "generalPosition" : "{0.015046, -0.065425}",
+                  "uuid" : "1C98F498-447F-4E96-9243-F3F6EFCD3E6D",
+                  "children" : [
+                    {
+                      "rotation" : 3.863104,
+                      "parentUUID" : "1C98F498-447F-4E96-9243-F3F6EFCD3E6D",
+                      "tags" : [
+                        "DEFAULT"
+                      ],
+                      "spriteUUID" : "4AB26407-4B38-45E8-8B96-5E2032A6DE87",
+                      "spriteName" : "leg_lower_L_outline",
+                      "generalPosition" : "{0.000978, 0.036626}",
+                      "uuid" : "1FDD72C1-0707-4A54-ABEC-691E94E76A1D",
+                      "children" : [
+                        {
+                          "rotation" : 1.19812,
+                          "parentUUID" : "1FDD72C1-0707-4A54-ABEC-691E94E76A1D",
+                          "tags" : [
+                            "DEFAULT"
+                          ],
+                          "spriteUUID" : "9B4AB0A0-B579-42A1-8D14-7DFF6C91B041",
+                          "spriteName" : "foot_LEFT",
+                          "generalPosition" : "{-0.004018, 0.034892}",
+                          "uuid" : "89849707-08DE-4FF2-815D-9272935FFC51",
+                          "name" : "foot_LEFT.png",
+                          "anchor" : "{0.271646, 0.328476}",
+                          "size" : "{57.000000, 29.000000}",
+                          "nodeType" : "LHSprite",
+                          "alpha" : 255,
+                          "scale" : "{1.000000, 1.000000}",
+                          "relativeImagePath" : "PublishFolder\/",
+                          "zOrder" : 0,
+                          "imageFileName" : "officer.png",
+                          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                        }
+                      ],
+                      "name" : "leg_lower_L_outline.png",
+                      "anchor" : "{0.450184, 0.140118}",
+                      "size" : "{40.000000, 66.000000}",
+                      "nodeType" : "LHSprite",
+                      "alpha" : 255,
+                      "scale" : "{1.000000, 1.000000}",
+                      "relativeImagePath" : "PublishFolder\/",
+                      "zOrder" : 0,
+                      "imageFileName" : "officer.png",
+                      "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                    }
+                  ],
+                  "name" : "leg_upper_L_outline.png",
+                  "anchor" : "{0.473919, 0.137284}",
+                  "size" : "{38.000000, 73.000000}",
+                  "nodeType" : "LHSprite",
+                  "alpha" : 255,
+                  "scale" : "{1.000000, 1.000000}",
+                  "relativeImagePath" : "PublishFolder\/",
+                  "zOrder" : 1,
+                  "imageFileName" : "officer.png",
+                  "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                },
+                {
+                  "rotation" : 358.3091,
+                  "parentUUID" : "0CF72417-694F-40FF-ACA8-A95C45FB753B",
+                  "tags" : [
+                    "DEFAULT"
+                  ],
+                  "spriteUUID" : "55C7F992-41E7-499F-A6A9-F63ECAC36761",
+                  "spriteName" : "leg_upper_R_outline",
+                  "generalPosition" : "{-0.016650, -0.059109}",
+                  "uuid" : "19BC1A48-8C84-47B8-A269-2AE8E04C38B5",
+                  "children" : [
+                    {
+                      "rotation" : 5.806605,
+                      "parentUUID" : "19BC1A48-8C84-47B8-A269-2AE8E04C38B5",
+                      "tags" : [
+                        "DEFAULT"
+                      ],
+                      "spriteUUID" : "E7DCA35D-0B75-4D07-91E3-027DD9AB6A1B",
+                      "spriteName" : "leg_lower_R_outline",
+                      "generalPosition" : "{0.002209, 0.038417}",
+                      "uuid" : "0936AF20-CE82-45F5-B677-FB5B32E3CC79",
+                      "children" : [
+                        {
+                          "rotation" : 357.9287,
+                          "parentUUID" : "0936AF20-CE82-45F5-B677-FB5B32E3CC79",
+                          "tags" : [
+                            "DEFAULT"
+                          ],
+                          "spriteUUID" : "E9F9A949-A0CE-4D45-885A-7A236B9729C4",
+                          "spriteName" : "foot_RIGHT",
+                          "generalPosition" : "{-0.007858, 0.037690}",
+                          "uuid" : "FFFD3D46-7E69-49AD-9D50-9FCC41C3E875",
+                          "name" : "foot_RIGHT.png",
+                          "anchor" : "{0.246223, 0.265227}",
+                          "size" : "{57.000000, 29.000000}",
+                          "nodeType" : "LHSprite",
+                          "alpha" : 255,
+                          "scale" : "{1.000000, 1.000000}",
+                          "relativeImagePath" : "PublishFolder\/",
+                          "zOrder" : 0,
+                          "imageFileName" : "officer.png",
+                          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                        }
+                      ],
+                      "name" : "leg_lower_R_outline.png",
+                      "anchor" : "{0.732651, 0.248344}",
+                      "size" : "{42.000000, 62.000000}",
+                      "nodeType" : "LHSprite",
+                      "alpha" : 255,
+                      "scale" : "{1.000000, 1.000000}",
+                      "relativeImagePath" : "PublishFolder\/",
+                      "zOrder" : 0,
+                      "imageFileName" : "officer.png",
+                      "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                    }
+                  ],
+                  "name" : "leg_upper_R_outline.png",
+                  "anchor" : "{0.557872, 0.097571}",
+                  "size" : "{45.000000, 69.000000}",
+                  "nodeType" : "LHSprite",
+                  "alpha" : 255,
+                  "scale" : "{1.000000, 1.000000}",
+                  "relativeImagePath" : "PublishFolder\/",
+                  "zOrder" : 2,
+                  "imageFileName" : "officer.png",
+                  "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                }
+              ],
+              "name" : "lowerBody",
+              "anchor" : "{0.469799, 0.045409}",
+              "size" : "{116.545082, 144.567810}",
+              "nodeType" : "LHNode",
+              "alpha" : 255,
+              "scale" : "{1.000000, 1.000000}",
+              "zOrder" : -1,
+              "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+            },
+            {
+              "rotation" : 3.433591,
+              "parentUUID" : "7CB3886A-EF00-4EAC-B3EA-29D56EC07F64",
+              "tags" : [
+                "DEFAULT"
+              ],
+              "generalPosition" : "{-0.023221, 0.025155}",
+              "uuid" : "818B58E0-B65E-471F-AD14-9CBA937AAFB2",
+              "children" : [
+                {
+                  "rotation" : 359.8287,
+                  "parentUUID" : "818B58E0-B65E-471F-AD14-9CBA937AAFB2",
+                  "tags" : [
+                    "DEFAULT"
+                  ],
+                  "spriteUUID" : "0686CE2D-8B8B-4279-BACD-B8503E330CD8",
+                  "spriteName" : "neck_outline",
+                  "generalPosition" : "{-0.004752, -0.003430}",
+                  "uuid" : "2900405F-669C-4011-BE35-B72498811127",
+                  "children" : [
+                    {
+                      "rotation" : 1.684118,
+                      "parentUUID" : "2900405F-669C-4011-BE35-B72498811127",
+                      "tags" : [
+                        "DEFAULT"
+                      ],
+                      "spriteUUID" : "2CB26D5B-1C39-421C-AFE8-B067ED849739",
+                      "spriteName" : "head",
+                      "generalPosition" : "{-0.003763, -0.002640}",
+                      "uuid" : "8040DEAB-6150-4558-AEFB-CF19C6CBB53A",
+                      "children" : [
+                        {
+                          "rotation" : -1.913968,
+                          "parentUUID" : "8040DEAB-6150-4558-AEFB-CF19C6CBB53A",
+                          "tags" : [
+                            "DEFAULT"
+                          ],
+                          "spriteUUID" : "F752A2A6-610F-430D-93C9-0929AC6EB050",
+                          "spriteName" : "mouth",
+                          "generalPosition" : "{0.021695, 0.034787}",
+                          "uuid" : "FF5ED9EB-1D42-42E7-976A-EF9DE1436ACB",
+                          "name" : "mouth.png",
+                          "anchor" : "{0.500000, 0.500000}",
+                          "size" : "{24.000000, 16.000000}",
+                          "nodeType" : "LHSprite",
+                          "alpha" : 255,
+                          "scale" : "{1.000000, 1.000000}",
+                          "relativeImagePath" : "PublishFolder\/",
+                          "zOrder" : 0,
+                          "imageFileName" : "officer.png",
+                          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                        },
+                        {
+                          "rotation" : -1.913968,
+                          "parentUUID" : "8040DEAB-6150-4558-AEFB-CF19C6CBB53A",
+                          "tags" : [
+                            "DEFAULT"
+                          ],
+                          "spriteUUID" : "28108AC4-BF28-44D2-9D3E-159A82417248",
+                          "spriteName" : "eyes_OPEN",
+                          "generalPosition" : "{0.008183, -0.003419}",
+                          "uuid" : "FC6241BA-5251-44AF-A7BF-BF62F9F2F953",
+                          "name" : "eyes_OPEN.png",
+                          "anchor" : "{0.253149, 0.271504}",
+                          "size" : "{38.000000, 23.000000}",
+                          "nodeType" : "LHSprite",
+                          "alpha" : 255,
+                          "scale" : "{1.000000, 1.000000}",
+                          "relativeImagePath" : "PublishFolder\/",
+                          "zOrder" : 0,
+                          "imageFileName" : "officer.png",
+                          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                        },
+                        {
+                          "rotation" : -1.913968,
+                          "parentUUID" : "8040DEAB-6150-4558-AEFB-CF19C6CBB53A",
+                          "tags" : [
+                            "DEFAULT"
+                          ],
+                          "spriteUUID" : "F8C044E6-FDC2-476F-90A7-18D4F90CB5D2",
+                          "spriteName" : "hair",
+                          "generalPosition" : "{-0.003011, -0.032081}",
+                          "uuid" : "26D48421-5CC1-49F3-A53D-6B9BEBFA485A",
+                          "name" : "hair.png",
+                          "anchor" : "{0.500000, 0.500000}",
+                          "size" : "{71.000000, 47.000000}",
+                          "nodeType" : "LHSprite",
+                          "alpha" : 255,
+                          "scale" : "{1.000000, 1.000000}",
+                          "relativeImagePath" : "PublishFolder\/",
+                          "zOrder" : 0,
+                          "imageFileName" : "officer.png",
+                          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                        },
+                        {
+                          "rotation" : -720.5912,
+                          "parentUUID" : "8040DEAB-6150-4558-AEFB-CF19C6CBB53A",
+                          "tags" : [
+                            "DEFAULT"
+                          ],
+                          "spriteUUID" : "581D3D4F-6B44-41AA-8EB8-5A79F24C247C",
+                          "spriteName" : "hat",
+                          "generalPosition" : "{0.003890, -0.063198}",
+                          "uuid" : "931C45E0-EA28-4D66-8DF1-0C78485B5677",
+                          "name" : "hat.png",
+                          "anchor" : "{0.500000, 0.500000}",
+                          "size" : "{100.000000, 58.000000}",
+                          "nodeType" : "LHSprite",
+                          "alpha" : 255,
+                          "scale" : "{1.000000, 1.000000}",
+                          "relativeImagePath" : "PublishFolder\/",
+                          "zOrder" : 0,
+                          "imageFileName" : "officer.png",
+                          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                        }
+                      ],
+                      "name" : "head.png",
+                      "anchor" : "{0.388650, 0.930799}",
+                      "size" : "{71.000000, 82.000000}",
+                      "nodeType" : "LHSprite",
+                      "alpha" : 255,
+                      "scale" : "{1.000000, 1.000000}",
+                      "relativeImagePath" : "PublishFolder\/",
+                      "zOrder" : 0,
+                      "imageFileName" : "officer.png",
+                      "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                    }
+                  ],
+                  "name" : "neck_outline.png",
+                  "anchor" : "{0.337482, 0.843485}",
+                  "size" : "{32.000000, 27.000000}",
+                  "nodeType" : "LHSprite",
+                  "alpha" : 255,
+                  "scale" : "{1.000000, 1.000000}",
+                  "relativeImagePath" : "PublishFolder\/",
+                  "zOrder" : -1,
+                  "imageFileName" : "officer.png",
+                  "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                },
+                {
+                  "rotation" : -359.2878,
+                  "parentUUID" : "818B58E0-B65E-471F-AD14-9CBA937AAFB2",
+                  "tags" : [
+                    "DEFAULT"
+                  ],
+                  "spriteUUID" : "B0420897-5EBA-46A4-93E9-63F60117AF1A",
+                  "spriteName" : "gun-belt",
+                  "generalPosition" : "{0.003342, 0.139860}",
+                  "uuid" : "E6572AEB-2121-4509-96F8-321D98164B02",
+                  "name" : "gun-belt.png",
+                  "anchor" : "{0.500000, 0.500000}",
+                  "size" : "{70.000000, 21.000000}",
+                  "nodeType" : "LHSprite",
+                  "alpha" : 255,
+                  "scale" : "{1.000000, 1.000000}",
+                  "relativeImagePath" : "PublishFolder\/",
+                  "zOrder" : -1,
+                  "imageFileName" : "officer.png",
+                  "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                },
+                {
+                  "rotation" : -357.9418,
+                  "parentUUID" : "818B58E0-B65E-471F-AD14-9CBA937AAFB2",
+                  "tags" : [
+                    "DEFAULT"
+                  ],
+                  "spriteUUID" : "47F0641C-AEEE-4BF3-82A8-30E64666B378",
+                  "spriteName" : "torso_outline",
+                  "generalPosition" : "{-0.002655, 0.117897}",
+                  "uuid" : "4FB74B65-B365-4995-9BB5-FE5795BF5A6F",
+                  "name" : "torso_outline.png",
+                  "anchor" : "{0.437001, 0.816016}",
+                  "size" : "{77.000000, 103.000000}",
+                  "nodeType" : "LHSprite",
+                  "alpha" : 255,
+                  "scale" : "{1.000000, 1.000000}",
+                  "relativeImagePath" : "PublishFolder\/",
+                  "zOrder" : 0,
+                  "imageFileName" : "officer.png",
+                  "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                },
+                {
+                  "rotation" : -1.478564,
+                  "parentUUID" : "818B58E0-B65E-471F-AD14-9CBA937AAFB2",
+                  "tags" : [
+                    "DEFAULT"
+                  ],
+                  "spriteUUID" : "976CB2B5-2E62-436E-B296-AEB245064BCE",
+                  "spriteName" : "vest_outline",
+                  "generalPosition" : "{0.002791, 0.065768}",
+                  "uuid" : "B7576E7F-7D61-4677-9248-9A400F13E62E",
+                  "name" : "vest_outline.png",
+                  "anchor" : "{0.500000, 0.500000}",
+                  "size" : "{76.000000, 93.000000}",
+                  "nodeType" : "LHSprite",
+                  "alpha" : 255,
+                  "scale" : "{1.000000, 1.000000}",
+                  "relativeImagePath" : "PublishFolder\/",
+                  "zOrder" : 1,
+                  "imageFileName" : "officer.png",
+                  "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                },
+                {
+                  "rotation" : -359.8242,
+                  "parentUUID" : "818B58E0-B65E-471F-AD14-9CBA937AAFB2",
+                  "tags" : [
+                    "DEFAULT"
+                  ],
+                  "spriteUUID" : "AE41604F-34E6-4A0F-882B-78FF39826AAD",
+                  "spriteName" : "gun",
+                  "generalPosition" : "{-0.044731, 0.117151}",
+                  "uuid" : "12E651CC-79CC-4D80-9D23-20F335C996C7",
+                  "name" : "gun.png",
+                  "anchor" : "{0.310907, 0.214645}",
+                  "size" : "{31.000000, 42.000000}",
+                  "nodeType" : "LHSprite",
+                  "alpha" : 255,
+                  "scale" : "{1.000000, 1.000000}",
+                  "relativeImagePath" : "PublishFolder\/",
+                  "zOrder" : 2,
+                  "imageFileName" : "officer.png",
+                  "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                },
+                {
+                  "rotation" : -359.2878,
+                  "parentUUID" : "818B58E0-B65E-471F-AD14-9CBA937AAFB2",
+                  "tags" : [
+                    "DEFAULT"
+                  ],
+                  "spriteUUID" : "3FD5CC04-6845-4C11-B58D-2B993E90903F",
+                  "spriteName" : "gun-holster",
+                  "generalPosition" : "{-0.027461, 0.139890}",
+                  "uuid" : "0375DFAF-ACB2-4EE0-91B5-A874984A30B9",
+                  "name" : "gun-holster.png",
+                  "anchor" : "{0.500000, 0.500000}",
+                  "size" : "{27.000000, 41.000000}",
+                  "nodeType" : "LHSprite",
+                  "alpha" : 255,
+                  "scale" : "{1.000000, 1.000000}",
+                  "relativeImagePath" : "PublishFolder\/",
+                  "zOrder" : 3,
+                  "imageFileName" : "officer.png",
+                  "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                },
+                {
+                  "rotation" : -0.8401489,
+                  "parentUUID" : "818B58E0-B65E-471F-AD14-9CBA937AAFB2",
+                  "tags" : [
+                    "DEFAULT"
+                  ],
+                  "spriteUUID" : "F6566FA0-1B8B-4784-81A3-BEBAB15E1845",
+                  "spriteName" : "shoulder_R_outline",
+                  "generalPosition" : "{-0.033415, 0.015159}",
+                  "uuid" : "4F437E29-6CFA-4748-A8D7-796C5CF5673B",
+                  "children" : [
+                    {
+                      "rotation" : 356.3387,
+                      "parentUUID" : "4F437E29-6CFA-4748-A8D7-796C5CF5673B",
+                      "tags" : [
+                        "DEFAULT"
+                      ],
+                      "spriteUUID" : "DDA02EF6-18FB-4E4C-89C4-D3B2B539E580",
+                      "spriteName" : "forearm_R_outline",
+                      "generalPosition" : "{-0.012984, 0.025107}",
+                      "uuid" : "51ED3BBC-CBC2-48FA-9849-2E79D61491D4",
+                      "children" : [
+                        {
+                          "rotation" : 356.0899,
+                          "parentUUID" : "51ED3BBC-CBC2-48FA-9849-2E79D61491D4",
+                          "tags" : [
+                            "DEFAULT"
+                          ],
+                          "spriteUUID" : "B23DCF8C-721A-4EB3-896B-99B26737D1F9",
+                          "spriteName" : "hand_R_outline",
+                          "generalPosition" : "{-0.003542, 0.030970}",
+                          "uuid" : "F79B6C48-E606-4C1B-8282-B133DB457802",
+                          "name" : "hand_R_outline.png",
+                          "anchor" : "{0.430030, 0.131231}",
+                          "size" : "{34.000000, 35.000000}",
+                          "nodeType" : "LHSprite",
+                          "alpha" : 255,
+                          "scale" : "{1.000000, 1.000000}",
+                          "relativeImagePath" : "PublishFolder\/",
+                          "zOrder" : 0,
+                          "imageFileName" : "officer.png",
+                          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                        }
+                      ],
+                      "name" : "forearm_R_outline.png",
+                      "anchor" : "{0.706234, 0.106946}",
+                      "size" : "{29.000000, 50.000000}",
+                      "nodeType" : "LHSprite",
+                      "alpha" : 255,
+                      "scale" : "{1.000000, 1.000000}",
+                      "relativeImagePath" : "PublishFolder\/",
+                      "zOrder" : 0,
+                      "imageFileName" : "officer.png",
+                      "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                    }
+                  ],
+                  "name" : "shoulder_R_outline.png",
+                  "anchor" : "{0.835133, 0.178600}",
+                  "size" : "{54.000000, 54.000000}",
+                  "nodeType" : "LHSprite",
+                  "alpha" : 255,
+                  "scale" : "{1.000000, 1.000000}",
+                  "relativeImagePath" : "PublishFolder\/",
+                  "zOrder" : 4,
+                  "imageFileName" : "officer.png",
+                  "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                }
+              ],
+              "name" : "upperBody",
+              "anchor" : "{0.444409, 0.900373}",
+              "size" : "{144.590103, 200.135269}",
+              "nodeType" : "LHNode",
+              "alpha" : 255,
+              "scale" : "{1.000000, 1.000000}",
+              "zOrder" : 0,
+              "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+            }
+          ],
+          "name" : "Officer",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{193.735931, 346.626526}",
+          "animations" : [
+            {
+              "active" : true,
+              "repetitions" : 0,
+              "totalFrames" : 40,
+              "fps" : 24,
+              "properties" : {
+                "Children Positions" : {
+                  "subproperties" : {
+                    "931C45E0-EA28-4D66-8DF1-0C78485B5677" : {
+                      "locked" : false,
+                      "type" : "LHPositionProperty",
+                      "Frames" : [
+                        {
+                          "positions" : {
+                            "931C45E0-EA28-4D66-8DF1-0C78485B5677" : "{3.734302, -40.446936}"
+                          },
+                          "frameIndex" : 0
+                        },
+                        {
+                          "positions" : {
+                            "931C45E0-EA28-4D66-8DF1-0C78485B5677" : "{3.734302, -40.446936}"
+                          },
+                          "frameIndex" : 5
+                        },
+                        {
+                          "positions" : {
+                            "931C45E0-EA28-4D66-8DF1-0C78485B5677" : "{106.578852, 8.154905}"
+                          },
+                          "frameIndex" : 11
+                        },
+                        {
+                          "positions" : {
+                            "931C45E0-EA28-4D66-8DF1-0C78485B5677" : "{72.644986, -18.421647}"
+                          },
+                          "frameIndex" : 16
+                        },
+                        {
+                          "positions" : {
+                            "931C45E0-EA28-4D66-8DF1-0C78485B5677" : "{22.483974, -50.223716}"
+                          },
+                          "frameIndex" : 21
+                        },
+                        {
+                          "positions" : {
+                            "931C45E0-EA28-4D66-8DF1-0C78485B5677" : "{3.734302, -40.446936}"
+                          },
+                          "frameIndex" : 26
+                        }
+                      ]
+                    }
+                  },
+                  "Frames" : [
+
+                  ],
+                  "type" : "LHChildrenPositionsProperty"
+                },
+                "Children Rotations" : {
+                  "subproperties" : {
+                    "931C45E0-EA28-4D66-8DF1-0C78485B5677" : {
+                      "locked" : false,
+                      "type" : "LHRotationProperty",
+                      "Frames" : [
+                        {
+                          "rotations" : {
+                            "931C45E0-EA28-4D66-8DF1-0C78485B5677" : -720.5912
+                          },
+                          "frameIndex" : 0
+                        },
+                        {
+                          "rotations" : {
+                            "931C45E0-EA28-4D66-8DF1-0C78485B5677" : -720.5912
+                          },
+                          "frameIndex" : 5
+                        },
+                        {
+                          "rotations" : {
+                            "931C45E0-EA28-4D66-8DF1-0C78485B5677" : 81.701
+                          },
+                          "frameIndex" : 11
+                        },
+                        {
+                          "rotations" : {
+                            "931C45E0-EA28-4D66-8DF1-0C78485B5677" : 51.01869
+                          },
+                          "frameIndex" : 16
+                        },
+                        {
+                          "rotations" : {
+                            "931C45E0-EA28-4D66-8DF1-0C78485B5677" : 26.48751
+                          },
+                          "frameIndex" : 21
+                        },
+                        {
+                          "rotations" : {
+                            "931C45E0-EA28-4D66-8DF1-0C78485B5677" : -720.5912
+                          },
+                          "frameIndex" : 26
+                        }
+                      ]
+                    }
+                  },
+                  "Frames" : [
+                    {
+                      "rotations" : {
+                        "51ED3BBC-CBC2-48FA-9849-2E79D61491D4" : 356.3387,
+                        "0CF72417-694F-40FF-ACA8-A95C45FB753B" : 0.5736903,
+                        "FFFD3D46-7E69-49AD-9D50-9FCC41C3E875" : 357.9287,
+                        "8040DEAB-6150-4558-AEFB-CF19C6CBB53A" : 1.684118,
+                        "E6572AEB-2121-4509-96F8-321D98164B02" : -359.2878,
+                        "F79B6C48-E606-4C1B-8282-B133DB457802" : 356.0899,
+                        "B636C641-DA3B-4014-B1B2-4FFA23A6BB28" : 7.165001,
+                        "818B58E0-B65E-471F-AD14-9CBA937AAFB2" : 3.433591,
+                        "1C98F498-447F-4E96-9243-F3F6EFCD3E6D" : 356.0632,
+                        "DEC74035-6B2D-4151-B9B9-10C132A718E2" : 8.464942,
+                        "19BC1A48-8C84-47B8-A269-2AE8E04C38B5" : 358.3091,
+                        "1FDD72C1-0707-4A54-ABEC-691E94E76A1D" : 3.863104,
+                        "2900405F-669C-4011-BE35-B72498811127" : 359.8287,
+                        "26D48421-5CC1-49F3-A53D-6B9BEBFA485A" : -1.913968,
+                        "0936AF20-CE82-45F5-B677-FB5B32E3CC79" : 5.806605,
+                        "4F437E29-6CFA-4748-A8D7-796C5CF5673B" : -0.8401489,
+                        "931C45E0-EA28-4D66-8DF1-0C78485B5677" : -720.5912,
+                        "4FB74B65-B365-4995-9BB5-FE5795BF5A6F" : -357.9418,
+                        "B240887F-D9F9-42BA-A24E-29A3A6B9FC00" : -11.89795,
+                        "B7576E7F-7D61-4677-9248-9A400F13E62E" : -1.478564,
+                        "FC6241BA-5251-44AF-A7BF-BF62F9F2F953" : -1.913968,
+                        "FF5ED9EB-1D42-42E7-976A-EF9DE1436ACB" : -1.913968,
+                        "0375DFAF-ACB2-4EE0-91B5-A874984A30B9" : -359.2878,
+                        "12E651CC-79CC-4D80-9D23-20F335C996C7" : -359.8242,
+                        "89849707-08DE-4FF2-815D-9272935FFC51" : 1.19812
+                      },
+                      "frameIndex" : 0
+                    },
+                    {
+                      "rotations" : {
+                        "51ED3BBC-CBC2-48FA-9849-2E79D61491D4" : 356.3387,
+                        "0CF72417-694F-40FF-ACA8-A95C45FB753B" : 0.5736903,
+                        "FFFD3D46-7E69-49AD-9D50-9FCC41C3E875" : 357.9287,
+                        "8040DEAB-6150-4558-AEFB-CF19C6CBB53A" : 1.684118,
+                        "E6572AEB-2121-4509-96F8-321D98164B02" : -359.2878,
+                        "F79B6C48-E606-4C1B-8282-B133DB457802" : 356.0899,
+                        "B636C641-DA3B-4014-B1B2-4FFA23A6BB28" : 7.165001,
+                        "818B58E0-B65E-471F-AD14-9CBA937AAFB2" : 3.433591,
+                        "1C98F498-447F-4E96-9243-F3F6EFCD3E6D" : 356.0632,
+                        "DEC74035-6B2D-4151-B9B9-10C132A718E2" : 8.464942,
+                        "19BC1A48-8C84-47B8-A269-2AE8E04C38B5" : 358.3091,
+                        "1FDD72C1-0707-4A54-ABEC-691E94E76A1D" : 3.863104,
+                        "2900405F-669C-4011-BE35-B72498811127" : 359.8287,
+                        "26D48421-5CC1-49F3-A53D-6B9BEBFA485A" : -1.913968,
+                        "0936AF20-CE82-45F5-B677-FB5B32E3CC79" : 5.806605,
+                        "4F437E29-6CFA-4748-A8D7-796C5CF5673B" : -0.8401489,
+                        "931C45E0-EA28-4D66-8DF1-0C78485B5677" : -720.5912,
+                        "4FB74B65-B365-4995-9BB5-FE5795BF5A6F" : -357.9418,
+                        "B240887F-D9F9-42BA-A24E-29A3A6B9FC00" : 263.9011,
+                        "B7576E7F-7D61-4677-9248-9A400F13E62E" : -1.478564,
+                        "FC6241BA-5251-44AF-A7BF-BF62F9F2F953" : -1.913968,
+                        "FF5ED9EB-1D42-42E7-976A-EF9DE1436ACB" : -1.913968,
+                        "0375DFAF-ACB2-4EE0-91B5-A874984A30B9" : -359.2878,
+                        "12E651CC-79CC-4D80-9D23-20F335C996C7" : -359.8242,
+                        "89849707-08DE-4FF2-815D-9272935FFC51" : 1.19812
+                      },
+                      "frameIndex" : 5
+                    },
+                    {
+                      "rotations" : {
+                        "51ED3BBC-CBC2-48FA-9849-2E79D61491D4" : 356.3387,
+                        "0CF72417-694F-40FF-ACA8-A95C45FB753B" : 0.5736903,
+                        "FFFD3D46-7E69-49AD-9D50-9FCC41C3E875" : 357.9287,
+                        "8040DEAB-6150-4558-AEFB-CF19C6CBB53A" : 1.684118,
+                        "E6572AEB-2121-4509-96F8-321D98164B02" : -359.2878,
+                        "F79B6C48-E606-4C1B-8282-B133DB457802" : 356.0899,
+                        "B636C641-DA3B-4014-B1B2-4FFA23A6BB28" : 56.40591,
+                        "818B58E0-B65E-471F-AD14-9CBA937AAFB2" : 3.433591,
+                        "1C98F498-447F-4E96-9243-F3F6EFCD3E6D" : 356.0632,
+                        "DEC74035-6B2D-4151-B9B9-10C132A718E2" : 8.464942,
+                        "19BC1A48-8C84-47B8-A269-2AE8E04C38B5" : 358.3091,
+                        "1FDD72C1-0707-4A54-ABEC-691E94E76A1D" : 3.863104,
+                        "2900405F-669C-4011-BE35-B72498811127" : 359.8287,
+                        "26D48421-5CC1-49F3-A53D-6B9BEBFA485A" : -1.913968,
+                        "0936AF20-CE82-45F5-B677-FB5B32E3CC79" : 5.806605,
+                        "4F437E29-6CFA-4748-A8D7-796C5CF5673B" : -0.8401489,
+                        "931C45E0-EA28-4D66-8DF1-0C78485B5677" : 85.50179,
+                        "4FB74B65-B365-4995-9BB5-FE5795BF5A6F" : -357.9418,
+                        "B240887F-D9F9-42BA-A24E-29A3A6B9FC00" : 297.5924,
+                        "B7576E7F-7D61-4677-9248-9A400F13E62E" : -1.478564,
+                        "FC6241BA-5251-44AF-A7BF-BF62F9F2F953" : -1.913968,
+                        "FF5ED9EB-1D42-42E7-976A-EF9DE1436ACB" : -1.913968,
+                        "0375DFAF-ACB2-4EE0-91B5-A874984A30B9" : -359.2878,
+                        "12E651CC-79CC-4D80-9D23-20F335C996C7" : -359.8242,
+                        "89849707-08DE-4FF2-815D-9272935FFC51" : 1.19812
+                      },
+                      "frameIndex" : 11
+                    },
+                    {
+                      "rotations" : {
+                        "51ED3BBC-CBC2-48FA-9849-2E79D61491D4" : 356.3387,
+                        "0CF72417-694F-40FF-ACA8-A95C45FB753B" : 0.5736903,
+                        "FFFD3D46-7E69-49AD-9D50-9FCC41C3E875" : 357.9287,
+                        "8040DEAB-6150-4558-AEFB-CF19C6CBB53A" : 1.684118,
+                        "E6572AEB-2121-4509-96F8-321D98164B02" : -359.2878,
+                        "F79B6C48-E606-4C1B-8282-B133DB457802" : 356.0899,
+                        "B636C641-DA3B-4014-B1B2-4FFA23A6BB28" : 18.69636,
+                        "818B58E0-B65E-471F-AD14-9CBA937AAFB2" : 3.433591,
+                        "1C98F498-447F-4E96-9243-F3F6EFCD3E6D" : 356.0632,
+                        "DEC74035-6B2D-4151-B9B9-10C132A718E2" : 8.464942,
+                        "19BC1A48-8C84-47B8-A269-2AE8E04C38B5" : 358.3091,
+                        "1FDD72C1-0707-4A54-ABEC-691E94E76A1D" : 3.863104,
+                        "2900405F-669C-4011-BE35-B72498811127" : 359.8287,
+                        "26D48421-5CC1-49F3-A53D-6B9BEBFA485A" : -1.913968,
+                        "0936AF20-CE82-45F5-B677-FB5B32E3CC79" : 5.806605,
+                        "4F437E29-6CFA-4748-A8D7-796C5CF5673B" : -0.8401489,
+                        "931C45E0-EA28-4D66-8DF1-0C78485B5677" : 58.72886,
+                        "4FB74B65-B365-4995-9BB5-FE5795BF5A6F" : -357.9418,
+                        "B240887F-D9F9-42BA-A24E-29A3A6B9FC00" : 297.5924,
+                        "B7576E7F-7D61-4677-9248-9A400F13E62E" : -1.478564,
+                        "FC6241BA-5251-44AF-A7BF-BF62F9F2F953" : -1.913968,
+                        "FF5ED9EB-1D42-42E7-976A-EF9DE1436ACB" : -1.913968,
+                        "0375DFAF-ACB2-4EE0-91B5-A874984A30B9" : -359.2878,
+                        "12E651CC-79CC-4D80-9D23-20F335C996C7" : -359.8242,
+                        "89849707-08DE-4FF2-815D-9272935FFC51" : 1.19812
+                      },
+                      "frameIndex" : 16
+                    },
+                    {
+                      "rotations" : {
+                        "51ED3BBC-CBC2-48FA-9849-2E79D61491D4" : 356.3387,
+                        "0CF72417-694F-40FF-ACA8-A95C45FB753B" : 0.5736903,
+                        "FFFD3D46-7E69-49AD-9D50-9FCC41C3E875" : 357.9287,
+                        "8040DEAB-6150-4558-AEFB-CF19C6CBB53A" : 1.684118,
+                        "E6572AEB-2121-4509-96F8-321D98164B02" : -359.2878,
+                        "F79B6C48-E606-4C1B-8282-B133DB457802" : 356.0899,
+                        "B636C641-DA3B-4014-B1B2-4FFA23A6BB28" : 40.1591,
+                        "818B58E0-B65E-471F-AD14-9CBA937AAFB2" : 3.433591,
+                        "1C98F498-447F-4E96-9243-F3F6EFCD3E6D" : 356.0632,
+                        "DEC74035-6B2D-4151-B9B9-10C132A718E2" : 8.464942,
+                        "19BC1A48-8C84-47B8-A269-2AE8E04C38B5" : 358.3091,
+                        "1FDD72C1-0707-4A54-ABEC-691E94E76A1D" : 3.863104,
+                        "2900405F-669C-4011-BE35-B72498811127" : 359.8287,
+                        "26D48421-5CC1-49F3-A53D-6B9BEBFA485A" : -1.913968,
+                        "0936AF20-CE82-45F5-B677-FB5B32E3CC79" : 5.806605,
+                        "4F437E29-6CFA-4748-A8D7-796C5CF5673B" : -0.8401489,
+                        "931C45E0-EA28-4D66-8DF1-0C78485B5677" : 32.84178,
+                        "4FB74B65-B365-4995-9BB5-FE5795BF5A6F" : -357.9418,
+                        "B240887F-D9F9-42BA-A24E-29A3A6B9FC00" : 253.0381,
+                        "B7576E7F-7D61-4677-9248-9A400F13E62E" : -1.478564,
+                        "FC6241BA-5251-44AF-A7BF-BF62F9F2F953" : -1.913968,
+                        "FF5ED9EB-1D42-42E7-976A-EF9DE1436ACB" : -1.913968,
+                        "0375DFAF-ACB2-4EE0-91B5-A874984A30B9" : -359.2878,
+                        "12E651CC-79CC-4D80-9D23-20F335C996C7" : -359.8242,
+                        "89849707-08DE-4FF2-815D-9272935FFC51" : 1.19812
+                      },
+                      "frameIndex" : 21
+                    },
+                    {
+                      "rotations" : {
+                        "51ED3BBC-CBC2-48FA-9849-2E79D61491D4" : 356.3387,
+                        "0CF72417-694F-40FF-ACA8-A95C45FB753B" : 0.5736903,
+                        "FFFD3D46-7E69-49AD-9D50-9FCC41C3E875" : 357.9287,
+                        "8040DEAB-6150-4558-AEFB-CF19C6CBB53A" : 1.684118,
+                        "E6572AEB-2121-4509-96F8-321D98164B02" : -359.2878,
+                        "F79B6C48-E606-4C1B-8282-B133DB457802" : 356.0899,
+                        "B636C641-DA3B-4014-B1B2-4FFA23A6BB28" : 58.46435,
+                        "818B58E0-B65E-471F-AD14-9CBA937AAFB2" : 3.433591,
+                        "1C98F498-447F-4E96-9243-F3F6EFCD3E6D" : 356.0632,
+                        "DEC74035-6B2D-4151-B9B9-10C132A718E2" : 8.464942,
+                        "19BC1A48-8C84-47B8-A269-2AE8E04C38B5" : 358.3091,
+                        "1FDD72C1-0707-4A54-ABEC-691E94E76A1D" : 3.863104,
+                        "2900405F-669C-4011-BE35-B72498811127" : 359.8287,
+                        "26D48421-5CC1-49F3-A53D-6B9BEBFA485A" : -1.913968,
+                        "0936AF20-CE82-45F5-B677-FB5B32E3CC79" : 5.806605,
+                        "4F437E29-6CFA-4748-A8D7-796C5CF5673B" : -0.8401489,
+                        "931C45E0-EA28-4D66-8DF1-0C78485B5677" : 7.843426,
+                        "4FB74B65-B365-4995-9BB5-FE5795BF5A6F" : -357.9418,
+                        "B240887F-D9F9-42BA-A24E-29A3A6B9FC00" : 236.1262,
+                        "B7576E7F-7D61-4677-9248-9A400F13E62E" : -1.478564,
+                        "FC6241BA-5251-44AF-A7BF-BF62F9F2F953" : -1.913968,
+                        "FF5ED9EB-1D42-42E7-976A-EF9DE1436ACB" : -1.913968,
+                        "0375DFAF-ACB2-4EE0-91B5-A874984A30B9" : -359.2878,
+                        "12E651CC-79CC-4D80-9D23-20F335C996C7" : -359.8242,
+                        "89849707-08DE-4FF2-815D-9272935FFC51" : 1.19812
+                      },
+                      "frameIndex" : 26
+                    },
+                    {
+                      "rotations" : {
+                        "51ED3BBC-CBC2-48FA-9849-2E79D61491D4" : 356.3387,
+                        "0CF72417-694F-40FF-ACA8-A95C45FB753B" : 0.5736903,
+                        "FFFD3D46-7E69-49AD-9D50-9FCC41C3E875" : 357.9287,
+                        "8040DEAB-6150-4558-AEFB-CF19C6CBB53A" : 1.684118,
+                        "E6572AEB-2121-4509-96F8-321D98164B02" : -359.2878,
+                        "F79B6C48-E606-4C1B-8282-B133DB457802" : 356.0899,
+                        "B636C641-DA3B-4014-B1B2-4FFA23A6BB28" : 11.10454,
+                        "818B58E0-B65E-471F-AD14-9CBA937AAFB2" : 3.433591,
+                        "1C98F498-447F-4E96-9243-F3F6EFCD3E6D" : 356.0632,
+                        "DEC74035-6B2D-4151-B9B9-10C132A718E2" : 8.464942,
+                        "19BC1A48-8C84-47B8-A269-2AE8E04C38B5" : 358.3091,
+                        "1FDD72C1-0707-4A54-ABEC-691E94E76A1D" : 3.863104,
+                        "2900405F-669C-4011-BE35-B72498811127" : 359.8287,
+                        "26D48421-5CC1-49F3-A53D-6B9BEBFA485A" : -1.913968,
+                        "0936AF20-CE82-45F5-B677-FB5B32E3CC79" : 5.806605,
+                        "4F437E29-6CFA-4748-A8D7-796C5CF5673B" : -0.8401489,
+                        "931C45E0-EA28-4D66-8DF1-0C78485B5677" : 7.843426,
+                        "4FB74B65-B365-4995-9BB5-FE5795BF5A6F" : -357.9418,
+                        "B240887F-D9F9-42BA-A24E-29A3A6B9FC00" : 283.628,
+                        "B7576E7F-7D61-4677-9248-9A400F13E62E" : -1.478564,
+                        "FC6241BA-5251-44AF-A7BF-BF62F9F2F953" : -1.913968,
+                        "FF5ED9EB-1D42-42E7-976A-EF9DE1436ACB" : -1.913968,
+                        "0375DFAF-ACB2-4EE0-91B5-A874984A30B9" : -359.2878,
+                        "12E651CC-79CC-4D80-9D23-20F335C996C7" : -359.8242,
+                        "89849707-08DE-4FF2-815D-9272935FFC51" : 1.19812
+                      },
+                      "frameIndex" : 31
+                    },
+                    {
+                      "rotations" : {
+                        "51ED3BBC-CBC2-48FA-9849-2E79D61491D4" : 356.3387,
+                        "0CF72417-694F-40FF-ACA8-A95C45FB753B" : 0.5736903,
+                        "FFFD3D46-7E69-49AD-9D50-9FCC41C3E875" : 357.9287,
+                        "8040DEAB-6150-4558-AEFB-CF19C6CBB53A" : 1.684118,
+                        "E6572AEB-2121-4509-96F8-321D98164B02" : -359.2878,
+                        "F79B6C48-E606-4C1B-8282-B133DB457802" : 356.0899,
+                        "B636C641-DA3B-4014-B1B2-4FFA23A6BB28" : 7.165001,
+                        "818B58E0-B65E-471F-AD14-9CBA937AAFB2" : 3.433591,
+                        "1C98F498-447F-4E96-9243-F3F6EFCD3E6D" : 356.0632,
+                        "DEC74035-6B2D-4151-B9B9-10C132A718E2" : 8.464942,
+                        "19BC1A48-8C84-47B8-A269-2AE8E04C38B5" : 358.3091,
+                        "1FDD72C1-0707-4A54-ABEC-691E94E76A1D" : 3.863104,
+                        "2900405F-669C-4011-BE35-B72498811127" : 359.8287,
+                        "26D48421-5CC1-49F3-A53D-6B9BEBFA485A" : -1.913968,
+                        "0936AF20-CE82-45F5-B677-FB5B32E3CC79" : 5.806605,
+                        "4F437E29-6CFA-4748-A8D7-796C5CF5673B" : -0.8401489,
+                        "931C45E0-EA28-4D66-8DF1-0C78485B5677" : -720.5912,
+                        "4FB74B65-B365-4995-9BB5-FE5795BF5A6F" : -357.9418,
+                        "B240887F-D9F9-42BA-A24E-29A3A6B9FC00" : -11.89795,
+                        "B7576E7F-7D61-4677-9248-9A400F13E62E" : -1.478564,
+                        "FC6241BA-5251-44AF-A7BF-BF62F9F2F953" : -1.913968,
+                        "FF5ED9EB-1D42-42E7-976A-EF9DE1436ACB" : -1.913968,
+                        "0375DFAF-ACB2-4EE0-91B5-A874984A30B9" : -359.2878,
+                        "12E651CC-79CC-4D80-9D23-20F335C996C7" : -359.8242,
+                        "89849707-08DE-4FF2-815D-9272935FFC51" : 1.19812
+                      },
+                      "frameIndex" : 36
+                    }
+                  ],
+                  "type" : "LHChildrenRotationsProperty"
+                }
+              },
+              "name" : "waveing"
+            },
+            {
+              "active" : false,
+              "repetitions" : 2,
+              "totalFrames" : 30,
+              "fps" : 24,
+              "properties" : {
+                "Children Positions" : {
+                  "Frames" : [
+                    {
+                      "positions" : {
+                        "51ED3BBC-CBC2-48FA-9849-2E79D61491D4" : "{-12.464931, 16.068483}",
+                        "0CF72417-694F-40FF-ACA8-A95C45FB753B" : "{-14.590223, 20.930803}",
+                        "FFFD3D46-7E69-49AD-9D50-9FCC41C3E875" : "{-7.543760, 24.121711}",
+                        "8040DEAB-6150-4558-AEFB-CF19C6CBB53A" : "{-2.638585, 1.004278}",
+                        "E6572AEB-2121-4509-96F8-321D98164B02" : "{3.208011, 89.510471}",
+                        "F79B6C48-E606-4C1B-8282-B133DB457802" : "{-3.400630, 19.820896}",
+                        "B636C641-DA3B-4014-B1B2-4FFA23A6BB28" : "{12.829013, 16.191175}",
+                        "818B58E0-B65E-471F-AD14-9CBA937AAFB2" : "{-22.291909, 16.099456}",
+                        "1C98F498-447F-4E96-9243-F3F6EFCD3E6D" : "{14.444283, -41.872054}",
+                        "7CB3886A-EF00-4EAC-B3EA-29D56EC07F64" : "{410.010592, 373.900046}",
+                        "B7576E7F-7D61-4677-9248-9A400F13E62E" : "{2.679425, 42.091570}",
+                        "19BC1A48-8C84-47B8-A269-2AE8E04C38B5" : "{-15.984279, -37.829607}",
+                        "2900405F-669C-4011-BE35-B72498811127" : "{-4.749597, 0.702195}",
+                        "26D48421-5CC1-49F3-A53D-6B9BEBFA485A" : "{-0.712976, -8.699875}",
+                        "4F437E29-6CFA-4748-A8D7-796C5CF5673B" : "{-21.283415, 17.003551}",
+                        "0936AF20-CE82-45F5-B677-FB5B32E3CC79" : "{2.120959, 24.586924}",
+                        "1FDD72C1-0707-4A54-ABEC-691E94E76A1D" : "{0.938620, 23.440787}",
+                        "4FB74B65-B365-4995-9BB5-FE5795BF5A6F" : "{-2.548548, 75.453868}",
+                        "B240887F-D9F9-42BA-A24E-29A3A6B9FC00" : "{-2.584900, -50.641575}",
+                        "DEC74035-6B2D-4151-B9B9-10C132A718E2" : "{12.987622, -0.808326}",
+                        "931C45E0-EA28-4D66-8DF1-0C78485B5677" : "{3.734302, -40.446936}",
+                        "FC6241BA-5251-44AF-A7BF-BF62F9F2F953" : "{6.214601, -2.849737}",
+                        "EA336653-E4F0-4906-ADC5-62E6F8E2F655" : "{-1.833035, -52.724146}",
+                        "FF5ED9EB-1D42-42E7-976A-EF9DE1436ACB" : "{19.853297, 20.576124}",
+                        "0375DFAF-ACB2-4EE0-91B5-A874984A30B9" : "{-26.362466, 89.529282}",
+                        "12E651CC-79CC-4D80-9D23-20F335C996C7" : "{-42.941512, 74.976538}",
+                        "89849707-08DE-4FF2-815D-9272935FFC51" : "{-3.857013, 22.330789}"
+                      },
+                      "frameIndex" : 0
+                    },
+                    {
+                      "positions" : {
+                        "51ED3BBC-CBC2-48FA-9849-2E79D61491D4" : "{-12.464931, 16.068483}",
+                        "0CF72417-694F-40FF-ACA8-A95C45FB753B" : "{-14.590223, 25.826852}",
+                        "FFFD3D46-7E69-49AD-9D50-9FCC41C3E875" : "{-7.543760, 24.121711}",
+                        "8040DEAB-6150-4558-AEFB-CF19C6CBB53A" : "{-2.638585, 1.004278}",
+                        "E6572AEB-2121-4509-96F8-321D98164B02" : "{3.208011, 89.510471}",
+                        "F79B6C48-E606-4C1B-8282-B133DB457802" : "{-3.400630, 19.820896}",
+                        "B636C641-DA3B-4014-B1B2-4FFA23A6BB28" : "{12.829013, 16.191175}",
+                        "818B58E0-B65E-471F-AD14-9CBA937AAFB2" : "{-22.291909, 20.995505}",
+                        "1C98F498-447F-4E96-9243-F3F6EFCD3E6D" : "{14.444283, -41.872054}",
+                        "7CB3886A-EF00-4EAC-B3EA-29D56EC07F64" : "{410.010592, 373.900046}",
+                        "B7576E7F-7D61-4677-9248-9A400F13E62E" : "{2.679425, 42.091570}",
+                        "19BC1A48-8C84-47B8-A269-2AE8E04C38B5" : "{-15.984279, -37.829607}",
+                        "2900405F-669C-4011-BE35-B72498811127" : "{-4.749597, 0.702195}",
+                        "26D48421-5CC1-49F3-A53D-6B9BEBFA485A" : "{-0.712976, -8.699875}",
+                        "4F437E29-6CFA-4748-A8D7-796C5CF5673B" : "{-21.283415, 17.003551}",
+                        "0936AF20-CE82-45F5-B677-FB5B32E3CC79" : "{2.120959, 24.586924}",
+                        "1FDD72C1-0707-4A54-ABEC-691E94E76A1D" : "{0.938620, 23.440787}",
+                        "4FB74B65-B365-4995-9BB5-FE5795BF5A6F" : "{-2.548548, 75.453868}",
+                        "B240887F-D9F9-42BA-A24E-29A3A6B9FC00" : "{0.000000, -50.000000}",
+                        "DEC74035-6B2D-4151-B9B9-10C132A718E2" : "{12.987622, -0.808326}",
+                        "931C45E0-EA28-4D66-8DF1-0C78485B5677" : "{3.734302, -40.446936}",
+                        "FC6241BA-5251-44AF-A7BF-BF62F9F2F953" : "{6.214601, -2.849737}",
+                        "EA336653-E4F0-4906-ADC5-62E6F8E2F655" : "{-1.833035, -52.724146}",
+                        "FF5ED9EB-1D42-42E7-976A-EF9DE1436ACB" : "{19.853297, 20.576124}",
+                        "0375DFAF-ACB2-4EE0-91B5-A874984A30B9" : "{-26.362466, 89.529282}",
+                        "12E651CC-79CC-4D80-9D23-20F335C996C7" : "{-42.941512, 74.976538}",
+                        "89849707-08DE-4FF2-815D-9272935FFC51" : "{-3.857013, 22.330789}"
+                      },
+                      "frameIndex" : 14
+                    },
+                    {
+                      "positions" : {
+                        "51ED3BBC-CBC2-48FA-9849-2E79D61491D4" : "{-12.464931, 16.068483}",
+                        "0CF72417-694F-40FF-ACA8-A95C45FB753B" : "{-14.590223, 20.930803}",
+                        "FFFD3D46-7E69-49AD-9D50-9FCC41C3E875" : "{-7.543760, 24.121711}",
+                        "8040DEAB-6150-4558-AEFB-CF19C6CBB53A" : "{-2.638585, 1.004278}",
+                        "E6572AEB-2121-4509-96F8-321D98164B02" : "{3.208011, 89.510471}",
+                        "F79B6C48-E606-4C1B-8282-B133DB457802" : "{-3.400630, 19.820896}",
+                        "B636C641-DA3B-4014-B1B2-4FFA23A6BB28" : "{12.829013, 16.191175}",
+                        "818B58E0-B65E-471F-AD14-9CBA937AAFB2" : "{-22.291909, 16.099456}",
+                        "1C98F498-447F-4E96-9243-F3F6EFCD3E6D" : "{14.444283, -41.872054}",
+                        "7CB3886A-EF00-4EAC-B3EA-29D56EC07F64" : "{410.010592, 373.900046}",
+                        "B7576E7F-7D61-4677-9248-9A400F13E62E" : "{2.679425, 42.091570}",
+                        "19BC1A48-8C84-47B8-A269-2AE8E04C38B5" : "{-15.984279, -37.829607}",
+                        "2900405F-669C-4011-BE35-B72498811127" : "{-4.749597, 0.702195}",
+                        "26D48421-5CC1-49F3-A53D-6B9BEBFA485A" : "{-0.712976, -8.699875}",
+                        "4F437E29-6CFA-4748-A8D7-796C5CF5673B" : "{-21.283415, 17.003551}",
+                        "0936AF20-CE82-45F5-B677-FB5B32E3CC79" : "{2.120959, 24.586924}",
+                        "1FDD72C1-0707-4A54-ABEC-691E94E76A1D" : "{0.938620, 23.440787}",
+                        "4FB74B65-B365-4995-9BB5-FE5795BF5A6F" : "{-2.548548, 75.453868}",
+                        "B240887F-D9F9-42BA-A24E-29A3A6B9FC00" : "{-2.584900, -50.641575}",
+                        "DEC74035-6B2D-4151-B9B9-10C132A718E2" : "{12.987622, -0.808326}",
+                        "931C45E0-EA28-4D66-8DF1-0C78485B5677" : "{3.734302, -40.446936}",
+                        "FC6241BA-5251-44AF-A7BF-BF62F9F2F953" : "{6.214601, -2.849737}",
+                        "EA336653-E4F0-4906-ADC5-62E6F8E2F655" : "{-1.833035, -52.724146}",
+                        "FF5ED9EB-1D42-42E7-976A-EF9DE1436ACB" : "{19.853297, 20.576124}",
+                        "0375DFAF-ACB2-4EE0-91B5-A874984A30B9" : "{-26.362466, 89.529282}",
+                        "12E651CC-79CC-4D80-9D23-20F335C996C7" : "{-42.941512, 74.976538}",
+                        "89849707-08DE-4FF2-815D-9272935FFC51" : "{-3.857013, 22.330789}"
+                      },
+                      "frameIndex" : 29
+                    }
+                  ],
+                  "type" : "LHChildrenPositionsProperty"
+                },
+                "Children Rotations" : {
+                  "Frames" : [
+                    {
+                      "rotations" : {
+                        "51ED3BBC-CBC2-48FA-9849-2E79D61491D4" : 356.3387,
+                        "0CF72417-694F-40FF-ACA8-A95C45FB753B" : 0.5736903,
+                        "FFFD3D46-7E69-49AD-9D50-9FCC41C3E875" : 357.9287,
+                        "8040DEAB-6150-4558-AEFB-CF19C6CBB53A" : 1.684118,
+                        "E6572AEB-2121-4509-96F8-321D98164B02" : -359.2878,
+                        "F79B6C48-E606-4C1B-8282-B133DB457802" : 356.0899,
+                        "B636C641-DA3B-4014-B1B2-4FFA23A6BB28" : 7.165001,
+                        "818B58E0-B65E-471F-AD14-9CBA937AAFB2" : 3.433591,
+                        "1C98F498-447F-4E96-9243-F3F6EFCD3E6D" : 29.10598,
+                        "DEC74035-6B2D-4151-B9B9-10C132A718E2" : 8.464942,
+                        "19BC1A48-8C84-47B8-A269-2AE8E04C38B5" : 335.6682,
+                        "1FDD72C1-0707-4A54-ABEC-691E94E76A1D" : 15.34851,
+                        "2900405F-669C-4011-BE35-B72498811127" : 359.8287,
+                        "26D48421-5CC1-49F3-A53D-6B9BEBFA485A" : -1.913968,
+                        "0936AF20-CE82-45F5-B677-FB5B32E3CC79" : 14.18925,
+                        "4F437E29-6CFA-4748-A8D7-796C5CF5673B" : 339.2752,
+                        "931C45E0-EA28-4D66-8DF1-0C78485B5677" : -720.5912,
+                        "4FB74B65-B365-4995-9BB5-FE5795BF5A6F" : -357.9418,
+                        "B240887F-D9F9-42BA-A24E-29A3A6B9FC00" : 26.34033,
+                        "B7576E7F-7D61-4677-9248-9A400F13E62E" : -1.478564,
+                        "FC6241BA-5251-44AF-A7BF-BF62F9F2F953" : -1.913968,
+                        "FF5ED9EB-1D42-42E7-976A-EF9DE1436ACB" : -1.913968,
+                        "0375DFAF-ACB2-4EE0-91B5-A874984A30B9" : -359.2878,
+                        "12E651CC-79CC-4D80-9D23-20F335C996C7" : -359.8242,
+                        "89849707-08DE-4FF2-815D-9272935FFC51" : 1.19812
+                      },
+                      "frameIndex" : 0
+                    },
+                    {
+                      "rotations" : {
+                        "51ED3BBC-CBC2-48FA-9849-2E79D61491D4" : 356.3387,
+                        "0CF72417-694F-40FF-ACA8-A95C45FB753B" : 0.5736903,
+                        "FFFD3D46-7E69-49AD-9D50-9FCC41C3E875" : 357.9287,
+                        "8040DEAB-6150-4558-AEFB-CF19C6CBB53A" : 1.684118,
+                        "E6572AEB-2121-4509-96F8-321D98164B02" : -359.2878,
+                        "F79B6C48-E606-4C1B-8282-B133DB457802" : 356.0899,
+                        "B636C641-DA3B-4014-B1B2-4FFA23A6BB28" : 7.165001,
+                        "818B58E0-B65E-471F-AD14-9CBA937AAFB2" : 3,
+                        "1C98F498-447F-4E96-9243-F3F6EFCD3E6D" : 33.03086,
+                        "DEC74035-6B2D-4151-B9B9-10C132A718E2" : 8.464942,
+                        "19BC1A48-8C84-47B8-A269-2AE8E04C38B5" : 344.1033,
+                        "1FDD72C1-0707-4A54-ABEC-691E94E76A1D" : 21.6236,
+                        "2900405F-669C-4011-BE35-B72498811127" : 359.8287,
+                        "26D48421-5CC1-49F3-A53D-6B9BEBFA485A" : -1.913968,
+                        "0936AF20-CE82-45F5-B677-FB5B32E3CC79" : 19.122,
+                        "4F437E29-6CFA-4748-A8D7-796C5CF5673B" : 331.2741,
+                        "931C45E0-EA28-4D66-8DF1-0C78485B5677" : -720.5912,
+                        "4FB74B65-B365-4995-9BB5-FE5795BF5A6F" : -357.9418,
+                        "B240887F-D9F9-42BA-A24E-29A3A6B9FC00" : 34.42432,
+                        "B7576E7F-7D61-4677-9248-9A400F13E62E" : -1.478564,
+                        "FC6241BA-5251-44AF-A7BF-BF62F9F2F953" : -1.913968,
+                        "FF5ED9EB-1D42-42E7-976A-EF9DE1436ACB" : -1.913968,
+                        "0375DFAF-ACB2-4EE0-91B5-A874984A30B9" : -359.2878,
+                        "12E651CC-79CC-4D80-9D23-20F335C996C7" : -359.8242,
+                        "89849707-08DE-4FF2-815D-9272935FFC51" : 1.19812
+                      },
+                      "frameIndex" : 4
+                    },
+                    {
+                      "rotations" : {
+                        "51ED3BBC-CBC2-48FA-9849-2E79D61491D4" : 356.3387,
+                        "0CF72417-694F-40FF-ACA8-A95C45FB753B" : 0.5736903,
+                        "FFFD3D46-7E69-49AD-9D50-9FCC41C3E875" : 357.9287,
+                        "8040DEAB-6150-4558-AEFB-CF19C6CBB53A" : 1.684118,
+                        "E6572AEB-2121-4509-96F8-321D98164B02" : -359.2878,
+                        "F79B6C48-E606-4C1B-8282-B133DB457802" : 356.0899,
+                        "B636C641-DA3B-4014-B1B2-4FFA23A6BB28" : 7.165001,
+                        "818B58E0-B65E-471F-AD14-9CBA937AAFB2" : 3.433591,
+                        "1C98F498-447F-4E96-9243-F3F6EFCD3E6D" : 336.6571,
+                        "DEC74035-6B2D-4151-B9B9-10C132A718E2" : 8.464942,
+                        "19BC1A48-8C84-47B8-A269-2AE8E04C38B5" : 349.4248,
+                        "1FDD72C1-0707-4A54-ABEC-691E94E76A1D" : 69.71021,
+                        "2900405F-669C-4011-BE35-B72498811127" : 359.8287,
+                        "26D48421-5CC1-49F3-A53D-6B9BEBFA485A" : -1.913968,
+                        "0936AF20-CE82-45F5-B677-FB5B32E3CC79" : 16.37527,
+                        "4F437E29-6CFA-4748-A8D7-796C5CF5673B" : 316.1664,
+                        "931C45E0-EA28-4D66-8DF1-0C78485B5677" : -720.5912,
+                        "4FB74B65-B365-4995-9BB5-FE5795BF5A6F" : -357.9418,
+                        "B240887F-D9F9-42BA-A24E-29A3A6B9FC00" : 54.14961,
+                        "B7576E7F-7D61-4677-9248-9A400F13E62E" : -1.478564,
+                        "FC6241BA-5251-44AF-A7BF-BF62F9F2F953" : -1.913968,
+                        "FF5ED9EB-1D42-42E7-976A-EF9DE1436ACB" : -1.913968,
+                        "0375DFAF-ACB2-4EE0-91B5-A874984A30B9" : -359.2878,
+                        "12E651CC-79CC-4D80-9D23-20F335C996C7" : -359.8242,
+                        "89849707-08DE-4FF2-815D-9272935FFC51" : 1.19812
+                      },
+                      "frameIndex" : 9
+                    },
+                    {
+                      "rotations" : {
+                        "51ED3BBC-CBC2-48FA-9849-2E79D61491D4" : 356.3387,
+                        "0CF72417-694F-40FF-ACA8-A95C45FB753B" : 0.5736903,
+                        "FFFD3D46-7E69-49AD-9D50-9FCC41C3E875" : 352.1197,
+                        "8040DEAB-6150-4558-AEFB-CF19C6CBB53A" : 1.684118,
+                        "E6572AEB-2121-4509-96F8-321D98164B02" : -359.2878,
+                        "F79B6C48-E606-4C1B-8282-B133DB457802" : 356.0899,
+                        "B636C641-DA3B-4014-B1B2-4FFA23A6BB28" : 7.165001,
+                        "818B58E0-B65E-471F-AD14-9CBA937AAFB2" : 3.433591,
+                        "1C98F498-447F-4E96-9243-F3F6EFCD3E6D" : 325.4879,
+                        "DEC74035-6B2D-4151-B9B9-10C132A718E2" : 8.464942,
+                        "19BC1A48-8C84-47B8-A269-2AE8E04C38B5" : 11.13986,
+                        "1FDD72C1-0707-4A54-ABEC-691E94E76A1D" : 15.89047,
+                        "2900405F-669C-4011-BE35-B72498811127" : 359.8287,
+                        "26D48421-5CC1-49F3-A53D-6B9BEBFA485A" : -1.913968,
+                        "0936AF20-CE82-45F5-B677-FB5B32E3CC79" : 13.58071,
+                        "4F437E29-6CFA-4748-A8D7-796C5CF5673B" : 312.6491,
+                        "931C45E0-EA28-4D66-8DF1-0C78485B5677" : -720.5912,
+                        "4FB74B65-B365-4995-9BB5-FE5795BF5A6F" : -357.9418,
+                        "B240887F-D9F9-42BA-A24E-29A3A6B9FC00" : 54.14961,
+                        "B7576E7F-7D61-4677-9248-9A400F13E62E" : -1.478564,
+                        "FC6241BA-5251-44AF-A7BF-BF62F9F2F953" : -1.913968,
+                        "FF5ED9EB-1D42-42E7-976A-EF9DE1436ACB" : -1.913968,
+                        "0375DFAF-ACB2-4EE0-91B5-A874984A30B9" : -359.2878,
+                        "12E651CC-79CC-4D80-9D23-20F335C996C7" : -359.8242,
+                        "89849707-08DE-4FF2-815D-9272935FFC51" : 1.19812
+                      },
+                      "frameIndex" : 14
+                    },
+                    {
+                      "rotations" : {
+                        "51ED3BBC-CBC2-48FA-9849-2E79D61491D4" : 356.3387,
+                        "0CF72417-694F-40FF-ACA8-A95C45FB753B" : 0.5736903,
+                        "FFFD3D46-7E69-49AD-9D50-9FCC41C3E875" : 352.1197,
+                        "8040DEAB-6150-4558-AEFB-CF19C6CBB53A" : 1.684118,
+                        "E6572AEB-2121-4509-96F8-321D98164B02" : -359.2878,
+                        "F79B6C48-E606-4C1B-8282-B133DB457802" : 356.0899,
+                        "B636C641-DA3B-4014-B1B2-4FFA23A6BB28" : 7.165001,
+                        "818B58E0-B65E-471F-AD14-9CBA937AAFB2" : 3.433591,
+                        "1C98F498-447F-4E96-9243-F3F6EFCD3E6D" : 344.9866,
+                        "DEC74035-6B2D-4151-B9B9-10C132A718E2" : 8.464942,
+                        "19BC1A48-8C84-47B8-A269-2AE8E04C38B5" : 16.0972,
+                        "1FDD72C1-0707-4A54-ABEC-691E94E76A1D" : 20.62425,
+                        "2900405F-669C-4011-BE35-B72498811127" : 359.8287,
+                        "26D48421-5CC1-49F3-A53D-6B9BEBFA485A" : -1.913968,
+                        "0936AF20-CE82-45F5-B677-FB5B32E3CC79" : 18.49201,
+                        "4F437E29-6CFA-4748-A8D7-796C5CF5673B" : 323.357,
+                        "931C45E0-EA28-4D66-8DF1-0C78485B5677" : -720.5912,
+                        "4FB74B65-B365-4995-9BB5-FE5795BF5A6F" : -357.9418,
+                        "B240887F-D9F9-42BA-A24E-29A3A6B9FC00" : 41.13391,
+                        "B7576E7F-7D61-4677-9248-9A400F13E62E" : -1.478564,
+                        "FC6241BA-5251-44AF-A7BF-BF62F9F2F953" : -1.913968,
+                        "FF5ED9EB-1D42-42E7-976A-EF9DE1436ACB" : -1.913968,
+                        "0375DFAF-ACB2-4EE0-91B5-A874984A30B9" : -359.2878,
+                        "12E651CC-79CC-4D80-9D23-20F335C996C7" : -359.8242,
+                        "89849707-08DE-4FF2-815D-9272935FFC51" : 357.5127
+                      },
+                      "frameIndex" : 19
+                    },
+                    {
+                      "rotations" : {
+                        "51ED3BBC-CBC2-48FA-9849-2E79D61491D4" : 356.3387,
+                        "0CF72417-694F-40FF-ACA8-A95C45FB753B" : 0.5736903,
+                        "FFFD3D46-7E69-49AD-9D50-9FCC41C3E875" : 5.465115,
+                        "8040DEAB-6150-4558-AEFB-CF19C6CBB53A" : 1.684118,
+                        "E6572AEB-2121-4509-96F8-321D98164B02" : -359.2878,
+                        "F79B6C48-E606-4C1B-8282-B133DB457802" : 356.0899,
+                        "B636C641-DA3B-4014-B1B2-4FFA23A6BB28" : 7.165001,
+                        "818B58E0-B65E-471F-AD14-9CBA937AAFB2" : 3.433591,
+                        "1C98F498-447F-4E96-9243-F3F6EFCD3E6D" : 10.0462,
+                        "DEC74035-6B2D-4151-B9B9-10C132A718E2" : 8.464942,
+                        "19BC1A48-8C84-47B8-A269-2AE8E04C38B5" : 317.5111,
+                        "1FDD72C1-0707-4A54-ABEC-691E94E76A1D" : 357.5827,
+                        "2900405F-669C-4011-BE35-B72498811127" : 359.8287,
+                        "26D48421-5CC1-49F3-A53D-6B9BEBFA485A" : -1.913968,
+                        "0936AF20-CE82-45F5-B677-FB5B32E3CC79" : 57.84899,
+                        "4F437E29-6CFA-4748-A8D7-796C5CF5673B" : 337.3481,
+                        "931C45E0-EA28-4D66-8DF1-0C78485B5677" : -720.5912,
+                        "4FB74B65-B365-4995-9BB5-FE5795BF5A6F" : -357.9418,
+                        "B240887F-D9F9-42BA-A24E-29A3A6B9FC00" : 26.40285,
+                        "B7576E7F-7D61-4677-9248-9A400F13E62E" : -1.478564,
+                        "FC6241BA-5251-44AF-A7BF-BF62F9F2F953" : -1.913968,
+                        "FF5ED9EB-1D42-42E7-976A-EF9DE1436ACB" : -1.913968,
+                        "0375DFAF-ACB2-4EE0-91B5-A874984A30B9" : -359.2878,
+                        "12E651CC-79CC-4D80-9D23-20F335C996C7" : -359.8242,
+                        "89849707-08DE-4FF2-815D-9272935FFC51" : 356.6686
+                      },
+                      "frameIndex" : 24
+                    },
+                    {
+                      "rotations" : {
+                        "51ED3BBC-CBC2-48FA-9849-2E79D61491D4" : 356.3387,
+                        "0CF72417-694F-40FF-ACA8-A95C45FB753B" : 0.5736903,
+                        "FFFD3D46-7E69-49AD-9D50-9FCC41C3E875" : 357.9287,
+                        "8040DEAB-6150-4558-AEFB-CF19C6CBB53A" : 1.684118,
+                        "E6572AEB-2121-4509-96F8-321D98164B02" : -359.2878,
+                        "F79B6C48-E606-4C1B-8282-B133DB457802" : 356.0899,
+                        "B636C641-DA3B-4014-B1B2-4FFA23A6BB28" : 7.165001,
+                        "818B58E0-B65E-471F-AD14-9CBA937AAFB2" : 3.433591,
+                        "1C98F498-447F-4E96-9243-F3F6EFCD3E6D" : 29.10598,
+                        "DEC74035-6B2D-4151-B9B9-10C132A718E2" : 8.464942,
+                        "19BC1A48-8C84-47B8-A269-2AE8E04C38B5" : 335.6682,
+                        "1FDD72C1-0707-4A54-ABEC-691E94E76A1D" : 15.34851,
+                        "2900405F-669C-4011-BE35-B72498811127" : 359.8287,
+                        "26D48421-5CC1-49F3-A53D-6B9BEBFA485A" : -1.913968,
+                        "0936AF20-CE82-45F5-B677-FB5B32E3CC79" : 14.18925,
+                        "4F437E29-6CFA-4748-A8D7-796C5CF5673B" : 339.2752,
+                        "931C45E0-EA28-4D66-8DF1-0C78485B5677" : -720.5912,
+                        "4FB74B65-B365-4995-9BB5-FE5795BF5A6F" : -357.9418,
+                        "B240887F-D9F9-42BA-A24E-29A3A6B9FC00" : 26.34033,
+                        "B7576E7F-7D61-4677-9248-9A400F13E62E" : -1.478564,
+                        "FC6241BA-5251-44AF-A7BF-BF62F9F2F953" : -1.913968,
+                        "FF5ED9EB-1D42-42E7-976A-EF9DE1436ACB" : -1.913968,
+                        "0375DFAF-ACB2-4EE0-91B5-A874984A30B9" : -359.2878,
+                        "12E651CC-79CC-4D80-9D23-20F335C996C7" : -359.8242,
+                        "89849707-08DE-4FF2-815D-9272935FFC51" : 1.19812
+                      },
+                      "frameIndex" : 29
+                    }
+                  ],
+                  "type" : "LHChildrenRotationsProperty"
+                }
+              },
+              "name" : "softWalk"
+            }
+          ],
+          "nodeType" : "LHNode",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "zOrder" : -2,
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "spriteUUID" : "986AA138-7C74-479B-A627-5BBF982B2605",
+          "spriteName" : "carTyre",
+          "generalPosition" : "{0.146274, 0.364725}",
+          "uuid" : "DF57079E-C242-4358-B5AE-F68211831A12",
+          "name" : "carTyre",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{43.000000, 43.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "PublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "carParts.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        }
+      ],
+      "name" : "GAME WORLD",
+      "anchor" : "{0.500000, 0.500000}",
+      "size" : "{128.000000, 128.000000}",
+      "nodeType" : "LHGameWorldNode",
+      "alpha" : 255,
+      "scale" : "{1.000000, 1.000000}",
+      "zOrder" : 0,
+      "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+    },
+    {
+      "rotation" : 0,
+      "parentUUID" : "A89204FD-2EF5-4B2B-9540-71D0C417EC3D",
+      "tags" : [
+        "DEFAULT"
+      ],
+      "generalPosition" : "{0.000000, 0.000000}",
+      "uuid" : "0AEA0FB2-A9B1-48A2-9F11-9D7D8CA1A408",
+      "name" : "FRONT USER INTERFACE",
+      "anchor" : "{0.500000, 0.500000}",
+      "size" : "{128.000000, 128.000000}",
+      "nodeType" : "LHUINode",
+      "alpha" : 255,
+      "scale" : "{1.000000, 1.000000}",
+      "zOrder" : 1,
+      "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+    }
+  ],
+  "devices" : [
+    {
+      "ratio" : 1,
+      "suffix" : "",
+      "size" : "{960.000000, 640.000000}"
+    },
+    {
+      "ratio" : 1,
+      "suffix" : "",
+      "size" : "{1136.000000, 640.000000}"
+    },
+    {
+      "ratio" : 1,
+      "suffix" : "",
+      "size" : "{1334.000000, 750.000000}"
+    },
+    {
+      "ratio" : 2,
+      "suffix" : "@2x",
+      "size" : "{2208.000000, 1242.000000}"
+    },
+    {
+      "ratio" : 2,
+      "suffix" : "@2x",
+      "size" : "{2048.000000, 1536.000000}"
+    },
+    {
+      "ratio" : 1,
+      "suffix" : "",
+      "size" : "{1024.000000, 768.000000}"
+    },
+    {
+      "ratio" : 1,
+      "suffix" : "",
+      "size" : "{960.000000, 540.000000}"
+    },
+    {
+      "ratio" : 1,
+      "suffix" : "",
+      "size" : "{800.000000, 480.000000}"
+    },
+    {
+      "ratio" : 1,
+      "suffix" : "",
+      "size" : "{1280.000000, 720.000000}"
+    },
+    {
+      "ratio" : 2,
+      "suffix" : "@2x",
+      "size" : "{1920.000000, 1080.000000}"
+    },
+    {
+      "ratio" : 1,
+      "suffix" : "",
+      "size" : "{1024.000000, 600.000000}"
+    },
+    {
+      "ratio" : 1,
+      "suffix" : "",
+      "size" : "{1280.000000, 800.000000}"
+    },
+    {
+      "ratio" : 2,
+      "suffix" : "@2x",
+      "size" : "{1920.000000, 1200.000000}"
+    },
+    {
+      "ratio" : 1,
+      "suffix" : "",
+      "size" : "{1024.000000, 600.000000}"
+    },
+    {
+      "ratio" : 1,
+      "suffix" : "",
+      "size" : "{1024.000000, 600.000000}"
+    },
+    {
+      "ratio" : 1,
+      "suffix" : "",
+      "size" : "{1280.000000, 720.000000}"
+    },
+    {
+      "ratio" : 2,
+      "suffix" : "@2x",
+      "size" : "{1920.000000, 1080.000000}"
+    },
+    {
+      "ratio" : 1,
+      "suffix" : "",
+      "size" : "{1280.000000, 720.000000}"
+    },
+    {
+      "ratio" : 2,
+      "suffix" : "@2x",
+      "size" : "{1920.000000, 1080.000000}"
+    },
+    {
+      "ratio" : 1,
+      "suffix" : "",
+      "size" : "{800.000000, 480.000000}"
+    },
+    {
+      "ratio" : 1,
+      "suffix" : "",
+      "size" : "{1280.000000, 768.000000}"
+    },
+    {
+      "ratio" : 1,
+      "suffix" : "",
+      "size" : "{1280.000000, 720.000000}"
+    }
+  ],
+  "useGlobalGravity" : true,
+  "nodeType" : "LHScene",
+  "sceneFormat" : 1,
+  "physicsBoundaries" : {
+    "2208x1242" : "{{0.000000, -0.004584}, {0.993187, 0.997052}}",
+    "general" : "{{0.000000, -0.268285}, {1.227886, 1.260753}}",
+    "1334x750" : "{{0.000000, -0.268285}, {1.227886, 1.260753}}",
+    "1136x640" : "{{0.000000, -0.004584}, {0.993187, 0.997052}}",
+    "2048x1536" : "{{0.000000, -0.004584}, {0.993187, 0.997052}}",
+    "960x640" : "{{0.000000, -0.004584}, {0.993187, 0.997052}}",
+    "1024x768" : "{{0.000000, -0.004584}, {0.993187, 0.997052}}"
+  },
+  "globalGravityDirection" : "{0.000000, -1.000000}"
+}

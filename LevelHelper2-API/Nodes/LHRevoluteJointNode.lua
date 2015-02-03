@@ -144,7 +144,7 @@ local function lateLoading(selfNode)
 		
 		coronaJoint:setRotationLimits(selfNode:getLowerAngle(), selfNode:getUpperAngle());
 			
-        selfNode.lhCoronaJoint = coronaJoint;
+		selfNode.lhCoronaJoint = coronaJoint;       
     end
 end
 --------------------------------------------------------------------------------

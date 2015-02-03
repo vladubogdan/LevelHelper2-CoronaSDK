@@ -17,8 +17,32 @@ local function setSpriteFrameWithName( selfNode, spriteName )
 		local frame = selfNode.frameNamesMap[spriteName];
 		if(frame)then
 			selfNode:setFrame(frame);
+			selfNode.spriteFrameName = spriteName;
 		end
 	end
+end
+--------------------------------------------------------------------------------
+--!@docBegin
+--!Get the name of the sprite texture rectangle.
+--!Returns A string value or nil if sprite is not using a frame name but an image file.
+local function getSpriteFrameName( selfNode)
+--!@docEnd
+	return selfNode.spriteFrameName;
+end
+--------------------------------------------------------------------------------
+--!@docBegin
+--!Get the image file path used by the texture of this sprite.
+--!Returns A string value
+local function getImageFilePath(selfNode)
+	return selfNode.imageFilePath;
+end
+
+--------------------------------------------------------------------------------
+--!@docBegin
+--!Get the sprite sheet path
+--!Returns A string value or nil if sprite is using an image file.
+local function getSpriteSheetPath(selfNode)
+	return selfNode.spriteSheetPath;
 end
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
@@ -103,14 +127,32 @@ function LHSprite:nodeWithDictionary(dict, prnt)
 		object.x = calculatedPos.x;
 		object.y = calculatedPos.y;
 
+		object.spriteSheetPath = spriteSheetPath;
 	end
 
 	--add all LevelHelper 2 valid properties to the object
 	object.nodeType = "LHSprite"
 	
+	object.spriteFrameName = spriteName;
+	object.imageFilePath = imageFilePath;
+	
+	
+	
+	--Functions
+	----------------------------------------------------------------------------
+	object.setSpriteFrameWithName 	= setSpriteFrameWithName;
+	object.getSpriteFrameName 		= getSpriteFrameName;
+	object.getImageFilePath 		= getImageFilePath;
+	object.getSpriteSheetPath 		= getSpriteSheetPath;
+	
+	
 	local LHNodeProtocol = require('LevelHelper2-API.Protocols.LHNodeProtocol');
 	local LHAnimationsProtocol = require('LevelHelper2-API.Protocols.LHAnimationsProtocol');
 	local LHPhysicsProtocol = require('LevelHelper2-API.Protocols.LHPhysicsProtocol');
+	
+	
+	
+	
 	
 	-- LHUtils.LHPrintObjectInfo(prnt);
 	
@@ -135,9 +177,6 @@ function LHSprite:nodeWithDictionary(dict, prnt)
 	object.nodeProtocolEnterFrame 	= object.enterFrame;
 	object.enterFrame = visit;
 	
-	--Functions
-	----------------------------------------------------------------------------
-	object.setSpriteFrameWithName = setSpriteFrameWithName;
 	
 	return object
 end

@@ -1,0 +1,179 @@
+{
+  "designResolution" : "{960.000000, 640.000000}",
+  "globalGravityForce" : 8,
+  "tags" : [
+    "DEFAULT"
+  ],
+  "aspect" : 5,
+  "backgroundColor" : "{{0.414449, 0.579414}, {1.000000, 1.000000}}",
+  "uuid" : "E4DCC704-0902-4BDD-8CB4-3D11CC579CCA",
+  "children" : [
+    {
+      "rotation" : 0,
+      "parentUUID" : "E4DCC704-0902-4BDD-8CB4-3D11CC579CCA",
+      "tags" : [
+        "DEFAULT"
+      ],
+      "generalPosition" : "{0.000000, 0.000000}",
+      "uuid" : "D1ACF6C4-210E-460D-A348-E04E9DF01237",
+      "name" : "BACK USER INTERFACE",
+      "anchor" : "{0.500000, 0.500000}",
+      "size" : "{128.000000, 128.000000}",
+      "nodeType" : "LHBackUINode",
+      "alpha" : 255,
+      "scale" : "{1.000000, 1.000000}",
+      "zOrder" : -1,
+      "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+    },
+    {
+      "rotation" : 0,
+      "parentUUID" : "E4DCC704-0902-4BDD-8CB4-3D11CC579CCA",
+      "tags" : [
+        "DEFAULT"
+      ],
+      "generalPosition" : "{0.000000, 0.000000}",
+      "uuid" : "C19E20E2-E0D5-4184-862D-CB7E8E95C460",
+      "name" : "GAME WORLD",
+      "anchor" : "{0.500000, 0.500000}",
+      "size" : "{128.000000, 128.000000}",
+      "nodeType" : "LHGameWorldNode",
+      "alpha" : 255,
+      "scale" : "{1.000000, 1.000000}",
+      "zOrder" : 0,
+      "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+    },
+    {
+      "rotation" : 0,
+      "parentUUID" : "E4DCC704-0902-4BDD-8CB4-3D11CC579CCA",
+      "tags" : [
+        "DEFAULT"
+      ],
+      "generalPosition" : "{0.000000, 0.000000}",
+      "uuid" : "BABDFC59-BF19-493E-A77C-E264411A7158",
+      "name" : "FRONT USER INTERFACE",
+      "anchor" : "{0.500000, 0.500000}",
+      "size" : "{128.000000, 128.000000}",
+      "nodeType" : "LHUINode",
+      "alpha" : 255,
+      "scale" : "{1.000000, 1.000000}",
+      "zOrder" : 1,
+      "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+    }
+  ],
+  "devices" : [
+    {
+      "ratio" : 1,
+      "suffix" : "",
+      "size" : "{960.000000, 640.000000}"
+    },
+    {
+      "ratio" : 1,
+      "suffix" : "",
+      "size" : "{1136.000000, 640.000000}"
+    },
+    {
+      "ratio" : 1,
+      "suffix" : "",
+      "size" : "{1334.000000, 750.000000}"
+    },
+    {
+      "ratio" : 1.6,
+      "suffix" : "@2x",
+      "size" : "{2208.000000, 1242.000000}"
+    },
+    {
+      "ratio" : 2,
+      "suffix" : "@2x",
+      "size" : "{2048.000000, 1536.000000}"
+    },
+    {
+      "ratio" : 1,
+      "suffix" : "",
+      "size" : "{1024.000000, 768.000000}"
+    },
+    {
+      "ratio" : 1,
+      "suffix" : "",
+      "size" : "{960.000000, 540.000000}"
+    },
+    {
+      "ratio" : 1,
+      "suffix" : "",
+      "size" : "{800.000000, 480.000000}"
+    },
+    {
+      "ratio" : 1,
+      "suffix" : "",
+      "size" : "{1280.000000, 720.000000}"
+    },
+    {
+      "ratio" : 2,
+      "suffix" : "@2x",
+      "size" : "{1920.000000, 1080.000000}"
+    },
+    {
+      "ratio" : 1,
+      "suffix" : "",
+      "size" : "{1024.000000, 600.000000}"
+    },
+    {
+      "ratio" : 1,
+      "suffix" : "",
+      "size" : "{1280.000000, 800.000000}"
+    },
+    {
+      "ratio" : 2,
+      "suffix" : "@2x",
+      "size" : "{1920.000000, 1200.000000}"
+    },
+    {
+      "ratio" : 1,
+      "suffix" : "",
+      "size" : "{1024.000000, 600.000000}"
+    },
+    {
+      "ratio" : 1,
+      "suffix" : "",
+      "size" : "{1024.000000, 600.000000}"
+    },
+    {
+      "ratio" : 1,
+      "suffix" : "",
+      "size" : "{1280.000000, 720.000000}"
+    },
+    {
+      "ratio" : 2,
+      "suffix" : "@2x",
+      "size" : "{1920.000000, 1080.000000}"
+    },
+    {
+      "ratio" : 1,
+      "suffix" : "",
+      "size" : "{1280.000000, 720.000000}"
+    },
+    {
+      "ratio" : 2,
+      "suffix" : "@2x",
+      "size" : "{1920.000000, 1080.000000}"
+    },
+    {
+      "ratio" : 1,
+      "suffix" : "",
+      "size" : "{800.000000, 480.000000}"
+    },
+    {
+      "ratio" : 1,
+      "suffix" : "",
+      "size" : "{1280.000000, 768.000000}"
+    },
+    {
+      "ratio" : 1,
+      "suffix" : "",
+      "size" : "{1280.000000, 720.000000}"
+    }
+  ],
+  "useGlobalGravity" : true,
+  "nodeType" : "LHScene",
+  "sceneFormat" : 1,
+  "globalGravityDirection" : "{0.000000, -1.000000}"
+}
