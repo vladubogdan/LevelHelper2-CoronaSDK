@@ -225,8 +225,6 @@ function LHBone:nodeWithDictionary(dict, prnt)
 	--add all LevelHelper 2 valid properties to the object
 	object.nodeType = "LHBone"
 	
-	print("create bone");
-	
 	--add LevelHelper methods
 	prnt:addChild(object);
 	
