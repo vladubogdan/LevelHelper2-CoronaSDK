@@ -257,7 +257,11 @@ local function updateNodeWithAnimationProperty(selfObject, prop, time)
 	elseif(prop.isAnimationPositionProperty == true)then
 		
 		selfObject:animateNodePositionToTime(time, beginFrm, endFrm, animNode);
-		
+	
+	elseif(prop.isAnimationRootBoneProperty == true)then
+	
+		selfObject:animateRootBonesToTime(time, beginFrm, endFrm, animNode);
+	
 	elseif(prop.isAnimationChildrenRotationsProperty == true)then
 		
 		selfObject:animateNodeChildrenRotationsToTime(time, beginFrm, endFrm, animNode, prop);
@@ -376,6 +380,107 @@ local function animateNodePositionToTime(selfObject, time, beginFrame, endFrame,
 		newPos = selfObject:convertFramePosition(newPos, animNode);
 		
 		animNode:setPosition({x = newPos.x, y = newPos.y});
+	end
+end
+--------------------------------------------------------------------------------
+local function animateRootBonesToTime(selfObject, time, beginFrame, endFrame, rootBone)
+
+	if(rootBone:isRoot() ~= true)then
+		print("WARNING: Animation on a non root bone.");
+		return;
+	end
+	
+	local allBones = rootBone:getChildrenOfType("LHBone");
+	
+	if(beginFrame ~= nil and endFrame ~= nil)then
+		
+		local beginTime = beginFrame:frameNumber()*(1.0/selfObject._fps);
+		local endTime = endFrame:frameNumber()*(1.0/selfObject._fps);
+
+		local framesTimeDistance = endTime - beginTime;
+		local timeUnit = (time-beginTime)/framesTimeDistance; --a value between 0 and 1
+		
+		local bFrmInfoRoot = beginFrame:frameInfoForBoneNamed("__rootBone__");
+		local eFrmInfoRoot = endFrame:frameInfoForBoneNamed("__rootBone__");
+		
+		local beginPosition = bFrmInfoRoot:getPosition();
+		local endPosition 	= eFrmInfoRoot:getPosition();
+		
+		local beginRotation = bFrmInfoRoot:getRotation();
+		local endRotation 	= eFrmInfoRoot:getRotation();
+		
+		--lets calculate the new node position based on the start - end and unit time
+		local newX = beginPosition.x + (endPosition.x - beginPosition.x)*timeUnit;
+		local newY = beginPosition.y + (endPosition.y - beginPosition.y)*timeUnit;
+		local newPos = {x = newX, y = newY};
+		
+		local shortest_angle = math.fmod( (math.fmod( (endRotation - beginRotation), 360.0) + 540.0), 360.0) - 180.0;
+		local newRotation = beginRotation + shortest_angle*timeUnit;
+		
+		rootBone:setPosition(newPos);
+		rootBone:setRotation(newRotation);
+	
+		for i=1, #allBones do
+			
+			local b = allBones[i];
+			
+			local bInfo = beginFrame:frameInfoForBoneNamed( b:getUniqueName() );
+			local eInfo = endFrame:frameInfoForBoneNamed( b:getUniqueName() );
+		
+			if(bInfo ~= nil and eInfo ~= nil)then
+				
+				local beginRotation = bInfo:getRotation();
+				local endRotation 	= eInfo:getRotation();
+			
+				local shortest_angle = math.fmod( (math.fmod( (endRotation - beginRotation), 360.0) + 540.0), 360.0) - 180.0;
+				local newRotation = beginRotation + shortest_angle*timeUnit;
+				
+				b:setRotation(newRotation);
+				
+				if(b:getRigid() == false)then
+				
+					local beginPosition = bInfo:getPosition();
+					local endPosition 	= eInfo:getPosition();
+					--lets calculate the new node position based on the start - end and unit time
+					local newX = beginPosition.x + (endPosition.x - beginPosition.x)*timeUnit;
+					local newY = beginPosition.y + (endPosition.y - beginPosition.y)*timeUnit;
+					local newPos = {x = newX, y = newY};
+					
+					b:setPosition(newPos);
+				end
+			end
+		end
+	end
+
+	if(beginFrame ~= nil and endFrame == nil)then
+	
+		local bFrmInfoRoot = beginFrame:frameInfoForBoneNamed("__rootBone__");
+		
+		if(bFrmInfoRoot ~= nil)then 
+			local beginPosition = bFrmInfoRoot:getPosition();
+			local beginRotation = bFrmInfoRoot:getRotation();
+			
+			rootBone:setPosition(beginPosition);
+			rootBone:setRotation(beginRotation);
+		end
+		
+		for i=1, #allBones do
+			
+			local b = allBones[i];
+			
+			local bInfo = beginFrame:frameInfoForBoneNamed( b:getUniqueName() );
+			
+			if(bInfo ~= nil)then
+				
+				local beginRotation = bInfo:getRotation();
+				b:setRotation(beginRotation);
+				
+				if(b:getRigid() == false)then
+					local beginPosition = bInfo:getPosition();
+					b:setPosition(beginPosition);
+				end
+			end
+		end
 	end
 end
 --------------------------------------------------------------------------------
@@ -719,6 +824,7 @@ function LHAnimation:animationWithDictionary(dict, node)
 	
 	object.animateNodeChildrenPositionsToTime = animateNodeChildrenPositionsToTime;
 	object.animateNodePositionToTime = animateNodePositionToTime;
+	object.animateRootBonesToTime = animateRootBonesToTime;
 	object.animateNodeChildrenRotationsToTime = animateNodeChildrenRotationsToTime;
 	object.animateNodeChildrenScalesToTime = animateNodeChildrenScalesToTime;
 	object.animateNodeRotationToTime = animateNodeRotationToTime;

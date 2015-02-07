@@ -462,8 +462,6 @@ end
 --------------------------------------------------------------------------------
 function LHBodyShape:removeSelf()
 
-	print("LHBodyShape removeSelf");
-
 	self._minFixtureIdForThisObject = nil
  	self._maxFixtureIdForThisObject = nil
 	self._shapeName = nil;

@@ -28,6 +28,8 @@ local LHAsset	= require('LevelHelper2-API.Nodes.LHAsset');
 local LHCamera	= require('LevelHelper2-API.Nodes.LHCamera');
 local LHParallax	= require('LevelHelper2-API.Nodes.LHParallax');
 local LHParallaxLayer	= require('LevelHelper2-API.Nodes.LHParallaxLayer');
+local LHBone	= require('LevelHelper2-API.Nodes.LHBone');
+local LHBoneNodes= require('LevelHelper2-API.Nodes.LHBoneNodes');
 
 local LHUtils = require("LevelHelper2-API.Utilities.LHUtils");
 local LHUserProperties = require("LevelHelper2-API.Protocols.LHUserProperties");
@@ -345,6 +347,47 @@ local function setAnchor(selfNode, x, y)
 		selfNode.lhChildren.anchorY = y;
 	end
 end
+--------------------------------------------------------------------------------
+--!@docBegin
+--!Set the node x and y anchor by keeping the position of the node on screen in the same place.
+--!@param x The new x anchor value
+--!@param y The new y anchor value
+local function setAnchorByKeepingPosition(selfNode, x, y)
+--!@docEnd
+	local prevAnchor = selfNode:getAnchor();
+	local prevPos = selfNode:getPosition();  			
+	prevPos = selfNode:getParent():convertToWorldSpace(prevPos);
+  	
+  	local newPos = {x = prevPos.x + (x - prevAnchor.x)*selfNode.lhContentSize.width,
+  					y = prevPos.y + (y - prevAnchor.y)*selfNode.lhContentSize.height};
+  				
+  	selfNode.anchorX = x;
+    selfNode.anchorY = y;
+    
+    newPos = selfNode:getParent():convertToNodeSpace(newPos);
+  			
+    selfNode.x = newPos.x;
+	selfNode.y = newPos.y;
+			
+	if(selfNode.lhChildren)then
+		-- selfNode.lhChildren.anchorChildren = true;
+		selfNode.lhChildren.anchorX = x;
+		selfNode.lhChildren.anchorY = y;
+		
+		selfNode.lhChildren.x = newPos.x;
+		selfNode.lhChildren.y = newPos.y;
+	end		
+end
+
+--------------------------------------------------------------------------------
+--!@docBegin
+--!Get the node anchor as a table {x = 0.5, y = 0.5}
+local function getAnchor(selfNode)
+--!@docEnd	
+	return {x = selfNode.anchorX, y = selfNode.anchorY};
+end
+
+
 local function convertToWorldSpace(selfNode, position)
 	local contentX, contentY = selfNode:localToContent(position.x, position.y);
 	return {x = contentX, y = contentY};
@@ -353,6 +396,53 @@ local function convertToNodeSpace(selfNode, position)
 	local localX, localY = selfNode:contentToLocal(position.x, position.y);
 	return {x = localX, y = localY};
 end
+
+local function convertToWorldAngle(selfNode, localAngle)
+
+    local rot = LHUtils.LHPointForAngle(localAngle);
+    local worldPt = selfNode:convertToWorldSpace(rot);
+   	local worldOriginPt = selfNode:convertToWorldSpace({x = 0, y = 0});
+    local worldVec = LHUtils.LHPointSub(worldPt, worldOriginPt);
+    local ang = LHUtils.LHPointToAngle(worldVec);
+    return LHUtils.LHNormalAbsoluteAngleDegrees(ang);
+    
+end
+
+local function convertToNodeAngle(selfNode, worldAngle)
+
+    local rot = LHUtils.LHPointForAngle(worldAngle);
+    local nodePt = selfNode:convertToNodeSpace(rot);
+    local nodeOriginPt = selfNode:convertToNodeSpace({x = 0, y = 0});
+    local nodeVec = LHUtils.LHPointSub(nodePt, nodeOriginPt);
+    local ang = LHUtils.LHPointToAngle(nodeVec);
+    return LHUtils.LHNormalAbsoluteAngleDegrees(ang);
+end
+
+
+local function unitForGlobalPosition(selfNode, globalpt)
+
+    local localPt = selfNode:convertToNodeSpace(globalpt);
+    
+    -- print("local pt " .. tostring(localPt.x) .. " " .. tostring(localPt.y));
+	
+   
+    local sizer = selfNode.lhContentSize;
+
+	-- print("sprite size " .. tostring(sizer.width) .. " " .. tostring(sizer.height));
+    
+    
+    local centerPointX = sizer.width*0.5;
+    local centerPointY = sizer.height*0.5;
+    
+    localPt.x = localPt.x + centerPointX;
+    localPt.y = localPt.y + centerPointY;
+		
+	-- print("local + center pt " .. tostring(localPt.x) .. " " .. tostring(localPt.y));
+			
+    return  {x = localPt.x/sizer.width, y = localPt.y/sizer.height};
+end
+
+
 
 local function enterFrame(selfNode, event)
 
@@ -419,6 +509,8 @@ function initNodeProtocolWithDictionary(dict, node, prnt)
 	node.setRotation 	= setRotation;
 	node.setScale 		= setScale;
 	node.setAnchor 		= setAnchor;
+	node.setAnchorByKeepingPosition = setAnchorByKeepingPosition;
+	node.getAnchor 		= getAnchor;
 	node.enterFrame 	= enterFrame;
 	--Modern object hierarchy simulation
 	node.addChild 				= addChild;
@@ -447,6 +539,10 @@ function initNodeProtocolWithDictionary(dict, node, prnt)
 	
 	node.convertToWorldSpace = convertToWorldSpace;
 	node.convertToNodeSpace = convertToNodeSpace;
+	node.convertToWorldAngle = convertToWorldAngle;
+	node.convertToNodeAngle = convertToNodeAngle;
+	node.unitForGlobalPosition = unitForGlobalPosition;
+	
 	
 	--Load node protocol properties
 	----------------------------------------------------------------------------
@@ -600,6 +696,10 @@ function createLHNodeWithDictionaryWithParent(childInfo, prnt)
 		return LHSprite:nodeWithDictionary(childInfo, prnt);
 	end
 	
+	if nodeType == "LHBone" then    
+		return LHBone:nodeWithDictionary(childInfo, prnt);
+	end
+	
 	if nodeType == "LHBezier" then    
 		return LHBezier:nodeWithDictionary(childInfo, prnt);
 	end
@@ -659,6 +759,12 @@ function createLHNodeWithDictionaryWithParent(childInfo, prnt)
 	if nodeType == "LHParallax" then
 		return LHParallax:nodeWithDictionary(childInfo, prnt);
 	end
+	
+	if nodeType == "LHBoneNodes" then
+		return LHBoneNodes:nodeWithDictionary(childInfo, prnt);
+	end
+	
+	
 	
 	print("UNKNOWN NODE TYPE " .. nodeType);
 	
