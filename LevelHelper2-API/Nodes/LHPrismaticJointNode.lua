@@ -5,6 +5,12 @@
 --!@docBegin
 --!LHPrismaticJointNode class is used to load a LevelHelper prismatic joint or as they are called in Corona SDK, piston joints.
 --!
+--!Conforms to:
+--!
+--!LHNodeProtocol
+--!
+--!LHJointsProtocol
+--!
 --!@docEnd
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------

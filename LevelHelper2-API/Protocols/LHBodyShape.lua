@@ -106,6 +106,8 @@ function LHBodyShape:createWithName(name, node, scene, from, to, allBodyFixtures
 	chainPoints[#chainPoints+1] = to.x;
 	chainPoints[#chainPoints+1] = to.y;
 	
+	fixtureInfo = {	}
+	
 	fixtureInfo.chain = chainPoints;
 	fixtureInfo.connectFirstAndLastChainVertex = false;
 	
@@ -461,8 +463,6 @@ end
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 function LHBodyShape:removeSelf()
-
-	print("LHBodyShape removeSelf");
 
 	self._minFixtureIdForThisObject = nil
  	self._maxFixtureIdForThisObject = nil

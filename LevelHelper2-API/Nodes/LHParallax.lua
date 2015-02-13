@@ -5,6 +5,12 @@
 --!@docBegin
 --!LHParallax class is used to load a parallax object from a level file.
 --!
+--!Conforms to:
+--!
+--!LHNodeProtocol
+--!
+--!LHAnimationsProtocol
+--!
 --!@docEnd
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------

@@ -8,9 +8,13 @@
 --!LHScene is used to load a level file into Corona SDK engine.
 --!End users will have to use this class in order to load a level done with LevelHelper 2 into Corona SDK.
 --!@code
---!    local LHScene =  require("LevelHelper2-API.LHScene");
+--!    local LHScene = require("LevelHelper2-API.LHScene");
 --!    local lhScene = LHScene:initWithContentOfFile("publishFolder/level01.json");
 --!@endcode
+--!
+--!Conforms to:
+--!
+--!LHNodeProtocol
 --!
 --!@docEnd
 
@@ -360,17 +364,16 @@ local function getInfoForCollisionEvent(event)
 end
 --------------------------------------------------------------------------------
 --!@docBegin
---!Enable the use of LevelHelper API collision handling
---|The following events will be available once you register to them
---!<yourLHSceneObject>:addEventListener("didBeginContact", <yourCoronaSceneObject>);
---!<yourLHSceneObject>:addEventListener("didEndContact", <yourCoronaSceneObject>);
+--!Enable the use of LevelHelper API collision handling.
+--!
+--!The following events will be available once you register to them.
 --!@code
---!   lhScene:addEventListener("didBeginContact", scene);
---!   lhScene:addEventListener("didEndContact", scene);
---!
---!
+--!   lhScene:addEventListener("didBeginContact", scene); --lhScene is your LHScene object
+--!   lhScene:addEventListener("didEndContact", scene); --scene is your corona scene
+--!@endcode
+--!@code
 --!function scene:didBeginContact(event)
---!	
+--!
 --!	local contactInfo = event.object;
 --!	
 --!	print("did BEGIN contact with info......................................................");
@@ -380,12 +383,13 @@ end
 --!	print("Node B: " .. tostring(contactInfo.nodeB));
 --!	print("Node B Shape name: " .. contactInfo.nodeBShapeName);
 --!	print("Node B Shape id: " .. contactInfo.nodeBShapeID);
---!	
 --!end
+--!@endcode
+--!@code
 --!function scene:didEndContact(event)
---!	
+--!
 --!	local contactInfo = event.object;
---!	
+--!
 --!	print("did END contact with info......................................................");
 --!	print("Node A: " .. tostring(contactInfo.nodeA));
 --!	print("Node A Shape name: " .. contactInfo.nodeAShapeName);
@@ -393,10 +397,10 @@ end
 --!	print("Node B: " .. tostring(contactInfo.nodeB));
 --!	print("Node B Shape name: " .. contactInfo.nodeBShapeName);
 --!	print("Node B Shape id: " .. contactInfo.nodeBShapeID);
---!	
---!end
---!@endcode
 --!
+--!end
+--!
+--!@endcode
 local function enableCollisionHandling(selfNode)
 --!@docEnd
 	Runtime:addEventListener( "collision", selfNode);

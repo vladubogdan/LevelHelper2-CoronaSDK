@@ -5,6 +5,10 @@
 --!@docBegin
 --!LHParallaxLayer class is used to load a parallax layer object from a level file.
 --!
+--!Conforms to:
+--!
+--!LHNodeProtocol
+--!
 --!@docEnd
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
@@ -36,8 +40,7 @@ function LHParallaxLayer:nodeWithDictionary(dict, prnt)
 				
 	local LHUtils = require("LevelHelper2-API.Utilities.LHUtils");
 	local LHNodeProtocol = require('LevelHelper2-API.Protocols.LHNodeProtocol')
-	local LHAnimationsProtocol = require('LevelHelper2-API.Protocols.LHAnimationsProtocol');
-	
+
 	local object = display.newGroup();
 	
 	--add all LevelHelper 2 valid properties to the object
@@ -49,8 +52,6 @@ function LHParallaxLayer:nodeWithDictionary(dict, prnt)
 	LHNodeProtocol.initNodeProtocolWithDictionary(dict, object, prnt);
 	LHNodeProtocol.loadChildrenForNodeFromDictionary(object, dict);
 
-	LHAnimationsProtocol.initAnimationsProtocolWithDictionary(dict, object, prnt:getScene());
-	
 	object._xRatio = dict["xRatio"];
 	object._yRatio = dict["yRatio"];
 

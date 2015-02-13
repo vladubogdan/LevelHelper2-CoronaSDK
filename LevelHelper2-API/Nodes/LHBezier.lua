@@ -5,6 +5,12 @@
 --!@docBegin
 --!LHBezier class is used to load and display a bezier from a level file.
 --!
+--!Conforms to:
+--!
+--!LHNodeProtocol
+--!
+--!LHPhysicsProtocol
+--!
 --!@docEnd
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------

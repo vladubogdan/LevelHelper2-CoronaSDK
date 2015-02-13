@@ -279,3 +279,26 @@ function LHPointOnCurve(p1, p2, p3, p4, t)
 
 	return vPoint;
 end
+
+-- Converts degrees to a normalized vector.
+function LHPointForAngle(degrees)
+    local a = LHDegreesToRadians(degrees);
+    return {x =math.cos(a), y = math.sin(a)};
+end
+
+-- Converts a vector to degrees.
+function LHPointToAngle(v)
+	return LHRadiansToDegrees(math.atan2(v.y, v.x));
+end
+
+function LHPointSub(ptA, ptB)
+    return { x = ptA.x - ptB.x, y = ptA.y - ptB.y};
+end
+
+function LHNormalAbsoluteAngleDegrees(angle)
+    local fAngle = math.fmod(angle, 360.0);
+    if(fAngle >= 0)then
+    	return fAngle;
+    end
+   	return fAngle + 360.0;
+end

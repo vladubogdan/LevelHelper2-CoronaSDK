@@ -5,6 +5,12 @@
 --!@docBegin
 --!LHDistanceJointNode class is used to load a LevelHelper 2 distance joint node.
 --!
+--!Conforms to:
+--!
+--!LHNodeProtocol
+--!
+--!LHJointsProtocol
+--!
 --!@docEnd
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
@@ -65,24 +71,7 @@ local function lateLoading(selfNode)
 		if(nil == physics)then	return end
 		physics.start();
 
-		-- print("creating distance joint");
-		-- print(anchorA.x);
-		-- print(anchorA.y);
-		-- print(anchorB.x);
-		-- print(anchorB.y);
-		
--- 2014-11-21 08:01:50.584 Corona Simulator[21403:5109592] 38.984874725342
--- 2014-11-21 08:01:50.584 Corona Simulator[21403:5109592] 32.306484222412
--- 2014-11-21 08:01:50.584 Corona Simulator[21403:5109592] 32.360450744629
--- 2014-11-21 08:01:50.584 Corona Simulator[21403:5109592] 95.120918273926
-
---with asset
--- 2014-11-21 08:02:39.957 Corona Simulator[21403:5109592] 38.984874725342
--- 2014-11-21 08:02:39.957 Corona Simulator[21403:5109592] 32.306484222412
--- 2014-11-21 08:02:39.957 Corona Simulator[21403:5109592] 32.360450744629
--- 2014-11-21 08:02:39.957 Corona Simulator[21403:5109592] 95.120910644531
-		
-    	local coronaJoint = physics.newJoint(	"distance", 
+		local coronaJoint = physics.newJoint(	"distance", 
                                              	nodeA,
                                               	nodeB,
 	                                            anchorA.x,

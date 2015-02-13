@@ -5,6 +5,14 @@
 --!@docBegin
 --! LHShape class is used to load and display a shape from a level file.
 --!
+--!Conforms to:
+--!
+--!LHNodeProtocol
+--!
+--!LHAnimationsProtocol
+--!
+--!LHPhysicsProtocol
+--!
 --!@docEnd
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
