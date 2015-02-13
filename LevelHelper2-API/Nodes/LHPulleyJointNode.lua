@@ -5,6 +5,12 @@
 --!@docBegin
 --!LHPulleyJointNode class is used to load a LevelHelper pulley joint.
 --!
+--!Conforms to:
+--!
+--!LHNodeProtocol
+--!
+--!LHJointsProtocol
+--!
 --!@docEnd
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------

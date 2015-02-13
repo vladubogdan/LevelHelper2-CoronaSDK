@@ -5,6 +5,10 @@
 --!@docBegin
 --!LHGameWorldNode is used to load all the elements that should move with the camera.
 --!
+--!Conforms to:
+--!
+--!LHNodeProtocol
+--!
 --!@docEnd
 --------------------------------------------------------------------------------
 local LHGameWorldNode = {}

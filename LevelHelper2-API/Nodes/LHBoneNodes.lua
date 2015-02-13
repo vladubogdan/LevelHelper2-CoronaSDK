@@ -5,6 +5,11 @@
 --!@docBegin
 --!LHBoneNodes class is used to hold all sprites inside a skeletal structure.
 --!
+--!
+--!Conforms to:
+--!
+--!LHNodeProtocol
+--!
 --!@docEnd
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------

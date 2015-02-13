@@ -5,6 +5,14 @@
 --!@docBegin
 --!LHSprite class is used to load textured rectangles that are found in a level file.
 --!
+--!Conforms to:
+--!
+--!LHNodeProtocol
+--!
+--!LHAnimationsProtocol
+--!
+--!LHPhysicsProtocol
+--!
 --!@docEnd
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------

@@ -5,6 +5,10 @@
 --!@docBegin
 --!LHUINode class is used to load the front UI elements. Game elements that won't move with the camera.
 --!
+--!Conforms to:
+--!
+--!LHNodeProtocol
+--!
 --!@docEnd
 --------------------------------------------------------------------------------
 local LHUINode = {}

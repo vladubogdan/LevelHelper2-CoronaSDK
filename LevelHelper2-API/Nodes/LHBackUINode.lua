@@ -5,6 +5,10 @@
 --!@docBegin
 --!LHBackUINode class is used to load the UI elements.
 --!
+--!Conforms to:
+--!
+--!LHNodeProtocol
+--!
 --!@docEnd
 --------------------------------------------------------------------------------
 local LHBackUINode = {}

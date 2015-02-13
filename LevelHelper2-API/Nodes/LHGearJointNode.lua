@@ -5,6 +5,12 @@
 --!@docBegin
 --!LHGearJointNode class is used to load a LevelHelper gear joint.
 --!
+--!Conforms to:
+--!
+--!LHNodeProtocol
+--!
+--!LHJointsProtocol
+--!
 --!@docEnd
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------

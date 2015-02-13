@@ -3,7 +3,13 @@
 -- LHBone.lua
 --
 --!@docBegin
---!LHBone class is used to load a skeletal structure.
+--!LHBone class is used to load a skeletal structure. 
+--!
+--!Conforms to:
+--!
+--!LHNodeProtocol
+--!
+--!LHAnimationsProtocol
 --!
 --!@docEnd
 --------------------------------------------------------------------------------

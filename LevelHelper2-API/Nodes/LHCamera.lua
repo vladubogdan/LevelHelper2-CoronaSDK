@@ -5,6 +5,12 @@
 --!@docBegin
 --!LHCamera class is used to load a camera object from a level file.
 --!
+--!Conforms to:
+--!
+--!LHNodeProtocol
+--!
+--!LHAnimationsProtocol
+--!
 --!@docEnd
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------

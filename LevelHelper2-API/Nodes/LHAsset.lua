@@ -5,6 +5,14 @@
 --!@docBegin
 --!LHAsset class is used to load an asset object from a level file or from the resources folder.
 --!
+--!Conforms to:
+--!
+--!LHNodeProtocol
+--!
+--!LHAnimationsProtocol
+--!
+--!LHPhysicsProtocol
+--!
 --!@docEnd
 --------------------------------------------------------------------------------
 local function visit(selfNode, event)

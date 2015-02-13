@@ -5,6 +5,12 @@
 --!@docBegin
 --!LHRopeJointNode class is used to load a LevelHelper rope joint.
 --!
+--!Conforms to:
+--!
+--!LHNodeProtocol
+--!
+--!LHJointsProtocol
+--!
 --!@docEnd
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------

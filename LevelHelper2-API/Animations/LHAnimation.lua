@@ -2,6 +2,10 @@
 --
 -- LHAnimation.lua
 --
+--!@docBegin
+--!This class is responsible for playing animations defined inside LevelHelper 2.
+--!
+--!@docEnd
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 local LHUtils = require("LevelHelper2-API.Utilities.LHUtils");
@@ -66,7 +70,7 @@ local function setAnimating(selfObject, animating)
 end
 --------------------------------------------------------------------------------
 --!@docBegin
---!Returns wheter or not the animation is currently playing. A boolean value.
+--!Returns whether or not the animation is currently playing. A boolean value.
 local function animating(selfObject)
 --!@docEnd	
 	return selfObject._animating;

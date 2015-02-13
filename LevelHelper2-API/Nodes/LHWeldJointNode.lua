@@ -5,6 +5,12 @@
 --!@docBegin
 --!LHWeldJointNode class is used to load a LevelHelper weld joint.
 --!
+--!Conforms to:
+--!
+--!LHNodeProtocol
+--!
+--!LHJointsProtocol
+--!
 --!@docEnd
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------

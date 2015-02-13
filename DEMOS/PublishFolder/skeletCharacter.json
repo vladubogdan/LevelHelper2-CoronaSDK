@@ -1,0 +1,2016 @@
+{
+  "designResolution" : "{960.000000, 640.000000}",
+  "globalGravityForce" : 8,
+  "tags" : [
+    "DEFAULT"
+  ],
+  "aspect" : 7,
+  "backgroundColor" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}",
+  "uuid" : "95DF5854-393B-4DFD-A454-A8C10A7142EF",
+  "children" : [
+    {
+      "rotation" : 0,
+      "parentUUID" : "95DF5854-393B-4DFD-A454-A8C10A7142EF",
+      "tags" : [
+        "DEFAULT"
+      ],
+      "generalPosition" : "{0.000000, 0.000000}",
+      "uuid" : "6CE0EE16-95E3-4494-934E-8244408101C6",
+      "name" : "BACK USER INTERFACE",
+      "anchor" : "{0.500000, 0.500000}",
+      "size" : "{128.000000, 128.000000}",
+      "nodeType" : "LHBackUINode",
+      "alpha" : 255,
+      "scale" : "{1.000000, 1.000000}",
+      "zOrder" : -1,
+      "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+    },
+    {
+      "rotation" : 0,
+      "parentUUID" : "95DF5854-393B-4DFD-A454-A8C10A7142EF",
+      "tags" : [
+        "DEFAULT"
+      ],
+      "generalPosition" : "{0.000000, 0.000000}",
+      "uuid" : "A48D01D1-60A6-4E6D-B93B-4C62A3D5C85E",
+      "children" : [
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "connections" : [
+
+          ],
+          "tags" : [
+            "DEFAULT"
+          ],
+          "rigid" : true,
+          "maxAngle" : 180,
+          "generalPosition" : "{0.831017, 0.445915}",
+          "uuid" : "73E05B59-922B-44FD-AAAD-0C8D01654744",
+          "children" : [
+            {
+              "rotation" : 0,
+              "parentUUID" : "73E05B59-922B-44FD-AAAD-0C8D01654744",
+              "tags" : [
+                "DEFAULT"
+              ],
+              "generalPosition" : "{0.000000, 0.000000}",
+              "uuid" : "55685A8A-C778-4855-9249-E0D9DC179BA7",
+              "children" : [
+                {
+                  "rotation" : 259.777,
+                  "parentUUID" : "55685A8A-C778-4855-9249-E0D9DC179BA7",
+                  "tags" : [
+                    "DEFAULT"
+                  ],
+                  "spriteUUID" : "D9FD4119-E075-4A59-BDBC-7CD660873DBF",
+                  "spriteName" : "upperArm_L",
+                  "generalPosition" : "{0.022751, -0.086805}",
+                  "uuid" : "903BC834-FF55-4770-B5D3-1992166375B9",
+                  "children" : [
+                    {
+                      "rotation" : 377.5413,
+                      "parentUUID" : "903BC834-FF55-4770-B5D3-1992166375B9",
+                      "tags" : [
+                        "DEFAULT"
+                      ],
+                      "spriteUUID" : "03138379-7CA1-4D0F-8153-E47B147D088F",
+                      "spriteName" : "lowerArm_L",
+                      "generalPosition" : "{-0.006078, 0.032556}",
+                      "uuid" : "587670D8-C80B-4CE3-9B4A-34AC47175350",
+                      "children" : [
+                        {
+                          "rotation" : 359.7317,
+                          "parentUUID" : "587670D8-C80B-4CE3-9B4A-34AC47175350",
+                          "tags" : [
+                            "DEFAULT"
+                          ],
+                          "spriteUUID" : "DD1A919B-D69B-4BAA-966F-2CA1C903555D",
+                          "spriteName" : "hand_L",
+                          "generalPosition" : "{-0.000215, 0.024259}",
+                          "uuid" : "31E1A9BA-DB7D-448C-82D0-BEA39136AA5C",
+                          "name" : "hand_L",
+                          "anchor" : "{0.500000, 0.500000}",
+                          "size" : "{26.000000, 26.000000}",
+                          "nodeType" : "LHSprite",
+                          "alpha" : 255,
+                          "scale" : "{1.000000, 1.000000}",
+                          "relativeImagePath" : "PublishFolder\/",
+                          "zOrder" : 0,
+                          "imageFileName" : "girlSoldierParts.png",
+                          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                        }
+                      ],
+                      "name" : "lowerArm_L",
+                      "anchor" : "{0.500000, 0.500000}",
+                      "size" : "{21.000000, 32.000000}",
+                      "nodeType" : "LHSprite",
+                      "alpha" : 255,
+                      "scale" : "{1.000000, 1.000000}",
+                      "relativeImagePath" : "PublishFolder\/",
+                      "zOrder" : 0,
+                      "imageFileName" : "girlSoldierParts.png",
+                      "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                    }
+                  ],
+                  "name" : "upperArm_L",
+                  "anchor" : "{0.500000, 0.500000}",
+                  "size" : "{18.000000, 25.000000}",
+                  "nodeType" : "LHSprite",
+                  "alpha" : 255,
+                  "scale" : "{1.000000, 1.000000}",
+                  "relativeImagePath" : "PublishFolder\/",
+                  "zOrder" : -1,
+                  "imageFileName" : "girlSoldierParts.png",
+                  "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                },
+                {
+                  "rotation" : 0,
+                  "parentUUID" : "55685A8A-C778-4855-9249-E0D9DC179BA7",
+                  "tags" : [
+                    "DEFAULT"
+                  ],
+                  "spriteUUID" : "311ED56E-17E0-4CCC-9D8E-80567C7D8BC2",
+                  "spriteName" : "Body",
+                  "generalPosition" : "{-0.000513, -0.054073}",
+                  "uuid" : "0A13F859-F38B-4EF1-BD9B-B3FD30CEA09B",
+                  "name" : "Body",
+                  "anchor" : "{0.500000, 0.500000}",
+                  "size" : "{56.000000, 71.000000}",
+                  "nodeType" : "LHSprite",
+                  "alpha" : 255,
+                  "scale" : "{1.000000, 1.000000}",
+                  "relativeImagePath" : "PublishFolder\/",
+                  "zOrder" : 0,
+                  "imageFileName" : "girlSoldierParts.png",
+                  "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                },
+                {
+                  "rotation" : 338.5942,
+                  "parentUUID" : "55685A8A-C778-4855-9249-E0D9DC179BA7",
+                  "tags" : [
+                    "DEFAULT"
+                  ],
+                  "spriteUUID" : "456B3A0E-DF7A-47CA-96DE-5FA6B5E9A173",
+                  "spriteName" : "upperLeg_L",
+                  "generalPosition" : "{0.018604, 0.002748}",
+                  "uuid" : "F84647D0-742F-4D05-B102-00293CAC4F89",
+                  "children" : [
+                    {
+                      "rotation" : 357.6777,
+                      "parentUUID" : "F84647D0-742F-4D05-B102-00293CAC4F89",
+                      "tags" : [
+                        "DEFAULT"
+                      ],
+                      "spriteUUID" : "37D10EF5-1651-48F3-B65B-437B1BC04125",
+                      "spriteName" : "lowerLeg_L",
+                      "generalPosition" : "{0.002050, 0.037216}",
+                      "uuid" : "A44FE2F8-3D1E-4A77-8F27-9DA462AEC7AB",
+                      "children" : [
+                        {
+                          "rotation" : 364.6297,
+                          "parentUUID" : "A44FE2F8-3D1E-4A77-8F27-9DA462AEC7AB",
+                          "tags" : [
+                            "DEFAULT"
+                          ],
+                          "spriteUUID" : "ACE3C9EE-AFDF-4AAA-AEBA-1EAAC6CD082D",
+                          "spriteName" : "foot_L",
+                          "generalPosition" : "{0.007617, 0.033106}",
+                          "uuid" : "92DC7260-4BFE-4B5F-B672-C3EAFC5ABCEB",
+                          "name" : "foot_L",
+                          "anchor" : "{0.500000, 0.500000}",
+                          "size" : "{48.000000, 23.000000}",
+                          "nodeType" : "LHSprite",
+                          "alpha" : 255,
+                          "scale" : "{1.000000, 1.000000}",
+                          "relativeImagePath" : "PublishFolder\/",
+                          "zOrder" : 0,
+                          "imageFileName" : "girlSoldierParts.png",
+                          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                        }
+                      ],
+                      "name" : "lowerLeg_L",
+                      "anchor" : "{0.500000, 0.500000}",
+                      "size" : "{30.000000, 34.000000}",
+                      "nodeType" : "LHSprite",
+                      "alpha" : 255,
+                      "scale" : "{1.000000, 1.000000}",
+                      "relativeImagePath" : "PublishFolder\/",
+                      "zOrder" : 0,
+                      "imageFileName" : "girlSoldierParts.png",
+                      "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                    }
+                  ],
+                  "name" : "upperLeg_L",
+                  "anchor" : "{0.500000, 0.500000}",
+                  "size" : "{23.000000, 32.000000}",
+                  "nodeType" : "LHSprite",
+                  "alpha" : 255,
+                  "scale" : "{1.000000, 1.000000}",
+                  "relativeImagePath" : "PublishFolder\/",
+                  "zOrder" : 1,
+                  "imageFileName" : "girlSoldierParts.png",
+                  "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                },
+                {
+                  "rotation" : 3.975159,
+                  "parentUUID" : "55685A8A-C778-4855-9249-E0D9DC179BA7",
+                  "tags" : [
+                    "DEFAULT"
+                  ],
+                  "spriteUUID" : "D3630DAD-D770-432F-8D8E-1DAB61F7DB11",
+                  "spriteName" : "upperLeg_R",
+                  "generalPosition" : "{-0.015421, 0.004049}",
+                  "uuid" : "7977DC4C-1652-40E0-A9B3-EB8AE7445F5F",
+                  "children" : [
+                    {
+                      "rotation" : 5.372391,
+                      "parentUUID" : "7977DC4C-1652-40E0-A9B3-EB8AE7445F5F",
+                      "tags" : [
+                        "DEFAULT"
+                      ],
+                      "spriteUUID" : "CDBA6F90-68E1-416D-B040-1CA54BF3E577",
+                      "spriteName" : "lowerLeg_R",
+                      "generalPosition" : "{-0.003773, 0.035964}",
+                      "uuid" : "AEF279AC-6A6B-45D8-B82E-D217293F7B89",
+                      "children" : [
+                        {
+                          "rotation" : -2.301834,
+                          "parentUUID" : "AEF279AC-6A6B-45D8-B82E-D217293F7B89",
+                          "tags" : [
+                            "DEFAULT"
+                          ],
+                          "spriteUUID" : "6DA3C69A-315C-4687-B7D2-783DCE53A0CF",
+                          "spriteName" : "foot_R",
+                          "generalPosition" : "{-0.007714, 0.034301}",
+                          "uuid" : "C181AE74-77F7-4EE8-8DD8-93D36384BF49",
+                          "name" : "foot_R",
+                          "anchor" : "{0.500000, 0.500000}",
+                          "size" : "{48.000000, 23.000000}",
+                          "nodeType" : "LHSprite",
+                          "alpha" : 255,
+                          "scale" : "{1.000000, 1.000000}",
+                          "relativeImagePath" : "PublishFolder\/",
+                          "zOrder" : 0,
+                          "imageFileName" : "girlSoldierParts.png",
+                          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                        }
+                      ],
+                      "name" : "lowerLeg_R",
+                      "anchor" : "{0.500000, 0.500000}",
+                      "size" : "{30.000000, 34.000000}",
+                      "nodeType" : "LHSprite",
+                      "alpha" : 255,
+                      "scale" : "{1.000000, 1.000000}",
+                      "relativeImagePath" : "PublishFolder\/",
+                      "zOrder" : 0,
+                      "imageFileName" : "girlSoldierParts.png",
+                      "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                    }
+                  ],
+                  "name" : "upperLeg_R",
+                  "anchor" : "{0.500000, 0.500000}",
+                  "size" : "{23.000000, 32.000000}",
+                  "nodeType" : "LHSprite",
+                  "alpha" : 255,
+                  "scale" : "{1.000000, 1.000000}",
+                  "relativeImagePath" : "PublishFolder\/",
+                  "zOrder" : 1,
+                  "imageFileName" : "girlSoldierParts.png",
+                  "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                },
+                {
+                  "rotation" : 0.2498236,
+                  "parentUUID" : "55685A8A-C778-4855-9249-E0D9DC179BA7",
+                  "tags" : [
+                    "DEFAULT"
+                  ],
+                  "spriteUUID" : "B5DA7A9C-4EDD-4052-B881-A5D8EEBA1B52",
+                  "spriteName" : "HeadNormal",
+                  "generalPosition" : "{0.005573, -0.181405}",
+                  "uuid" : "94B2901D-90FD-4FFB-8B07-1210CEE64600",
+                  "name" : "HeadNormal",
+                  "anchor" : "{0.500000, 0.500000}",
+                  "size" : "{120.000000, 110.000000}",
+                  "nodeType" : "LHSprite",
+                  "alpha" : 255,
+                  "scale" : "{1.000000, 1.000000}",
+                  "relativeImagePath" : "PublishFolder\/",
+                  "zOrder" : 1,
+                  "imageFileName" : "girlSoldierParts.png",
+                  "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                },
+                {
+                  "rotation" : 74.24147,
+                  "parentUUID" : "55685A8A-C778-4855-9249-E0D9DC179BA7",
+                  "tags" : [
+                    "DEFAULT"
+                  ],
+                  "spriteUUID" : "F25494DF-1F9F-4B67-8DA0-F007D1B0FFE7",
+                  "spriteName" : "upperArm_R",
+                  "generalPosition" : "{-0.029751, -0.078602}",
+                  "uuid" : "F3F9FB7D-B715-4AA3-88C5-8D276D498E63",
+                  "children" : [
+                    {
+                      "rotation" : -0.7215424,
+                      "parentUUID" : "F3F9FB7D-B715-4AA3-88C5-8D276D498E63",
+                      "tags" : [
+                        "DEFAULT"
+                      ],
+                      "spriteUUID" : "5003FBC1-287C-4FC5-865E-1C073B790978",
+                      "spriteName" : "lowerArm_R",
+                      "generalPosition" : "{-0.002532, 0.034987}",
+                      "uuid" : "9EFF187F-59A7-4761-8C09-F3D7613CA470",
+                      "children" : [
+                        {
+                          "rotation" : 6.879562,
+                          "parentUUID" : "9EFF187F-59A7-4761-8C09-F3D7613CA470",
+                          "tags" : [
+                            "DEFAULT"
+                          ],
+                          "spriteUUID" : "D9FAA7B0-7752-40CD-9525-74F5C016137F",
+                          "spriteName" : "hand_R",
+                          "generalPosition" : "{0.003327, 0.030125}",
+                          "uuid" : "DA09DBE4-5E65-44AD-8644-750671AFE82C",
+                          "name" : "hand_R",
+                          "anchor" : "{0.500000, 0.500000}",
+                          "size" : "{34.000000, 28.000000}",
+                          "nodeType" : "LHSprite",
+                          "alpha" : 255,
+                          "scale" : "{1.000000, 1.000000}",
+                          "relativeImagePath" : "PublishFolder\/",
+                          "zOrder" : 0,
+                          "imageFileName" : "girlSoldierParts.png",
+                          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                        }
+                      ],
+                      "name" : "lowerArm_R",
+                      "anchor" : "{0.500000, 0.500000}",
+                      "size" : "{21.000000, 31.000000}",
+                      "nodeType" : "LHSprite",
+                      "alpha" : 255,
+                      "scale" : "{1.000000, 1.000000}",
+                      "relativeImagePath" : "PublishFolder\/",
+                      "zOrder" : 0,
+                      "imageFileName" : "girlSoldierParts.png",
+                      "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                    }
+                  ],
+                  "name" : "upperArm_R",
+                  "anchor" : "{0.500000, 0.500000}",
+                  "size" : "{22.000000, 30.000000}",
+                  "nodeType" : "LHSprite",
+                  "alpha" : 255,
+                  "scale" : "{1.000000, 1.000000}",
+                  "relativeImagePath" : "PublishFolder\/",
+                  "zOrder" : 2,
+                  "imageFileName" : "girlSoldierParts.png",
+                  "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                }
+              ],
+              "name" : "Nodes",
+              "anchor" : "{0.500000, 0.500000}",
+              "size" : "{0.000000, 0.000000}",
+              "lockedNodes" : false,
+              "nodeType" : "LHBoneNodes",
+              "alpha" : 255,
+              "scale" : "{1.000000, 1.000000}",
+              "zOrder" : -9999,
+              "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+            },
+            {
+              "rotation" : 0,
+              "parentUUID" : "73E05B59-922B-44FD-AAAD-0C8D01654744",
+              "connections" : [
+                {
+                  "angleDelta" : 0,
+                  "nodeName" : "Body",
+                  "positionDelta" : "{-0.299520, -2.301158}"
+                }
+              ],
+              "tags" : [
+                "DEFAULT"
+              ],
+              "rigid" : true,
+              "maxAngle" : 10,
+              "generalPosition" : "{-0.000201, -0.007300}",
+              "uuid" : "40C84CEB-1454-4B9B-9364-0FCEC90EF672",
+              "children" : [
+                {
+                  "rotation" : 92.42578,
+                  "parentUUID" : "40C84CEB-1454-4B9B-9364-0FCEC90EF672",
+                  "connections" : [
+                    {
+                      "angleDelta" : 167.3512,
+                      "nodeName" : "upperArm_L",
+                      "positionDelta" : "{0.889923, -1.010570}"
+                    }
+                  ],
+                  "tags" : [
+                    "DEFAULT"
+                  ],
+                  "rigid" : true,
+                  "maxAngle" : 240,
+                  "generalPosition" : "{0.013798, -0.038301}",
+                  "uuid" : "C566D9A7-250A-4BB0-90D2-49DCE99C0838",
+                  "children" : [
+                    {
+                      "rotation" : 5.546517,
+                      "parentUUID" : "C566D9A7-250A-4BB0-90D2-49DCE99C0838",
+                      "connections" : [
+                        {
+                          "angleDelta" : 179.346,
+                          "nodeName" : "lowerArm_L",
+                          "positionDelta" : "{0.581155, -3.464127}"
+                        }
+                      ],
+                      "tags" : [
+                        "DEFAULT"
+                      ],
+                      "rigid" : true,
+                      "maxAngle" : 110,
+                      "generalPosition" : "{0.000000, -0.012223}",
+                      "uuid" : "65603672-372B-4401-9A64-F3544F00A01A",
+                      "children" : [
+                        {
+                          "rotation" : 1.256321,
+                          "parentUUID" : "65603672-372B-4401-9A64-F3544F00A01A",
+                          "connections" : [
+                            {
+                              "angleDelta" : 177.8214,
+                              "nodeName" : "hand_L",
+                              "positionDelta" : "{0.398524, -1.651885}"
+                            }
+                          ],
+                          "tags" : [
+                            "DEFAULT"
+                          ],
+                          "rigid" : true,
+                          "maxAngle" : 100,
+                          "generalPosition" : "{0.000055, -0.018352}",
+                          "uuid" : "96877152-5A49-406E-B9EB-9AA6D615F1D3",
+                          "name" : "UntitledBone_9",
+                          "anchor" : "{0.500000, 1.000000}",
+                          "size" : "{4.000000, 11.209096}",
+                          "nodeType" : "LHBone",
+                          "alpha" : 255,
+                          "scale" : "{1.000000, 1.000000}",
+                          "minAngle" : -70,
+                          "zOrder" : 0,
+                          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                        }
+                      ],
+                      "name" : "UntitledBone_8",
+                      "anchor" : "{0.500000, 1.000000}",
+                      "size" : "{4.000000, 22.915226}",
+                      "nodeType" : "LHBone",
+                      "alpha" : 255,
+                      "scale" : "{1.000000, 1.000000}",
+                      "minAngle" : 0,
+                      "zOrder" : 0,
+                      "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                    }
+                  ],
+                  "name" : "UntitledBone_7",
+                  "anchor" : "{0.500000, 1.000000}",
+                  "size" : "{4.000000, 15.645704}",
+                  "nodeType" : "LHBone",
+                  "alpha" : 255,
+                  "scale" : "{1.000000, 1.000000}",
+                  "minAngle" : 70,
+                  "zOrder" : 0,
+                  "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                },
+                {
+                  "rotation" : 258.4593,
+                  "parentUUID" : "40C84CEB-1454-4B9B-9364-0FCEC90EF672",
+                  "connections" : [
+                    {
+                      "angleDelta" : -184.2178,
+                      "nodeName" : "upperArm_R",
+                      "positionDelta" : "{-1.206133, -0.509951}"
+                    }
+                  ],
+                  "tags" : [
+                    "DEFAULT"
+                  ],
+                  "rigid" : true,
+                  "maxAngle" : 20,
+                  "generalPosition" : "{-0.017803, -0.033646}",
+                  "uuid" : "63FDD3BB-00DA-49A3-83D0-A3AB240250F0",
+                  "children" : [
+                    {
+                      "rotation" : 0,
+                      "parentUUID" : "63FDD3BB-00DA-49A3-83D0-A3AB240250F0",
+                      "connections" : [
+                        {
+                          "angleDelta" : -184.9393,
+                          "nodeName" : "lowerArm_R",
+                          "positionDelta" : "{-0.428867, -1.240148}"
+                        }
+                      ],
+                      "tags" : [
+                        "DEFAULT"
+                      ],
+                      "rigid" : true,
+                      "maxAngle" : -140,
+                      "generalPosition" : "{0.000000, -0.017572}",
+                      "uuid" : "C1AB83E8-BBE7-4C88-9AE8-1F424B6A01B3",
+                      "children" : [
+                        {
+                          "rotation" : 358.0071,
+                          "parentUUID" : "C1AB83E8-BBE7-4C88-9AE8-1F424B6A01B3",
+                          "connections" : [
+                            {
+                              "angleDelta" : -176.0669,
+                              "nodeName" : "hand_R",
+                              "positionDelta" : "{-4.932539, -4.063451}"
+                            }
+                          ],
+                          "tags" : [
+                            "DEFAULT"
+                          ],
+                          "rigid" : true,
+                          "maxAngle" : 90,
+                          "generalPosition" : "{0.000000, -0.016459}",
+                          "uuid" : "77B7AB8D-AB71-4A1A-A21F-3AC93685D7AB",
+                          "name" : "UntitledBone_12",
+                          "anchor" : "{0.500000, 1.000000}",
+                          "size" : "{4.000000, 11.507619}",
+                          "nodeType" : "LHBone",
+                          "alpha" : 255,
+                          "scale" : "{1.000000, 1.000000}",
+                          "minAngle" : -90,
+                          "zOrder" : 0,
+                          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                        }
+                      ],
+                      "name" : "UntitledBone_11",
+                      "anchor" : "{0.500000, 1.000000}",
+                      "size" : "{4.000000, 21.067068}",
+                      "nodeType" : "LHBone",
+                      "alpha" : 255,
+                      "scale" : "{1.000000, 1.000000}",
+                      "minAngle" : 0,
+                      "zOrder" : 0,
+                      "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                    }
+                  ],
+                  "name" : "UntitledBone_10",
+                  "anchor" : "{0.500000, 1.000000}",
+                  "size" : "{4.000000, 22.492296}",
+                  "nodeType" : "LHBone",
+                  "alpha" : 255,
+                  "scale" : "{1.000000, 1.000000}",
+                  "minAngle" : 340,
+                  "zOrder" : 0,
+                  "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                },
+                {
+                  "rotation" : 10.11575,
+                  "parentUUID" : "40C84CEB-1454-4B9B-9364-0FCEC90EF672",
+                  "connections" : [
+                    {
+                      "angleDelta" : -9.865929,
+                      "nodeName" : "HeadNormal",
+                      "positionDelta" : "{1.352770, -36.967687}"
+                    }
+                  ],
+                  "tags" : [
+                    "DEFAULT"
+                  ],
+                  "rigid" : true,
+                  "maxAngle" : 40,
+                  "generalPosition" : "{-0.005125, -0.051328}",
+                  "uuid" : "897E4B25-57B4-4AD8-81FC-5068FBC8B73E",
+                  "name" : "UntitledBone_13",
+                  "anchor" : "{0.500000, 1.000000}",
+                  "size" : "{4.000000, 30.043617}",
+                  "nodeType" : "LHBone",
+                  "alpha" : 255,
+                  "scale" : "{1.000000, 1.000000}",
+                  "minAngle" : -10,
+                  "zOrder" : 0,
+                  "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                }
+              ],
+              "name" : "UntitledBone",
+              "anchor" : "{0.500000, 1.000000}",
+              "size" : "{4.000000, 55.267124}",
+              "nodeType" : "LHBone",
+              "alpha" : 255,
+              "scale" : "{1.000000, 1.000000}",
+              "minAngle" : -10,
+              "zOrder" : 0,
+              "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+            },
+            {
+              "rotation" : 156.7388,
+              "parentUUID" : "73E05B59-922B-44FD-AAAD-0C8D01654744",
+              "connections" : [
+                {
+                  "angleDelta" : 181.8554,
+                  "nodeName" : "upperLeg_L",
+                  "positionDelta" : "{-0.867523, -1.032223}"
+                }
+              ],
+              "tags" : [
+                "DEFAULT"
+              ],
+              "rigid" : true,
+              "maxAngle" : 240,
+              "generalPosition" : "{0.012895, -0.013741}",
+              "uuid" : "6CE4319F-68C7-4231-B822-9BC1221E9CCD",
+              "children" : [
+                {
+                  "rotation" : 1.035521,
+                  "parentUUID" : "6CE4319F-68C7-4231-B822-9BC1221E9CCD",
+                  "connections" : [
+                    {
+                      "angleDelta" : 178.4976,
+                      "nodeName" : "lowerLeg_L",
+                      "positionDelta" : "{-2.271555, 0.401375}"
+                    }
+                  ],
+                  "tags" : [
+                    "DEFAULT"
+                  ],
+                  "rigid" : true,
+                  "maxAngle" : 110,
+                  "generalPosition" : "{-0.000052, -0.016551}",
+                  "uuid" : "FBEBFB12-1111-4672-8B54-A9A71782C963",
+                  "children" : [
+                    {
+                      "rotation" : 296.9735,
+                      "parentUUID" : "FBEBFB12-1111-4672-8B54-A9A71782C963",
+                      "connections" : [
+                        {
+                          "angleDelta" : 246.1538,
+                          "nodeName" : "foot_L",
+                          "positionDelta" : "{3.530565, -2.250928}"
+                        }
+                      ],
+                      "tags" : [
+                        "DEFAULT"
+                      ],
+                      "rigid" : true,
+                      "maxAngle" : 20,
+                      "generalPosition" : "{-0.000748, -0.018488}",
+                      "uuid" : "C5818B86-20DC-472E-AA31-98A44D7DA016",
+                      "name" : "UntitledBone_3",
+                      "anchor" : "{0.500000, 1.000000}",
+                      "size" : "{4.000000, 20.228800}",
+                      "nodeType" : "LHBone",
+                      "alpha" : 255,
+                      "scale" : "{1.000000, 1.000000}",
+                      "minAngle" : -90,
+                      "zOrder" : 0,
+                      "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                    }
+                  ],
+                  "name" : "UntitledBone_2",
+                  "anchor" : "{0.500000, 1.000000}",
+                  "size" : "{4.000000, 29.343765}",
+                  "nodeType" : "LHBone",
+                  "alpha" : 255,
+                  "scale" : "{1.000000, 1.000000}",
+                  "minAngle" : 0,
+                  "zOrder" : 0,
+                  "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                }
+              ],
+              "name" : "UntitledBone_1",
+              "anchor" : "{0.500000, 1.000000}",
+              "size" : "{4.000000, 21.654726}",
+              "nodeType" : "LHBone",
+              "alpha" : 255,
+              "scale" : "{1.000000, 1.000000}",
+              "minAngle" : 70,
+              "zOrder" : 0,
+              "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+            },
+            {
+              "rotation" : 187.8929,
+              "parentUUID" : "73E05B59-922B-44FD-AAAD-0C8D01654744",
+              "connections" : [
+                {
+                  "angleDelta" : -183.9178,
+                  "nodeName" : "upperLeg_R",
+                  "positionDelta" : "{-0.541070, 2.386896}"
+                }
+              ],
+              "tags" : [
+                "DEFAULT"
+              ],
+              "rigid" : true,
+              "maxAngle" : -240,
+              "generalPosition" : "{-0.014281, -0.014442}",
+              "uuid" : "650C73A3-B000-41A4-AA43-B31F98A20D6C",
+              "children" : [
+                {
+                  "rotation" : 0,
+                  "parentUUID" : "650C73A3-B000-41A4-AA43-B31F98A20D6C",
+                  "connections" : [
+                    {
+                      "angleDelta" : -178.5454,
+                      "nodeName" : "lowerLeg_R",
+                      "positionDelta" : "{1.345365, 3.640602}"
+                    }
+                  ],
+                  "tags" : [
+                    "DEFAULT"
+                  ],
+                  "rigid" : true,
+                  "maxAngle" : -110,
+                  "generalPosition" : "{0.000161, -0.020534}",
+                  "uuid" : "9F083B82-A1F6-4403-AF49-AF87D6683606",
+                  "children" : [
+                    {
+                      "rotation" : 73.02856,
+                      "parentUUID" : "9F083B82-A1F6-4403-AF49-AF87D6683606",
+                      "connections" : [
+                        {
+                          "angleDelta" : -253.8758,
+                          "nodeName" : "foot_R",
+                          "positionDelta" : "{-2.526657, -0.943876}"
+                        }
+                      ],
+                      "tags" : [
+                        "DEFAULT"
+                      ],
+                      "rigid" : true,
+                      "maxAngle" : -20,
+                      "generalPosition" : "{0.000300, -0.019880}",
+                      "uuid" : "7070EA2F-62A0-4A54-96C4-6EFF4FBF631D",
+                      "name" : "UntitledBone_6",
+                      "anchor" : "{0.500000, 1.000000}",
+                      "size" : "{4.000000, 18.511036}",
+                      "nodeType" : "LHBone",
+                      "alpha" : 255,
+                      "scale" : "{1.000000, 1.000000}",
+                      "minAngle" : 90,
+                      "zOrder" : 0,
+                      "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                    }
+                  ],
+                  "name" : "UntitledBone_5",
+                  "anchor" : "{0.500000, 1.000000}",
+                  "size" : "{4.000000, 22.645191}",
+                  "nodeType" : "LHBone",
+                  "alpha" : 255,
+                  "scale" : "{1.000000, 1.000000}",
+                  "minAngle" : 0,
+                  "zOrder" : 0,
+                  "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                }
+              ],
+              "name" : "UntitledBone_4",
+              "anchor" : "{0.500000, 1.000000}",
+              "size" : "{4.000000, 28.518618}",
+              "nodeType" : "LHBone",
+              "alpha" : 255,
+              "scale" : "{1.000000, 1.000000}",
+              "minAngle" : -70,
+              "zOrder" : 0,
+              "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+            }
+          ],
+          "name" : "girlSoldier",
+          "anchor" : "{0.500000, 1.000000}",
+          "size" : "{8.000000, 8.000000}",
+          "animations" : [
+            {
+              "active" : true,
+              "repetitions" : 0,
+              "totalFrames" : 30,
+              "fps" : 24,
+              "properties" : {
+                "Skeletal Transform" : {
+                  "Frames" : [
+                    {
+                      "bonesInfo" : {
+                        "UntitledBone_11" : {
+                          "pos" : "{0.000000, -11.246148}",
+                          "rot" : 0
+                        },
+                        "UntitledBone_1" : {
+                          "pos" : "{12.379230, -8.794380}",
+                          "rot" : 156.7388
+                        },
+                        "UntitledBone" : {
+                          "pos" : "{-0.192886, -4.672087}",
+                          "rot" : 0
+                        },
+                        "UntitledBone_6" : {
+                          "pos" : "{0.287701, -12.723169}",
+                          "rot" : 73.02856
+                        },
+                        "UntitledBone_9" : {
+                          "pos" : "{0.053111, -11.744973}",
+                          "rot" : 1.256321
+                        },
+                        "UntitledBone_4" : {
+                          "pos" : "{-13.709632, -9.242984}",
+                          "rot" : 187.8929
+                        },
+                        "UntitledBone_10" : {
+                          "pos" : "{-17.090405, -21.533483}",
+                          "rot" : 258.4593
+                        },
+                        "UntitledBone_7" : {
+                          "pos" : "{13.246303, -24.512684}",
+                          "rot" : 92.42578
+                        },
+                        "UntitledBone_2" : {
+                          "pos" : "{0.316760, -14.161160}",
+                          "rot" : 1.035521
+                        },
+                        "UntitledBone_13" : {
+                          "pos" : "{-4.919678, -32.849911}",
+                          "rot" : 10.11575
+                        },
+                        "__rootBone__" : {
+                          "pos" : "{797.776448, 285.385283}",
+                          "rot" : 0
+                        },
+                        "UntitledBone_5" : {
+                          "pos" : "{0.154908, -13.141962}",
+                          "rot" : 0
+                        },
+                        "UntitledBone_12" : {
+                          "pos" : "{0.000000, -10.533534}",
+                          "rot" : 358.0071
+                        },
+                        "UntitledBone_8" : {
+                          "pos" : "{0.000000, -7.822852}",
+                          "rot" : 5.546517
+                        },
+                        "UntitledBone_3" : {
+                          "pos" : "{-0.718435, -11.832556}",
+                          "rot" : 296.9735
+                        }
+                      },
+                      "frameIndex" : 0
+                    },
+                    {
+                      "bonesInfo" : {
+                        "UntitledBone_11" : {
+                          "pos" : "{0.000000, -11.246148}",
+                          "rot" : 289.6194
+                        },
+                        "UntitledBone_1" : {
+                          "pos" : "{12.379230, -8.794380}",
+                          "rot" : 89.34589
+                        },
+                        "UntitledBone" : {
+                          "pos" : "{-0.192886, -4.672087}",
+                          "rot" : 10
+                        },
+                        "UntitledBone_6" : {
+                          "pos" : "{0.287701, -12.723169}",
+                          "rot" : 17.00537
+                        },
+                        "UntitledBone_9" : {
+                          "pos" : "{0.053111, -11.744973}",
+                          "rot" : 292.3855
+                        },
+                        "UntitledBone_4" : {
+                          "pos" : "{-13.709632, -9.242984}",
+                          "rot" : 236.0197
+                        },
+                        "UntitledBone_10" : {
+                          "pos" : "{-17.090405, -21.533483}",
+                          "rot" : 217.997
+                        },
+                        "UntitledBone_7" : {
+                          "pos" : "{13.246303, -24.512684}",
+                          "rot" : 70
+                        },
+                        "UntitledBone_2" : {
+                          "pos" : "{0.316760, -14.161160}",
+                          "rot" : 87.61405
+                        },
+                        "UntitledBone_13" : {
+                          "pos" : "{-4.919678, -32.849911}",
+                          "rot" : 350
+                        },
+                        "__rootBone__" : {
+                          "pos" : "{797.776448, 285.385283}",
+                          "rot" : 0
+                        },
+                        "UntitledBone_5" : {
+                          "pos" : "{0.154908, -13.141962}",
+                          "rot" : 291.0727
+                        },
+                        "UntitledBone_12" : {
+                          "pos" : "{0.000000, -10.533534}",
+                          "rot" : 288.4318
+                        },
+                        "UntitledBone_8" : {
+                          "pos" : "{0.000000, -7.822852}",
+                          "rot" : 50.73489
+                        },
+                        "UntitledBone_3" : {
+                          "pos" : "{-0.718435, -11.832556}",
+                          "rot" : 331.2389
+                        }
+                      },
+                      "frameIndex" : 14
+                    },
+                    {
+                      "bonesInfo" : {
+                        "UntitledBone_11" : {
+                          "pos" : "{0.000000, -11.246148}",
+                          "rot" : 0
+                        },
+                        "UntitledBone_1" : {
+                          "pos" : "{12.379230, -8.794380}",
+                          "rot" : 156.7388
+                        },
+                        "UntitledBone" : {
+                          "pos" : "{-0.192886, -4.672087}",
+                          "rot" : 0
+                        },
+                        "UntitledBone_6" : {
+                          "pos" : "{0.287701, -12.723169}",
+                          "rot" : 73.02856
+                        },
+                        "UntitledBone_9" : {
+                          "pos" : "{0.053111, -11.744973}",
+                          "rot" : 1.256321
+                        },
+                        "UntitledBone_4" : {
+                          "pos" : "{-13.709632, -9.242984}",
+                          "rot" : 187.8929
+                        },
+                        "UntitledBone_10" : {
+                          "pos" : "{-17.090405, -21.533483}",
+                          "rot" : 258.4593
+                        },
+                        "UntitledBone_7" : {
+                          "pos" : "{13.246303, -24.512684}",
+                          "rot" : 92.42578
+                        },
+                        "UntitledBone_2" : {
+                          "pos" : "{0.316760, -14.161160}",
+                          "rot" : 1.035521
+                        },
+                        "UntitledBone_13" : {
+                          "pos" : "{-4.919678, -32.849911}",
+                          "rot" : 10.11575
+                        },
+                        "__rootBone__" : {
+                          "pos" : "{797.776448, 285.385283}",
+                          "rot" : 0
+                        },
+                        "UntitledBone_5" : {
+                          "pos" : "{0.154908, -13.141962}",
+                          "rot" : 0
+                        },
+                        "UntitledBone_12" : {
+                          "pos" : "{0.000000, -10.533534}",
+                          "rot" : 358.0071
+                        },
+                        "UntitledBone_8" : {
+                          "pos" : "{0.000000, -7.822852}",
+                          "rot" : 5.546517
+                        },
+                        "UntitledBone_3" : {
+                          "pos" : "{-0.718435, -11.832556}",
+                          "rot" : 296.9735
+                        }
+                      },
+                      "frameIndex" : 29
+                    }
+                  ],
+                  "type" : "LHRootBoneProperty"
+                }
+              },
+              "name" : "test"
+            }
+          ],
+          "nodeType" : "LHBone",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "minAngle" : -180,
+          "zOrder" : 0,
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "connections" : [
+
+          ],
+          "tags" : [
+            "DEFAULT"
+          ],
+          "rigid" : true,
+          "maxAngle" : 180,
+          "generalPosition" : "{0.342276, 0.457484}",
+          "uuid" : "916C2D8D-4212-4EBB-80CE-E418619641BD",
+          "children" : [
+            {
+              "rotation" : 0,
+              "parentUUID" : "916C2D8D-4212-4EBB-80CE-E418619641BD",
+              "tags" : [
+                "DEFAULT"
+              ],
+              "generalPosition" : "{0.000000, 0.000000}",
+              "uuid" : "49ED4675-C062-4AD6-A633-FA44199E922F",
+              "children" : [
+                {
+                  "rotation" : 271.5363,
+                  "parentUUID" : "49ED4675-C062-4AD6-A633-FA44199E922F",
+                  "tags" : [
+                    "DEFAULT"
+                  ],
+                  "spriteUUID" : "793F10B3-014C-43F9-95D4-15710A65E62C",
+                  "spriteName" : "upperArm_L",
+                  "generalPosition" : "{0.027597, -0.079769}",
+                  "uuid" : "A70E6F4D-ACF9-492F-AD13-B9454F36A0CF",
+                  "children" : [
+                    {
+                      "rotation" : 365.5465,
+                      "parentUUID" : "A70E6F4D-ACF9-492F-AD13-B9454F36A0CF",
+                      "tags" : [
+                        "DEFAULT"
+                      ],
+                      "spriteUUID" : "0BE4C1E3-B61C-4279-8A2E-AEB5D58022F9",
+                      "spriteName" : "lowerArm_L",
+                      "generalPosition" : "{-0.001509, 0.038659}",
+                      "uuid" : "CD66E30D-FAAB-4A36-B9D5-BC48DF2233B7",
+                      "children" : [
+                        {
+                          "rotation" : 360,
+                          "parentUUID" : "CD66E30D-FAAB-4A36-B9D5-BC48DF2233B7",
+                          "tags" : [
+                            "DEFAULT"
+                          ],
+                          "spriteUUID" : "8CD78198-EF65-4D03-B4B5-71F37D06274F",
+                          "spriteName" : "hand_L",
+                          "generalPosition" : "{0.000467, 0.028019}",
+                          "uuid" : "EA5310AA-8A62-463E-A3C8-168E8972A2C9",
+                          "name" : "hand_L",
+                          "anchor" : "{0.500000, 0.500000}",
+                          "size" : "{26.000000, 25.000000}",
+                          "nodeType" : "LHSprite",
+                          "alpha" : 255,
+                          "scale" : "{1.000000, 1.000000}",
+                          "relativeImagePath" : "PublishFolder\/",
+                          "zOrder" : 0,
+                          "imageFileName" : "suitmanParts.png",
+                          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                        }
+                      ],
+                      "name" : "lowerArm_L",
+                      "anchor" : "{0.500000, 0.500000}",
+                      "size" : "{20.000000, 31.000000}",
+                      "nodeType" : "LHSprite",
+                      "alpha" : 255,
+                      "scale" : "{1.000000, 1.000000}",
+                      "relativeImagePath" : "PublishFolder\/",
+                      "zOrder" : 0,
+                      "imageFileName" : "suitmanParts.png",
+                      "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                    }
+                  ],
+                  "name" : "upperArm_L",
+                  "anchor" : "{0.500000, 0.500000}",
+                  "size" : "{21.000000, 34.000000}",
+                  "nodeType" : "LHSprite",
+                  "alpha" : 255,
+                  "scale" : "{1.000000, 1.000000}",
+                  "relativeImagePath" : "PublishFolder\/",
+                  "zOrder" : -1,
+                  "imageFileName" : "suitmanParts.png",
+                  "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                },
+                {
+                  "rotation" : 0,
+                  "parentUUID" : "49ED4675-C062-4AD6-A633-FA44199E922F",
+                  "tags" : [
+                    "DEFAULT"
+                  ],
+                  "spriteUUID" : "440E5021-C4AA-43E9-997A-FF83D9893615",
+                  "spriteName" : "Body",
+                  "generalPosition" : "{-0.000385, -0.052649}",
+                  "uuid" : "680FDF12-142B-4EB2-B42E-7E84ACEB3573",
+                  "name" : "Body",
+                  "anchor" : "{0.500000, 0.500000}",
+                  "size" : "{50.000000, 66.000000}",
+                  "nodeType" : "LHSprite",
+                  "alpha" : 255,
+                  "scale" : "{1.000000, 1.000000}",
+                  "relativeImagePath" : "PublishFolder\/",
+                  "zOrder" : 0,
+                  "imageFileName" : "suitmanParts.png",
+                  "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                },
+                {
+                  "rotation" : 359.3554,
+                  "parentUUID" : "49ED4675-C062-4AD6-A633-FA44199E922F",
+                  "tags" : [
+                    "DEFAULT"
+                  ],
+                  "spriteUUID" : "2D48ED6B-95CC-4A04-8FCA-19D985899E4D",
+                  "spriteName" : "HeadNormal",
+                  "generalPosition" : "{0.001439, -0.175172}",
+                  "uuid" : "1DA2ADC9-034C-41AE-9CD5-636330EB51BD",
+                  "name" : "HeadNormal",
+                  "anchor" : "{0.500000, 0.500000}",
+                  "size" : "{113.000000, 101.000000}",
+                  "nodeType" : "LHSprite",
+                  "alpha" : 255,
+                  "scale" : "{1.000000, 1.000000}",
+                  "relativeImagePath" : "PublishFolder\/",
+                  "zOrder" : 1,
+                  "imageFileName" : "suitmanParts.png",
+                  "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                },
+                {
+                  "rotation" : 337.2559,
+                  "parentUUID" : "49ED4675-C062-4AD6-A633-FA44199E922F",
+                  "tags" : [
+                    "DEFAULT"
+                  ],
+                  "spriteUUID" : "C637A851-D382-4663-A194-B149F1ED33A2",
+                  "spriteName" : "upperLeg_L",
+                  "generalPosition" : "{0.012738, -0.013810}",
+                  "uuid" : "7D5301B1-57D0-4D38-806B-07E18805E65F",
+                  "children" : [
+                    {
+                      "rotation" : 360,
+                      "parentUUID" : "7D5301B1-57D0-4D38-806B-07E18805E65F",
+                      "tags" : [
+                        "DEFAULT"
+                      ],
+                      "spriteUUID" : "05254FE2-F0BA-48CD-BCF8-E0A6AA727992",
+                      "spriteName" : "foot_L",
+                      "generalPosition" : "{0.010186, 0.076290}",
+                      "uuid" : "B5949882-6A8C-4D62-B0C3-434235D9E58B",
+                      "name" : "foot_L",
+                      "anchor" : "{0.500000, 0.500000}",
+                      "size" : "{48.000000, 23.000000}",
+                      "nodeType" : "LHSprite",
+                      "alpha" : 255,
+                      "scale" : "{1.000000, 1.000000}",
+                      "relativeImagePath" : "PublishFolder\/",
+                      "zOrder" : 0,
+                      "imageFileName" : "suitmanParts.png",
+                      "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                    },
+                    {
+                      "rotation" : 360,
+                      "parentUUID" : "7D5301B1-57D0-4D38-806B-07E18805E65F",
+                      "tags" : [
+                        "DEFAULT"
+                      ],
+                      "spriteUUID" : "F37EB3CE-CE23-4DDE-99CA-494996749234",
+                      "spriteName" : "lowerLeg_L",
+                      "generalPosition" : "{0.000557, 0.041746}",
+                      "uuid" : "EF4A6CA4-C488-4B1D-89B9-CA8A10B52CDF",
+                      "name" : "lowerLeg_L",
+                      "anchor" : "{0.500000, 0.500000}",
+                      "size" : "{23.000000, 35.000000}",
+                      "nodeType" : "LHSprite",
+                      "alpha" : 255,
+                      "scale" : "{1.000000, 1.000000}",
+                      "relativeImagePath" : "PublishFolder\/",
+                      "zOrder" : 1,
+                      "imageFileName" : "suitmanParts.png",
+                      "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                    }
+                  ],
+                  "name" : "upperLeg_L",
+                  "anchor" : "{0.513937, 0.239720}",
+                  "size" : "{23.000000, 33.000000}",
+                  "nodeType" : "LHSprite",
+                  "alpha" : 255,
+                  "scale" : "{1.000000, 1.000000}",
+                  "relativeImagePath" : "PublishFolder\/",
+                  "zOrder" : 1,
+                  "imageFileName" : "suitmanParts.png",
+                  "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                },
+                {
+                  "rotation" : 7.971664,
+                  "parentUUID" : "49ED4675-C062-4AD6-A633-FA44199E922F",
+                  "tags" : [
+                    "DEFAULT"
+                  ],
+                  "spriteUUID" : "68C58920-B24F-486F-879F-7E949FE507D9",
+                  "spriteName" : "upperLeg_R",
+                  "generalPosition" : "{-0.014205, -0.012569}",
+                  "uuid" : "2FED274A-A8AF-4AD2-AA5C-8308EE9A8171",
+                  "children" : [
+                    {
+                      "rotation" : 0,
+                      "parentUUID" : "2FED274A-A8AF-4AD2-AA5C-8308EE9A8171",
+                      "tags" : [
+                        "DEFAULT"
+                      ],
+                      "spriteUUID" : "B47A794C-3E85-44BD-985C-0274DDF453B9",
+                      "spriteName" : "foot_R",
+                      "generalPosition" : "{-0.008808, 0.076508}",
+                      "uuid" : "366F9374-40B9-4891-A666-E34C796F639C",
+                      "name" : "foot_R",
+                      "anchor" : "{0.500000, 0.500000}",
+                      "size" : "{48.000000, 23.000000}",
+                      "nodeType" : "LHSprite",
+                      "alpha" : 255,
+                      "scale" : "{1.000000, 1.000000}",
+                      "relativeImagePath" : "PublishFolder\/",
+                      "zOrder" : 0,
+                      "imageFileName" : "suitmanParts.png",
+                      "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                    },
+                    {
+                      "rotation" : 0,
+                      "parentUUID" : "2FED274A-A8AF-4AD2-AA5C-8308EE9A8171",
+                      "tags" : [
+                        "DEFAULT"
+                      ],
+                      "spriteUUID" : "AEF2A035-EAC3-4C2C-898C-7ABD9D4E8A69",
+                      "spriteName" : "lowerLeg_R",
+                      "generalPosition" : "{0.000416, 0.040894}",
+                      "uuid" : "EC305F48-B40E-42BD-B2B5-A2BC12CF2861",
+                      "name" : "lowerLeg_R",
+                      "anchor" : "{0.500000, 0.500000}",
+                      "size" : "{23.000000, 35.000000}",
+                      "nodeType" : "LHSprite",
+                      "alpha" : 255,
+                      "scale" : "{1.000000, 1.000000}",
+                      "relativeImagePath" : "PublishFolder\/",
+                      "zOrder" : 0,
+                      "imageFileName" : "suitmanParts.png",
+                      "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                    }
+                  ],
+                  "name" : "upperLeg_R",
+                  "anchor" : "{0.495944, 0.279059}",
+                  "size" : "{23.000000, 33.000000}",
+                  "nodeType" : "LHSprite",
+                  "alpha" : 255,
+                  "scale" : "{1.000000, 1.000000}",
+                  "relativeImagePath" : "PublishFolder\/",
+                  "zOrder" : 1,
+                  "imageFileName" : "suitmanParts.png",
+                  "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                },
+                {
+                  "rotation" : 68.26079,
+                  "parentUUID" : "49ED4675-C062-4AD6-A633-FA44199E922F",
+                  "tags" : [
+                    "DEFAULT"
+                  ],
+                  "spriteUUID" : "15D4F5E8-CA0B-4054-9BE3-733E8D59C992",
+                  "spriteName" : "upperArm_R",
+                  "generalPosition" : "{-0.029685, -0.078683}",
+                  "uuid" : "1181633D-1B22-46AF-B838-DE9AA43C66DB",
+                  "children" : [
+                    {
+                      "rotation" : 8.71579,
+                      "parentUUID" : "1181633D-1B22-46AF-B838-DE9AA43C66DB",
+                      "tags" : [
+                        "DEFAULT"
+                      ],
+                      "spriteUUID" : "D1460380-6F90-4ABA-8692-AF69CAEB9231",
+                      "spriteName" : "lowerArm_R",
+                      "generalPosition" : "{-0.004998, 0.036189}",
+                      "uuid" : "0C1CDAE6-0DBA-420E-979A-A99772ED821F",
+                      "children" : [
+                        {
+                          "rotation" : 1.525879e-05,
+                          "parentUUID" : "0C1CDAE6-0DBA-420E-979A-A99772ED821F",
+                          "tags" : [
+                            "DEFAULT"
+                          ],
+                          "spriteUUID" : "735F36A3-38B9-43C0-BEBE-41DBBFF6E564",
+                          "spriteName" : "hand_R",
+                          "generalPosition" : "{0.004498, 0.030224}",
+                          "uuid" : "57828905-602F-4714-ACD0-7BC16246D1FB",
+                          "name" : "hand_R",
+                          "anchor" : "{0.500000, 0.500000}",
+                          "size" : "{30.000000, 27.000000}",
+                          "nodeType" : "LHSprite",
+                          "alpha" : 255,
+                          "scale" : "{1.000000, 1.000000}",
+                          "relativeImagePath" : "PublishFolder\/",
+                          "zOrder" : 0,
+                          "imageFileName" : "suitmanParts.png",
+                          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                        }
+                      ],
+                      "name" : "lowerArm_R",
+                      "anchor" : "{0.500000, 0.500000}",
+                      "size" : "{21.000000, 32.000000}",
+                      "nodeType" : "LHSprite",
+                      "alpha" : 255,
+                      "scale" : "{1.000000, 1.000000}",
+                      "relativeImagePath" : "PublishFolder\/",
+                      "zOrder" : 0,
+                      "imageFileName" : "suitmanParts.png",
+                      "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                    }
+                  ],
+                  "name" : "upperArm_R",
+                  "anchor" : "{0.500000, 0.500000}",
+                  "size" : "{21.000000, 33.000000}",
+                  "nodeType" : "LHSprite",
+                  "alpha" : 255,
+                  "scale" : "{1.000000, 1.000000}",
+                  "relativeImagePath" : "PublishFolder\/",
+                  "zOrder" : 2,
+                  "imageFileName" : "suitmanParts.png",
+                  "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                }
+              ],
+              "name" : "Nodes",
+              "anchor" : "{0.500000, 0.500000}",
+              "size" : "{0.000000, 0.000000}",
+              "lockedNodes" : false,
+              "nodeType" : "LHBoneNodes",
+              "alpha" : 255,
+              "scale" : "{1.000000, 1.000000}",
+              "zOrder" : -9999,
+              "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+            },
+            {
+              "rotation" : 0,
+              "parentUUID" : "916C2D8D-4212-4EBB-80CE-E418619641BD",
+              "connections" : [
+                {
+                  "angleDelta" : 0,
+                  "nodeName" : "Body",
+                  "positionDelta" : "{-0.176640, -1.389798}"
+                }
+              ],
+              "tags" : [
+                "DEFAULT"
+              ],
+              "rigid" : true,
+              "maxAngle" : 10,
+              "generalPosition" : "{-0.000201, -0.007300}",
+              "uuid" : "82829E2E-A073-4E8E-A008-A95092BDB48D",
+              "children" : [
+                {
+                  "rotation" : 92.42578,
+                  "parentUUID" : "82829E2E-A073-4E8E-A008-A95092BDB48D",
+                  "connections" : [
+                    {
+                      "angleDelta" : 179.1106,
+                      "nodeName" : "upperArm_L",
+                      "positionDelta" : "{1.250105, 3.635788}"
+                    }
+                  ],
+                  "tags" : [
+                    "DEFAULT"
+                  ],
+                  "rigid" : true,
+                  "maxAngle" : 240,
+                  "generalPosition" : "{0.015690, -0.032016}",
+                  "uuid" : "09CA3EF4-A779-48D4-BF3F-ADA50FFB2A9F",
+                  "children" : [
+                    {
+                      "rotation" : 5.546517,
+                      "parentUUID" : "09CA3EF4-A779-48D4-BF3F-ADA50FFB2A9F",
+                      "connections" : [
+                        {
+                          "angleDelta" : 179.1106,
+                          "nodeName" : "lowerArm_L",
+                          "positionDelta" : "{1.063060, 0.127057}"
+                        }
+                      ],
+                      "tags" : [
+                        "DEFAULT"
+                      ],
+                      "rigid" : true,
+                      "maxAngle" : 110,
+                      "generalPosition" : "{0.000168, -0.015548}",
+                      "uuid" : "7699DCF3-0D60-461E-8C32-EA435FB4C946",
+                      "children" : [
+                        {
+                          "rotation" : 1.256321,
+                          "parentUUID" : "7699DCF3-0D60-461E-8C32-EA435FB4C946",
+                          "connections" : [
+                            {
+                              "angleDelta" : 177.8542,
+                              "nodeName" : "hand_L",
+                              "positionDelta" : "{0.562961, -2.284394}"
+                            }
+                          ],
+                          "tags" : [
+                            "DEFAULT"
+                          ],
+                          "rigid" : true,
+                          "maxAngle" : 100,
+                          "generalPosition" : "{-0.000416, -0.015502}",
+                          "uuid" : "0FD990B1-57D0-4685-96FB-247C8314BC0D",
+                          "name" : "UntitledBone_9",
+                          "anchor" : "{0.500000, 1.000000}",
+                          "size" : "{4.000000, 11.209096}",
+                          "nodeType" : "LHBone",
+                          "alpha" : 255,
+                          "scale" : "{1.000000, 1.000000}",
+                          "minAngle" : -70,
+                          "zOrder" : 0,
+                          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                        }
+                      ],
+                      "name" : "UntitledBone_8",
+                      "anchor" : "{0.500000, 1.000000}",
+                      "size" : "{4.000000, 22.915226}",
+                      "nodeType" : "LHBone",
+                      "alpha" : 255,
+                      "scale" : "{1.000000, 1.000000}",
+                      "minAngle" : 0,
+                      "zOrder" : 0,
+                      "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                    }
+                  ],
+                  "name" : "UntitledBone_7",
+                  "anchor" : "{0.500000, 1.000000}",
+                  "size" : "{4.000000, 30.645704}",
+                  "nodeType" : "LHBone",
+                  "alpha" : 255,
+                  "scale" : "{1.000000, 1.000000}",
+                  "minAngle" : 70,
+                  "zOrder" : 0,
+                  "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                },
+                {
+                  "rotation" : 258.4593,
+                  "parentUUID" : "82829E2E-A073-4E8E-A008-A95092BDB48D",
+                  "connections" : [
+                    {
+                      "angleDelta" : -190.1985,
+                      "nodeName" : "upperArm_R",
+                      "positionDelta" : "{-1.168017, -0.437501}"
+                    }
+                  ],
+                  "tags" : [
+                    "DEFAULT"
+                  ],
+                  "rigid" : true,
+                  "maxAngle" : 20,
+                  "generalPosition" : "{-0.017803, -0.033646}",
+                  "uuid" : "DF7D0625-D41F-4530-AAF1-8E7DEB54D847",
+                  "children" : [
+                    {
+                      "rotation" : 0,
+                      "parentUUID" : "DF7D0625-D41F-4530-AAF1-8E7DEB54D847",
+                      "connections" : [
+                        {
+                          "angleDelta" : -181.4827,
+                          "nodeName" : "lowerArm_R",
+                          "positionDelta" : "{-0.546602, -2.302452}"
+                        }
+                      ],
+                      "tags" : [
+                        "DEFAULT"
+                      ],
+                      "rigid" : true,
+                      "maxAngle" : -140,
+                      "generalPosition" : "{0.000000, -0.017572}",
+                      "uuid" : "CED19DEC-E340-4AA8-8C5A-FA218D1F97C7",
+                      "children" : [
+                        {
+                          "rotation" : 358.0071,
+                          "parentUUID" : "CED19DEC-E340-4AA8-8C5A-FA218D1F97C7",
+                          "connections" : [
+                            {
+                              "angleDelta" : -179.4898,
+                              "nodeName" : "hand_R",
+                              "positionDelta" : "{-4.978185, -5.419915}"
+                            }
+                          ],
+                          "tags" : [
+                            "DEFAULT"
+                          ],
+                          "rigid" : true,
+                          "maxAngle" : 90,
+                          "generalPosition" : "{0.000000, -0.016459}",
+                          "uuid" : "0C9EA462-DA0D-413E-AA06-527CB26EC26D",
+                          "name" : "UntitledBone_12",
+                          "anchor" : "{0.500000, 1.000000}",
+                          "size" : "{4.000000, 11.507619}",
+                          "nodeType" : "LHBone",
+                          "alpha" : 255,
+                          "scale" : "{1.000000, 1.000000}",
+                          "minAngle" : -90,
+                          "zOrder" : 0,
+                          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                        }
+                      ],
+                      "name" : "UntitledBone_11",
+                      "anchor" : "{0.500000, 1.000000}",
+                      "size" : "{4.000000, 21.067068}",
+                      "nodeType" : "LHBone",
+                      "alpha" : 255,
+                      "scale" : "{1.000000, 1.000000}",
+                      "minAngle" : 0,
+                      "zOrder" : 0,
+                      "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                    }
+                  ],
+                  "name" : "UntitledBone_10",
+                  "anchor" : "{0.500000, 1.000000}",
+                  "size" : "{4.000000, 22.492296}",
+                  "nodeType" : "LHBone",
+                  "alpha" : 255,
+                  "scale" : "{1.000000, 1.000000}",
+                  "minAngle" : 340,
+                  "zOrder" : 0,
+                  "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                },
+                {
+                  "rotation" : 10.11575,
+                  "parentUUID" : "82829E2E-A073-4E8E-A008-A95092BDB48D",
+                  "connections" : [
+                    {
+                      "angleDelta" : 349.2397,
+                      "nodeName" : "HeadNormal",
+                      "positionDelta" : "{-8.011711, -30.622050}"
+                    }
+                  ],
+                  "tags" : [
+                    "DEFAULT"
+                  ],
+                  "rigid" : true,
+                  "maxAngle" : 40,
+                  "generalPosition" : "{0.001505, -0.052286}",
+                  "uuid" : "6905DD21-2F3F-440A-A819-C36BB3201ECA",
+                  "name" : "UntitledBone_13",
+                  "anchor" : "{0.500000, 1.000000}",
+                  "size" : "{4.000000, 30.043617}",
+                  "nodeType" : "LHBone",
+                  "alpha" : 255,
+                  "scale" : "{1.000000, 1.000000}",
+                  "minAngle" : -10,
+                  "zOrder" : 0,
+                  "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                }
+              ],
+              "name" : "UntitledBone",
+              "anchor" : "{0.500000, 1.000000}",
+              "size" : "{4.000000, 55.267124}",
+              "nodeType" : "LHBone",
+              "alpha" : 255,
+              "scale" : "{1.000000, 1.000000}",
+              "minAngle" : -10,
+              "zOrder" : 0,
+              "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+            },
+            {
+              "rotation" : 156.7388,
+              "parentUUID" : "916C2D8D-4212-4EBB-80CE-E418619641BD",
+              "connections" : [
+                {
+                  "angleDelta" : 180.5171,
+                  "nodeName" : "upperLeg_L",
+                  "positionDelta" : "{0.121029, 10.927456}"
+                }
+              ],
+              "tags" : [
+                "DEFAULT"
+              ],
+              "rigid" : true,
+              "maxAngle" : 240,
+              "generalPosition" : "{0.012895, -0.013741}",
+              "uuid" : "91F789DC-1AF1-4562-ABA2-44D352BF814C",
+              "children" : [
+                {
+                  "rotation" : 1.035521,
+                  "parentUUID" : "91F789DC-1AF1-4562-ABA2-44D352BF814C",
+                  "connections" : [
+                    {
+                      "angleDelta" : 179.4816,
+                      "nodeName" : "lowerLeg_L",
+                      "positionDelta" : "{-0.275952, 4.456763}"
+                    }
+                  ],
+                  "tags" : [
+                    "DEFAULT"
+                  ],
+                  "rigid" : true,
+                  "maxAngle" : 110,
+                  "generalPosition" : "{0.000330, -0.022127}",
+                  "uuid" : "2FFDB33D-915B-4E11-AF8A-5193E49F551E",
+                  "children" : [
+                    {
+                      "rotation" : 296.9735,
+                      "parentUUID" : "2FFDB33D-915B-4E11-AF8A-5193E49F551E",
+                      "connections" : [
+                        {
+                          "angleDelta" : 242.5081,
+                          "nodeName" : "foot_L",
+                          "positionDelta" : "{1.027880, -0.508831}"
+                        }
+                      ],
+                      "tags" : [
+                        "DEFAULT"
+                      ],
+                      "rigid" : true,
+                      "maxAngle" : 20,
+                      "generalPosition" : "{-0.000748, -0.018488}",
+                      "uuid" : "7C668747-5359-42D2-ACFF-635DCFB0564A",
+                      "name" : "UntitledBone_3",
+                      "anchor" : "{0.500000, 1.000000}",
+                      "size" : "{4.000000, 20.228800}",
+                      "nodeType" : "LHBone",
+                      "alpha" : 255,
+                      "scale" : "{1.000000, 1.000000}",
+                      "minAngle" : -90,
+                      "zOrder" : 0,
+                      "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                    }
+                  ],
+                  "name" : "UntitledBone_2",
+                  "anchor" : "{0.500000, 1.000000}",
+                  "size" : "{4.000000, 29.343765}",
+                  "nodeType" : "LHBone",
+                  "alpha" : 255,
+                  "scale" : "{1.000000, 1.000000}",
+                  "minAngle" : 0,
+                  "zOrder" : 0,
+                  "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                }
+              ],
+              "name" : "UntitledBone_1",
+              "anchor" : "{0.500000, 1.000000}",
+              "size" : "{4.000000, 21.654726}",
+              "nodeType" : "LHBone",
+              "alpha" : 255,
+              "scale" : "{1.000000, 1.000000}",
+              "minAngle" : 70,
+              "zOrder" : 0,
+              "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+            },
+            {
+              "rotation" : 187.8929,
+              "parentUUID" : "916C2D8D-4212-4EBB-80CE-E418619641BD",
+              "connections" : [
+                {
+                  "angleDelta" : -179.9212,
+                  "nodeName" : "upperLeg_R",
+                  "positionDelta" : "{0.136535, 11.580946}"
+                }
+              ],
+              "tags" : [
+                "DEFAULT"
+              ],
+              "rigid" : true,
+              "maxAngle" : -240,
+              "generalPosition" : "{-0.013681, -0.016685}",
+              "uuid" : "0717E8BC-531F-4BEC-B8AF-BE9A8815D0B1",
+              "children" : [
+                {
+                  "rotation" : 0,
+                  "parentUUID" : "0717E8BC-531F-4BEC-B8AF-BE9A8815D0B1",
+                  "connections" : [
+                    {
+                      "angleDelta" : -179.9212,
+                      "nodeName" : "lowerLeg_R",
+                      "positionDelta" : "{-0.576039, 4.824323}"
+                    }
+                  ],
+                  "tags" : [
+                    "DEFAULT"
+                  ],
+                  "rigid" : true,
+                  "maxAngle" : -110,
+                  "generalPosition" : "{0.000277, -0.016226}",
+                  "uuid" : "A6C63181-9F5F-47BA-999B-5C870EAB41BD",
+                  "children" : [
+                    {
+                      "rotation" : 73.02856,
+                      "parentUUID" : "A6C63181-9F5F-47BA-999B-5C870EAB41BD",
+                      "connections" : [
+                        {
+                          "angleDelta" : -252.9498,
+                          "nodeName" : "foot_R",
+                          "positionDelta" : "{-2.663664, 0.055009}"
+                        }
+                      ],
+                      "tags" : [
+                        "DEFAULT"
+                      ],
+                      "rigid" : true,
+                      "maxAngle" : -20,
+                      "generalPosition" : "{0.000300, -0.019880}",
+                      "uuid" : "07ABA575-FD5D-49A8-926A-84E020392933",
+                      "name" : "UntitledBone_6",
+                      "anchor" : "{0.500000, 1.000000}",
+                      "size" : "{4.000000, 18.511036}",
+                      "nodeType" : "LHBone",
+                      "alpha" : 255,
+                      "scale" : "{1.000000, 1.000000}",
+                      "minAngle" : 90,
+                      "zOrder" : 0,
+                      "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                    }
+                  ],
+                  "name" : "UntitledBone_5",
+                  "anchor" : "{0.500000, 1.000000}",
+                  "size" : "{4.000000, 32.645191}",
+                  "nodeType" : "LHBone",
+                  "alpha" : 255,
+                  "scale" : "{1.000000, 1.000000}",
+                  "minAngle" : 0,
+                  "zOrder" : 0,
+                  "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                }
+              ],
+              "name" : "UntitledBone_4",
+              "anchor" : "{0.500000, 1.000000}",
+              "size" : "{4.000000, 28.518618}",
+              "nodeType" : "LHBone",
+              "alpha" : 255,
+              "scale" : "{1.000000, 1.000000}",
+              "minAngle" : -70,
+              "zOrder" : 0,
+              "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+            }
+          ],
+          "name" : "suitman",
+          "anchor" : "{0.500000, 1.000000}",
+          "size" : "{8.000000, 8.000000}",
+          "animations" : [
+            {
+              "active" : true,
+              "repetitions" : 0,
+              "totalFrames" : 30,
+              "fps" : 24,
+              "properties" : {
+                "Skeletal Transform" : {
+                  "Frames" : [
+                    {
+                      "bonesInfo" : {
+                        "UntitledBone_11" : {
+                          "pos" : "{0.000000, -11.246148}",
+                          "rot" : 0
+                        },
+                        "UntitledBone_1" : {
+                          "pos" : "{12.379230, -8.794380}",
+                          "rot" : 156.7388
+                        },
+                        "UntitledBone" : {
+                          "pos" : "{-0.192886, -4.672087}",
+                          "rot" : 0
+                        },
+                        "UntitledBone_6" : {
+                          "pos" : "{0.287701, -12.723169}",
+                          "rot" : 73.02856
+                        },
+                        "UntitledBone_9" : {
+                          "pos" : "{0.053111, -11.744973}",
+                          "rot" : 1.256321
+                        },
+                        "UntitledBone_4" : {
+                          "pos" : "{-13.709632, -9.242984}",
+                          "rot" : 187.8929
+                        },
+                        "UntitledBone_10" : {
+                          "pos" : "{-17.090405, -21.533483}",
+                          "rot" : 258.4593
+                        },
+                        "UntitledBone_7" : {
+                          "pos" : "{13.246303, -24.512684}",
+                          "rot" : 92.42578
+                        },
+                        "UntitledBone_2" : {
+                          "pos" : "{0.316760, -14.161160}",
+                          "rot" : 1.035521
+                        },
+                        "UntitledBone_13" : {
+                          "pos" : "{-4.919678, -32.849911}",
+                          "rot" : 10.11575
+                        },
+                        "__rootBone__" : {
+                          "pos" : "{328.585092, 292.789516}",
+                          "rot" : 0
+                        },
+                        "UntitledBone_5" : {
+                          "pos" : "{0.154908, -13.141962}",
+                          "rot" : 0
+                        },
+                        "UntitledBone_12" : {
+                          "pos" : "{0.000000, -10.533534}",
+                          "rot" : 358.0071
+                        },
+                        "UntitledBone_8" : {
+                          "pos" : "{0.000000, -7.822852}",
+                          "rot" : 5.546517
+                        },
+                        "UntitledBone_3" : {
+                          "pos" : "{-0.718435, -11.832556}",
+                          "rot" : 296.9735
+                        }
+                      },
+                      "frameIndex" : 0
+                    },
+                    {
+                      "bonesInfo" : {
+                        "UntitledBone_11" : {
+                          "pos" : "{0.000000, -11.246148}",
+                          "rot" : 289.6194
+                        },
+                        "UntitledBone_1" : {
+                          "pos" : "{12.379230, -8.794380}",
+                          "rot" : 89.34589
+                        },
+                        "UntitledBone" : {
+                          "pos" : "{-0.192886, -4.672087}",
+                          "rot" : 10
+                        },
+                        "UntitledBone_6" : {
+                          "pos" : "{0.287701, -12.723169}",
+                          "rot" : 17.00537
+                        },
+                        "UntitledBone_9" : {
+                          "pos" : "{0.053111, -11.744973}",
+                          "rot" : 292.3855
+                        },
+                        "UntitledBone_4" : {
+                          "pos" : "{-13.709632, -9.242984}",
+                          "rot" : 236.0197
+                        },
+                        "UntitledBone_10" : {
+                          "pos" : "{-17.090405, -21.533483}",
+                          "rot" : 217.997
+                        },
+                        "UntitledBone_7" : {
+                          "pos" : "{13.246303, -24.512684}",
+                          "rot" : 70
+                        },
+                        "UntitledBone_2" : {
+                          "pos" : "{0.316760, -14.161160}",
+                          "rot" : 87.61405
+                        },
+                        "UntitledBone_13" : {
+                          "pos" : "{-4.919678, -32.849911}",
+                          "rot" : 350
+                        },
+                        "__rootBone__" : {
+                          "pos" : "{328.585092, 292.789516}",
+                          "rot" : 0
+                        },
+                        "UntitledBone_5" : {
+                          "pos" : "{0.154908, -13.141962}",
+                          "rot" : 291.0727
+                        },
+                        "UntitledBone_12" : {
+                          "pos" : "{0.000000, -10.533534}",
+                          "rot" : 288.4318
+                        },
+                        "UntitledBone_8" : {
+                          "pos" : "{0.000000, -7.822852}",
+                          "rot" : 50.73489
+                        },
+                        "UntitledBone_3" : {
+                          "pos" : "{-0.718435, -11.832556}",
+                          "rot" : 331.2389
+                        }
+                      },
+                      "frameIndex" : 14
+                    },
+                    {
+                      "bonesInfo" : {
+                        "UntitledBone_11" : {
+                          "pos" : "{0.000000, -11.246148}",
+                          "rot" : 0
+                        },
+                        "UntitledBone_1" : {
+                          "pos" : "{12.379230, -8.794380}",
+                          "rot" : 156.7388
+                        },
+                        "UntitledBone" : {
+                          "pos" : "{-0.192886, -4.672087}",
+                          "rot" : 0
+                        },
+                        "UntitledBone_6" : {
+                          "pos" : "{0.287701, -12.723169}",
+                          "rot" : 73.02856
+                        },
+                        "UntitledBone_9" : {
+                          "pos" : "{0.053111, -11.744973}",
+                          "rot" : 1.256321
+                        },
+                        "UntitledBone_4" : {
+                          "pos" : "{-13.709632, -9.242984}",
+                          "rot" : 187.8929
+                        },
+                        "UntitledBone_10" : {
+                          "pos" : "{-17.090405, -21.533483}",
+                          "rot" : 258.4593
+                        },
+                        "UntitledBone_7" : {
+                          "pos" : "{13.246303, -24.512684}",
+                          "rot" : 92.42578
+                        },
+                        "UntitledBone_2" : {
+                          "pos" : "{0.316760, -14.161160}",
+                          "rot" : 1.035521
+                        },
+                        "UntitledBone_13" : {
+                          "pos" : "{-4.919678, -32.849911}",
+                          "rot" : 10.11575
+                        },
+                        "__rootBone__" : {
+                          "pos" : "{328.585092, 292.789516}",
+                          "rot" : 0
+                        },
+                        "UntitledBone_5" : {
+                          "pos" : "{0.154908, -13.141962}",
+                          "rot" : 0
+                        },
+                        "UntitledBone_12" : {
+                          "pos" : "{0.000000, -10.533534}",
+                          "rot" : 358.0071
+                        },
+                        "UntitledBone_8" : {
+                          "pos" : "{0.000000, -7.822852}",
+                          "rot" : 5.546517
+                        },
+                        "UntitledBone_3" : {
+                          "pos" : "{-0.718435, -11.832556}",
+                          "rot" : 296.9735
+                        }
+                      },
+                      "frameIndex" : 29
+                    }
+                  ],
+                  "type" : "LHRootBoneProperty"
+                }
+              },
+              "name" : "test"
+            }
+          ],
+          "nodeType" : "LHBone",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "minAngle" : -180,
+          "zOrder" : 0,
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        }
+      ],
+      "name" : "GAME WORLD",
+      "anchor" : "{0.500000, 0.500000}",
+      "size" : "{128.000000, 128.000000}",
+      "nodeType" : "LHGameWorldNode",
+      "alpha" : 255,
+      "scale" : "{1.000000, 1.000000}",
+      "zOrder" : 0,
+      "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+    },
+    {
+      "rotation" : 0,
+      "parentUUID" : "95DF5854-393B-4DFD-A454-A8C10A7142EF",
+      "tags" : [
+        "DEFAULT"
+      ],
+      "generalPosition" : "{0.000000, 0.000000}",
+      "uuid" : "D67A3A39-3622-4225-B97D-125F06357510",
+      "name" : "FRONT USER INTERFACE",
+      "anchor" : "{0.500000, 0.500000}",
+      "size" : "{128.000000, 128.000000}",
+      "nodeType" : "LHUINode",
+      "alpha" : 255,
+      "scale" : "{1.000000, 1.000000}",
+      "zOrder" : 1,
+      "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+    }
+  ],
+  "devices" : [
+    {
+      "ratio" : 1,
+      "suffix" : "",
+      "size" : "{960.000000, 640.000000}"
+    },
+    {
+      "ratio" : 1,
+      "suffix" : "",
+      "size" : "{1136.000000, 640.000000}"
+    },
+    {
+      "ratio" : 1,
+      "suffix" : "",
+      "size" : "{1334.000000, 750.000000}"
+    },
+    {
+      "ratio" : 2,
+      "suffix" : "@2x",
+      "size" : "{2208.000000, 1242.000000}"
+    },
+    {
+      "ratio" : 2,
+      "suffix" : "@2x",
+      "size" : "{2048.000000, 1536.000000}"
+    }
+  ],
+  "useGlobalGravity" : true,
+  "nodeType" : "LHScene",
+  "sceneFormat" : 1,
+  "globalGravityDirection" : "{0.000000, -1.000000}"
+}
