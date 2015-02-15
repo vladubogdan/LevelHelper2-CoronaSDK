@@ -1,0 +1,274 @@
+{
+  "designResolution" : "{960.000000, 640.000000}",
+  "globalGravityForce" : 8,
+  "tags" : [
+    "DEFAULT"
+  ],
+  "aspect" : 0,
+  "backgroundColor" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}",
+  "uuid" : "87BF1791-D457-4DEC-8BC7-CFDA69039FFE",
+  "children" : [
+    {
+      "rotation" : 0,
+      "parentUUID" : "87BF1791-D457-4DEC-8BC7-CFDA69039FFE",
+      "tags" : [
+        "DEFAULT"
+      ],
+      "generalPosition" : "{0.000000, 0.000000}",
+      "uuid" : "1C7203F8-2328-4772-BB61-D182673A08B7",
+      "name" : "BACK USER INTERFACE",
+      "anchor" : "{0.500000, 0.500000}",
+      "size" : "{128.000000, 128.000000}",
+      "nodeType" : "LHBackUINode",
+      "alpha" : 255,
+      "scale" : "{1.000000, 1.000000}",
+      "zOrder" : -1,
+      "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+    },
+    {
+      "rotation" : 0,
+      "parentUUID" : "87BF1791-D457-4DEC-8BC7-CFDA69039FFE",
+      "tags" : [
+        "DEFAULT"
+      ],
+      "generalPosition" : "{0.000000, 0.000000}",
+      "uuid" : "B0D45046-FA8C-4C7F-8CEA-9AB1C730E804",
+      "children" : [
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "generalPosition" : "{0.536864, 0.496425}",
+          "closed" : false,
+          "uuid" : "90E212F8-0478-47A1-A101-F6039F32DA9B",
+          "name" : "myPath",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{684.936768, 250.946274}",
+          "nodeType" : "LHBezier",
+          "alpha" : 255,
+          "points" : [
+            {
+              "ctrl2" : "{-317.976204, -312.289375}",
+              "hasCtrl1" : true,
+              "ctrl1" : "{-342.468392, 225.473137}",
+              "mainPt" : "{-342.468392, 125.473137}",
+              "hasCtrl2" : true
+            },
+            {
+              "ctrl2" : "{342.468330, -25.472969}",
+              "hasCtrl1" : true,
+              "ctrl1" : "{191.682396, 339.280174}",
+              "mainPt" : "{342.468330, -125.472969}",
+              "hasCtrl2" : true
+            }
+          ],
+          "scale" : "{1.000000, 1.000000}",
+          "zOrder" : 0,
+          "colorOverlay" : "{{0.000000, 0.000000}, {0.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "nodePhysics" : {
+            "bullet" : false,
+            "angularDamping" : 0,
+            "gravityScale" : 1,
+            "allowSleep" : true,
+            "angularVelocity" : 0,
+            "fixedRotation" : false,
+            "linearDamping" : 0,
+            "type" : 2,
+            "shape" : 6,
+            "linearVelocity" : "{0.000000, 0.000000}"
+          },
+          "spriteUUID" : "986AA138-7C74-479B-A627-5BBF982B2605",
+          "spriteName" : "carTyre",
+          "generalPosition" : "{0.815136, 0.640050}",
+          "uuid" : "F8307465-CF40-47B4-9779-8C58CE26D90B",
+          "name" : "tyre",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{43.000000, 43.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "PublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "carParts.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 94.72571,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "spriteUUID" : "4ACEF20F-2A68-412D-8AC0-9F94C8037BA6",
+          "spriteName" : "Knife",
+          "generalPosition" : "{0.171343, 0.785991}",
+          "uuid" : "9E1DC877-6DB4-49C8-8A28-48D77E81B071",
+          "name" : "Knife",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{56.000000, 15.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{2.256217, 4.619954}",
+          "relativeImagePath" : "PublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "girlSoldierParts.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        }
+      ],
+      "name" : "GAME WORLD",
+      "anchor" : "{0.500000, 0.500000}",
+      "size" : "{128.000000, 128.000000}",
+      "nodeType" : "LHGameWorldNode",
+      "alpha" : 255,
+      "scale" : "{1.000000, 1.000000}",
+      "zOrder" : 0,
+      "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+    },
+    {
+      "rotation" : 0,
+      "parentUUID" : "87BF1791-D457-4DEC-8BC7-CFDA69039FFE",
+      "tags" : [
+        "DEFAULT"
+      ],
+      "generalPosition" : "{0.000000, 0.000000}",
+      "uuid" : "47725CF7-502C-4319-BCE2-CB77E8B5B6F6",
+      "name" : "FRONT USER INTERFACE",
+      "anchor" : "{0.500000, 0.500000}",
+      "size" : "{128.000000, 128.000000}",
+      "nodeType" : "LHUINode",
+      "alpha" : 255,
+      "scale" : "{1.000000, 1.000000}",
+      "zOrder" : 1,
+      "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+    }
+  ],
+  "devices" : [
+    {
+      "ratio" : 1,
+      "suffix" : "",
+      "size" : "{960.000000, 640.000000}"
+    },
+    {
+      "ratio" : 1,
+      "suffix" : "",
+      "size" : "{1136.000000, 640.000000}"
+    },
+    {
+      "ratio" : 1,
+      "suffix" : "",
+      "size" : "{1334.000000, 750.000000}"
+    },
+    {
+      "ratio" : 2,
+      "suffix" : "@2x",
+      "size" : "{2208.000000, 1242.000000}"
+    },
+    {
+      "ratio" : 2,
+      "suffix" : "@2x",
+      "size" : "{2048.000000, 1536.000000}"
+    },
+    {
+      "ratio" : 1,
+      "suffix" : "",
+      "size" : "{1024.000000, 768.000000}"
+    },
+    {
+      "ratio" : 1,
+      "suffix" : "",
+      "size" : "{960.000000, 540.000000}"
+    },
+    {
+      "ratio" : 1,
+      "suffix" : "",
+      "size" : "{800.000000, 480.000000}"
+    },
+    {
+      "ratio" : 1,
+      "suffix" : "",
+      "size" : "{1280.000000, 720.000000}"
+    },
+    {
+      "ratio" : 2,
+      "suffix" : "@2x",
+      "size" : "{1920.000000, 1080.000000}"
+    },
+    {
+      "ratio" : 1,
+      "suffix" : "",
+      "size" : "{1024.000000, 600.000000}"
+    },
+    {
+      "ratio" : 1,
+      "suffix" : "",
+      "size" : "{1280.000000, 800.000000}"
+    },
+    {
+      "ratio" : 2,
+      "suffix" : "@2x",
+      "size" : "{1920.000000, 1200.000000}"
+    },
+    {
+      "ratio" : 1,
+      "suffix" : "",
+      "size" : "{1024.000000, 600.000000}"
+    },
+    {
+      "ratio" : 1,
+      "suffix" : "",
+      "size" : "{1024.000000, 600.000000}"
+    },
+    {
+      "ratio" : 1,
+      "suffix" : "",
+      "size" : "{1280.000000, 720.000000}"
+    },
+    {
+      "ratio" : 2,
+      "suffix" : "@2x",
+      "size" : "{1920.000000, 1080.000000}"
+    },
+    {
+      "ratio" : 1,
+      "suffix" : "",
+      "size" : "{1280.000000, 720.000000}"
+    },
+    {
+      "ratio" : 2,
+      "suffix" : "@2x",
+      "size" : "{1920.000000, 1080.000000}"
+    },
+    {
+      "ratio" : 1,
+      "suffix" : "",
+      "size" : "{800.000000, 480.000000}"
+    },
+    {
+      "ratio" : 1,
+      "suffix" : "",
+      "size" : "{1280.000000, 768.000000}"
+    },
+    {
+      "ratio" : 1,
+      "suffix" : "",
+      "size" : "{1280.000000, 720.000000}"
+    }
+  ],
+  "useGlobalGravity" : true,
+  "nodeType" : "LHScene",
+  "sceneFormat" : 1,
+  "physicsBoundaries" : {
+    "960x640" : "{{0.000000, 0.000000}, {1.000000, 1.000000}}",
+    "2208x1242" : "{{0.000000, 0.000000}, {1.000000, 1.000000}}",
+    "general" : "{{0.000000, 0.000000}, {1.000000, 1.000000}}"
+  },
+  "globalGravityDirection" : "{0.000000, -1.000000}"
+}

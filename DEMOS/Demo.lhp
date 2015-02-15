@@ -349,6 +349,11 @@
 					<key>publish</key>
 					<true/>
 				</dict>
+				<key>followPathViaCode.lhs</key>
+				<dict>
+					<key>publish</key>
+					<true/>
+				</dict>
 				<key>skeletCharacterSetup.lhs</key>
 				<dict>
 					<key>publish</key>

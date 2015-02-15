@@ -15,10 +15,32 @@
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 --!@docBegin
---!Get the line points of the bezier shape.
-local function linePoints(_bezierObj)
+--!Get the line points in the bezier coordinate system.
+local function linePoints(selfNode)
 --!@docEnd
-	return _bezierObj._linePoints;
+	return selfNode._linePoints;
+end
+--------------------------------------------------------------------------------
+--!@docBegin
+--!Get the line points in the scene coordinate system.
+local function linePointsInSceneSpace(selfNode)
+--!@docEnd
+	local worldPoints = {};
+	for i=1,#selfNode._linePoints do
+		local pt = selfNode._linePoints[i];
+		local worldPt = selfNode:convertToWorldSpace(pt);
+		-- if(i == 1 or i == #selfNode._linePoints)then
+			worldPoints[#worldPoints+1] = worldPt;
+		-- end
+	end
+	return worldPoints;
+end
+--------------------------------------------------------------------------------
+--!@docBegin
+--!Get the total length of the bezier. A float value.
+local function getLength(selfNode)
+--!@docEnd
+	return selfNode._length;
 end
 
 local LHBezier = {}
@@ -41,6 +63,7 @@ function LHBezier:nodeWithDictionary(dict, prnt)
     local closed = dict["closed"];
 
     object._linePoints = {};
+    object._length = 0;
         
     local convert = {x = 1.0, y = 1.0};
     
@@ -85,11 +108,13 @@ function LHBezier:nodeWithDictionary(dict, prnt)
                 local vPoint = LHUtils.LHPointOnCurve(previousMainPt, control1, control2, mainPt, t);
                 
                 object._linePoints[#object._linePoints+1] = {x = vPoint.x*convert.x, 
-											 				y = vPoint.y*convert.y}
+											 				 y = vPoint.y*convert.y}
 																	
                 if prevPt then
                     local line = display.newLine( object, prevPt.x, prevPt.y, vPoint.x, vPoint.y );
                     line:setStrokeColor(color.red, color.green, color.blue);
+                    
+                    object._length = object._length + LHUtils.LHDistance(prevPt, vPoint);
                 end
                 
                 prevPt = vPoint;
@@ -130,6 +155,8 @@ function LHBezier:nodeWithDictionary(dict, prnt)
                 if prevPt then
                     local line = display.newLine( object, prevPt.x, prevPt.y, vPoint.x, vPoint.y );
                     line:setStrokeColor(color.red, color.green, color.blue);
+                    
+                    object._length = object._length + LHUtils.LHDistance(prevPt, vPoint);
                 end
                 
                 prevPt = vPoint;
@@ -141,6 +168,8 @@ function LHBezier:nodeWithDictionary(dict, prnt)
     
     --add LevelHelper methods
     object.linePoints = linePoints;
+    object.linePointsInSceneSpace = linePointsInSceneSpace;
+    object.getLength = getLength;
 
 	prnt:addChild(object);
 	

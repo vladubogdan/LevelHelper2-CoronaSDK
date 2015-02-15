@@ -31,6 +31,8 @@ local LHParallaxLayer	= require('LevelHelper2-API.Nodes.LHParallaxLayer');
 local LHBone	= require('LevelHelper2-API.Nodes.LHBone');
 local LHBoneNodes= require('LevelHelper2-API.Nodes.LHBoneNodes');
 
+require('LevelHelper2-API.Utilities.LHPathMovement');
+
 local LHUtils = require("LevelHelper2-API.Utilities.LHUtils");
 local LHUserProperties = require("LevelHelper2-API.Protocols.LHUserProperties");
 --------------------------------------------------------------------------------
@@ -422,28 +424,231 @@ end
 local function unitForGlobalPosition(selfNode, globalpt)
 
     local localPt = selfNode:convertToNodeSpace(globalpt);
-    
-    -- print("local pt " .. tostring(localPt.x) .. " " .. tostring(localPt.y));
-	
-   
     local sizer = selfNode.lhContentSize;
 
-	-- print("sprite size " .. tostring(sizer.width) .. " " .. tostring(sizer.height));
-    
-    
-    local centerPointX = sizer.width*0.5;
+	local centerPointX = sizer.width*0.5;
     local centerPointY = sizer.height*0.5;
     
     localPt.x = localPt.x + centerPointX;
     localPt.y = localPt.y + centerPointY;
 		
-	-- print("local + center pt " .. tostring(localPt.x) .. " " .. tostring(localPt.y));
-			
-    return  {x = localPt.x/sizer.width, y = localPt.y/sizer.height};
+	return  {x = localPt.x/sizer.width, y = localPt.y/sizer.height};
 end
 
+--pragma-mark - Path movement
+--------------------------------------------------------------------------------
+--!@docBegin
+--!Prepare movement on a bezier object.
+--!@param bezierObject The bezier object of which shape will be used to create the movement of the node. 
+--!@code
+--!		local bezierObject 			= lhScene:getChildNodeWithUniqueName("bezierNodeName");
+--!		local objectToMoveOnPath	= lhScene:getChildNodeWithUniqueName("objectNodeName");
+--!		objectToMoveOnPath:pathMovementPrepareOnBezier(bezierObject);
+--!@endcode
+--!Adding path movement has ended event listener
+--!@code
+--! 	--somewhere at the beginning of your scene file add the following method
+--! 	function scene:LHPathMovementHasEndedPerObjectNotification(event)
+--!			print("did end path movement on object " .. tostring(event.object) .. " name: " .. event.object:getUniqueName());	
+--!		end
+--!
+--! 	--adding the event lister
+--!  	objectToMoveOnPath:addEventListener( "LHPathMovementHasEndedPerObjectNotification", scene )
+--!@endcode
+local function pathMovementPrepareOnBezier(selfNode, bezierObject)
+--!@docEnd	
+	selfNode._pathMovementObj = LHPathMovement:initWithBezier(bezierObject, selfNode);
+end
+--------------------------------------------------------------------------------
+--!@docBegin
+--!Play or pause the path movement if it was previously prepared using pathMovementPrepareOnBezier method.
+--!@param value A true or false value.
+local function pathMovementSetPlaying(selfNode, value)
+--!@docEnd
+	if(nil ~= selfNode._pathMovementObj)then
+		selfNode._pathMovementObj.playing = value;
+	end
+end
+--------------------------------------------------------------------------------
+--!@docBegin
+--!Find if the path movement is currently playing or not.
+--!@return A boolean value.
+local function pathMovementGetPlaying(selfNode)
+--!@docEnd
+	if(nil ~= selfNode._pathMovementObj)then
+		return selfNode._pathMovementObj.playing;
+	end
+	return false;
+end
+--------------------------------------------------------------------------------
+--!@docBegin
+--!Set the duration it should take for the object to travel from the beginning to the end of the path.
+--!
+--!If path movement is set as ping pong the time to travel begin -> end -> begin will be double.
+--!@param value A number value. In seconds.
+local function pathMovementSetDuration(selfNode, value)
+--!@docEnd
+	if(nil ~= selfNode._pathMovementObj)then
+		selfNode._pathMovementObj.timeLength = value;
+	end
+end
+--------------------------------------------------------------------------------
+--!@docBegin
+--!Put the object at the initial path movement starting point and resets repetitions count.
+--!
+--!Path movement play/pause state will not be changed.
+local function pathMovementRestart(selfNode)
+--!@docEnd
+	if(nil ~= selfNode._pathMovementObj)then
+		selfNode._pathMovementObj:restart();
+	end
+end
+--------------------------------------------------------------------------------
+--!@docBegin
+--!Set the path movement direction.
+--!
+--!@param value A number value. A positiv value means the object will move on path from first to last point. A negative value means from last to first point.
+local function pathMovementSetDirection(selfNode, value)
+--!@docEnd
+	if(nil ~= selfNode._pathMovementObj)then
+		selfNode._pathMovementObj:setDirection(value);
+	end
+end
+--------------------------------------------------------------------------------
+--!@docBegin
+--!Get the path movement direction.
+--!@return A number value. A positiv value means object is moving on path from first to last point. A negative value means object is moving on path from last to first point.
+local function pathMovementGetDirection(selfNode)
+--!@docEnd
+	if(nil ~= selfNode._pathMovementObj)then
+		return selfNode._pathMovementObj.direction;
+	end
+	return 0;
+end
+--------------------------------------------------------------------------------
+--!@docBegin
+--!Set if the object moving on the path should rotate to have the same orientation as the path.
+--!
+--!The object orientation starts from the initial angle of the object when the path movement was prepared.
+--!@param value A bolean value.
+local function pathMovementSetUseOrientation(selfNode, value)
+--!@docEnd
+	if(nil ~= selfNode._pathMovementObj)then
+		selfNode._pathMovementObj.useOrientation = value;
+	end
+end
+--------------------------------------------------------------------------------
+--!@docBegin
+--!Get if the object moving on the path is rotating to match the path trajectory.
+local function pathMovementGetUseOrientation(selfNode)
+--!@docEnd
+	if(nil ~= selfNode._pathMovementObj)then
+		return selfNode._pathMovementObj.useOrientation;
+	end
+	return false;
+end
+--------------------------------------------------------------------------------
+--!@docBegin
+--!Set if the object xScale should be flipped when the path movement reaches an end point.
+--!
+--!This is useful for when orienting an object on the path and the movement changes direction.
+--!@param value A bolean value.
+local function pathMovementSetFlipScaleXAtEnd(selfNode, value)
+--!@docEnd
+	if(nil ~= selfNode._pathMovementObj)then
+		selfNode._pathMovementObj.flipScaleXAtEnd = value;
+	end
+end
+--------------------------------------------------------------------------------
+--!@docBegin
+--!Get if the object xScale is flipped when path movement reaches an end point.
+local function pathMovementGetFlipScaleXAtEnd(selfNode)
+--!@docEnd
+	if(nil ~= selfNode._pathMovementObj)then
+		return selfNode._pathMovementObj.flipScaleXAtEnd;
+	end
+	return false;
+end
+--------------------------------------------------------------------------------
+--!@docBegin
+--!Set if the object yScale should be flipped when the path movement reaches an end point.
+--!
+--!This is useful for when orienting an object on the path and the movement changes direction.
+--!@param value A bolean value.
+local function pathMovementSetFlipScaleYAtEnd(selfNode, value)
+--!@docEnd
+	if(nil ~= selfNode._pathMovementObj)then
+		selfNode._pathMovementObj.flipScaleYAtEnd = value;
+	end
+end
+--------------------------------------------------------------------------------
+--!@docBegin
+--!Get if the object yScale is flipped when path movement reaches an end point.
+local function pathMovementGetFlipScaleYAtEnd(selfNode)
+--!@docEnd
+	if(nil ~= selfNode._pathMovementObj)then
+		return selfNode._pathMovementObj.flipScaleYAtEnd;
+	end
+	return false;
+end
+--------------------------------------------------------------------------------
+--!@docBegin
+--!Set how many times the path should move until it pause itself.
+--!
+--!@param value A number value. A value of 0 means the path should loop until it is stopped manually using pathMovementSetPlaying(false);
+local function pathMovementSetRepetitions(selfNode, value)
+--!@docEnd
+	if(nil ~= selfNode._pathMovementObj)then
+		selfNode._pathMovementObj.repetitions = value;
+	end
+end
+--------------------------------------------------------------------------------
+--!@docBegin
+--!Get the number of path movement repetitions.
+--!@return A number value. A 0 value means the path is looping.
+local function pathMovementGetRepetitions(selfNode)
+--!@docEnd
+	if(nil ~= selfNode._pathMovementObj)then
+		return selfNode._pathMovementObj.repetitions;
+	end
+	return 0;
+end
+--------------------------------------------------------------------------------
+--!@docBegin
+--!Get how many times the movement was repeated on the path since started. This counter is reset only when calling pathMovementRestart().
+--!@return A number value.
+local function pathMovementGetCurrentRepetition(selfNode)
+--!@docEnd
+	if(nil ~= selfNode._pathMovementObj)then
+		return selfNode._pathMovementObj.currentRepetition;
+	end
+	return 0;
+end
+--------------------------------------------------------------------------------
+--!@docBegin
+--!Set if the movement on the path should ping pong. E.g Move from beginning to end to beginning.
+--!If you enable ping pong and use a specific number of path movement repetitions, you should double the repetitions number.
+--!@param value A boolean value.
+local function pathMovementSetIsPingPong(selfNode, value)
+--!@docEnd
+	if(nil ~= selfNode._pathMovementObj)then
+		selfNode._pathMovementObj.pingPong = value;
+	end
+end
+--------------------------------------------------------------------------------
+--!@docBegin
+--!Get if path movement is ping pong.
+--!@return A boolean value.
+local function pathMovementGetIsPingPong(selfNode)
+--!@docEnd
+	if(nil ~= selfNode._pathMovementObj)then
+		return selfNode._pathMovementObj.pingPong;
+	end
+	return false;
+end
 
-
+--pragma-mark -
+--------------------------------------------------------------------------------
 local function enterFrame(selfNode, event)
 
 	if(selfNode._isNodeProtocol)then
@@ -463,6 +668,10 @@ local function enterFrame(selfNode, event)
 		-- end
 	end
 	
+	if(selfNode._pathMovementObj ~= nil)then
+		selfNode._pathMovementObj:enterFrame(event);
+	end
+	
 	local children = selfNode:getChildren();
 	if(children)then
 		for i = 1, children.numChildren do
@@ -471,6 +680,27 @@ local function enterFrame(selfNode, event)
 				child:enterFrame(event);
 			end
 		end
+	end
+end
+
+local function nodeProtocolRemoveSelf(selfNode)
+	
+	local children = selfNode:getChildren();
+	while(children ~= nil and children.numChildren > 0)do
+		local child = children[1];
+		if(child)then
+			child:removeSelf();
+		end
+		children = selfNode:getChildren();
+	end
+
+	if(selfNode._pathMovementObj ~= nil)then
+		selfNode._pathMovementObj:removeSelf();
+	end
+	selfNode._pathMovementObj = nil;
+	
+	if(selfNode._superRemoveSelf ~= nil)then
+		selfNode:_superRemoveSelf();
 	end
 end
 --------------------------------------------------------------------------------
@@ -512,6 +742,12 @@ function initNodeProtocolWithDictionary(dict, node, prnt)
 	node.setAnchorByKeepingPosition = setAnchorByKeepingPosition;
 	node.getAnchor 		= getAnchor;
 	node.enterFrame 	= enterFrame;
+	
+	if(node.removeSelf ~= nil)then
+		node._superRemoveSelf = node.removeSelf;
+	end
+	node.removeSelf = nodeProtocolRemoveSelf;
+	
 	--Modern object hierarchy simulation
 	node.addChild 				= addChild;
 	node.removeChild 			= removeChild;
@@ -543,6 +779,26 @@ function initNodeProtocolWithDictionary(dict, node, prnt)
 	node.convertToNodeAngle = convertToNodeAngle;
 	node.unitForGlobalPosition = unitForGlobalPosition;
 	
+	node._pathMovementObj = nil;
+	node.pathMovementPrepareOnBezier = pathMovementPrepareOnBezier;
+	node.pathMovementSetPlaying = pathMovementSetPlaying;
+	node.pathMovementGetPlaying = pathMovementGetPlaying;
+	node.pathMovementSetDuration = pathMovementSetDuration;
+	node.pathMovementRestart = pathMovementRestart;
+	node.pathMovementSetDirection = pathMovementSetDirection;
+	node.pathMovementGetDirection = pathMovementGetDirection;
+	node.pathMovementSetRepetitions = pathMovementSetRepetitions;
+	node.pathMovementGetRepetitions = pathMovementGetRepetitions;
+	node.pathMovementGetCurrentRepetition = pathMovementGetCurrentRepetition;
+	node.pathMovementSetIsPingPong = pathMovementSetIsPingPong;
+	node.pathMovementGetIsPingPong = pathMovementGetIsPingPong;
+	node.pathMovementSetUseOrientation = pathMovementSetUseOrientation;
+	node.pathMovementGetUseOrientation = pathMovementGetUseOrientation;
+	
+	node.pathMovementSetFlipScaleXAtEnd = pathMovementSetFlipScaleXAtEnd;
+	node.pathMovementGetFlipScaleXAtEnd = pathMovementGetFlipScaleXAtEnd;
+	node.pathMovementSetFlipScaleYAtEnd = pathMovementSetFlipScaleYAtEnd;
+	node.pathMovementGetFlipScaleYAtEnd = pathMovementGetFlipScaleYAtEnd;
 	
 	--Load node protocol properties
 	----------------------------------------------------------------------------

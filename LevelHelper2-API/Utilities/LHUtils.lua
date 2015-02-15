@@ -286,6 +286,16 @@ function LHPointForAngle(degrees)
     return {x =math.cos(a), y = math.sin(a)};
 end
 
+function LHAngleOfLineInDegree(startPoint, endPoint)
+
+	local angle =  (math.atan2(endPoint.y - startPoint.y, endPoint.x - startPoint.x)*180.0)/math.pi;
+
+	while ( angle < -180.0 ) do angle = angle + 360.0 end
+	while ( angle >  180.0 ) do angle = angle - 360.0 end
+
+	return angle;
+end
+
 -- Converts a vector to degrees.
 function LHPointToAngle(v)
 	return LHRadiansToDegrees(math.atan2(v.y, v.x));
@@ -294,6 +304,23 @@ end
 function LHPointSub(ptA, ptB)
     return { x = ptA.x - ptB.x, y = ptA.y - ptB.y};
 end
+
+function LHDot(v1, v2)
+        return v1.x*v2.x + v1.y*v2.y;
+end
+
+function LHLengthSQ(v)
+        return LHDot(v, v);
+end
+
+function LHLength(v)
+        return math.sqrt(LHLengthSQ(v));
+end
+
+function LHDistance(v1, v2)
+        return LHLength(LHPointSub(v1, v2));
+end
+
 
 function LHNormalAbsoluteAngleDegrees(angle)
     local fAngle = math.fmod(angle, 360.0);

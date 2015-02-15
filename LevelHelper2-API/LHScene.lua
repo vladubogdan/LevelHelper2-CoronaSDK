@@ -100,7 +100,7 @@ end
 local function removeSelf(_sceneObj)
 	
 	Runtime:removeEventListener( "enterFrame", _sceneObj )
-	_sceneObj:_superRemoveSelf();
+	_sceneObj:nodeProtocolRemoveSelf();
 	_sceneObj:disableCollisionHandling();
 end
 --------------------------------------------------------------------------------
@@ -481,9 +481,6 @@ function LHScene:initWithContentOfFile(jsonFile)
 	
 	_scene.getGameWorldRect 					= getGameWorldRect;
 	
-	_scene._superRemoveSelf 					= _scene.removeSelf;
-	_scene.removeSelf 							= removeSelf;
-	
 	local dict = nil;
 	if not base then base = system.ResourceDirectory; end
 	local jsonContent = LHUtils.jsonFileContent(jsonFile, base)    
@@ -513,6 +510,13 @@ function LHScene:initWithContentOfFile(jsonFile)
 	
 	_scene:loadPhysicsBoundariesFromDictionary(dict);
 	_scene:loadGlobalGravityFromDictionary(dict);
+	
+	-- _scene._superRemoveSelf 					= _scene.removeSelf;
+	-- _scene.removeSelf 							= removeSelf;
+	
+	_scene.nodeProtocolRemoveSelf 	= _scene.removeSelf;
+	_scene.removeSelf = removeSelf;
+	
 	
 	_scene.lhUniqueName = jsonFile;
 	
