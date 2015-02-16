@@ -17,22 +17,44 @@ require("LevelHelper2-API.Protocols.LHBodyShape")
 function initPhysicsProtocolWithDictionary(dict, node, scene)
 
 	
-    local LHUtils = require("LevelHelper2-API.Utilities.LHUtils");
+	local LHUtils = require("LevelHelper2-API.Utilities.LHUtils");
 
 	node.protocolName = "LHPhysicsProtocol";
-    node._isPhysicsProtocol = true;
+	node._isPhysicsProtocol = true;
 
-	if(dict == nil)then return end;
-	
 	local physics = require("physics")
 	if(nil == physics)then	return end
 
 	physics.start();
 
+	if(dict == nil)then 
+		
+		if(node.getSpriteFrameName and node.getSpriteSheetPath) then
+			local spriteFrameName = node:getSpriteFrameName();
+			local spriteSheetPath = node:getSpriteSheetPath();
+			
+			if(spriteFrameName ~= nil and spriteSheetPath ~= nil)then
+				-- require the sprite sheet information file
+				local sheetInfo = require(spriteSheetPath);
+				if(sheetInfo)then
+					if(sheetInfo.getPhysicsData)then
+						dict = sheetInfo.getPhysicsData()[spriteFrameName];
+					end
+				end
+				
+				if(dict)then
+					dict["shape"] = 6;
+				end
+			end
+		end
+	end
+
+	if(dict == nil)then return end
+	
 	local shapeType = dict["shape"];
-    local type  	= dict["type"];
+	local type  	= dict["type"];
  
-  	if(type == 3) then
+	if(type == 3) then
 		return
 	end
 

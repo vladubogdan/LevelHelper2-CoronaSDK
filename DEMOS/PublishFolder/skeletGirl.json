@@ -1,0 +1,3264 @@
+{
+  "designResolution" : "{960.000000, 640.000000}",
+  "globalGravityForce" : 8,
+  "tags" : [
+    "DEFAULT"
+  ],
+  "aspect" : 0,
+  "backgroundColor" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}",
+  "uuid" : "7340713A-C763-481B-9A51-0BB2F589A4FF",
+  "children" : [
+    {
+      "rotation" : 0,
+      "parentUUID" : "7340713A-C763-481B-9A51-0BB2F589A4FF",
+      "tags" : [
+        "DEFAULT"
+      ],
+      "generalPosition" : "{0.000000, 0.000000}",
+      "uuid" : "9140EE7E-0CFD-4A9B-A42C-658E7FAF7BCA",
+      "name" : "BACK USER INTERFACE",
+      "anchor" : "{0.500000, 0.500000}",
+      "size" : "{128.000000, 128.000000}",
+      "nodeType" : "LHBackUINode",
+      "alpha" : 255,
+      "scale" : "{1.000000, 1.000000}",
+      "zOrder" : -1,
+      "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+    },
+    {
+      "rotation" : 0,
+      "parentUUID" : "7340713A-C763-481B-9A51-0BB2F589A4FF",
+      "tags" : [
+        "DEFAULT"
+      ],
+      "generalPosition" : "{0.000000, 0.000000}",
+      "uuid" : "3629C4FC-2424-4D6F-8B99-982F10286833",
+      "children" : [
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "connections" : [
+
+          ],
+          "tags" : [
+            "DEFAULT"
+          ],
+          "rigid" : true,
+          "maxAngle" : 180,
+          "generalPosition" : "{0.504978, 0.413810}",
+          "uuid" : "23BC2B1A-6079-423E-B891-4349998889D7",
+          "children" : [
+            {
+              "rotation" : 0,
+              "parentUUID" : "23BC2B1A-6079-423E-B891-4349998889D7",
+              "tags" : [
+                "DEFAULT"
+              ],
+              "generalPosition" : "{0.000000, 0.000000}",
+              "uuid" : "7FC5EA80-6B23-4D18-B7BD-5644A98BB90F",
+              "children" : [
+                {
+                  "rotation" : 53.49553,
+                  "parentUUID" : "7FC5EA80-6B23-4D18-B7BD-5644A98BB90F",
+                  "tags" : [
+                    "DEFAULT"
+                  ],
+                  "spriteUUID" : "D9FD4119-E075-4A59-BDBC-7CD660873DBF",
+                  "spriteName" : "upperArm_L",
+                  "generalPosition" : "{0.002158, -0.077474}",
+                  "uuid" : "EF4EF1D9-127E-4AE2-BD11-B391D320CA06",
+                  "children" : [
+                    {
+                      "rotation" : -37.67908,
+                      "parentUUID" : "EF4EF1D9-127E-4AE2-BD11-B391D320CA06",
+                      "tags" : [
+                        "DEFAULT"
+                      ],
+                      "spriteUUID" : "03138379-7CA1-4D0F-8153-E47B147D088F",
+                      "spriteName" : "lowerArm_L",
+                      "generalPosition" : "{0.008041, 0.027886}",
+                      "uuid" : "A6BB1851-796A-4055-87A3-624B22C45335",
+                      "children" : [
+                        {
+                          "rotation" : 0.1544342,
+                          "parentUUID" : "A6BB1851-796A-4055-87A3-624B22C45335",
+                          "tags" : [
+                            "DEFAULT"
+                          ],
+                          "spriteUUID" : "DD1A919B-D69B-4BAA-966F-2CA1C903555D",
+                          "spriteName" : "hand_L",
+                          "generalPosition" : "{0.000085, 0.029033}",
+                          "uuid" : "E43A40B6-2D0B-4110-BBAD-1EB7E4E8CA6C",
+                          "name" : "hand_L",
+                          "anchor" : "{0.500000, 0.500000}",
+                          "size" : "{26.000000, 26.000000}",
+                          "nodeType" : "LHSprite",
+                          "alpha" : 255,
+                          "scale" : "{1.000000, 1.000000}",
+                          "relativeImagePath" : "PublishFolder\/",
+                          "zOrder" : 0,
+                          "imageFileName" : "girlSoldierParts.png",
+                          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                        }
+                      ],
+                      "name" : "lowerArm_L",
+                      "anchor" : "{0.500000, 0.500000}",
+                      "size" : "{21.000000, 32.000000}",
+                      "nodeType" : "LHSprite",
+                      "alpha" : 255,
+                      "scale" : "{1.000000, 1.000000}",
+                      "relativeImagePath" : "PublishFolder\/",
+                      "zOrder" : 0,
+                      "imageFileName" : "girlSoldierParts.png",
+                      "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                    }
+                  ],
+                  "name" : "upperArm_L",
+                  "anchor" : "{0.500000, 0.500000}",
+                  "size" : "{18.000000, 25.000000}",
+                  "nodeType" : "LHSprite",
+                  "alpha" : 255,
+                  "scale" : "{1.000000, 1.000000}",
+                  "relativeImagePath" : "PublishFolder\/",
+                  "zOrder" : -1,
+                  "imageFileName" : "girlSoldierParts.png",
+                  "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                },
+                {
+                  "rotation" : 0,
+                  "parentUUID" : "7FC5EA80-6B23-4D18-B7BD-5644A98BB90F",
+                  "tags" : [
+                    "DEFAULT"
+                  ],
+                  "spriteUUID" : "311ED56E-17E0-4CCC-9D8E-80567C7D8BC2",
+                  "spriteName" : "Body",
+                  "generalPosition" : "{-0.000628, -0.054653}",
+                  "uuid" : "D322144F-2880-4598-BA21-D2E67CF9E70E",
+                  "name" : "Body",
+                  "anchor" : "{0.500000, 0.500000}",
+                  "size" : "{56.000000, 71.000000}",
+                  "nodeType" : "LHSprite",
+                  "alpha" : 255,
+                  "scale" : "{1.000000, 1.000000}",
+                  "relativeImagePath" : "PublishFolder\/",
+                  "zOrder" : 0,
+                  "imageFileName" : "girlSoldierParts.png",
+                  "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                },
+                {
+                  "rotation" : 3.992665,
+                  "parentUUID" : "7FC5EA80-6B23-4D18-B7BD-5644A98BB90F",
+                  "tags" : [
+                    "DEFAULT"
+                  ],
+                  "spriteUUID" : "B5DA7A9C-4EDD-4052-B881-A5D8EEBA1B52",
+                  "spriteName" : "HeadNormal",
+                  "generalPosition" : "{0.004682, -0.183931}",
+                  "uuid" : "4B3F8DBB-7305-44B7-95B8-B7A5C0B9257D",
+                  "name" : "HeadNormal",
+                  "anchor" : "{0.500000, 0.500000}",
+                  "size" : "{120.000000, 110.000000}",
+                  "nodeType" : "LHSprite",
+                  "alpha" : 255,
+                  "scale" : "{1.000000, 1.000000}",
+                  "relativeImagePath" : "PublishFolder\/",
+                  "zOrder" : 1,
+                  "imageFileName" : "girlSoldierParts.png",
+                  "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                },
+                {
+                  "rotation" : 337.6093,
+                  "parentUUID" : "7FC5EA80-6B23-4D18-B7BD-5644A98BB90F",
+                  "tags" : [
+                    "DEFAULT"
+                  ],
+                  "spriteUUID" : "456B3A0E-DF7A-47CA-96DE-5FA6B5E9A173",
+                  "spriteName" : "upperLeg_L",
+                  "generalPosition" : "{0.017772, 0.000110}",
+                  "uuid" : "1B82FF1B-3101-457D-957A-A7156EA5F290",
+                  "children" : [
+                    {
+                      "rotation" : 360,
+                      "parentUUID" : "1B82FF1B-3101-457D-957A-A7156EA5F290",
+                      "tags" : [
+                        "DEFAULT"
+                      ],
+                      "spriteUUID" : "37D10EF5-1651-48F3-B65B-437B1BC04125",
+                      "spriteName" : "lowerLeg_L",
+                      "generalPosition" : "{0.000055, 0.038312}",
+                      "uuid" : "7C799E73-7B88-4F97-BDF9-5B5CDBF03D9A",
+                      "children" : [
+                        {
+                          "rotation" : 360,
+                          "parentUUID" : "7C799E73-7B88-4F97-BDF9-5B5CDBF03D9A",
+                          "tags" : [
+                            "DEFAULT"
+                          ],
+                          "spriteUUID" : "ACE3C9EE-AFDF-4AAA-AEBA-1EAAC6CD082D",
+                          "spriteName" : "foot_L",
+                          "generalPosition" : "{0.005980, 0.033113}",
+                          "uuid" : "982CF1CD-2B0D-4BE8-92BB-2ADDFA56E269",
+                          "name" : "foot_L",
+                          "anchor" : "{0.500000, 0.500000}",
+                          "size" : "{48.000000, 23.000000}",
+                          "nodeType" : "LHSprite",
+                          "alpha" : 255,
+                          "scale" : "{1.000000, 1.000000}",
+                          "relativeImagePath" : "PublishFolder\/",
+                          "zOrder" : 0,
+                          "imageFileName" : "girlSoldierParts.png",
+                          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                        }
+                      ],
+                      "name" : "lowerLeg_L",
+                      "anchor" : "{0.500000, 0.500000}",
+                      "size" : "{30.000000, 34.000000}",
+                      "nodeType" : "LHSprite",
+                      "alpha" : 255,
+                      "scale" : "{1.000000, 1.000000}",
+                      "relativeImagePath" : "PublishFolder\/",
+                      "zOrder" : 0,
+                      "imageFileName" : "girlSoldierParts.png",
+                      "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                    }
+                  ],
+                  "name" : "upperLeg_L",
+                  "anchor" : "{0.500000, 0.500000}",
+                  "size" : "{23.000000, 32.000000}",
+                  "nodeType" : "LHSprite",
+                  "alpha" : 255,
+                  "scale" : "{1.000000, 1.000000}",
+                  "relativeImagePath" : "PublishFolder\/",
+                  "zOrder" : 1,
+                  "imageFileName" : "girlSoldierParts.png",
+                  "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                },
+                {
+                  "rotation" : 5.407028,
+                  "parentUUID" : "7FC5EA80-6B23-4D18-B7BD-5644A98BB90F",
+                  "tags" : [
+                    "DEFAULT"
+                  ],
+                  "spriteUUID" : "D3630DAD-D770-432F-8D8E-1DAB61F7DB11",
+                  "spriteName" : "upperLeg_R",
+                  "generalPosition" : "{-0.015528, 0.001181}",
+                  "uuid" : "F51F4980-946E-4DCE-BAF4-86FC3A975301",
+                  "children" : [
+                    {
+                      "rotation" : 29.01891,
+                      "parentUUID" : "F51F4980-946E-4DCE-BAF4-86FC3A975301",
+                      "tags" : [
+                        "DEFAULT"
+                      ],
+                      "spriteUUID" : "37D10EF5-1651-48F3-B65B-437B1BC04125",
+                      "spriteName" : "lowerLeg_L",
+                      "generalPosition" : "{-0.007669, 0.036225}",
+                      "uuid" : "6071484F-06F6-4CA7-A308-6A629C9A14AF",
+                      "children" : [
+                        {
+                          "rotation" : -18.69759,
+                          "parentUUID" : "6071484F-06F6-4CA7-A308-6A629C9A14AF",
+                          "tags" : [
+                            "DEFAULT"
+                          ],
+                          "spriteUUID" : "ACE3C9EE-AFDF-4AAA-AEBA-1EAAC6CD082D",
+                          "spriteName" : "foot_L",
+                          "generalPosition" : "{0.007020, 0.029480}",
+                          "uuid" : "679339A3-2487-48B0-B9ED-D83E3F0C00CA",
+                          "name" : "foot_R",
+                          "anchor" : "{0.500000, 0.500000}",
+                          "size" : "{48.000000, 23.000000}",
+                          "nodeType" : "LHSprite",
+                          "alpha" : 255,
+                          "scale" : "{1.000000, 1.000000}",
+                          "relativeImagePath" : "PublishFolder\/",
+                          "zOrder" : 0,
+                          "imageFileName" : "girlSoldierParts.png",
+                          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                        }
+                      ],
+                      "name" : "lowerLeg_R",
+                      "anchor" : "{0.500000, 0.500000}",
+                      "size" : "{30.000000, 34.000000}",
+                      "nodeType" : "LHSprite",
+                      "alpha" : 255,
+                      "scale" : "{1.000000, 1.000000}",
+                      "relativeImagePath" : "PublishFolder\/",
+                      "zOrder" : 0,
+                      "imageFileName" : "girlSoldierParts.png",
+                      "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                    }
+                  ],
+                  "name" : "upperLeg_R",
+                  "anchor" : "{0.500000, 0.500000}",
+                  "size" : "{23.000000, 32.000000}",
+                  "nodeType" : "LHSprite",
+                  "alpha" : 255,
+                  "scale" : "{1.000000, 1.000000}",
+                  "relativeImagePath" : "PublishFolder\/",
+                  "zOrder" : 1,
+                  "imageFileName" : "girlSoldierParts.png",
+                  "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                },
+                {
+                  "rotation" : 0,
+                  "parentUUID" : "7FC5EA80-6B23-4D18-B7BD-5644A98BB90F",
+                  "tags" : [
+                    "DEFAULT"
+                  ],
+                  "spriteUUID" : "A972340F-E3E8-4754-9D85-CF76B44A1052",
+                  "spriteName" : "Grenade",
+                  "generalPosition" : "{-0.022914, -0.030215}",
+                  "uuid" : "E5C27DEA-288C-4B29-9B05-B6834BDC58E0",
+                  "name" : "Grenade",
+                  "anchor" : "{0.500000, 0.500000}",
+                  "size" : "{38.000000, 43.000000}",
+                  "nodeType" : "LHSprite",
+                  "alpha" : 255,
+                  "scale" : "{0.527246, 0.558982}",
+                  "relativeImagePath" : "PublishFolder\/",
+                  "zOrder" : 1,
+                  "imageFileName" : "girlSoldierParts.png",
+                  "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                },
+                {
+                  "rotation" : 308.0973,
+                  "parentUUID" : "7FC5EA80-6B23-4D18-B7BD-5644A98BB90F",
+                  "tags" : [
+                    "DEFAULT"
+                  ],
+                  "spriteUUID" : "F25494DF-1F9F-4B67-8DA0-F007D1B0FFE7",
+                  "spriteName" : "upperArm_R",
+                  "generalPosition" : "{-0.013107, -0.076089}",
+                  "uuid" : "9680F1CC-E236-495E-9C43-A1908FDAF9B1",
+                  "children" : [
+                    {
+                      "rotation" : 306.3,
+                      "parentUUID" : "9680F1CC-E236-495E-9C43-A1908FDAF9B1",
+                      "tags" : [
+                        "DEFAULT"
+                      ],
+                      "spriteUUID" : "5003FBC1-287C-4FC5-865E-1C073B790978",
+                      "spriteName" : "lowerArm_R",
+                      "generalPosition" : "{0.007610, 0.028947}",
+                      "uuid" : "C9A6B808-9677-4206-ACD7-BA531A9D50C3",
+                      "children" : [
+                        {
+                          "rotation" : 364.2592,
+                          "parentUUID" : "C9A6B808-9677-4206-ACD7-BA531A9D50C3",
+                          "tags" : [
+                            "DEFAULT"
+                          ],
+                          "spriteUUID" : "D9FAA7B0-7752-40CD-9525-74F5C016137F",
+                          "spriteName" : "hand_R",
+                          "generalPosition" : "{0.004642, 0.026126}",
+                          "uuid" : "C3451A37-01DC-4001-A13F-91A5FE8AFCB4",
+                          "name" : "hand_R",
+                          "anchor" : "{0.500000, 0.500000}",
+                          "size" : "{34.000000, 28.000000}",
+                          "nodeType" : "LHSprite",
+                          "alpha" : 255,
+                          "scale" : "{1.000000, 1.000000}",
+                          "relativeImagePath" : "PublishFolder\/",
+                          "zOrder" : 0,
+                          "imageFileName" : "girlSoldierParts.png",
+                          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                        }
+                      ],
+                      "name" : "lowerArm_R",
+                      "anchor" : "{0.500000, 0.500000}",
+                      "size" : "{21.000000, 31.000000}",
+                      "nodeType" : "LHSprite",
+                      "alpha" : 255,
+                      "scale" : "{1.000000, 1.000000}",
+                      "relativeImagePath" : "PublishFolder\/",
+                      "zOrder" : 0,
+                      "imageFileName" : "girlSoldierParts.png",
+                      "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                    }
+                  ],
+                  "name" : "upperArm_R",
+                  "anchor" : "{0.500000, 0.500000}",
+                  "size" : "{22.000000, 30.000000}",
+                  "nodeType" : "LHSprite",
+                  "alpha" : 255,
+                  "scale" : "{1.000000, 1.000000}",
+                  "relativeImagePath" : "PublishFolder\/",
+                  "zOrder" : 2,
+                  "imageFileName" : "girlSoldierParts.png",
+                  "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                }
+              ],
+              "name" : "Nodes",
+              "anchor" : "{0.500000, 0.500000}",
+              "size" : "{0.000000, 0.000000}",
+              "lockedNodes" : true,
+              "nodeType" : "LHBoneNodes",
+              "alpha" : 255,
+              "scale" : "{1.000000, 1.000000}",
+              "zOrder" : -9999,
+              "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+            },
+            {
+              "rotation" : 359.6326,
+              "parentUUID" : "23BC2B1A-6079-423E-B891-4349998889D7",
+              "connections" : [
+                {
+                  "angleDelta" : -359.6326,
+                  "nodeName" : "Body",
+                  "positionDelta" : "{-0.404211, -4.884832}"
+                },
+                {
+                  "angleDelta" : -359.6326,
+                  "nodeName" : "Grenade",
+                  "positionDelta" : "{-21.898630, 10.617966}"
+                }
+              ],
+              "tags" : [
+                "DEFAULT"
+              ],
+              "rigid" : true,
+              "maxAngle" : 10,
+              "generalPosition" : "{0.000000, -0.006250}",
+              "uuid" : "DB628412-B8A3-46CD-AE95-A10491E9D46E",
+              "children" : [
+                {
+                  "rotation" : 240,
+                  "parentUUID" : "DB628412-B8A3-46CD-AE95-A10491E9D46E",
+                  "connections" : [
+                    {
+                      "angleDelta" : -186.137,
+                      "nodeName" : "upperArm_L",
+                      "positionDelta" : "{0.274804, -1.980852}"
+                    }
+                  ],
+                  "tags" : [
+                    "DEFAULT"
+                  ],
+                  "rigid" : true,
+                  "maxAngle" : 240,
+                  "generalPosition" : "{0.012569, -0.038683}",
+                  "uuid" : "B8D5DD34-0260-4CD2-B9F7-CFF6219F6AE5",
+                  "children" : [
+                    {
+                      "rotation" : 315.7507,
+                      "parentUUID" : "B8D5DD34-0260-4CD2-B9F7-CFF6219F6AE5",
+                      "connections" : [
+                        {
+                          "angleDelta" : -179.5668,
+                          "nodeName" : "lowerArm_L",
+                          "positionDelta" : "{0.196223, -3.306895}"
+                        }
+                      ],
+                      "tags" : [
+                        "DEFAULT"
+                      ],
+                      "rigid" : true,
+                      "maxAngle" : 0,
+                      "generalPosition" : "{0.000000, -0.014162}",
+                      "uuid" : "378C5D48-914A-472A-B05C-1AA1E0019BB1",
+                      "children" : [
+                        {
+                          "rotation" : 359.0757,
+                          "parentUUID" : "378C5D48-914A-472A-B05C-1AA1E0019BB1",
+                          "connections" : [
+                            {
+                              "angleDelta" : -178.4881,
+                              "nodeName" : "hand_L",
+                              "positionDelta" : "{0.416562, -1.368362}"
+                            }
+                          ],
+                          "tags" : [
+                            "DEFAULT"
+                          ],
+                          "rigid" : true,
+                          "maxAngle" : 60,
+                          "generalPosition" : "{-0.000040, -0.022276}",
+                          "uuid" : "9EC5CC3A-D539-4A50-A098-A2DB7E3689BA",
+                          "name" : "hand_l",
+                          "anchor" : "{0.500000, 1.000000}",
+                          "size" : "{4.000000, 12.514744}",
+                          "nodeType" : "LHBone",
+                          "alpha" : 255,
+                          "scale" : "{1.000000, 1.000000}",
+                          "minAngle" : -70,
+                          "zOrder" : 0,
+                          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                        }
+                      ],
+                      "name" : "lower_arm_l",
+                      "anchor" : "{0.500000, 1.000000}",
+                      "size" : "{4.000000, 20.468748}",
+                      "nodeType" : "LHBone",
+                      "alpha" : 255,
+                      "scale" : "{1.000000, 1.000000}",
+                      "minAngle" : -140,
+                      "zOrder" : 0,
+                      "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                    }
+                  ],
+                  "name" : "upper_arm_l",
+                  "anchor" : "{0.500000, 1.000000}",
+                  "size" : "{4.000000, 18.127443}",
+                  "nodeType" : "LHBone",
+                  "alpha" : 255,
+                  "scale" : "{1.000000, 1.000000}",
+                  "minAngle" : 30,
+                  "zOrder" : 0,
+                  "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                },
+                {
+                  "rotation" : 132.613,
+                  "parentUUID" : "DB628412-B8A3-46CD-AE95-A10491E9D46E",
+                  "connections" : [
+                    {
+                      "angleDelta" : 175.8517,
+                      "nodeName" : "upperArm_R",
+                      "positionDelta" : "{-1.179098, 1.440184}"
+                    }
+                  ],
+                  "tags" : [
+                    "DEFAULT"
+                  ],
+                  "rigid" : true,
+                  "maxAngle" : 20,
+                  "generalPosition" : "{-0.020297, -0.037019}",
+                  "uuid" : "5FF499C8-641A-4046-A4A6-35B4A4E6D1C8",
+                  "children" : [
+                    {
+                      "rotation" : 307.444,
+                      "parentUUID" : "5FF499C8-641A-4046-A4A6-35B4A4E6D1C8",
+                      "connections" : [
+                        {
+                          "angleDelta" : 174.7078,
+                          "nodeName" : "lowerArm_R",
+                          "positionDelta" : "{-0.892571, -0.948477}"
+                        }
+                      ],
+                      "tags" : [
+                        "DEFAULT"
+                      ],
+                      "rigid" : true,
+                      "maxAngle" : -140,
+                      "generalPosition" : "{0.000000, -0.015819}",
+                      "uuid" : "E524CDF8-05D0-47C6-9338-960E21F45BBF",
+                      "children" : [
+                        {
+                          "rotation" : 356.2338,
+                          "parentUUID" : "E524CDF8-05D0-47C6-9338-960E21F45BBF",
+                          "connections" : [
+                            {
+                              "angleDelta" : 182.7332,
+                              "nodeName" : "hand_R",
+                              "positionDelta" : "{-6.540163, -2.107594}"
+                            }
+                          ],
+                          "tags" : [
+                            "DEFAULT"
+                          ],
+                          "rigid" : true,
+                          "maxAngle" : 90,
+                          "generalPosition" : "{0.000118, -0.016622}",
+                          "uuid" : "B59D44E7-4D04-4A8B-91F7-F7E7B283B072",
+                          "name" : "hand_r",
+                          "anchor" : "{0.500000, 1.000000}",
+                          "size" : "{4.000000, 9.771664}",
+                          "nodeType" : "LHBone",
+                          "alpha" : 255,
+                          "scale" : "{1.000000, 1.000000}",
+                          "minAngle" : -90,
+                          "zOrder" : 0,
+                          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                        }
+                      ],
+                      "name" : "lower_arm_r",
+                      "anchor" : "{0.500000, 1.000000}",
+                      "size" : "{4.000000, 21.437119}",
+                      "nodeType" : "LHBone",
+                      "alpha" : 255,
+                      "scale" : "{1.000000, 1.000000}",
+                      "minAngle" : 0,
+                      "zOrder" : 0,
+                      "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                    }
+                  ],
+                  "name" : "upper_arm_r",
+                  "anchor" : "{0.500000, 1.000000}",
+                  "size" : "{4.000000, 20.248529}",
+                  "nodeType" : "LHBone",
+                  "alpha" : 255,
+                  "scale" : "{1.000000, 1.000000}",
+                  "minAngle" : 340,
+                  "zOrder" : 0,
+                  "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                },
+                {
+                  "rotation" : 10.95524,
+                  "parentUUID" : "DB628412-B8A3-46CD-AE95-A10491E9D46E",
+                  "connections" : [
+                    {
+                      "angleDelta" : -6.595145,
+                      "nodeName" : "HeadNormal",
+                      "positionDelta" : "{0.155724, -40.569907}"
+                    }
+                  ],
+                  "tags" : [
+                    "DEFAULT"
+                  ],
+                  "rigid" : true,
+                  "maxAngle" : 40,
+                  "generalPosition" : "{-0.004744, -0.059208}",
+                  "uuid" : "4DBD4E25-63F2-4A6D-B6A6-DBFCE072CF98",
+                  "name" : "head",
+                  "anchor" : "{0.500000, 1.000000}",
+                  "size" : "{4.000000, 20.155874}",
+                  "nodeType" : "LHBone",
+                  "alpha" : 255,
+                  "scale" : "{1.000000, 1.000000}",
+                  "minAngle" : -10,
+                  "zOrder" : 0,
+                  "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                }
+              ],
+              "name" : "spine",
+              "anchor" : "{0.500000, 1.000000}",
+              "size" : "{4.000000, 52.192635}",
+              "nodeType" : "LHBone",
+              "alpha" : 255,
+              "scale" : "{1.000000, 1.000000}",
+              "minAngle" : -10,
+              "zOrder" : 0,
+              "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+            },
+            {
+              "rotation" : 156.7141,
+              "parentUUID" : "23BC2B1A-6079-423E-B891-4349998889D7",
+              "connections" : [
+                {
+                  "angleDelta" : 180.8952,
+                  "nodeName" : "upperLeg_L",
+                  "positionDelta" : "{-0.744973, 1.297889}"
+                }
+              ],
+              "tags" : [
+                "DEFAULT"
+              ],
+              "rigid" : true,
+              "maxAngle" : 240,
+              "generalPosition" : "{0.013005, -0.013560}",
+              "uuid" : "B99487C7-F2A7-4777-B0B6-6264FC6A2130",
+              "children" : [
+                {
+                  "rotation" : 4.514254,
+                  "parentUUID" : "B99487C7-F2A7-4777-B0B6-6264FC6A2130",
+                  "connections" : [
+                    {
+                      "angleDelta" : 176.381,
+                      "nodeName" : "lowerLeg_L",
+                      "positionDelta" : "{-1.363888, 1.680295}"
+                    }
+                  ],
+                  "tags" : [
+                    "DEFAULT"
+                  ],
+                  "rigid" : true,
+                  "maxAngle" : 110,
+                  "generalPosition" : "{0.000000, -0.017411}",
+                  "uuid" : "F5F174F6-1695-45A0-9500-A135791D1EBA",
+                  "children" : [
+                    {
+                      "rotation" : 293.5517,
+                      "parentUUID" : "F5F174F6-1695-45A0-9500-A135791D1EBA",
+                      "connections" : [
+                        {
+                          "angleDelta" : 242.8293,
+                          "nodeName" : "foot_L",
+                          "positionDelta" : "{1.600038, -0.288433}"
+                        }
+                      ],
+                      "tags" : [
+                        "DEFAULT"
+                      ],
+                      "rigid" : true,
+                      "maxAngle" : 20,
+                      "generalPosition" : "{0.000000, -0.021386}",
+                      "uuid" : "5CB45CF2-3D7B-45AF-90E3-14E544ACF7C1",
+                      "name" : "foot_l",
+                      "anchor" : "{0.500000, 1.000000}",
+                      "size" : "{4.000000, 19.212095}",
+                      "nodeType" : "LHBone",
+                      "alpha" : 255,
+                      "scale" : "{1.000000, 1.000000}",
+                      "minAngle" : -90,
+                      "zOrder" : 0,
+                      "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                    }
+                  ],
+                  "name" : "lower_leg_l",
+                  "anchor" : "{0.500000, 1.000000}",
+                  "size" : "{4.000000, 27.373554}",
+                  "nodeType" : "LHBone",
+                  "alpha" : 255,
+                  "scale" : "{1.000000, 1.000000}",
+                  "minAngle" : 0,
+                  "zOrder" : 0,
+                  "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                }
+              ],
+              "name" : "upper_leg_l",
+              "anchor" : "{0.500000, 1.000000}",
+              "size" : "{4.000000, 22.286306}",
+              "nodeType" : "LHBone",
+              "alpha" : 255,
+              "scale" : "{1.000000, 1.000000}",
+              "minAngle" : 70,
+              "zOrder" : 0,
+              "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+            },
+            {
+              "rotation" : 188.941,
+              "parentUUID" : "23BC2B1A-6079-423E-B891-4349998889D7",
+              "connections" : [
+                {
+                  "angleDelta" : -183.534,
+                  "nodeName" : "upperLeg_R",
+                  "positionDelta" : "{-1.393166, 1.076713}"
+                }
+              ],
+              "tags" : [
+                "DEFAULT"
+              ],
+              "rigid" : true,
+              "maxAngle" : -240,
+              "generalPosition" : "{-0.015377, -0.014265}",
+              "uuid" : "B8F37BB8-7F1E-4264-8359-F5605A85680F",
+              "children" : [
+                {
+                  "rotation" : 28.42789,
+                  "parentUUID" : "B8F37BB8-7F1E-4264-8359-F5605A85680F",
+                  "connections" : [
+                    {
+                      "angleDelta" : -182.9429,
+                      "nodeName" : "lowerLeg_R",
+                      "positionDelta" : "{-1.566885, 1.711385}"
+                    }
+                  ],
+                  "tags" : [
+                    "DEFAULT"
+                  ],
+                  "rigid" : true,
+                  "maxAngle" : 120,
+                  "generalPosition" : "{0.000000, -0.016976}",
+                  "uuid" : "A8DF08BA-63A3-4E57-A5D7-3FE5E1848E4B",
+                  "children" : [
+                    {
+                      "rotation" : 266.8333,
+                      "parentUUID" : "A8DF08BA-63A3-4E57-A5D7-3FE5E1848E4B",
+                      "connections" : [
+                        {
+                          "angleDelta" : -108.4738,
+                          "nodeName" : "foot_R",
+                          "positionDelta" : "{3.179429, 0.928099}"
+                        }
+                      ],
+                      "tags" : [
+                        "DEFAULT"
+                      ],
+                      "rigid" : true,
+                      "maxAngle" : -110,
+                      "generalPosition" : "{0.000000, -0.022052}",
+                      "uuid" : "DD187EBD-88FF-4EDD-83AD-2C91834AA233",
+                      "name" : "foot_r",
+                      "anchor" : "{0.500000, 1.000000}",
+                      "size" : "{4.000000, 20.064455}",
+                      "nodeType" : "LHBone",
+                      "alpha" : 255,
+                      "scale" : "{1.000000, 1.000000}",
+                      "minAngle" : 0,
+                      "zOrder" : 0,
+                      "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                    }
+                  ],
+                  "name" : "lower_leg_r",
+                  "anchor" : "{0.500000, 1.000000}",
+                  "size" : "{4.000000, 28.226591}",
+                  "nodeType" : "LHBone",
+                  "alpha" : 255,
+                  "scale" : "{1.000000, 1.000000}",
+                  "minAngle" : 0,
+                  "zOrder" : 0,
+                  "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                }
+              ],
+              "name" : "upper_leg_r",
+              "anchor" : "{0.500000, 1.000000}",
+              "size" : "{4.000000, 21.729128}",
+              "nodeType" : "LHBone",
+              "alpha" : 255,
+              "scale" : "{1.000000, 1.000000}",
+              "minAngle" : -70,
+              "zOrder" : 0,
+              "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+            }
+          ],
+          "name" : "girlSoldier",
+          "anchor" : "{0.500000, 1.000000}",
+          "size" : "{8.000000, 8.000000}",
+          "animations" : [
+            {
+              "active" : false,
+              "repetitions" : 0,
+              "totalFrames" : 30,
+              "fps" : 24,
+              "properties" : {
+                "Skeletal Transform" : {
+                  "Frames" : [
+                    {
+                      "bonesInfo" : {
+                        "lower_arm_l" : {
+                          "pos" : "{0.000000, -9.063722}",
+                          "rot" : 0
+                        },
+                        "hand_r" : {
+                          "pos" : "{0.113249, -10.638231}",
+                          "rot" : 356.2338
+                        },
+                        "hand_l" : {
+                          "pos" : "{-0.038606, -14.256453}",
+                          "rot" : 359.0757
+                        },
+                        "upper_leg_l" : {
+                          "pos" : "{12.485254, -8.678401}",
+                          "rot" : 179.4503
+                        },
+                        "head" : {
+                          "pos" : "{-4.554367, -37.892960}",
+                          "rot" : 6.980221
+                        },
+                        "lower_leg_l" : {
+                          "pos" : "{0.000000, -11.143153}",
+                          "rot" : 4.514254
+                        },
+                        "foot_r" : {
+                          "pos" : "{0.000000, -14.113296}",
+                          "rot" : 67.33786
+                        },
+                        "foot_l" : {
+                          "pos" : "{0.000000, -13.686777}",
+                          "rot" : 293.5517
+                        },
+                        "upper_arm_r" : {
+                          "pos" : "{-19.485135, -23.692429}",
+                          "rot" : 249.2628
+                        },
+                        "lower_arm_r" : {
+                          "pos" : "{0.000000, -10.124265}",
+                          "rot" : 0
+                        },
+                        "upper_leg_r" : {
+                          "pos" : "{-14.762363, -9.129307}",
+                          "rot" : 180
+                        },
+                        "lower_leg_r" : {
+                          "pos" : "{0.000000, -10.864564}",
+                          "rot" : 0
+                        },
+                        "__rootBone__" : {
+                          "pos" : "{484.779048, 264.838119}",
+                          "rot" : 0
+                        },
+                        "spine" : {
+                          "pos" : "{0.000000, -4.000000}",
+                          "rot" : 359.6326
+                        },
+                        "upper_arm_l" : {
+                          "pos" : "{12.065852, -24.757173}",
+                          "rot" : 94.75543
+                        }
+                      },
+                      "frameIndex" : 0
+                    },
+                    {
+                      "bonesInfo" : {
+                        "lower_arm_l" : {
+                          "pos" : "{0.000000, -9.063722}",
+                          "rot" : 50.53504
+                        },
+                        "hand_r" : {
+                          "pos" : "{0.113249, -10.638231}",
+                          "rot" : 301.3491
+                        },
+                        "hand_l" : {
+                          "pos" : "{-0.038606, -14.256453}",
+                          "rot" : 38.38518
+                        },
+                        "upper_leg_l" : {
+                          "pos" : "{12.485254, -8.678401}",
+                          "rot" : 119.7189
+                        },
+                        "head" : {
+                          "pos" : "{-4.554367, -37.892960}",
+                          "rot" : 350
+                        },
+                        "lower_leg_l" : {
+                          "pos" : "{0.000000, -11.143153}",
+                          "rot" : 46.37839
+                        },
+                        "foot_r" : {
+                          "pos" : "{0.000000, -14.113296}",
+                          "rot" : 27.16795
+                        },
+                        "foot_l" : {
+                          "pos" : "{0.000000, -13.686777}",
+                          "rot" : 343.273
+                        },
+                        "upper_arm_r" : {
+                          "pos" : "{-19.485135, -23.692429}",
+                          "rot" : 214.6923
+                        },
+                        "lower_arm_r" : {
+                          "pos" : "{0.000000, -10.124265}",
+                          "rot" : 310.524
+                        },
+                        "upper_leg_r" : {
+                          "pos" : "{-14.762363, -9.129307}",
+                          "rot" : 241.9718
+                        },
+                        "lower_leg_r" : {
+                          "pos" : "{0.000000, -10.864564}",
+                          "rot" : 311.8684
+                        },
+                        "__rootBone__" : {
+                          "pos" : "{484.779048, 264.838119}",
+                          "rot" : 0
+                        },
+                        "spine" : {
+                          "pos" : "{0.000000, -4.000000}",
+                          "rot" : 10
+                        },
+                        "upper_arm_l" : {
+                          "pos" : "{12.065852, -24.757173}",
+                          "rot" : 69.79611
+                        }
+                      },
+                      "frameIndex" : 14
+                    },
+                    {
+                      "bonesInfo" : {
+                        "lower_arm_l" : {
+                          "pos" : "{0.000000, -9.063722}",
+                          "rot" : 0
+                        },
+                        "hand_r" : {
+                          "pos" : "{0.113249, -10.638231}",
+                          "rot" : 356.2338
+                        },
+                        "hand_l" : {
+                          "pos" : "{-0.038606, -14.256453}",
+                          "rot" : 359.0757
+                        },
+                        "upper_leg_l" : {
+                          "pos" : "{12.485254, -8.678401}",
+                          "rot" : 179.4503
+                        },
+                        "head" : {
+                          "pos" : "{-4.554367, -37.892960}",
+                          "rot" : 6.980221
+                        },
+                        "lower_leg_l" : {
+                          "pos" : "{0.000000, -11.143153}",
+                          "rot" : 4.514254
+                        },
+                        "foot_r" : {
+                          "pos" : "{0.000000, -14.113296}",
+                          "rot" : 67.33786
+                        },
+                        "foot_l" : {
+                          "pos" : "{0.000000, -13.686777}",
+                          "rot" : 293.5517
+                        },
+                        "upper_arm_r" : {
+                          "pos" : "{-19.485135, -23.692429}",
+                          "rot" : 249.2628
+                        },
+                        "lower_arm_r" : {
+                          "pos" : "{0.000000, -10.124265}",
+                          "rot" : 0
+                        },
+                        "upper_leg_r" : {
+                          "pos" : "{-14.762363, -9.129307}",
+                          "rot" : 180
+                        },
+                        "lower_leg_r" : {
+                          "pos" : "{0.000000, -10.864564}",
+                          "rot" : 0
+                        },
+                        "__rootBone__" : {
+                          "pos" : "{484.779048, 264.838119}",
+                          "rot" : 0
+                        },
+                        "spine" : {
+                          "pos" : "{0.000000, -4.000000}",
+                          "rot" : 359.6326
+                        },
+                        "upper_arm_l" : {
+                          "pos" : "{12.065852, -24.757173}",
+                          "rot" : 94.75543
+                        }
+                      },
+                      "frameIndex" : 29
+                    }
+                  ],
+                  "type" : "LHRootBoneProperty"
+                }
+              },
+              "name" : "test"
+            },
+            {
+              "active" : true,
+              "repetitions" : 0,
+              "totalFrames" : 40,
+              "fps" : 24,
+              "properties" : {
+                "Sprite Children" : {
+                  "subproperties" : {
+                    "HeadNormal" : {
+                      "locked" : false,
+                      "type" : "LHSpriteFrameProperty",
+                      "Frames" : [
+                        {
+                          "spriteSheetName" : "HeadNormal",
+                          "frameIndex" : 0
+                        },
+                        {
+                          "spriteSheetName" : "HeadHurt",
+                          "frameIndex" : 14
+                        },
+                        {
+                          "spriteSheetName" : "HeadHappy",
+                          "frameIndex" : 24
+                        }
+                      ]
+                    }
+                  },
+                  "Frames" : [
+
+                  ],
+                  "type" : "LHBoneSpritesChildrenFrameProperty"
+                },
+                "Skeletal Transform" : {
+                  "Frames" : [
+                    {
+                      "bonesInfo" : {
+                        "lower_arm_l" : {
+                          "pos" : "{0.000000, -9.063680}",
+                          "rot" : 315.7507
+                        },
+                        "hand_r" : {
+                          "pos" : "{0.113280, -10.638080}",
+                          "rot" : 356.2338
+                        },
+                        "hand_l" : {
+                          "pos" : "{-0.038400, -14.256640}",
+                          "rot" : 359.0757
+                        },
+                        "upper_leg_l" : {
+                          "pos" : "{12.484800, -8.678400}",
+                          "rot" : 156.7141
+                        },
+                        "head" : {
+                          "pos" : "{-4.554240, -37.893120}",
+                          "rot" : 10.95524
+                        },
+                        "lower_leg_l" : {
+                          "pos" : "{0.000000, -11.143040}",
+                          "rot" : 4.514254
+                        },
+                        "foot_r" : {
+                          "pos" : "{0.000000, -14.113280}",
+                          "rot" : 266.8333
+                        },
+                        "foot_l" : {
+                          "pos" : "{0.000000, -13.687040}",
+                          "rot" : 293.5517
+                        },
+                        "upper_arm_r" : {
+                          "pos" : "{-19.485120, -23.692160}",
+                          "rot" : 132.613
+                        },
+                        "lower_arm_r" : {
+                          "pos" : "{0.000000, -10.124160}",
+                          "rot" : 307.444
+                        },
+                        "upper_leg_r" : {
+                          "pos" : "{-14.761920, -9.129600}",
+                          "rot" : 188.941
+                        },
+                        "lower_leg_r" : {
+                          "pos" : "{0.000000, -10.864640}",
+                          "rot" : 28.42789
+                        },
+                        "__rootBone__" : {
+                          "pos" : "{484.779048, 264.838119}",
+                          "rot" : 0
+                        },
+                        "spine" : {
+                          "pos" : "{0.000000, -4.000000}",
+                          "rot" : 359.6326
+                        },
+                        "upper_arm_l" : {
+                          "pos" : "{12.066240, -24.757120}",
+                          "rot" : 240
+                        }
+                      },
+                      "frameIndex" : 0
+                    },
+                    {
+                      "bonesInfo" : {
+                        "lower_arm_l" : {
+                          "pos" : "{0.000000, -9.063680}",
+                          "rot" : 324.8622
+                        },
+                        "hand_r" : {
+                          "pos" : "{0.113280, -10.638080}",
+                          "rot" : 356.2338
+                        },
+                        "hand_l" : {
+                          "pos" : "{-0.038400, -14.256640}",
+                          "rot" : 359.0757
+                        },
+                        "upper_leg_l" : {
+                          "pos" : "{12.484800, -8.678400}",
+                          "rot" : 137.7379
+                        },
+                        "head" : {
+                          "pos" : "{-4.554240, -37.893120}",
+                          "rot" : 7.939934
+                        },
+                        "lower_leg_l" : {
+                          "pos" : "{0.000000, -11.143040}",
+                          "rot" : 46.50973
+                        },
+                        "foot_r" : {
+                          "pos" : "{0.000000, -14.113280}",
+                          "rot" : 253.0575
+                        },
+                        "foot_l" : {
+                          "pos" : "{0.000000, -13.687040}",
+                          "rot" : 293.5517
+                        },
+                        "upper_arm_r" : {
+                          "pos" : "{-19.485120, -23.692160}",
+                          "rot" : 125.4758
+                        },
+                        "lower_arm_r" : {
+                          "pos" : "{0.000000, -10.124160}",
+                          "rot" : 324.3036
+                        },
+                        "upper_leg_r" : {
+                          "pos" : "{-14.761920, -9.129600}",
+                          "rot" : 175.8398
+                        },
+                        "lower_leg_r" : {
+                          "pos" : "{0.000000, -10.864640}",
+                          "rot" : 72.77706
+                        },
+                        "__rootBone__" : {
+                          "pos" : "{484.779048, 271.683905}",
+                          "rot" : 0
+                        },
+                        "spine" : {
+                          "pos" : "{0.000000, -4.000000}",
+                          "rot" : 3.563099
+                        },
+                        "upper_arm_l" : {
+                          "pos" : "{12.066240, -24.757120}",
+                          "rot" : 240
+                        }
+                      },
+                      "frameIndex" : 4
+                    },
+                    {
+                      "bonesInfo" : {
+                        "lower_arm_l" : {
+                          "pos" : "{0.000000, -9.063680}",
+                          "rot" : 322.5843
+                        },
+                        "hand_r" : {
+                          "pos" : "{0.113280, -10.638080}",
+                          "rot" : 356.2338
+                        },
+                        "hand_l" : {
+                          "pos" : "{-0.038400, -14.256640}",
+                          "rot" : 359.0757
+                        },
+                        "upper_leg_l" : {
+                          "pos" : "{12.484800, -8.678400}",
+                          "rot" : 201.0394
+                        },
+                        "head" : {
+                          "pos" : "{-4.554240, -37.893120}",
+                          "rot" : 5.358696
+                        },
+                        "lower_leg_l" : {
+                          "pos" : "{0.000000, -11.143040}",
+                          "rot" : 0
+                        },
+                        "foot_r" : {
+                          "pos" : "{0.000000, -14.113280}",
+                          "rot" : 272.403
+                        },
+                        "foot_l" : {
+                          "pos" : "{0.000000, -13.687040}",
+                          "rot" : 282.9952
+                        },
+                        "upper_arm_r" : {
+                          "pos" : "{-19.485120, -23.692160}",
+                          "rot" : 169.3215
+                        },
+                        "lower_arm_r" : {
+                          "pos" : "{0.000000, -10.124160}",
+                          "rot" : 339.1046
+                        },
+                        "upper_leg_r" : {
+                          "pos" : "{-14.761920, -9.129600}",
+                          "rot" : 127.8927
+                        },
+                        "lower_leg_r" : {
+                          "pos" : "{0.000000, -10.864640}",
+                          "rot" : 97.13806
+                        },
+                        "__rootBone__" : {
+                          "pos" : "{485.143310, 266.329837}",
+                          "rot" : 0
+                        },
+                        "spine" : {
+                          "pos" : "{0.000000, -4.000000}",
+                          "rot" : 0.02797646
+                        },
+                        "upper_arm_l" : {
+                          "pos" : "{12.066240, -24.757120}",
+                          "rot" : 206.7757
+                        }
+                      },
+                      "frameIndex" : 9
+                    },
+                    {
+                      "bonesInfo" : {
+                        "lower_arm_l" : {
+                          "pos" : "{0.000000, -9.063680}",
+                          "rot" : 284.2168
+                        },
+                        "hand_r" : {
+                          "pos" : "{0.113280, -10.638080}",
+                          "rot" : 356.2338
+                        },
+                        "hand_l" : {
+                          "pos" : "{-0.038400, -14.256640}",
+                          "rot" : 359.0757
+                        },
+                        "upper_leg_l" : {
+                          "pos" : "{12.484800, -8.678400}",
+                          "rot" : 209.6471
+                        },
+                        "head" : {
+                          "pos" : "{-4.554240, -37.893120}",
+                          "rot" : 3.689607
+                        },
+                        "lower_leg_l" : {
+                          "pos" : "{0.000000, -11.143040}",
+                          "rot" : 0
+                        },
+                        "foot_r" : {
+                          "pos" : "{0.000000, -14.113280}",
+                          "rot" : 268.5339
+                        },
+                        "foot_l" : {
+                          "pos" : "{0.000000, -13.687040}",
+                          "rot" : 299.3871
+                        },
+                        "upper_arm_r" : {
+                          "pos" : "{-19.485120, -23.692160}",
+                          "rot" : 218.9403
+                        },
+                        "lower_arm_r" : {
+                          "pos" : "{0.000000, -10.124160}",
+                          "rot" : 310.2352
+                        },
+                        "upper_leg_r" : {
+                          "pos" : "{-14.761920, -9.129600}",
+                          "rot" : 120
+                        },
+                        "lower_leg_r" : {
+                          "pos" : "{0.000000, -10.864640}",
+                          "rot" : 60.23101
+                        },
+                        "__rootBone__" : {
+                          "pos" : "{485.070458, 262.488802}",
+                          "rot" : 0
+                        },
+                        "spine" : {
+                          "pos" : "{0.000000, -4.000000}",
+                          "rot" : 359.5219
+                        },
+                        "upper_arm_l" : {
+                          "pos" : "{12.066240, -24.757120}",
+                          "rot" : 184.258
+                        }
+                      },
+                      "frameIndex" : 14
+                    },
+                    {
+                      "bonesInfo" : {
+                        "lower_arm_l" : {
+                          "pos" : "{0.000000, -9.063680}",
+                          "rot" : 280.9739
+                        },
+                        "hand_r" : {
+                          "pos" : "{0.113280, -10.638080}",
+                          "rot" : 356.2338
+                        },
+                        "hand_l" : {
+                          "pos" : "{-0.038400, -14.256640}",
+                          "rot" : 359.0757
+                        },
+                        "upper_leg_l" : {
+                          "pos" : "{12.484800, -8.678400}",
+                          "rot" : 229.8584
+                        },
+                        "head" : {
+                          "pos" : "{-4.554240, -37.893120}",
+                          "rot" : 9.24482
+                        },
+                        "lower_leg_l" : {
+                          "pos" : "{0.000000, -11.143040}",
+                          "rot" : 10.37037
+                        },
+                        "foot_r" : {
+                          "pos" : "{0.000000, -14.113280}",
+                          "rot" : 298.6447
+                        },
+                        "foot_l" : {
+                          "pos" : "{0.000000, -13.687040}",
+                          "rot" : 296.1088
+                        },
+                        "upper_arm_r" : {
+                          "pos" : "{-19.485120, -23.692160}",
+                          "rot" : 242.28
+                        },
+                        "lower_arm_r" : {
+                          "pos" : "{0.000000, -10.124160}",
+                          "rot" : 289.4177
+                        },
+                        "upper_leg_r" : {
+                          "pos" : "{-14.761920, -9.129600}",
+                          "rot" : 140.0519
+                        },
+                        "lower_leg_r" : {
+                          "pos" : "{0.000000, -10.864640}",
+                          "rot" : 14.12663
+                        },
+                        "__rootBone__" : {
+                          "pos" : "{485.085028, 270.812604}",
+                          "rot" : 0
+                        },
+                        "spine" : {
+                          "pos" : "{0.000000, -4.000000}",
+                          "rot" : 2.086285
+                        },
+                        "upper_arm_l" : {
+                          "pos" : "{12.066240, -24.757120}",
+                          "rot" : 139.4447
+                        }
+                      },
+                      "frameIndex" : 19
+                    },
+                    {
+                      "bonesInfo" : {
+                        "lower_arm_l" : {
+                          "pos" : "{0.000000, -9.063680}",
+                          "rot" : 281.6225
+                        },
+                        "hand_r" : {
+                          "pos" : "{0.113280, -10.638080}",
+                          "rot" : 356.2338
+                        },
+                        "hand_l" : {
+                          "pos" : "{-0.038400, -14.256640}",
+                          "rot" : 359.0757
+                        },
+                        "upper_leg_l" : {
+                          "pos" : "{12.484800, -8.678400}",
+                          "rot" : 206.7096
+                        },
+                        "head" : {
+                          "pos" : "{-4.554240, -37.893120}",
+                          "rot" : 8.133796
+                        },
+                        "lower_leg_l" : {
+                          "pos" : "{0.000000, -11.143040}",
+                          "rot" : 45.18428
+                        },
+                        "foot_r" : {
+                          "pos" : "{0.000000, -14.113280}",
+                          "rot" : 295.1602
+                        },
+                        "foot_l" : {
+                          "pos" : "{0.000000, -13.687040}",
+                          "rot" : 296.7644
+                        },
+                        "upper_arm_r" : {
+                          "pos" : "{-19.485120, -23.692160}",
+                          "rot" : 237.6121
+                        },
+                        "lower_arm_r" : {
+                          "pos" : "{0.000000, -10.124160}",
+                          "rot" : 293.5812
+                        },
+                        "upper_leg_r" : {
+                          "pos" : "{-14.761920, -9.129600}",
+                          "rot" : 160.7224
+                        },
+                        "lower_leg_r" : {
+                          "pos" : "{0.000000, -10.864640}",
+                          "rot" : 14.51573
+                        },
+                        "__rootBone__" : {
+                          "pos" : "{485.987078, 266.598008}",
+                          "rot" : 0
+                        },
+                        "spine" : {
+                          "pos" : "{0.000000, -4.000000}",
+                          "rot" : 5.218156
+                        },
+                        "upper_arm_l" : {
+                          "pos" : "{12.066240, -24.757120}",
+                          "rot" : 148.4073
+                        }
+                      },
+                      "frameIndex" : 24
+                    },
+                    {
+                      "bonesInfo" : {
+                        "lower_arm_l" : {
+                          "pos" : "{0.000000, -9.063680}",
+                          "rot" : 0
+                        },
+                        "hand_r" : {
+                          "pos" : "{0.113280, -10.638080}",
+                          "rot" : 356.2338
+                        },
+                        "hand_l" : {
+                          "pos" : "{-0.038400, -14.256640}",
+                          "rot" : 359.0757
+                        },
+                        "upper_leg_l" : {
+                          "pos" : "{12.484800, -8.678400}",
+                          "rot" : 184.4822
+                        },
+                        "head" : {
+                          "pos" : "{-4.554240, -37.893120}",
+                          "rot" : 2.101148
+                        },
+                        "lower_leg_l" : {
+                          "pos" : "{0.000000, -11.143040}",
+                          "rot" : 67.65314
+                        },
+                        "foot_r" : {
+                          "pos" : "{0.000000, -14.113280}",
+                          "rot" : 294.8532
+                        },
+                        "foot_l" : {
+                          "pos" : "{0.000000, -13.687040}",
+                          "rot" : 296.7644
+                        },
+                        "upper_arm_r" : {
+                          "pos" : "{-19.485120, -23.692160}",
+                          "rot" : 177.8582
+                        },
+                        "lower_arm_r" : {
+                          "pos" : "{0.000000, -10.124160}",
+                          "rot" : 339.9324
+                        },
+                        "upper_leg_r" : {
+                          "pos" : "{-14.761920, -9.129600}",
+                          "rot" : 182.0718
+                        },
+                        "lower_leg_r" : {
+                          "pos" : "{0.000000, -10.864640}",
+                          "rot" : 0
+                        },
+                        "__rootBone__" : {
+                          "pos" : "{485.987078, 263.049297}",
+                          "rot" : 0
+                        },
+                        "spine" : {
+                          "pos" : "{0.000000, -4.000000}",
+                          "rot" : 1.432721
+                        },
+                        "upper_arm_l" : {
+                          "pos" : "{12.066240, -24.757120}",
+                          "rot" : 170.6764
+                        }
+                      },
+                      "frameIndex" : 29
+                    },
+                    {
+                      "bonesInfo" : {
+                        "lower_arm_l" : {
+                          "pos" : "{0.000000, -9.063680}",
+                          "rot" : 328.1227
+                        },
+                        "hand_r" : {
+                          "pos" : "{0.113280, -10.638080}",
+                          "rot" : 356.2338
+                        },
+                        "hand_l" : {
+                          "pos" : "{-0.038400, -14.256640}",
+                          "rot" : 315.5511
+                        },
+                        "upper_leg_l" : {
+                          "pos" : "{12.484800, -8.678400}",
+                          "rot" : 142.9221
+                        },
+                        "head" : {
+                          "pos" : "{-4.554240, -37.893120}",
+                          "rot" : 6.183804
+                        },
+                        "lower_leg_l" : {
+                          "pos" : "{0.000000, -11.143040}",
+                          "rot" : 77.49342
+                        },
+                        "foot_r" : {
+                          "pos" : "{0.000000, -14.113280}",
+                          "rot" : 295.1623
+                        },
+                        "foot_l" : {
+                          "pos" : "{0.000000, -13.687040}",
+                          "rot" : 296.7644
+                        },
+                        "upper_arm_r" : {
+                          "pos" : "{-19.485120, -23.692160}",
+                          "rot" : 153.9633
+                        },
+                        "lower_arm_r" : {
+                          "pos" : "{0.000000, -10.124160}",
+                          "rot" : 314.4563
+                        },
+                        "upper_leg_r" : {
+                          "pos" : "{-14.761920, -9.129600}",
+                          "rot" : 204.2923
+                        },
+                        "lower_leg_r" : {
+                          "pos" : "{0.000000, -10.864640}",
+                          "rot" : 1.885644
+                        },
+                        "__rootBone__" : {
+                          "pos" : "{485.987078, 260.135200}",
+                          "rot" : 0
+                        },
+                        "spine" : {
+                          "pos" : "{0.000000, -4.000000}",
+                          "rot" : 3.964473
+                        },
+                        "upper_arm_l" : {
+                          "pos" : "{12.066240, -24.757120}",
+                          "rot" : 210.7887
+                        }
+                      },
+                      "frameIndex" : 34
+                    },
+                    {
+                      "bonesInfo" : {
+                        "lower_arm_l" : {
+                          "pos" : "{0.000000, -9.063680}",
+                          "rot" : 315.7507
+                        },
+                        "hand_r" : {
+                          "pos" : "{0.113280, -10.638080}",
+                          "rot" : 356.2338
+                        },
+                        "hand_l" : {
+                          "pos" : "{-0.038400, -14.256640}",
+                          "rot" : 359.0757
+                        },
+                        "upper_leg_l" : {
+                          "pos" : "{12.484800, -8.678400}",
+                          "rot" : 156.7141
+                        },
+                        "head" : {
+                          "pos" : "{-4.554240, -37.893120}",
+                          "rot" : 10.95524
+                        },
+                        "lower_leg_l" : {
+                          "pos" : "{0.000000, -11.143040}",
+                          "rot" : 4.514254
+                        },
+                        "foot_r" : {
+                          "pos" : "{0.000000, -14.113280}",
+                          "rot" : 266.8333
+                        },
+                        "foot_l" : {
+                          "pos" : "{0.000000, -13.687040}",
+                          "rot" : 293.5517
+                        },
+                        "upper_arm_r" : {
+                          "pos" : "{-19.485120, -23.692160}",
+                          "rot" : 132.613
+                        },
+                        "lower_arm_r" : {
+                          "pos" : "{0.000000, -10.124160}",
+                          "rot" : 307.444
+                        },
+                        "upper_leg_r" : {
+                          "pos" : "{-14.761920, -9.129600}",
+                          "rot" : 188.941
+                        },
+                        "lower_leg_r" : {
+                          "pos" : "{0.000000, -10.864640}",
+                          "rot" : 28.42789
+                        },
+                        "__rootBone__" : {
+                          "pos" : "{484.779048, 264.838119}",
+                          "rot" : 0
+                        },
+                        "spine" : {
+                          "pos" : "{0.000000, -4.000000}",
+                          "rot" : 359.6326
+                        },
+                        "upper_arm_l" : {
+                          "pos" : "{12.066240, -24.757120}",
+                          "rot" : 240
+                        }
+                      },
+                      "frameIndex" : 39
+                    }
+                  ],
+                  "type" : "LHRootBoneProperty"
+                }
+              },
+              "name" : "walk"
+            }
+          ],
+          "nodeType" : "LHBone",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "minAngle" : -180,
+          "zOrder" : 0,
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "connections" : [
+
+          ],
+          "tags" : [
+            "DEFAULT"
+          ],
+          "rigid" : true,
+          "maxAngle" : 180,
+          "generalPosition" : "{0.196268, 0.426244}",
+          "uuid" : "522ACF34-6B14-4119-9AC3-BF62DDD9E351",
+          "children" : [
+            {
+              "rotation" : 0,
+              "parentUUID" : "522ACF34-6B14-4119-9AC3-BF62DDD9E351",
+              "tags" : [
+                "DEFAULT"
+              ],
+              "generalPosition" : "{0.000000, 0.000000}",
+              "uuid" : "3DA9107C-A64D-4004-BF86-904098C2ADB7",
+              "children" : [
+                {
+                  "rotation" : 61.95554,
+                  "parentUUID" : "3DA9107C-A64D-4004-BF86-904098C2ADB7",
+                  "tags" : [
+                    "DEFAULT"
+                  ],
+                  "spriteUUID" : "793F10B3-014C-43F9-95D4-15710A65E62C",
+                  "spriteName" : "upperArm_L",
+                  "generalPosition" : "{0.002575, -0.070673}",
+                  "uuid" : "84BD0771-635A-4D73-A811-2C5B9A5149CC",
+                  "children" : [
+                    {
+                      "rotation" : -44.24927,
+                      "parentUUID" : "84BD0771-635A-4D73-A811-2C5B9A5149CC",
+                      "tags" : [
+                        "DEFAULT"
+                      ],
+                      "spriteUUID" : "0BE4C1E3-B61C-4279-8A2E-AEB5D58022F9",
+                      "spriteName" : "lowerArm_L",
+                      "generalPosition" : "{0.009719, 0.031481}",
+                      "uuid" : "1AA70ACC-8C64-4CD0-8172-C9BFAD355496",
+                      "name" : "lowerArm_L",
+                      "anchor" : "{0.500000, 0.500000}",
+                      "size" : "{20.000000, 31.000000}",
+                      "nodeType" : "LHSprite",
+                      "alpha" : 255,
+                      "scale" : "{1.000000, 1.000000}",
+                      "relativeImagePath" : "PublishFolder\/",
+                      "zOrder" : 0,
+                      "imageFileName" : "suitmanParts.png",
+                      "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                    },
+                    {
+                      "rotation" : -44.24927,
+                      "parentUUID" : "84BD0771-635A-4D73-A811-2C5B9A5149CC",
+                      "tags" : [
+                        "DEFAULT"
+                      ],
+                      "spriteUUID" : "8CD78198-EF65-4D03-B4B5-71F37D06274F",
+                      "spriteName" : "hand_L",
+                      "generalPosition" : "{0.024226, 0.051352}",
+                      "uuid" : "65A5AF76-43ED-4593-8CBA-46996CD452C6",
+                      "name" : "hand_L",
+                      "anchor" : "{0.500000, 0.500000}",
+                      "size" : "{26.000000, 25.000000}",
+                      "nodeType" : "LHSprite",
+                      "alpha" : 255,
+                      "scale" : "{1.000000, 1.000000}",
+                      "relativeImagePath" : "PublishFolder\/",
+                      "zOrder" : 0,
+                      "imageFileName" : "suitmanParts.png",
+                      "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                    }
+                  ],
+                  "name" : "upperArm_L",
+                  "anchor" : "{0.500000, 0.500000}",
+                  "size" : "{21.000000, 34.000000}",
+                  "nodeType" : "LHSprite",
+                  "alpha" : 255,
+                  "scale" : "{1.000000, 1.000000}",
+                  "relativeImagePath" : "PublishFolder\/",
+                  "zOrder" : -1,
+                  "imageFileName" : "suitmanParts.png",
+                  "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                },
+                {
+                  "rotation" : 0,
+                  "parentUUID" : "3DA9107C-A64D-4004-BF86-904098C2ADB7",
+                  "tags" : [
+                    "DEFAULT"
+                  ],
+                  "spriteUUID" : "440E5021-C4AA-43E9-997A-FF83D9893615",
+                  "spriteName" : "Body",
+                  "generalPosition" : "{0.000374, -0.051656}",
+                  "uuid" : "377152BF-B1C3-45CE-A441-1204A4563B11",
+                  "name" : "Body",
+                  "anchor" : "{0.500000, 0.500000}",
+                  "size" : "{50.000000, 66.000000}",
+                  "nodeType" : "LHSprite",
+                  "alpha" : 255,
+                  "scale" : "{1.000000, 1.000000}",
+                  "relativeImagePath" : "PublishFolder\/",
+                  "zOrder" : 0,
+                  "imageFileName" : "suitmanParts.png",
+                  "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                },
+                {
+                  "rotation" : 3.97502,
+                  "parentUUID" : "3DA9107C-A64D-4004-BF86-904098C2ADB7",
+                  "tags" : [
+                    "DEFAULT"
+                  ],
+                  "spriteUUID" : "2D48ED6B-95CC-4A04-8FCA-19D985899E4D",
+                  "spriteName" : "HeadNormal",
+                  "generalPosition" : "{0.004485, -0.173813}",
+                  "uuid" : "13DF11A5-1BA0-4926-A3A6-3212ECF83C86",
+                  "name" : "HeadNormal",
+                  "anchor" : "{0.500000, 0.500000}",
+                  "size" : "{113.000000, 101.000000}",
+                  "nodeType" : "LHSprite",
+                  "alpha" : 255,
+                  "scale" : "{1.000000, 1.000000}",
+                  "relativeImagePath" : "PublishFolder\/",
+                  "zOrder" : 1,
+                  "imageFileName" : "suitmanParts.png",
+                  "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                },
+                {
+                  "rotation" : 337.2637,
+                  "parentUUID" : "3DA9107C-A64D-4004-BF86-904098C2ADB7",
+                  "tags" : [
+                    "DEFAULT"
+                  ],
+                  "spriteUUID" : "C637A851-D382-4663-A194-B149F1ED33A2",
+                  "spriteName" : "upperLeg_L",
+                  "generalPosition" : "{0.015600, 0.002274}",
+                  "uuid" : "FC396220-6FC3-4A8C-B67E-C0CAC0A509AD",
+                  "children" : [
+                    {
+                      "rotation" : 360,
+                      "parentUUID" : "FC396220-6FC3-4A8C-B67E-C0CAC0A509AD",
+                      "tags" : [
+                        "DEFAULT"
+                      ],
+                      "spriteUUID" : "05254FE2-F0BA-48CD-BCF8-E0A6AA727992",
+                      "spriteName" : "foot_L",
+                      "generalPosition" : "{0.009539, 0.075022}",
+                      "uuid" : "1C1D3A54-D89A-40A9-9EF0-88F00C9C80B7",
+                      "name" : "foot_L",
+                      "anchor" : "{0.500000, 0.500000}",
+                      "size" : "{48.000000, 23.000000}",
+                      "nodeType" : "LHSprite",
+                      "alpha" : 255,
+                      "scale" : "{1.000000, 1.000000}",
+                      "relativeImagePath" : "PublishFolder\/",
+                      "zOrder" : -1,
+                      "imageFileName" : "suitmanParts.png",
+                      "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                    },
+                    {
+                      "rotation" : 360,
+                      "parentUUID" : "FC396220-6FC3-4A8C-B67E-C0CAC0A509AD",
+                      "tags" : [
+                        "DEFAULT"
+                      ],
+                      "spriteUUID" : "F37EB3CE-CE23-4DDE-99CA-494996749234",
+                      "spriteName" : "lowerLeg_L",
+                      "generalPosition" : "{0.000151, 0.041227}",
+                      "uuid" : "76D1AB20-9830-4B29-8EB2-4CFD1A3B393B",
+                      "name" : "lowerLeg_L",
+                      "anchor" : "{0.500000, 0.500000}",
+                      "size" : "{23.000000, 35.000000}",
+                      "nodeType" : "LHSprite",
+                      "alpha" : 255,
+                      "scale" : "{1.000000, 1.000000}",
+                      "relativeImagePath" : "PublishFolder\/",
+                      "zOrder" : 0,
+                      "imageFileName" : "suitmanParts.png",
+                      "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                    }
+                  ],
+                  "name" : "upperLeg_L",
+                  "anchor" : "{0.500000, 0.500000}",
+                  "size" : "{23.000000, 33.000000}",
+                  "nodeType" : "LHSprite",
+                  "alpha" : 255,
+                  "scale" : "{1.000000, 1.000000}",
+                  "relativeImagePath" : "PublishFolder\/",
+                  "zOrder" : 1,
+                  "imageFileName" : "suitmanParts.png",
+                  "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                },
+                {
+                  "rotation" : 8.940979,
+                  "parentUUID" : "3DA9107C-A64D-4004-BF86-904098C2ADB7",
+                  "tags" : [
+                    "DEFAULT"
+                  ],
+                  "spriteUUID" : "68C58920-B24F-486F-879F-7E949FE507D9",
+                  "spriteName" : "upperLeg_R",
+                  "generalPosition" : "{-0.015146, 0.002593}",
+                  "uuid" : "F0FC0C67-E706-4439-8BF8-F4674952E677",
+                  "children" : [
+                    {
+                      "rotation" : 12.43363,
+                      "parentUUID" : "F0FC0C67-E706-4439-8BF8-F4674952E677",
+                      "tags" : [
+                        "DEFAULT"
+                      ],
+                      "spriteUUID" : "05254FE2-F0BA-48CD-BCF8-E0A6AA727992",
+                      "spriteName" : "foot_L",
+                      "generalPosition" : "{-0.007721, 0.073720}",
+                      "uuid" : "69596580-C711-4F5B-B4C6-640A9CC3A30D",
+                      "name" : "foot_R",
+                      "anchor" : "{0.500000, 0.500000}",
+                      "size" : "{48.000000, 23.000000}",
+                      "nodeType" : "LHSprite",
+                      "alpha" : 255,
+                      "scale" : "{1.000000, 1.000000}",
+                      "relativeImagePath" : "PublishFolder\/",
+                      "zOrder" : -1,
+                      "imageFileName" : "suitmanParts.png",
+                      "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                    },
+                    {
+                      "rotation" : 28.42789,
+                      "parentUUID" : "F0FC0C67-E706-4439-8BF8-F4674952E677",
+                      "tags" : [
+                        "DEFAULT"
+                      ],
+                      "spriteUUID" : "AEF2A035-EAC3-4C2C-898C-7ABD9D4E8A69",
+                      "spriteName" : "lowerLeg_R",
+                      "generalPosition" : "{-0.005433, 0.039960}",
+                      "uuid" : "6611F7F4-E1A2-466F-980F-24B4D691EAB2",
+                      "name" : "lowerLeg_R",
+                      "anchor" : "{0.500000, 0.500000}",
+                      "size" : "{23.000000, 35.000000}",
+                      "nodeType" : "LHSprite",
+                      "alpha" : 255,
+                      "scale" : "{1.000000, 1.000000}",
+                      "relativeImagePath" : "PublishFolder\/",
+                      "zOrder" : 0,
+                      "imageFileName" : "suitmanParts.png",
+                      "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                    }
+                  ],
+                  "name" : "upperLeg_R",
+                  "anchor" : "{0.500000, 0.500000}",
+                  "size" : "{23.000000, 33.000000}",
+                  "nodeType" : "LHSprite",
+                  "alpha" : 255,
+                  "scale" : "{1.000000, 1.000000}",
+                  "relativeImagePath" : "PublishFolder\/",
+                  "zOrder" : 1,
+                  "imageFileName" : "suitmanParts.png",
+                  "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                },
+                {
+                  "rotation" : 305.4932,
+                  "parentUUID" : "3DA9107C-A64D-4004-BF86-904098C2ADB7",
+                  "tags" : [
+                    "DEFAULT"
+                  ],
+                  "spriteUUID" : "15D4F5E8-CA0B-4054-9BE3-733E8D59C992",
+                  "spriteName" : "upperArm_R",
+                  "generalPosition" : "{-0.010905, -0.075454}",
+                  "uuid" : "3C868A5D-EEA2-4D56-A1E1-3FC6F91E5A17",
+                  "children" : [
+                    {
+                      "rotation" : 316.661,
+                      "parentUUID" : "3C868A5D-EEA2-4D56-A1E1-3FC6F91E5A17",
+                      "tags" : [
+                        "DEFAULT"
+                      ],
+                      "spriteUUID" : "D1460380-6F90-4ABA-8692-AF69CAEB9231",
+                      "spriteName" : "lowerArm_R",
+                      "generalPosition" : "{0.006064, 0.031209}",
+                      "uuid" : "B8955F66-7E11-4F69-A7FA-46625DAFA62C",
+                      "children" : [
+                        {
+                          "rotation" : 359.9999,
+                          "parentUUID" : "B8955F66-7E11-4F69-A7FA-46625DAFA62C",
+                          "tags" : [
+                            "DEFAULT"
+                          ],
+                          "spriteUUID" : "735F36A3-38B9-43C0-BEBE-41DBBFF6E564",
+                          "spriteName" : "hand_R",
+                          "generalPosition" : "{0.004784, 0.031090}",
+                          "uuid" : "90B2094F-E802-441F-8118-12CFBC02C265",
+                          "name" : "hand_R",
+                          "anchor" : "{0.500000, 0.500000}",
+                          "size" : "{30.000000, 27.000000}",
+                          "nodeType" : "LHSprite",
+                          "alpha" : 255,
+                          "scale" : "{1.000000, 1.000000}",
+                          "relativeImagePath" : "PublishFolder\/",
+                          "zOrder" : 0,
+                          "imageFileName" : "suitmanParts.png",
+                          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                        }
+                      ],
+                      "name" : "lowerArm_R",
+                      "anchor" : "{0.500000, 0.500000}",
+                      "size" : "{21.000000, 32.000000}",
+                      "nodeType" : "LHSprite",
+                      "alpha" : 255,
+                      "scale" : "{1.000000, 1.000000}",
+                      "relativeImagePath" : "PublishFolder\/",
+                      "zOrder" : 0,
+                      "imageFileName" : "suitmanParts.png",
+                      "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                    }
+                  ],
+                  "name" : "upperArm_R",
+                  "anchor" : "{0.500000, 0.500000}",
+                  "size" : "{21.000000, 33.000000}",
+                  "nodeType" : "LHSprite",
+                  "alpha" : 255,
+                  "scale" : "{1.000000, 1.000000}",
+                  "relativeImagePath" : "PublishFolder\/",
+                  "zOrder" : 2,
+                  "imageFileName" : "suitmanParts.png",
+                  "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                }
+              ],
+              "name" : "Nodes",
+              "anchor" : "{0.500000, 0.500000}",
+              "size" : "{0.000000, 0.000000}",
+              "lockedNodes" : true,
+              "nodeType" : "LHBoneNodes",
+              "alpha" : 255,
+              "scale" : "{1.000000, 1.000000}",
+              "zOrder" : -9999,
+              "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+            },
+            {
+              "rotation" : 359.6326,
+              "parentUUID" : "522ACF34-6B14-4119-9AC3-BF62DDD9E351",
+              "connections" : [
+                {
+                  "angleDelta" : -359.6326,
+                  "nodeName" : "Body",
+                  "positionDelta" : "{0.545389, -2.960623}"
+                }
+              ],
+              "tags" : [
+                "DEFAULT"
+              ],
+              "rigid" : true,
+              "maxAngle" : 10,
+              "generalPosition" : "{0.000000, -0.006250}",
+              "uuid" : "736F18F6-8F8B-4BEA-B67B-923A9290A250",
+              "children" : [
+                {
+                  "rotation" : 240,
+                  "parentUUID" : "736F18F6-8F8B-4BEA-B67B-923A9290A250",
+                  "connections" : [
+                    {
+                      "angleDelta" : -177.677,
+                      "nodeName" : "upperArm_L",
+                      "positionDelta" : "{0.756351, -3.865632}"
+                    }
+                  ],
+                  "tags" : [
+                    "DEFAULT"
+                  ],
+                  "rigid" : true,
+                  "maxAngle" : 240,
+                  "generalPosition" : "{0.014908, -0.032699}",
+                  "uuid" : "70CB49C7-946A-4BB2-A3F2-E642D020CA37",
+                  "children" : [
+                    {
+                      "rotation" : 315.7507,
+                      "parentUUID" : "70CB49C7-946A-4BB2-A3F2-E642D020CA37",
+                      "connections" : [
+                        {
+                          "angleDelta" : -177.677,
+                          "nodeName" : "lowerArm_L",
+                          "positionDelta" : "{1.101181, -2.313011}"
+                        }
+                      ],
+                      "tags" : [
+                        "DEFAULT"
+                      ],
+                      "rigid" : true,
+                      "maxAngle" : 0,
+                      "generalPosition" : "{0.000226, -0.022842}",
+                      "uuid" : "B1BAF941-AC70-4BA3-8DEA-E52FC9C43F66",
+                      "children" : [
+                        {
+                          "rotation" : 359.0757,
+                          "parentUUID" : "B1BAF941-AC70-4BA3-8DEA-E52FC9C43F66",
+                          "connections" : [
+                            {
+                              "angleDelta" : -176.7527,
+                              "nodeName" : "hand_L",
+                              "positionDelta" : "{0.376940, -0.910966}"
+                            }
+                          ],
+                          "tags" : [
+                            "DEFAULT"
+                          ],
+                          "rigid" : true,
+                          "maxAngle" : 60,
+                          "generalPosition" : "{0.000523, -0.021869}",
+                          "uuid" : "D9252785-C79D-4D58-9193-675C2C5123F8",
+                          "name" : "hand_l",
+                          "anchor" : "{0.500000, 1.000000}",
+                          "size" : "{4.000000, 12.514744}",
+                          "nodeType" : "LHBone",
+                          "alpha" : 255,
+                          "scale" : "{1.000000, 1.000000}",
+                          "minAngle" : -70,
+                          "zOrder" : 0,
+                          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                        }
+                      ],
+                      "name" : "lower_arm_l",
+                      "anchor" : "{0.500000, 1.000000}",
+                      "size" : "{4.000000, 20.468748}",
+                      "nodeType" : "LHBone",
+                      "alpha" : 255,
+                      "scale" : "{1.000000, 1.000000}",
+                      "minAngle" : -140,
+                      "zOrder" : 0,
+                      "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                    }
+                  ],
+                  "name" : "upper_arm_l",
+                  "anchor" : "{0.500000, 1.000000}",
+                  "size" : "{4.000000, 18.127443}",
+                  "nodeType" : "LHBone",
+                  "alpha" : 255,
+                  "scale" : "{1.000000, 1.000000}",
+                  "minAngle" : 30,
+                  "zOrder" : 0,
+                  "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                },
+                {
+                  "rotation" : 132.613,
+                  "parentUUID" : "736F18F6-8F8B-4BEA-B67B-923A9290A250",
+                  "connections" : [
+                    {
+                      "angleDelta" : 173.2476,
+                      "nodeName" : "upperArm_R",
+                      "positionDelta" : "{-1.226422, 0.775092}"
+                    }
+                  ],
+                  "tags" : [
+                    "DEFAULT"
+                  ],
+                  "rigid" : true,
+                  "maxAngle" : 20,
+                  "generalPosition" : "{-0.018641, -0.037012}",
+                  "uuid" : "ABEC8648-AC3E-4672-A29C-7AE2DA712684",
+                  "children" : [
+                    {
+                      "rotation" : 307.444,
+                      "parentUUID" : "ABEC8648-AC3E-4672-A29C-7AE2DA712684",
+                      "connections" : [
+                        {
+                          "angleDelta" : 182.4646,
+                          "nodeName" : "lowerArm_R",
+                          "positionDelta" : "{-0.042006, -1.147045}"
+                        }
+                      ],
+                      "tags" : [
+                        "DEFAULT"
+                      ],
+                      "rigid" : true,
+                      "maxAngle" : -140,
+                      "generalPosition" : "{0.000094, -0.017492}",
+                      "uuid" : "ED69E036-0AB5-47ED-A17E-857D509181FC",
+                      "children" : [
+                        {
+                          "rotation" : 356.2338,
+                          "parentUUID" : "ED69E036-0AB5-47ED-A17E-857D509181FC",
+                          "connections" : [
+                            {
+                              "angleDelta" : 186.2307,
+                              "nodeName" : "hand_R",
+                              "positionDelta" : "{-3.187172, -3.550431}"
+                            }
+                          ],
+                          "tags" : [
+                            "DEFAULT"
+                          ],
+                          "rigid" : true,
+                          "maxAngle" : 90,
+                          "generalPosition" : "{-0.000042, -0.020336}",
+                          "uuid" : "971E65FE-4751-4D97-BDED-04A8D5AF2851",
+                          "name" : "hand_r",
+                          "anchor" : "{0.500000, 1.000000}",
+                          "size" : "{4.000000, 9.771664}",
+                          "nodeType" : "LHBone",
+                          "alpha" : 255,
+                          "scale" : "{1.000000, 1.000000}",
+                          "minAngle" : -90,
+                          "zOrder" : 0,
+                          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                        }
+                      ],
+                      "name" : "lower_arm_r",
+                      "anchor" : "{0.500000, 1.000000}",
+                      "size" : "{4.000000, 21.437119}",
+                      "nodeType" : "LHBone",
+                      "alpha" : 255,
+                      "scale" : "{1.000000, 1.000000}",
+                      "minAngle" : 0,
+                      "zOrder" : 0,
+                      "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                    }
+                  ],
+                  "name" : "upper_arm_r",
+                  "anchor" : "{0.500000, 1.000000}",
+                  "size" : "{4.000000, 20.248529}",
+                  "nodeType" : "LHBone",
+                  "alpha" : 255,
+                  "scale" : "{1.000000, 1.000000}",
+                  "minAngle" : 340,
+                  "zOrder" : 0,
+                  "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                },
+                {
+                  "rotation" : 10.95524,
+                  "parentUUID" : "736F18F6-8F8B-4BEA-B67B-923A9290A250",
+                  "connections" : [
+                    {
+                      "angleDelta" : -6.61279,
+                      "nodeName" : "HeadNormal",
+                      "positionDelta" : "{-6.582291, -35.304224}"
+                    }
+                  ],
+                  "tags" : [
+                    "DEFAULT"
+                  ],
+                  "rigid" : true,
+                  "maxAngle" : 40,
+                  "generalPosition" : "{0.002949, -0.055169}",
+                  "uuid" : "D855AB8F-3518-4EFB-88B5-AF1056313793",
+                  "name" : "head",
+                  "anchor" : "{0.500000, 1.000000}",
+                  "size" : "{4.000000, 20.155874}",
+                  "nodeType" : "LHBone",
+                  "alpha" : 255,
+                  "scale" : "{1.000000, 1.000000}",
+                  "minAngle" : -10,
+                  "zOrder" : 0,
+                  "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                }
+              ],
+              "name" : "spine",
+              "anchor" : "{0.500000, 1.000000}",
+              "size" : "{4.000000, 52.192635}",
+              "nodeType" : "LHBone",
+              "alpha" : 255,
+              "scale" : "{1.000000, 1.000000}",
+              "minAngle" : -10,
+              "zOrder" : 0,
+              "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+            },
+            {
+              "rotation" : 156.7141,
+              "parentUUID" : "522ACF34-6B14-4119-9AC3-BF62DDD9E351",
+              "connections" : [
+                {
+                  "angleDelta" : 180.5497,
+                  "nodeName" : "upperLeg_L",
+                  "positionDelta" : "{0.626967, 2.396275}"
+                }
+              ],
+              "tags" : [
+                "DEFAULT"
+              ],
+              "rigid" : true,
+              "maxAngle" : 240,
+              "generalPosition" : "{0.012598, -0.010667}",
+              "uuid" : "DB37F312-0560-4DF4-A207-E668D6974F65",
+              "children" : [
+                {
+                  "rotation" : 4.514254,
+                  "parentUUID" : "DB37F312-0560-4DF4-A207-E668D6974F65",
+                  "connections" : [
+                    {
+                      "angleDelta" : 176.0354,
+                      "nodeName" : "lowerLeg_L",
+                      "positionDelta" : "{-0.174055, 2.325009}"
+                    }
+                  ],
+                  "tags" : [
+                    "DEFAULT"
+                  ],
+                  "rigid" : true,
+                  "maxAngle" : 110,
+                  "generalPosition" : "{0.000015, -0.019764}",
+                  "uuid" : "E90F16AC-A47D-42EB-84E3-DA7251F72303",
+                  "children" : [
+                    {
+                      "rotation" : 293.5517,
+                      "parentUUID" : "E90F16AC-A47D-42EB-84E3-DA7251F72303",
+                      "connections" : [
+                        {
+                          "angleDelta" : 242.4837,
+                          "nodeName" : "foot_L",
+                          "positionDelta" : "{-1.163543, -0.909517}"
+                        }
+                      ],
+                      "tags" : [
+                        "DEFAULT"
+                      ],
+                      "rigid" : true,
+                      "maxAngle" : 20,
+                      "generalPosition" : "{-0.000579, -0.024209}",
+                      "uuid" : "09B9B94A-2985-4798-A1AB-E58E8E1E33EA",
+                      "name" : "foot_l",
+                      "anchor" : "{0.500000, 1.000000}",
+                      "size" : "{4.000000, 19.212095}",
+                      "nodeType" : "LHBone",
+                      "alpha" : 255,
+                      "scale" : "{1.000000, 1.000000}",
+                      "minAngle" : -90,
+                      "zOrder" : 0,
+                      "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                    }
+                  ],
+                  "name" : "lower_leg_l",
+                  "anchor" : "{0.500000, 1.000000}",
+                  "size" : "{4.000000, 27.373554}",
+                  "nodeType" : "LHBone",
+                  "alpha" : 255,
+                  "scale" : "{1.000000, 1.000000}",
+                  "minAngle" : 0,
+                  "zOrder" : 0,
+                  "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                }
+              ],
+              "name" : "upper_leg_l",
+              "anchor" : "{0.500000, 1.000000}",
+              "size" : "{4.000000, 22.286306}",
+              "nodeType" : "LHBone",
+              "alpha" : 255,
+              "scale" : "{1.000000, 1.000000}",
+              "minAngle" : 70,
+              "zOrder" : 0,
+              "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+            },
+            {
+              "rotation" : 188.941,
+              "parentUUID" : "522ACF34-6B14-4119-9AC3-BF62DDD9E351",
+              "connections" : [
+                {
+                  "angleDelta" : -180,
+                  "nodeName" : "upperLeg_R",
+                  "positionDelta" : "{-0.113048, 0.485295}"
+                }
+              ],
+              "tags" : [
+                "DEFAULT"
+              ],
+              "rigid" : true,
+              "maxAngle" : -240,
+              "generalPosition" : "{-0.013582, -0.013455}",
+              "uuid" : "05A3B2F3-194F-4819-BD0E-66CFEF0F75F1",
+              "children" : [
+                {
+                  "rotation" : 28.42789,
+                  "parentUUID" : "05A3B2F3-194F-4819-BD0E-66CFEF0F75F1",
+                  "connections" : [
+                    {
+                      "angleDelta" : -180,
+                      "nodeName" : "lowerLeg_R",
+                      "positionDelta" : "{-0.457966, 2.911636}"
+                    }
+                  ],
+                  "tags" : [
+                    "DEFAULT"
+                  ],
+                  "rigid" : true,
+                  "maxAngle" : 110,
+                  "generalPosition" : "{0.000180, -0.023469}",
+                  "uuid" : "1EBBA606-F780-4DB0-8F9A-77BD6CD12050",
+                  "children" : [
+                    {
+                      "rotation" : 270,
+                      "parentUUID" : "1EBBA606-F780-4DB0-8F9A-77BD6CD12050",
+                      "connections" : [
+                        {
+                          "angleDelta" : -105.9943,
+                          "nodeName" : "foot_R",
+                          "positionDelta" : "{0.880318, 1.521547}"
+                        }
+                      ],
+                      "tags" : [
+                        "DEFAULT"
+                      ],
+                      "rigid" : true,
+                      "maxAngle" : 20,
+                      "generalPosition" : "{-0.000314, -0.025398}",
+                      "uuid" : "2C32C3FA-6C48-4971-8B81-7B60218A40B2",
+                      "name" : "foot_r",
+                      "anchor" : "{0.500000, 1.000000}",
+                      "size" : "{4.000000, 20.064455}",
+                      "nodeType" : "LHBone",
+                      "alpha" : 255,
+                      "scale" : "{1.000000, 1.000000}",
+                      "minAngle" : -90,
+                      "zOrder" : 0,
+                      "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                    }
+                  ],
+                  "name" : "lower_leg_r",
+                  "anchor" : "{0.500000, 1.000000}",
+                  "size" : "{4.000000, 28.226591}",
+                  "nodeType" : "LHBone",
+                  "alpha" : 255,
+                  "scale" : "{1.000000, 1.000000}",
+                  "minAngle" : 0,
+                  "zOrder" : 0,
+                  "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+                }
+              ],
+              "name" : "upper_leg_r",
+              "anchor" : "{0.500000, 1.000000}",
+              "size" : "{4.000000, 21.729128}",
+              "nodeType" : "LHBone",
+              "alpha" : 255,
+              "scale" : "{1.000000, 1.000000}",
+              "minAngle" : -70,
+              "zOrder" : 0,
+              "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+            }
+          ],
+          "name" : "suitMan",
+          "anchor" : "{0.500000, 1.000000}",
+          "size" : "{8.000000, 8.000000}",
+          "animations" : [
+            {
+              "active" : false,
+              "repetitions" : 0,
+              "totalFrames" : 30,
+              "fps" : 24,
+              "properties" : {
+                "Skeletal Transform" : {
+                  "Frames" : [
+                    {
+                      "bonesInfo" : {
+                        "lower_arm_l" : {
+                          "pos" : "{0.000000, -9.063722}",
+                          "rot" : 0
+                        },
+                        "hand_r" : {
+                          "pos" : "{0.113249, -10.638231}",
+                          "rot" : 356.2338
+                        },
+                        "hand_l" : {
+                          "pos" : "{-0.038606, -14.256453}",
+                          "rot" : 359.0757
+                        },
+                        "upper_leg_l" : {
+                          "pos" : "{12.485254, -8.678401}",
+                          "rot" : 179.4503
+                        },
+                        "head" : {
+                          "pos" : "{-4.554367, -37.892960}",
+                          "rot" : 6.980221
+                        },
+                        "lower_leg_l" : {
+                          "pos" : "{0.000000, -11.143153}",
+                          "rot" : 4.514254
+                        },
+                        "foot_r" : {
+                          "pos" : "{0.000000, -14.113296}",
+                          "rot" : 67.33786
+                        },
+                        "foot_l" : {
+                          "pos" : "{0.000000, -13.686777}",
+                          "rot" : 293.5517
+                        },
+                        "upper_arm_r" : {
+                          "pos" : "{-19.485135, -23.692429}",
+                          "rot" : 249.2628
+                        },
+                        "lower_arm_r" : {
+                          "pos" : "{0.000000, -10.124265}",
+                          "rot" : 0
+                        },
+                        "upper_leg_r" : {
+                          "pos" : "{-14.762363, -9.129307}",
+                          "rot" : 180
+                        },
+                        "lower_leg_r" : {
+                          "pos" : "{0.000000, -10.864564}",
+                          "rot" : 0
+                        },
+                        "__rootBone__" : {
+                          "pos" : "{188.417437, 272.796409}",
+                          "rot" : 0
+                        },
+                        "spine" : {
+                          "pos" : "{0.000000, -4.000000}",
+                          "rot" : 359.6326
+                        },
+                        "upper_arm_l" : {
+                          "pos" : "{12.065852, -24.757173}",
+                          "rot" : 94.75543
+                        }
+                      },
+                      "frameIndex" : 0
+                    },
+                    {
+                      "bonesInfo" : {
+                        "lower_arm_l" : {
+                          "pos" : "{0.000000, -9.063722}",
+                          "rot" : 50.53504
+                        },
+                        "hand_r" : {
+                          "pos" : "{0.113249, -10.638231}",
+                          "rot" : 301.3491
+                        },
+                        "hand_l" : {
+                          "pos" : "{-0.038606, -14.256453}",
+                          "rot" : 38.38518
+                        },
+                        "upper_leg_l" : {
+                          "pos" : "{12.485254, -8.678401}",
+                          "rot" : 119.7189
+                        },
+                        "head" : {
+                          "pos" : "{-4.554367, -37.892960}",
+                          "rot" : 350
+                        },
+                        "lower_leg_l" : {
+                          "pos" : "{0.000000, -11.143153}",
+                          "rot" : 46.37839
+                        },
+                        "foot_r" : {
+                          "pos" : "{0.000000, -14.113296}",
+                          "rot" : 27.16795
+                        },
+                        "foot_l" : {
+                          "pos" : "{0.000000, -13.686777}",
+                          "rot" : 343.273
+                        },
+                        "upper_arm_r" : {
+                          "pos" : "{-19.485135, -23.692429}",
+                          "rot" : 214.6923
+                        },
+                        "lower_arm_r" : {
+                          "pos" : "{0.000000, -10.124265}",
+                          "rot" : 310.524
+                        },
+                        "upper_leg_r" : {
+                          "pos" : "{-14.762363, -9.129307}",
+                          "rot" : 241.9718
+                        },
+                        "lower_leg_r" : {
+                          "pos" : "{0.000000, -10.864564}",
+                          "rot" : 311.8684
+                        },
+                        "__rootBone__" : {
+                          "pos" : "{188.417437, 272.796409}",
+                          "rot" : 0
+                        },
+                        "spine" : {
+                          "pos" : "{0.000000, -4.000000}",
+                          "rot" : 10
+                        },
+                        "upper_arm_l" : {
+                          "pos" : "{12.065852, -24.757173}",
+                          "rot" : 69.79611
+                        }
+                      },
+                      "frameIndex" : 14
+                    },
+                    {
+                      "bonesInfo" : {
+                        "lower_arm_l" : {
+                          "pos" : "{0.000000, -9.063722}",
+                          "rot" : 0
+                        },
+                        "hand_r" : {
+                          "pos" : "{0.113249, -10.638231}",
+                          "rot" : 356.2338
+                        },
+                        "hand_l" : {
+                          "pos" : "{-0.038606, -14.256453}",
+                          "rot" : 359.0757
+                        },
+                        "upper_leg_l" : {
+                          "pos" : "{12.485254, -8.678401}",
+                          "rot" : 179.4503
+                        },
+                        "head" : {
+                          "pos" : "{-4.554367, -37.892960}",
+                          "rot" : 6.980221
+                        },
+                        "lower_leg_l" : {
+                          "pos" : "{0.000000, -11.143153}",
+                          "rot" : 4.514254
+                        },
+                        "foot_r" : {
+                          "pos" : "{0.000000, -14.113296}",
+                          "rot" : 67.33786
+                        },
+                        "foot_l" : {
+                          "pos" : "{0.000000, -13.686777}",
+                          "rot" : 293.5517
+                        },
+                        "upper_arm_r" : {
+                          "pos" : "{-19.485135, -23.692429}",
+                          "rot" : 249.2628
+                        },
+                        "lower_arm_r" : {
+                          "pos" : "{0.000000, -10.124265}",
+                          "rot" : 0
+                        },
+                        "upper_leg_r" : {
+                          "pos" : "{-14.762363, -9.129307}",
+                          "rot" : 180
+                        },
+                        "lower_leg_r" : {
+                          "pos" : "{0.000000, -10.864564}",
+                          "rot" : 0
+                        },
+                        "__rootBone__" : {
+                          "pos" : "{188.417437, 272.796409}",
+                          "rot" : 0
+                        },
+                        "spine" : {
+                          "pos" : "{0.000000, -4.000000}",
+                          "rot" : 359.6326
+                        },
+                        "upper_arm_l" : {
+                          "pos" : "{12.065852, -24.757173}",
+                          "rot" : 94.75543
+                        }
+                      },
+                      "frameIndex" : 29
+                    }
+                  ],
+                  "type" : "LHRootBoneProperty"
+                }
+              },
+              "name" : "test"
+            },
+            {
+              "active" : true,
+              "repetitions" : 0,
+              "totalFrames" : 40,
+              "fps" : 24,
+              "properties" : {
+                "Skeletal Transform" : {
+                  "Frames" : [
+                    {
+                      "bonesInfo" : {
+                        "lower_arm_l" : {
+                          "pos" : "{0.000000, -9.063680}",
+                          "rot" : 315.7507
+                        },
+                        "hand_r" : {
+                          "pos" : "{0.113280, -10.638080}",
+                          "rot" : 356.2338
+                        },
+                        "hand_l" : {
+                          "pos" : "{-0.038400, -14.256640}",
+                          "rot" : 359.0757
+                        },
+                        "upper_leg_l" : {
+                          "pos" : "{12.484800, -8.678400}",
+                          "rot" : 156.7141
+                        },
+                        "head" : {
+                          "pos" : "{-4.554240, -37.893120}",
+                          "rot" : 10.95524
+                        },
+                        "lower_leg_l" : {
+                          "pos" : "{0.000000, -11.143040}",
+                          "rot" : 4.514254
+                        },
+                        "foot_r" : {
+                          "pos" : "{0.000000, -14.113280}",
+                          "rot" : 266.8333
+                        },
+                        "foot_l" : {
+                          "pos" : "{0.000000, -13.687040}",
+                          "rot" : 293.5517
+                        },
+                        "upper_arm_r" : {
+                          "pos" : "{-19.485120, -23.692160}",
+                          "rot" : 132.613
+                        },
+                        "lower_arm_r" : {
+                          "pos" : "{0.000000, -10.124160}",
+                          "rot" : 307.444
+                        },
+                        "upper_leg_r" : {
+                          "pos" : "{-14.761920, -9.129600}",
+                          "rot" : 188.941
+                        },
+                        "lower_leg_r" : {
+                          "pos" : "{0.000000, -10.864640}",
+                          "rot" : 28.42789
+                        },
+                        "__rootBone__" : {
+                          "pos" : "{188.417445, 272.796409}",
+                          "rot" : 0
+                        },
+                        "spine" : {
+                          "pos" : "{0.000000, -4.000000}",
+                          "rot" : 359.6326
+                        },
+                        "upper_arm_l" : {
+                          "pos" : "{12.066240, -24.757120}",
+                          "rot" : 240
+                        }
+                      },
+                      "frameIndex" : 0
+                    },
+                    {
+                      "bonesInfo" : {
+                        "lower_arm_l" : {
+                          "pos" : "{0.000000, -9.063680}",
+                          "rot" : 324.8622
+                        },
+                        "hand_r" : {
+                          "pos" : "{0.113280, -10.638080}",
+                          "rot" : 356.2338
+                        },
+                        "hand_l" : {
+                          "pos" : "{-0.038400, -14.256640}",
+                          "rot" : 359.0757
+                        },
+                        "upper_leg_l" : {
+                          "pos" : "{12.484800, -8.678400}",
+                          "rot" : 137.7379
+                        },
+                        "head" : {
+                          "pos" : "{-4.554240, -37.893120}",
+                          "rot" : 7.939934
+                        },
+                        "lower_leg_l" : {
+                          "pos" : "{0.000000, -11.143040}",
+                          "rot" : 46.50973
+                        },
+                        "foot_r" : {
+                          "pos" : "{0.000000, -14.113280}",
+                          "rot" : 253.0575
+                        },
+                        "foot_l" : {
+                          "pos" : "{0.000000, -13.687040}",
+                          "rot" : 293.5517
+                        },
+                        "upper_arm_r" : {
+                          "pos" : "{-19.485120, -23.692160}",
+                          "rot" : 125.4758
+                        },
+                        "lower_arm_r" : {
+                          "pos" : "{0.000000, -10.124160}",
+                          "rot" : 324.3036
+                        },
+                        "upper_leg_r" : {
+                          "pos" : "{-14.761920, -9.129600}",
+                          "rot" : 175.8398
+                        },
+                        "lower_leg_r" : {
+                          "pos" : "{0.000000, -10.864640}",
+                          "rot" : 72.77706
+                        },
+                        "__rootBone__" : {
+                          "pos" : "{188.417445, 279.642195}",
+                          "rot" : 0
+                        },
+                        "spine" : {
+                          "pos" : "{0.000000, -4.000000}",
+                          "rot" : 3.563099
+                        },
+                        "upper_arm_l" : {
+                          "pos" : "{12.066240, -24.757120}",
+                          "rot" : 240
+                        }
+                      },
+                      "frameIndex" : 4
+                    },
+                    {
+                      "bonesInfo" : {
+                        "lower_arm_l" : {
+                          "pos" : "{0.000000, -9.063680}",
+                          "rot" : 322.5843
+                        },
+                        "hand_r" : {
+                          "pos" : "{0.113280, -10.638080}",
+                          "rot" : 356.2338
+                        },
+                        "hand_l" : {
+                          "pos" : "{-0.038400, -14.256640}",
+                          "rot" : 359.0757
+                        },
+                        "upper_leg_l" : {
+                          "pos" : "{12.484800, -8.678400}",
+                          "rot" : 201.0394
+                        },
+                        "head" : {
+                          "pos" : "{-4.554240, -37.893120}",
+                          "rot" : 5.358696
+                        },
+                        "lower_leg_l" : {
+                          "pos" : "{0.000000, -11.143040}",
+                          "rot" : 0
+                        },
+                        "foot_r" : {
+                          "pos" : "{0.000000, -14.113280}",
+                          "rot" : 272.403
+                        },
+                        "foot_l" : {
+                          "pos" : "{0.000000, -13.687040}",
+                          "rot" : 282.9952
+                        },
+                        "upper_arm_r" : {
+                          "pos" : "{-19.485120, -23.692160}",
+                          "rot" : 169.3215
+                        },
+                        "lower_arm_r" : {
+                          "pos" : "{0.000000, -10.124160}",
+                          "rot" : 339.1046
+                        },
+                        "upper_leg_r" : {
+                          "pos" : "{-14.761920, -9.129600}",
+                          "rot" : 127.8927
+                        },
+                        "lower_leg_r" : {
+                          "pos" : "{0.000000, -10.864640}",
+                          "rot" : 97.13806
+                        },
+                        "__rootBone__" : {
+                          "pos" : "{188.781707, 274.288127}",
+                          "rot" : 0
+                        },
+                        "spine" : {
+                          "pos" : "{0.000000, -4.000000}",
+                          "rot" : 0.02797646
+                        },
+                        "upper_arm_l" : {
+                          "pos" : "{12.066240, -24.757120}",
+                          "rot" : 206.7757
+                        }
+                      },
+                      "frameIndex" : 9
+                    },
+                    {
+                      "bonesInfo" : {
+                        "lower_arm_l" : {
+                          "pos" : "{0.000000, -9.063680}",
+                          "rot" : 284.2168
+                        },
+                        "hand_r" : {
+                          "pos" : "{0.113280, -10.638080}",
+                          "rot" : 356.2338
+                        },
+                        "hand_l" : {
+                          "pos" : "{-0.038400, -14.256640}",
+                          "rot" : 359.0757
+                        },
+                        "upper_leg_l" : {
+                          "pos" : "{12.484800, -8.678400}",
+                          "rot" : 209.6471
+                        },
+                        "head" : {
+                          "pos" : "{-4.554240, -37.893120}",
+                          "rot" : 3.689607
+                        },
+                        "lower_leg_l" : {
+                          "pos" : "{0.000000, -11.143040}",
+                          "rot" : 0
+                        },
+                        "foot_r" : {
+                          "pos" : "{0.000000, -14.113280}",
+                          "rot" : 268.5339
+                        },
+                        "foot_l" : {
+                          "pos" : "{0.000000, -13.687040}",
+                          "rot" : 299.3871
+                        },
+                        "upper_arm_r" : {
+                          "pos" : "{-19.485120, -23.692160}",
+                          "rot" : 218.9403
+                        },
+                        "lower_arm_r" : {
+                          "pos" : "{0.000000, -10.124160}",
+                          "rot" : 310.2352
+                        },
+                        "upper_leg_r" : {
+                          "pos" : "{-14.761920, -9.129600}",
+                          "rot" : 120
+                        },
+                        "lower_leg_r" : {
+                          "pos" : "{0.000000, -10.864640}",
+                          "rot" : 60.23101
+                        },
+                        "__rootBone__" : {
+                          "pos" : "{188.708855, 270.447092}",
+                          "rot" : 0
+                        },
+                        "spine" : {
+                          "pos" : "{0.000000, -4.000000}",
+                          "rot" : 359.5219
+                        },
+                        "upper_arm_l" : {
+                          "pos" : "{12.066240, -24.757120}",
+                          "rot" : 184.258
+                        }
+                      },
+                      "frameIndex" : 14
+                    },
+                    {
+                      "bonesInfo" : {
+                        "lower_arm_l" : {
+                          "pos" : "{0.000000, -9.063680}",
+                          "rot" : 280.9739
+                        },
+                        "hand_r" : {
+                          "pos" : "{0.113280, -10.638080}",
+                          "rot" : 356.2338
+                        },
+                        "hand_l" : {
+                          "pos" : "{-0.038400, -14.256640}",
+                          "rot" : 359.0757
+                        },
+                        "upper_leg_l" : {
+                          "pos" : "{12.484800, -8.678400}",
+                          "rot" : 229.8584
+                        },
+                        "head" : {
+                          "pos" : "{-4.554240, -37.893120}",
+                          "rot" : 9.24482
+                        },
+                        "lower_leg_l" : {
+                          "pos" : "{0.000000, -11.143040}",
+                          "rot" : 10.37037
+                        },
+                        "foot_r" : {
+                          "pos" : "{0.000000, -14.113280}",
+                          "rot" : 298.6447
+                        },
+                        "foot_l" : {
+                          "pos" : "{0.000000, -13.687040}",
+                          "rot" : 296.1088
+                        },
+                        "upper_arm_r" : {
+                          "pos" : "{-19.485120, -23.692160}",
+                          "rot" : 242.28
+                        },
+                        "lower_arm_r" : {
+                          "pos" : "{0.000000, -10.124160}",
+                          "rot" : 289.4177
+                        },
+                        "upper_leg_r" : {
+                          "pos" : "{-14.761920, -9.129600}",
+                          "rot" : 140.0519
+                        },
+                        "lower_leg_r" : {
+                          "pos" : "{0.000000, -10.864640}",
+                          "rot" : 14.12663
+                        },
+                        "__rootBone__" : {
+                          "pos" : "{188.723425, 278.770894}",
+                          "rot" : 0
+                        },
+                        "spine" : {
+                          "pos" : "{0.000000, -4.000000}",
+                          "rot" : 2.086285
+                        },
+                        "upper_arm_l" : {
+                          "pos" : "{12.066240, -24.757120}",
+                          "rot" : 139.4447
+                        }
+                      },
+                      "frameIndex" : 19
+                    },
+                    {
+                      "bonesInfo" : {
+                        "lower_arm_l" : {
+                          "pos" : "{0.000000, -9.063680}",
+                          "rot" : 281.6225
+                        },
+                        "hand_r" : {
+                          "pos" : "{0.113280, -10.638080}",
+                          "rot" : 356.2338
+                        },
+                        "hand_l" : {
+                          "pos" : "{-0.038400, -14.256640}",
+                          "rot" : 359.0757
+                        },
+                        "upper_leg_l" : {
+                          "pos" : "{12.484800, -8.678400}",
+                          "rot" : 206.7096
+                        },
+                        "head" : {
+                          "pos" : "{-4.554240, -37.893120}",
+                          "rot" : 8.133796
+                        },
+                        "lower_leg_l" : {
+                          "pos" : "{0.000000, -11.143040}",
+                          "rot" : 45.18428
+                        },
+                        "foot_r" : {
+                          "pos" : "{0.000000, -14.113280}",
+                          "rot" : 295.1602
+                        },
+                        "foot_l" : {
+                          "pos" : "{0.000000, -13.687040}",
+                          "rot" : 296.7644
+                        },
+                        "upper_arm_r" : {
+                          "pos" : "{-19.485120, -23.692160}",
+                          "rot" : 237.6121
+                        },
+                        "lower_arm_r" : {
+                          "pos" : "{0.000000, -10.124160}",
+                          "rot" : 293.5812
+                        },
+                        "upper_leg_r" : {
+                          "pos" : "{-14.761920, -9.129600}",
+                          "rot" : 160.7224
+                        },
+                        "lower_leg_r" : {
+                          "pos" : "{0.000000, -10.864640}",
+                          "rot" : 14.51573
+                        },
+                        "__rootBone__" : {
+                          "pos" : "{189.625475, 274.556298}",
+                          "rot" : 0
+                        },
+                        "spine" : {
+                          "pos" : "{0.000000, -4.000000}",
+                          "rot" : 5.218156
+                        },
+                        "upper_arm_l" : {
+                          "pos" : "{12.066240, -24.757120}",
+                          "rot" : 148.4073
+                        }
+                      },
+                      "frameIndex" : 24
+                    },
+                    {
+                      "bonesInfo" : {
+                        "lower_arm_l" : {
+                          "pos" : "{0.000000, -9.063680}",
+                          "rot" : 0
+                        },
+                        "hand_r" : {
+                          "pos" : "{0.113280, -10.638080}",
+                          "rot" : 356.2338
+                        },
+                        "hand_l" : {
+                          "pos" : "{-0.038400, -14.256640}",
+                          "rot" : 359.0757
+                        },
+                        "upper_leg_l" : {
+                          "pos" : "{12.484800, -8.678400}",
+                          "rot" : 184.4822
+                        },
+                        "head" : {
+                          "pos" : "{-4.554240, -37.893120}",
+                          "rot" : 2.101148
+                        },
+                        "lower_leg_l" : {
+                          "pos" : "{0.000000, -11.143040}",
+                          "rot" : 67.65314
+                        },
+                        "foot_r" : {
+                          "pos" : "{0.000000, -14.113280}",
+                          "rot" : 294.8532
+                        },
+                        "foot_l" : {
+                          "pos" : "{0.000000, -13.687040}",
+                          "rot" : 296.7644
+                        },
+                        "upper_arm_r" : {
+                          "pos" : "{-19.485120, -23.692160}",
+                          "rot" : 177.8582
+                        },
+                        "lower_arm_r" : {
+                          "pos" : "{0.000000, -10.124160}",
+                          "rot" : 339.9324
+                        },
+                        "upper_leg_r" : {
+                          "pos" : "{-14.761920, -9.129600}",
+                          "rot" : 182.0718
+                        },
+                        "lower_leg_r" : {
+                          "pos" : "{0.000000, -10.864640}",
+                          "rot" : 0
+                        },
+                        "__rootBone__" : {
+                          "pos" : "{189.625475, 271.007587}",
+                          "rot" : 0
+                        },
+                        "spine" : {
+                          "pos" : "{0.000000, -4.000000}",
+                          "rot" : 1.432721
+                        },
+                        "upper_arm_l" : {
+                          "pos" : "{12.066240, -24.757120}",
+                          "rot" : 170.6764
+                        }
+                      },
+                      "frameIndex" : 29
+                    },
+                    {
+                      "bonesInfo" : {
+                        "lower_arm_l" : {
+                          "pos" : "{0.000000, -9.063680}",
+                          "rot" : 328.1227
+                        },
+                        "hand_r" : {
+                          "pos" : "{0.113280, -10.638080}",
+                          "rot" : 356.2338
+                        },
+                        "hand_l" : {
+                          "pos" : "{-0.038400, -14.256640}",
+                          "rot" : 315.5511
+                        },
+                        "upper_leg_l" : {
+                          "pos" : "{12.484800, -8.678400}",
+                          "rot" : 142.9221
+                        },
+                        "head" : {
+                          "pos" : "{-4.554240, -37.893120}",
+                          "rot" : 6.183804
+                        },
+                        "lower_leg_l" : {
+                          "pos" : "{0.000000, -11.143040}",
+                          "rot" : 77.49342
+                        },
+                        "foot_r" : {
+                          "pos" : "{0.000000, -14.113280}",
+                          "rot" : 295.1623
+                        },
+                        "foot_l" : {
+                          "pos" : "{0.000000, -13.687040}",
+                          "rot" : 296.7644
+                        },
+                        "upper_arm_r" : {
+                          "pos" : "{-19.485120, -23.692160}",
+                          "rot" : 153.9633
+                        },
+                        "lower_arm_r" : {
+                          "pos" : "{0.000000, -10.124160}",
+                          "rot" : 314.4563
+                        },
+                        "upper_leg_r" : {
+                          "pos" : "{-14.761920, -9.129600}",
+                          "rot" : 204.2923
+                        },
+                        "lower_leg_r" : {
+                          "pos" : "{0.000000, -10.864640}",
+                          "rot" : 1.885644
+                        },
+                        "__rootBone__" : {
+                          "pos" : "{189.625475, 268.093490}",
+                          "rot" : 0
+                        },
+                        "spine" : {
+                          "pos" : "{0.000000, -4.000000}",
+                          "rot" : 3.964473
+                        },
+                        "upper_arm_l" : {
+                          "pos" : "{12.066240, -24.757120}",
+                          "rot" : 210.7887
+                        }
+                      },
+                      "frameIndex" : 34
+                    },
+                    {
+                      "bonesInfo" : {
+                        "lower_arm_l" : {
+                          "pos" : "{0.000000, -9.063680}",
+                          "rot" : 315.7507
+                        },
+                        "hand_r" : {
+                          "pos" : "{0.113280, -10.638080}",
+                          "rot" : 356.2338
+                        },
+                        "hand_l" : {
+                          "pos" : "{-0.038400, -14.256640}",
+                          "rot" : 359.0757
+                        },
+                        "upper_leg_l" : {
+                          "pos" : "{12.484800, -8.678400}",
+                          "rot" : 156.7141
+                        },
+                        "head" : {
+                          "pos" : "{-4.554240, -37.893120}",
+                          "rot" : 10.95524
+                        },
+                        "lower_leg_l" : {
+                          "pos" : "{0.000000, -11.143040}",
+                          "rot" : 4.514254
+                        },
+                        "foot_r" : {
+                          "pos" : "{0.000000, -14.113280}",
+                          "rot" : 266.8333
+                        },
+                        "foot_l" : {
+                          "pos" : "{0.000000, -13.687040}",
+                          "rot" : 293.5517
+                        },
+                        "upper_arm_r" : {
+                          "pos" : "{-19.485120, -23.692160}",
+                          "rot" : 132.613
+                        },
+                        "lower_arm_r" : {
+                          "pos" : "{0.000000, -10.124160}",
+                          "rot" : 307.444
+                        },
+                        "upper_leg_r" : {
+                          "pos" : "{-14.761920, -9.129600}",
+                          "rot" : 188.941
+                        },
+                        "lower_leg_r" : {
+                          "pos" : "{0.000000, -10.864640}",
+                          "rot" : 28.42789
+                        },
+                        "__rootBone__" : {
+                          "pos" : "{188.417445, 272.796409}",
+                          "rot" : 0
+                        },
+                        "spine" : {
+                          "pos" : "{0.000000, -4.000000}",
+                          "rot" : 359.6326
+                        },
+                        "upper_arm_l" : {
+                          "pos" : "{12.066240, -24.757120}",
+                          "rot" : 240
+                        }
+                      },
+                      "frameIndex" : 39
+                    }
+                  ],
+                  "type" : "LHRootBoneProperty"
+                }
+              },
+              "name" : "walk"
+            }
+          ],
+          "nodeType" : "LHBone",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "minAngle" : -180,
+          "zOrder" : 3,
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        }
+      ],
+      "name" : "GAME WORLD",
+      "anchor" : "{0.500000, 0.500000}",
+      "size" : "{128.000000, 128.000000}",
+      "nodeType" : "LHGameWorldNode",
+      "alpha" : 255,
+      "scale" : "{1.000000, 1.000000}",
+      "zOrder" : 0,
+      "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+    },
+    {
+      "rotation" : 0,
+      "parentUUID" : "7340713A-C763-481B-9A51-0BB2F589A4FF",
+      "tags" : [
+        "DEFAULT"
+      ],
+      "generalPosition" : "{0.000000, 0.000000}",
+      "uuid" : "26A7E70B-7083-4D08-B5C2-5AA866F27342",
+      "name" : "FRONT USER INTERFACE",
+      "anchor" : "{0.500000, 0.500000}",
+      "size" : "{128.000000, 128.000000}",
+      "nodeType" : "LHUINode",
+      "alpha" : 255,
+      "scale" : "{1.000000, 1.000000}",
+      "zOrder" : 1,
+      "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+    }
+  ],
+  "devices" : [
+    {
+      "ratio" : 1,
+      "suffix" : "",
+      "size" : "{960.000000, 640.000000}"
+    },
+    {
+      "ratio" : 1,
+      "suffix" : "",
+      "size" : "{1136.000000, 640.000000}"
+    },
+    {
+      "ratio" : 1,
+      "suffix" : "",
+      "size" : "{1334.000000, 750.000000}"
+    },
+    {
+      "ratio" : 2,
+      "suffix" : "@2x",
+      "size" : "{2208.000000, 1242.000000}"
+    },
+    {
+      "ratio" : 2,
+      "suffix" : "@2x",
+      "size" : "{2048.000000, 1536.000000}"
+    }
+  ],
+  "useGlobalGravity" : true,
+  "nodeType" : "LHScene",
+  "sceneFormat" : 1,
+  "globalGravityDirection" : "{0.000000, -1.000000}"
+}

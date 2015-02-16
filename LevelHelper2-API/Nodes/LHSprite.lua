@@ -32,7 +32,7 @@ end
 --------------------------------------------------------------------------------
 --!@docBegin
 --!Get the name of the sprite texture rectangle.
---!Returns A string value or nil if sprite is not using a frame name but an image file.
+--!@return A string value or nil if sprite is not using a frame name but an image file.
 local function getSpriteFrameName( selfNode)
 --!@docEnd
 	return selfNode.spriteFrameName;
@@ -40,16 +40,18 @@ end
 --------------------------------------------------------------------------------
 --!@docBegin
 --!Get the image file path used by the texture of this sprite.
---!Returns A string value
+--!@return A string value
 local function getImageFilePath(selfNode)
+--!@docEnd	
 	return selfNode.imageFilePath;
 end
 
 --------------------------------------------------------------------------------
 --!@docBegin
 --!Get the sprite sheet path
---!Returns A string value or nil if sprite is using an image file.
+--!@return A string value or nil if sprite is using an image file.
 local function getSpriteSheetPath(selfNode)
+--!@docEnd
 	return selfNode.spriteSheetPath;
 end
 --------------------------------------------------------------------------------
@@ -63,6 +65,87 @@ end
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 local LHSprite = {}
+
+--------------------------------------------------------------------------------
+--!@docBegin
+--!Create a new sprite given a sprite frame name and an image name.
+--!
+--!If the sprite frame name also has physics, it will also create a body on the new sprite object.
+--!
+--!Note that the x and y position values needs to be given in the parent coordinate system.
+--!
+--!@param spriteFrameName The sprite frame name as defined in the Sprite Packer and Physics Editor.
+--!@param imageFilePath The path to the image file.
+--!@param parent The parent node of the newly created sprite object. Usually the game world node.
+--!@return A new LHSprite object.
+--!@code
+--!		local LHSprite =  require("LevelHelper2-API.Nodes.LHSprite");
+--!
+--!		local newSpriteObj = LHSprite:createWithSpriteFrameName("carTyre", "PublishFolder/carParts.png", lhScene:getGameWorldNode());
+--!			
+--!		newSpriteObj.x = 100;
+--!		newSpriteObj.y = 200;
+--!		--where lhScene is the object returned by LHScene:initWithContentOfFile("...");
+--!@endcode
+function LHSprite:createWithSpriteFrameName(spriteFrameName, imageFilePath, parent)
+--!@docEnd
+
+	local LHUtils = require("LevelHelper2-API.Utilities.LHUtils");
+
+	local spriteSheetPath = LHUtils.stripExtension(imageFilePath);
+	spriteSheetPath = LHUtils.replaceOccuranceOfStringWithString( spriteSheetPath, "/", "." )
+	
+	-- require the sprite sheet information file
+	local sheetInfo = require(spriteSheetPath); 
+	--create the image sheet
+	local imageSheet = graphics.newImageSheet( imageFilePath, sheetInfo.getSpriteSheetData() );
+	--create the sprite
+	
+	local sequenceData = {
+		name=imageFile,
+		start=1,
+		count=sheetInfo.getFramesCount()
+	}
+	object = display.newSprite( imageSheet, sequenceData )
+	
+	object:setFrame(sheetInfo.getFrameForName(spriteFrameName));
+	object.frameNamesMap = LHUtils.LHDeepCopy(sheetInfo.getFrameNamesMap());    
+	
+	object.spriteSheetPath = spriteSheetPath;
+	
+	--add all LevelHelper 2 valid properties to the object
+	object.nodeType = "LHSprite"
+	
+	object.spriteFrameName = spriteFrameName;
+	object.imageFilePath = imageFilePath;
+	
+	
+	--Functions
+	----------------------------------------------------------------------------
+	object.setSpriteFrameWithName 	= setSpriteFrameWithName;
+	object.getSpriteFrameName 		= getSpriteFrameName;
+	object.getImageFilePath 		= getImageFilePath;
+	object.getSpriteSheetPath 		= getSpriteSheetPath;
+	
+	local LHNodeProtocol = require('LevelHelper2-API.Protocols.LHNodeProtocol');
+	local LHAnimationsProtocol = require('LevelHelper2-API.Protocols.LHAnimationsProtocol');
+	local LHPhysicsProtocol = require('LevelHelper2-API.Protocols.LHPhysicsProtocol');
+	
+	parent:addChild(object);
+	
+	LHNodeProtocol.simulateModernObjectHierarchy(parent, object);
+	LHNodeProtocol.initNodeProtocolWithDictionary(dict, object, parent);
+	
+	LHPhysicsProtocol.initPhysicsProtocolWithDictionary(nil, object, parent:getScene());
+	LHAnimationsProtocol.initAnimationsProtocolWithDictionary(dict, object, parent:getScene());
+	
+	object.nodeProtocolEnterFrame 	= object.enterFrame;
+	object.enterFrame = visit;
+	
+	return object
+	
+end
+
 function LHSprite:nodeWithDictionary(dict, prnt)
 	
 	if (nil == dict) then
@@ -83,19 +166,7 @@ function LHSprite:nodeWithDictionary(dict, prnt)
 	
 	local object = nil; --sprite sheet or newImage
 	
-	-- contentSize.width = contentSize.width*4;
-	-- contentSize.height= contentSize.height*4;
 	
-	-- print("image path " .. imageFilePath);
-	-- print("relativeImagePath " .. tostring(relativeImagePath));
-	-- print("imageFileName " .. imageFileName);
-	
-	-- print("ACTUAL CONTENT SIZE : " .. display.actualContentWidth .. " " .. display.actualContentHeight);
-	-- print("PIXEL SIZE : " .. display.pixelWidth .. " " .. display.pixelHeight);
-	-- print("USER CONTENT SIZE : " .. display.contentWidth .. " " .. display.contentHeight);
-	-- print( display.pixelWidth / display.actualContentWidth )
-	-- print("IMAGE SIZE " .. tostring(contentSize.width) .. " " .. tostring(contentSize.height));
-	    
 	if false == isSprite then
 	    object = display.newImageRect(imageFilePath, contentSize.width, contentSize.height, true);
 	else
@@ -103,17 +174,10 @@ function LHSprite:nodeWithDictionary(dict, prnt)
 		local spriteSheetPath = LHUtils.stripExtension(imageFilePath);
 		spriteSheetPath = LHUtils.replaceOccuranceOfStringWithString( spriteSheetPath, "/", "." )
 		
-		    
-		-- require the sprite sheet information file
-		local sheetInfo = require(spriteSheetPath); 
-		--create the image sheet
-		local imageSheet = graphics.newImageSheet( imageFilePath, sheetInfo.getSpriteSheetData() );
-		--create the sprite
 		
-		    
-		--local GHSprite = display.newImage(imageSheet, sheetInfo.getFrameForName(spriteName));
-		--here i call the local GHSprite only because i want the documentation parser to know where to add this method
-		--i could have called it in any way.
+		local sheetInfo = require(spriteSheetPath); 
+		
+		local imageSheet = graphics.newImageSheet( imageFilePath, sheetInfo.getSpriteSheetData() );
 		
 		local sequenceData = {
 		    name=imageFile,
@@ -124,9 +188,6 @@ function LHSprite:nodeWithDictionary(dict, prnt)
 		
 		object:setFrame(sheetInfo.getFrameForName(spriteName));
 		object.frameNamesMap = LHUtils.LHDeepCopy(sheetInfo.getFrameNamesMap());    
-		--    addGHSpriteMethods();
-		--    loadPhysicsForImageFileAndSpriteName(imageFilePath, spriteName);    
-		
 		
 		local unitPosition = LHUtils.pointFromString(dict["generalPosition"]);
 		
@@ -145,7 +206,6 @@ function LHSprite:nodeWithDictionary(dict, prnt)
 	object.imageFilePath = imageFilePath;
 	
 	
-	
 	--Functions
 	----------------------------------------------------------------------------
 	object.setSpriteFrameWithName 	= setSpriteFrameWithName;
@@ -157,9 +217,6 @@ function LHSprite:nodeWithDictionary(dict, prnt)
 	local LHNodeProtocol = require('LevelHelper2-API.Protocols.LHNodeProtocol');
 	local LHAnimationsProtocol = require('LevelHelper2-API.Protocols.LHAnimationsProtocol');
 	local LHPhysicsProtocol = require('LevelHelper2-API.Protocols.LHPhysicsProtocol');
-	
-	
-	
 	
 	
 	-- LHUtils.LHPrintObjectInfo(prnt);

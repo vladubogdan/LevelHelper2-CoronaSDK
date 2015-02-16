@@ -3,6 +3,8 @@ local composer = require( "composer" )
 
 local availableDemoScenes = {}
 
+
+availableDemoScenes[#availableDemoScenes+1] = {name= "createSpritesByCode", scene= "createSpritesByCode"}
 availableDemoScenes[#availableDemoScenes+1] = {name= "moveOnPathByCode", scene= "moveOnPathByCode"}
 availableDemoScenes[#availableDemoScenes+1] = {name= "skeletalCharacter", scene= "skeletalCharacter"}
 availableDemoScenes[#availableDemoScenes+1] = {name= "cameraFollow", scene= "cameraFollow"}

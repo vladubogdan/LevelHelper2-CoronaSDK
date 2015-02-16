@@ -63,38 +63,14 @@ end
 --------------------------------------------------------------------------------
 function initAnimationsProtocolWithDictionary(dict, node, scene)
 
-	
-    local LHUtils = require("LevelHelper2-API.Utilities.LHUtils");
+	local LHUtils = require("LevelHelper2-API.Utilities.LHUtils");
 
-    node._isAnimationsProtocol = true;
-    node.protocolName = "LHAnimationsProtocol";
+	node._isAnimationsProtocol = true;
+	node.protocolName = "LHAnimationsProtocol";
 
-	if(dict == nil)then return end;
-	
 	node.lhActiveAnimation = nil;
-        
-    local animsInfo = dict["animations"];
-	
-	if(animsInfo ~= nil)then
-		
-		local LHAnimation = require('LevelHelper2-API.Animations.LHAnimation');
-		
-	    for i = 1, #animsInfo do
-	    	local anim = animsInfo[i];
-	    	
-	    	if(node.lhAnimations == nil)then
-	    		node.lhAnimations = {};
-	    	end
-	    	
-	    	local newAnim = LHAnimation:animationWithDictionary(anim, node);
-	    	if(newAnim:isActive())then
-	    		node.lhActiveAnimation = newAnim;
-	    	end
-	    	
-	    	node.lhAnimations[#node.lhAnimations+1] = newAnim;
-	    end
-	    
-    end
+	node.lhAnimations = {};
+
 	--LevelHelper 2 animations protocol functions
 	----------------------------------------------------------------------------
 	node.setActiveAnimation 	= setActiveAnimation;
@@ -105,5 +81,28 @@ function initAnimationsProtocolWithDictionary(dict, node, scene)
 	----------------------------------------------------------------------------
 	node._animProtocolLastTime = 0.0;
 	node.animationProtocolEnterFrame = animationProtocolEnterFrame;
+	
+	
+	
+	if(dict == nil)then return end;
+	
+	local animsInfo = dict["animations"];
+	
+	if(animsInfo ~= nil)then
+		
+		local LHAnimation = require('LevelHelper2-API.Animations.LHAnimation');
+		
+		for i = 1, #animsInfo do
+			local anim = animsInfo[i];
+			
+			local newAnim = LHAnimation:animationWithDictionary(anim, node);
+			if(newAnim:isActive())then
+				node.lhActiveAnimation = newAnim;
+			end
+			
+			node.lhAnimations[#node.lhAnimations+1] = newAnim;
+		end
+
+	end
 	
 end
