@@ -32,6 +32,49 @@ local function getDeviceSize()
 end
 --------------------------------------------------------------------------------
 --!@docBegin
+--!Takes the info of the node in the scene with unique name and creates a clone.
+--!
+--!The new node parent will be the same as the initial node. 
+--!
+--!Note that the x and y position values for the new node needs to be given in the parent coordinate system.
+--!
+--!The new cloned object unique name will be the the old object name + "Clone" e.g. "[uniqueName]Clone".
+--!
+--!Only the cloned object unique name gets changed, all children of the cloned object will have the same name as the original node.
+--!
+--!If you need to retrive a child from a cloned object use "getChildNodeWithUniqueName" on the cloned object itself and not on the scene object.
+--!
+--!@param uniqueName The unique name of the object already in the scene.
+--!@return A new node object or nil if no node with unique name is found in the scene.
+--!@code
+--!		local newNodeObj = lhScene:cloneNodeWithUniqueName("uniqueNameOfNodeInScene");
+--!			
+--!		newNodeObj.x = 100;
+--!		newNodeObj.y = 200;
+--!
+--!		--where lhScene is the object returned by LHScene:initWithContentOfFile("...");
+--!@endcode
+local function cloneNodeWithUniqueName(_sceneObj, uniqueName)
+--!@docEnd	
+	local sceneNode = _sceneObj:getChildNodeWithUniqueName(uniqueName);
+	if(sceneNode == nil)then
+		print("ERROR: No node with unique name \"" .. uniqueName .. "\" found in scene.");
+		return nil;
+	end
+	
+	if(nil == sceneNode._dictionaryInfo)then
+		print("ERROR: Node with unique name \"" .. uniqueName .. "\" cannot be clonned.");
+		return nil;
+	end
+	
+	local node = LHNodeProtocol.createLHNodeWithDictionaryWithParent(sceneNode._dictionaryInfo, sceneNode:getParent());
+	if(node)then
+		node.lhUniqueName = node.lhUniqueName .. "Clone";
+	end
+	return node;
+end
+--------------------------------------------------------------------------------
+--!@docBegin
 --!Get the back ui node from the scene.
 local function getBackUINode(_sceneObj)
 --!@docEnd
@@ -470,6 +513,7 @@ function LHScene:initWithContentOfFile(jsonFile)
 	_scene.getUINode 		 					= getUINode;
 	_scene.getDeviceSize						= getDeviceSize;
 	_scene.getDesignResolutionSize				= getDesignResolutionSize;
+	_scene.cloneNodeWithUniqueName				= cloneNodeWithUniqueName;
 	
 	_scene.tracedFixturesWithUUID 				= tracedFixturesWithUUID;
 	_scene.loadPhysicsBoundariesFromDictionary 	= loadPhysicsBoundariesFromDictionary;
@@ -478,7 +522,6 @@ function LHScene:initWithContentOfFile(jsonFile)
 	_scene.loadGlobalGravityFromDictionary 		= loadGlobalGravityFromDictionary;
 	
 	_scene.assetInfoForFile 					= assetInfoForFile;
-	
 	_scene.getGameWorldRect 					= getGameWorldRect;
 	
 	local dict = nil;

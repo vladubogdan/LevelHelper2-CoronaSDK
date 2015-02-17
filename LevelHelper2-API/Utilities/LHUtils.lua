@@ -258,13 +258,35 @@ function positionForNodeFromUnit(node, unitPos)
     
     return designPos;
 end
-
-function LHPrintObjectInfo(object)
-    local json = require "json"
-    local jsonString = json.encode( object )
-    print("OBJECT: " .. tostring(object) .. " INFO: " .. jsonString);
+--------------------------------------------------------------------------------
+-- Print contents of `tbl`, with indentation.
+-- `indent` sets the initial level of indentation.
+function tprint (tbl, indent)
+	if not indent then indent = 0 end
+	for k, v in pairs(tbl) do
+		formatting = string.rep("  ", indent) .. k .. ": "
+		if type(v) == "table" then
+			print(formatting)
+			tprint(v, indent+1)
+		elseif type(v) == 'boolean' then
+			print(formatting .. tostring(v))      
+		else
+			print(formatting .. v)
+		end
+	end
 end
-
+--------------------------------------------------------------------------------
+function LHPrintObjectInfo(object)
+	local json = require "json"
+	local jsonString = json.encode( object )
+	print("...............................");
+	print("Object:" .. tostring(object));
+	tprint(object, 2);
+	print("...............................");
+	-- print("OBJECT: " .. tostring(object) .. " INFO: " .. jsonString);
+end
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 function LHPointOnCurve(p1, p2, p3, p4, t)
 	local var1
 	local var2

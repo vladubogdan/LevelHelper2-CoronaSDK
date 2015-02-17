@@ -46,8 +46,8 @@ function loadChildrenForNodeFromDictionary( prntNode, dict )
 	local childrenInfo = dict["children"];
 	if childrenInfo then    	
 		for i = 1, #childrenInfo do    	
-			local childInfo = childrenInfo[i];    			
-			local node = createLHNodeWithDictionaryWithParent(childInfo, prntNode);	    	
+			local childInfo = childrenInfo[i];
+			local node = createLHNodeWithDictionaryWithParent(childInfo, prntNode);
 		end
 	end
 
@@ -757,10 +757,11 @@ function initNodeProtocolWithDictionary(dict, node, prnt)
 
 
 	node.protocolName = "LHNodeProtocol";
+	node._dictionaryInfo = dict;
 	node._isNodeProtocol = true;
-    node._lhParent = prnt;
-    
-    --LevelHelper 2 node protocol functions
+	node._lhParent = prnt;
+	
+	--LevelHelper 2 node protocol functions
 	----------------------------------------------------------------------------
 	node.getChildNodeWithUniqueName = getChildNodeWithUniqueName;
 	node.getChildNodeWithUUID 		= getChildNodeWithUUID;
@@ -1001,8 +1002,7 @@ function createLHNodeWithDictionaryWithParent(childInfo, prnt)
 	end
 	
 	
-	
-	print("UNKNOWN NODE TYPE " .. nodeType);
+	print("UNKNOWN NODE TYPE " .. tostring(nodeType));
 	
 	return nil
 end

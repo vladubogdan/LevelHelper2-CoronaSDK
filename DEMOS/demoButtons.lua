@@ -4,6 +4,7 @@ local composer = require( "composer" )
 local availableDemoScenes = {}
 
 
+availableDemoScenes[#availableDemoScenes+1] = {name= "duplicateNodesInScene", scene= "duplicateNodesInScene"}
 availableDemoScenes[#availableDemoScenes+1] = {name= "createSpritesByCode", scene= "createSpritesByCode"}
 availableDemoScenes[#availableDemoScenes+1] = {name= "moveOnPathByCode", scene= "moveOnPathByCode"}
 availableDemoScenes[#availableDemoScenes+1] = {name= "skeletalCharacter", scene= "skeletalCharacter"}
