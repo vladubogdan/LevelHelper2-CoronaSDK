@@ -224,15 +224,17 @@ function initPhysicsProtocolWithDictionary(dict, node, scene)
 					physicType,
 					unpack(allBodyFixtures))
 			
-			
 	node.isFixedRotation	= dict["fixedRotation"];
 	node.isBullet 			= dict["bullet"];
-	node.isSleepingAllowe	= dict["allowSleep"];
+	node.isSleepingAllowed	= dict["allowSleep"];
 	node.gravityScale		= dict["gravityScale"];
 	node.linearDamping 		= dict["linearDamping"];
+	
+	local linearVel 		= LHUtils.pointFromString(dict["linearVelocity"]);
+	node:setLinearVelocity( linearVel.x*32, linearVel.y*32 );
+
 	node.angularVelocity 	= dict["angularVelocity"];
 	node.angularDamping 	= dict["angularDamping"];
-	
 	
 	--LevelHelper 2 node physics protocol functions
 	----------------------------------------------------------------------------

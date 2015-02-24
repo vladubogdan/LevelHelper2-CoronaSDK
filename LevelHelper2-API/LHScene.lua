@@ -223,46 +223,46 @@ local function loadGameWorldInfoFromDictionary(selfObject, dict)
 										size = {width = bRect.size.width*designSize.width,
 												height = (bRect.size.height)*designSize.height}};
 			
-			local skBRect = selfObject._gameWorldRect;
+			-- local skBRect = selfObject._gameWorldRect;
 			
-			local from = {x = skBRect.origin.x, y = skBRect.origin.y};
-			local to = {x = skBRect.origin.x + skBRect.size.width,
-						y = skBRect.origin.y};
+			-- local from = {x = skBRect.origin.x, y = skBRect.origin.y};
+			-- local to = {x = skBRect.origin.x + skBRect.size.width,
+			-- 			y = skBRect.origin.y};
 			
-			local borderLine = display.newLine( from.x,from.y, to.x,to.y );
-			borderLine:setStrokeColor( 1, 0, 0, 1 )
-			borderLine.strokeWidth = 8
-			selfObject:getGameWorldNode():addChild(borderLine);
+			-- local borderLine = display.newLine( from.x,from.y, to.x,to.y );
+			-- borderLine:setStrokeColor( 1, 0, 0, 1 )
+			-- borderLine.strokeWidth = 8
+			-- selfObject:getGameWorldNode():addChild(borderLine);
 			
-			from = 	{x = skBRect.origin.x + skBRect.size.width,
-					y = skBRect.origin.y};
-			to = 	{x = skBRect.origin.x + skBRect.size.width,
-					y = skBRect.origin.y + skBRect.size.height};
+			-- from = 	{x = skBRect.origin.x + skBRect.size.width,
+			-- 		y = skBRect.origin.y};
+			-- to = 	{x = skBRect.origin.x + skBRect.size.width,
+			-- 		y = skBRect.origin.y + skBRect.size.height};
 					
-			borderLine = display.newLine( from.x,from.y, to.x,to.y );
-			borderLine:setStrokeColor( 1, 0, 0, 1 )
-			borderLine.strokeWidth = 8
-			selfObject:getGameWorldNode():addChild(borderLine);
+			-- borderLine = display.newLine( from.x,from.y, to.x,to.y );
+			-- borderLine:setStrokeColor( 1, 0, 0, 1 )
+			-- borderLine.strokeWidth = 8
+			-- selfObject:getGameWorldNode():addChild(borderLine);
 
-			from = 	{x = skBRect.origin.x + skBRect.size.width,
-					y = skBRect.origin.y + skBRect.size.height};
-			to = 	{x = skBRect.origin.x,
-					y = skBRect.origin.y + skBRect.size.height};
+			-- from = 	{x = skBRect.origin.x + skBRect.size.width,
+			-- 		y = skBRect.origin.y + skBRect.size.height};
+			-- to = 	{x = skBRect.origin.x,
+			-- 		y = skBRect.origin.y + skBRect.size.height};
 					
-			borderLine = display.newLine( from.x,from.y, to.x,to.y );
-			borderLine:setStrokeColor( 1, 0, 0, 1 )
-			borderLine.strokeWidth = 8
-			selfObject:getGameWorldNode():addChild(borderLine);
+			-- borderLine = display.newLine( from.x,from.y, to.x,to.y );
+			-- borderLine:setStrokeColor( 1, 0, 0, 1 )
+			-- borderLine.strokeWidth = 8
+			-- selfObject:getGameWorldNode():addChild(borderLine);
 			
-			from = 	{x = skBRect.origin.x,
-					y = skBRect.origin.y + skBRect.size.height};
-			to = 	{x = skBRect.origin.x,
-					y = skBRect.origin.y};
+			-- from = 	{x = skBRect.origin.x,
+			-- 		y = skBRect.origin.y + skBRect.size.height};
+			-- to = 	{x = skBRect.origin.x,
+			-- 		y = skBRect.origin.y};
 				
-			borderLine = display.newLine( from.x,from.y, to.x,to.y );
-			borderLine:setStrokeColor( 1, 0, 0, 1 )
-			borderLine.strokeWidth = 8
-			selfObject:getGameWorldNode():addChild(borderLine);
+			-- borderLine = display.newLine( from.x,from.y, to.x,to.y );
+			-- borderLine:setStrokeColor( 1, 0, 0, 1 )
+			-- borderLine.strokeWidth = 8
+			-- selfObject:getGameWorldNode():addChild(borderLine);
 			
 		end
 	end

@@ -47,6 +47,13 @@ local function totalTime(selfObject)
 end
 --------------------------------------------------------------------------------
 --!@docBegin
+--!The total number of frames on the animation. A number value.
+local function totalFrames(selfObject)
+--!@docEnd	
+	return selfObject._totalFrames;
+end
+--------------------------------------------------------------------------------
+--!@docBegin
 --!Current frame of the animation. As defines in LevelHelper 2 editor.
 local function currentFrame(selfObject)
 --!@docEnd	
@@ -188,23 +195,41 @@ end
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 local function resetOneShotFrames(selfObject)
-	selfObject:resetOneShotFramesStartingFromFrameNumber(0);
+	selfObject:resetOneShotFramesStartingFromFrameNumber(1);
 end
 --------------------------------------------------------------------------------
 local function resetOneShotFramesStartingFromFrameNumber(selfObject, frameNumber)
 	
 	for i=1, #selfObject._properties do
 		local prop = selfObject._properties[i];
+	
+		local subproperties = prop:allSubproperties();
 		
+		if(subproperties)then
+			for j=1, #subproperties do
+				local subprop = subproperties[j];
+				
+				local frames = subprop:keyFrames();
+				for k=1, #frames do
+					local frm = frames[k];
+					if(frm:frameNumber() >= frameNumber)then
+						frm:setWasShot(false);
+					end
+				end
+				
+			end
+		end
+	
 		local frames = prop:keyFrames();
-		
 		for j=1, #frames do
 			local frm = frames[j];
 			if(frm:frameNumber() >= frameNumber)then
 				frm:setWasShot(false);
 			end
 		end
+	
 	end
+	
 end
 --------------------------------------------------------------------------------
 local function updateNodeWithAnimationProperty(selfObject, prop, time)
@@ -293,8 +318,9 @@ local function updateNodeWithAnimationProperty(selfObject, prop, time)
 	elseif(prop.isAnimationSpriteFrameProperty == true)then
 		
 		selfObject:animateSpriteFrameChangeWithFrame(beginFrm, animNode);
+	
+	else
 		
-	else 
 		
 	end
 	

@@ -349,6 +349,11 @@
 					<key>publish</key>
 					<true/>
 				</dict>
+				<key>duplicateNodesInScene.lhs</key>
+				<dict>
+					<key>publish</key>
+					<true/>
+				</dict>
 				<key>emptyLevel.lhs</key>
 				<dict>
 					<key>publish</key>

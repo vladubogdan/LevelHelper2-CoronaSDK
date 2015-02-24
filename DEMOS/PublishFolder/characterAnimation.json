@@ -1372,11 +1372,91 @@
           ],
           "spriteUUID" : "986AA138-7C74-479B-A627-5BBF982B2605",
           "spriteName" : "carTyre",
-          "generalPosition" : "{0.146274, 0.364725}",
+          "generalPosition" : "{0.173058, 0.294907}",
           "uuid" : "DF57079E-C242-4358-B5AE-F68211831A12",
           "name" : "carTyre",
           "anchor" : "{0.500000, 0.500000}",
           "size" : "{43.000000, 43.000000}",
+          "nodeType" : "LHSprite",
+          "alpha" : 255,
+          "scale" : "{1.000000, 1.000000}",
+          "relativeImagePath" : "PublishFolder\/",
+          "zOrder" : 0,
+          "imageFileName" : "carParts.png",
+          "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+        },
+        {
+          "rotation" : 0,
+          "parentUUID" : "_GAME_WORLD_NODE_UUID_",
+          "tags" : [
+            "DEFAULT"
+          ],
+          "nodePhysics" : {
+            "bullet" : false,
+            "angularDamping" : 0,
+            "gravityScale" : 1,
+            "allowSleep" : true,
+            "angularVelocity" : 0,
+            "fixedRotation" : false,
+            "linearDamping" : 0,
+            "type" : 0,
+            "shape" : 6,
+            "linearVelocity" : "{0.000000, 0.000000}"
+          },
+          "spriteUUID" : "98D7378C-BDD3-47B2-A31E-D1A2771124FE",
+          "spriteName" : "wood",
+          "generalPosition" : "{0.094132, 0.399049}",
+          "uuid" : "FB13C403-7957-4169-9FA8-C00DB66C00A8",
+          "children" : [
+            {
+              "rotation" : 0,
+              "parentUUID" : "FB13C403-7957-4169-9FA8-C00DB66C00A8",
+              "tags" : [
+                "DEFAULT"
+              ],
+              "spriteUUID" : "B5DA7A9C-4EDD-4052-B881-A5D8EEBA1B52",
+              "spriteName" : "HeadNormal",
+              "generalPosition" : "{0.053338, 0.161192}",
+              "uuid" : "56D34B5A-3475-4134-9715-D37FD0300735",
+              "name" : "HeadNormal",
+              "anchor" : "{0.500000, 0.500000}",
+              "size" : "{120.000000, 110.000000}",
+              "nodeType" : "LHSprite",
+              "alpha" : 255,
+              "scale" : "{1.000000, 1.000000}",
+              "relativeImagePath" : "PublishFolder\/",
+              "zOrder" : 0,
+              "imageFileName" : "girlSoldierParts.png",
+              "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+            }
+          ],
+          "name" : "wood",
+          "anchor" : "{0.500000, 0.500000}",
+          "size" : "{128.000000, 32.000000}",
+          "animations" : [
+            {
+              "active" : true,
+              "repetitions" : 0,
+              "totalFrames" : 30,
+              "fps" : 24,
+              "properties" : {
+                "Sprite Frame" : {
+                  "Frames" : [
+                    {
+                      "spriteSheetName" : "wood",
+                      "frameIndex" : 0
+                    },
+                    {
+                      "spriteSheetName" : "carTyre",
+                      "frameIndex" : 9
+                    }
+                  ],
+                  "type" : "LHSpriteFrameProperty"
+                }
+              },
+              "name" : "tst"
+            }
+          ],
           "nodeType" : "LHSprite",
           "alpha" : 255,
           "scale" : "{1.000000, 1.000000}",
