@@ -65,7 +65,7 @@ end
 --!@param value The frame number where the animation should jump to.
 local function setCurrentFrame(selfObject, value)
 --!@docEnd	
-	selfObject:updateTimeWithValue(value*(1.0/selfObject._fps));
+	selfObject:setCurrentTime(value*(1.0/selfObject._fps));
 end
 --------------------------------------------------------------------------------
 --!@docBegin
