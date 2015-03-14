@@ -651,6 +651,11 @@ end
 --------------------------------------------------------------------------------
 local function enterFrame(selfNode, event)
 
+	if(selfNode._shouldRemoveSelf)then
+		selfNode:nodeProtocolRemoveSelf();
+		return;
+	end
+	
 	if(selfNode._isNodeProtocol)then
 		
 		if(selfNode.lhChildren ~= nil)then
@@ -683,6 +688,9 @@ local function enterFrame(selfNode, event)
 	end
 end
 
+local function scheduleForRemoval(selfNode)
+	selfNode._shouldRemoveSelf = true;
+end
 local function nodeProtocolRemoveSelf(selfNode)
 	
 	local children = selfNode:getChildren();
@@ -699,7 +707,11 @@ local function nodeProtocolRemoveSelf(selfNode)
 	end
 	selfNode._pathMovementObj = nil;
 	
+	
 	if(selfNode._superRemoveSelf ~= nil)then
+	
+		-- LHUtils.LHPrintObjectInfo(selfNode);
+	
 		selfNode:_superRemoveSelf();
 	end
 end
@@ -747,6 +759,8 @@ function initNodeProtocolWithDictionary(dict, node, prnt)
 		node._superRemoveSelf = node.removeSelf;
 	end
 	node.removeSelf = nodeProtocolRemoveSelf;
+	node.removeSelf = scheduleForRemoval;
+	node.nodeProtocolRemoveSelf = nodeProtocolRemoveSelf;
 	
 	--Modern object hierarchy simulation
 	node.addChild 				= addChild;
