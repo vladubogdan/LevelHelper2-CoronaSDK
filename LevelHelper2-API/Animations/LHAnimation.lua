@@ -5,6 +5,37 @@
 --!@docBegin
 --!This class is responsible for playing animations defined inside LevelHelper 2.
 --!
+--!To receive animation notifications you have to add a listener to didFinishedRepetitionOnAnimation and/or didFinishedPlayingAnimation.
+--!
+--!@code
+--!lhScene:addEventListener("didFinishedRepetitionOnAnimation", scene);--lhScene is your LHScene object
+--!lhScene:addEventListener("didFinishedPlayingAnimation", scene);--lhScene is your LHScene object
+--!@endcode
+--!
+--!@code
+--!function scene:didFinishedPlayingAnimation(event)
+--!	
+--!	local animationObject = event.object;
+--!	
+--!	print("didFinishedPlayingAnimation info......................................................");
+--!	print("Animation name: " .. tostring(animationObject:getName()));
+--!	print("Animation object: " .. tostring(animationObject:getNode():getUniqueName()));
+--!
+--!end
+--!@endcode
+--!
+--!@code
+--!function scene:didFinishedRepetitionOnAnimation(event)
+--!	
+--!	local animationObject = event.object;
+--!	
+--!	print("didFinishedRepetitionOnAnimation info......................................................");
+--!	print("Animation name: " .. tostring(animationObject:getName()));
+--!	print("Animation object: " .. tostring(animationObject:getNode():getUniqueName()));
+--!	
+--!end
+--!@endcode
+--!
 --!@docEnd
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
@@ -134,10 +165,19 @@ local function setCurrentTime(selfObject, val)
 		if( selfObject:didFinishAllRepetitions() == false) then
 			selfObject._currentTime = 0.0;
 			selfObject:resetOneShotFrames();
-			-- [(LHScene*)[node scene] didFinishedRepetitionOnAnimation:self];
+			
+			local finishAnimRepEvent = { 	name="didFinishedRepetitionOnAnimation", 
+								  		object= selfObject };
+			selfObject._node:getScene():dispatchEvent(finishAnimRepEvent);
+			
 		else
 			selfObject:getNode():setActiveAnimation(nil);
-			-- [(LHScene*)[node scene] didFinishedPlayingAnimation:self];
+			
+			local finishAnimEvent = { 	name="didFinishedPlayingAnimation", 
+								  		object= selfObject };
+			selfObject._node:getScene():dispatchEvent(finishAnimEvent);
+		
+			
 		end
 	end
 	selfObject.previousTime = selfObject._currentTime;

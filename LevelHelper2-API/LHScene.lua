@@ -554,10 +554,6 @@ function LHScene:initWithContentOfFile(jsonFile)
 	_scene:loadPhysicsBoundariesFromDictionary(dict);
 	_scene:loadGlobalGravityFromDictionary(dict);
 	
-	-- _scene._superRemoveSelf 					= _scene.removeSelf;
-	-- _scene.removeSelf 							= removeSelf;
-	
-	_scene.nodeProtocolRemoveSelf 	= _scene.removeSelf;
 	_scene.removeSelf = removeSelf;
 	
 	

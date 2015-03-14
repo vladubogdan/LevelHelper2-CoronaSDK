@@ -696,8 +696,13 @@ local function nodeProtocolRemoveSelf(selfNode)
 	local children = selfNode:getChildren();
 	while(children ~= nil and children.numChildren > 0)do
 		local child = children[1];
+		
 		if(child)then
-			child:removeSelf();
+			if(child.nodeProtocolRemoveSelf ~= nil)then
+				child:nodeProtocolRemoveSelf();
+			else
+				child:removeSelf();
+			end
 		end
 		children = selfNode:getChildren();
 	end
@@ -707,11 +712,7 @@ local function nodeProtocolRemoveSelf(selfNode)
 	end
 	selfNode._pathMovementObj = nil;
 	
-	
 	if(selfNode._superRemoveSelf ~= nil)then
-	
-		-- LHUtils.LHPrintObjectInfo(selfNode);
-	
 		selfNode:_superRemoveSelf();
 	end
 end
@@ -758,7 +759,7 @@ function initNodeProtocolWithDictionary(dict, node, prnt)
 	if(node.removeSelf ~= nil)then
 		node._superRemoveSelf = node.removeSelf;
 	end
-	node.removeSelf = nodeProtocolRemoveSelf;
+	-- node.removeSelf = nodeProtocolRemoveSelf;
 	node.removeSelf = scheduleForRemoval;
 	node.nodeProtocolRemoveSelf = nodeProtocolRemoveSelf;
 	

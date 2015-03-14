@@ -46,6 +46,26 @@ function scene:touch( event )
 	end
 end
 
+function scene:didFinishedRepetitionOnAnimation(event)
+	
+	local animationObject = event.object;
+	
+	print("didFinishedRepetitionOnAnimation info......................................................");
+	print("Animation name: " .. tostring(animationObject:getName()));
+	print("Animation object: " .. tostring(animationObject:getNode():getUniqueName()));
+	--look inside LHAnimation for more methods
+end
+
+function scene:didFinishedPlayingAnimation(event)
+	
+	local animationObject = event.object;
+	
+	print("didFinishedPlayingAnimation info......................................................");
+	print("Animation name: " .. tostring(animationObject:getName()));
+	print("Animation object: " .. tostring(animationObject:getNode():getUniqueName()));
+	--look inside LHAnimation for more methods
+end
+
 function scene:show( event )
 	
 	local sceneGroup = self.view
@@ -56,6 +76,11 @@ function scene:show( event )
 		lhScene = LHScene:initWithContentOfFile("PublishFolder/duplicateNodesInScene.json");
 	
 		sceneGroup:insert(lhScene);
+		
+		
+		lhScene:addEventListener("didFinishedRepetitionOnAnimation", scene);
+		lhScene:addEventListener("didFinishedPlayingAnimation", scene);
+		
 		
 		local demoHelpString = "DUPLICATE NODES IN SCENE BY CODE DEMO\n.";
 		
