@@ -82,6 +82,16 @@ function scene:show( event )
 		lhScene:addEventListener("didFinishedPlayingAnimation", scene);
 		
 		
+		local objectsWithTagTable = lhScene:getChildrenWithTags({"UPPER_LEG"}, false);
+		print("objects only with tag UPPER_LEG count: " .. tostring(#objectsWithTagTable) .. " (should return 2)");
+		
+		local objectsWithTagTable = lhScene:getChildrenWithTags({"UPPER_LEG", "LOWER_LEG"}, true);
+		print("objects only with tag UPPER_LEG or LOWER_LEG count: " .. tostring(#objectsWithTagTable) .. " (should return 4)");
+		
+		local objectsWithTagTable = lhScene:getChildrenWithTags({"UPPER_LEG", "LOWER_LEG"}, false);
+		print("objects only with tag UPPER_LEG and LOWER_LEG count: " .. tostring(#objectsWithTagTable) .. " (should return 0)");
+			
+		
 		local demoHelpString = "DUPLICATE NODES IN SCENE BY CODE DEMO\n.";
 		
 		local textOptions = 

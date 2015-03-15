@@ -161,9 +161,69 @@ local function getChildrenOfProtocol(selfNode, protocolType)
 	end
 	return temp;
 end
+--------------------------------------------------------------------------------
+--!@docBegin
+--!Returns a table of strings representing the tags assigned on this node.
+local function getTags(selfNode)
+--!@docEnd
+	return selfNode.lhTags;	
+end
+--------------------------------------------------------------------------------
+--!@docBegin
+--!Returns all children nodes that have the specified tag values.
+--!@param tagsTable A table of strings containing tag names.
+--!@param any Specify if all or just one tag value of the node needs to be in common with the tagsTable passed as argument to this function.
+local function getChildrenWithTags(selfNode, tagsTable, any)
+--!@docEnd	
+	local temp = {};
 
+	for i = 1, selfNode:getNumberOfChildren() do
+		local child = selfNode:getChildAtIndex(i);
+		
+		if child._isNodeProtocol == true then
+	
+			local childTags = child:getTags();
+	
+			local foundCount = 0;
+			local foundAtLeastOne = false;
+			
+			for t = 1, #childTags do
+				
+				local tg = childTags[t];
+				
+				for v = 1, #tagsTable do
+					local st = tagsTable[v];
+					
+					if st == tg then
+					
+						foundCount = foundCount + 1;
+						foundAtLeastOne = true;
+						if any then
+							break;
+						end
+					end
+				end
 
+				if(any and foundAtLeastOne)then
+					temp[#temp+1] = child;
+					break;
+				end
+			end
 
+			if(false == any and foundAtLeastOne and foundCount == #tagsTable)then
+				temp[#temp+1] = child;
+			end
+			
+			local childArray = child:getChildrenWithTags(tagsTable, any);
+			if(childArray)then
+				for j =1, #childArray do
+					temp[#temp+1] = childArray[j];
+				end
+			end
+		end
+	end
+	return temp;
+end
 --------------------------------------------------------------------------------
 --!@docBegin
 --!Get the node LHScene object
@@ -224,6 +284,14 @@ end
 local function getUniqueName(selfNode)
 --!@docEnd	
 	return selfNode.lhUniqueName;
+end
+
+--------------------------------------------------------------------------------
+--!@docBegin
+--!Returns the user property object assigned to this node or null.
+local function getUserProperty(selfNode)
+--!@docEnd
+	return selfNode.lhUserProperties;
 end
 --------------------------------------------------------------------------------
 --!@docBegin
@@ -717,33 +785,6 @@ local function nodeProtocolRemoveSelf(selfNode)
 	end
 end
 --------------------------------------------------------------------------------
--- function batch_allSprites(selfBatch)--returns array with LHSprite objects
-
--- 	--we only have to put the sprites from self to a table
--- 	local spritesTable = {}
--- 	for i = 1, selfBatch.numChildren do
--- 		spritesTable[#spritesTable+1] = selfBatch[i];
--- 	end
-
--- 	return spritesTable
--- end
--- --------------------------------------------------------------------------------
--- function batch_spritesWithTag(selfBatch, tag) --returns array with LHSprite objects with tag
--- 	local spritesTable = {}
--- 	for i = 1, selfBatch.numChildren do
--- 		local spr = selfBatch[i];
-		
--- 		if(spr.lhTag and spr.lhTag == tag)then
--- 			spritesTable[#spritesTable+1] = spr;
--- 		end
--- 	end
-
--- 	return spritesTable
--- end
---------------------------------------------------------------------------------
-
-
---------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 function initNodeProtocolWithDictionary(dict, node, prnt)
 
@@ -786,9 +827,13 @@ function initNodeProtocolWithDictionary(dict, node, prnt)
 	node.getParent					= getParent;
 	node.getUUID					= getUUID;
 	node.getUniqueName				= getUniqueName;
+	node.getUserProperty			= getUserProperty;
 	node.getType 					= getType;
 	node.getProtocolName			= getProtocolName;
 	
+	node.getTags 					= getTags;
+	node.getChildrenWithTags 		= getChildrenWithTags;
+
 	node.convertToWorldSpace = convertToWorldSpace;
 	node.convertToNodeSpace = convertToNodeSpace;
 	node.convertToWorldAngle = convertToWorldAngle;

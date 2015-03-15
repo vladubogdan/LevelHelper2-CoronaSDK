@@ -147,11 +147,68 @@ local function getChildrenOfProtocol(selfNode, protocolType)
 	end
 	return temp;
 end
+--------------------------------------------------------------------------------
+--!@docBegin
+--!Returns all children nodes that have the specified tag values.
+--!@param tagsTable A table of strings containing tag names.
+--!@param any Specify if all or just one tag value of the node needs to be in common with the tagsTable passed as argument to this function.
+local function getChildrenWithTags(selfNode, tagsTable, any)
+--!@docEnd	
+	local temp = {};
 
-
-
-
-
+	local assetParent = selfNode:getParent();
+	if(assetParent)then
+		
+		for i = 1, assetParent:getNumberOfChildren() do
+			local child = assetParent:getChildAtIndex(i);
+			
+			if child._isNodeProtocol == true and child._assetParent == selfNode then
+		
+				local childTags = child:getTags();
+		
+				local foundCount = 0;
+				local foundAtLeastOne = false;
+				
+				for t = 1, #childTags do
+					
+					local tg = childTags[t];
+					
+					for v = 1, #tagsTable do
+						local st = tagsTable[v];
+						
+						if st == tg then
+						
+							foundCount = foundCount + 1;
+							foundAtLeastOne = true;
+							if any then
+								break;
+							end
+						end
+					end
+	
+					if(any and foundAtLeastOne)then
+						temp[#temp+1] = child;
+						break;
+					end
+				end
+	
+				if(false == any and foundAtLeastOne and foundCount == #tagsTable)then
+					temp[#temp+1] = child;
+				end
+				
+				local childArray = child:getChildrenWithTags(tagsTable, any);
+				if(childArray)then
+					for j =1, #childArray do
+						temp[#temp+1] = childArray[j];
+					end
+				end
+			end
+		end
+	end
+	return temp;
+end
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 local LHAsset = {}
 function LHAsset:nodeWithDictionary(dict, prnt)
@@ -240,6 +297,7 @@ function LHAsset:nodeWithDictionary(dict, prnt)
 	object.getChildNodeWithUUID = getChildNodeWithUUID;
 	object.getChildrenOfType = getChildrenOfType;
 	object.getChildrenOfProtocol = getChildrenOfProtocol;
+	object.getChildrenWithTags = getChildrenWithTags;
 
 	--Functions
 	----------------------------------------------------------------------------

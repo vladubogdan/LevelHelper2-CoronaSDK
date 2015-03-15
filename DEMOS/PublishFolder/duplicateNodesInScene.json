@@ -114,7 +114,7 @@
             "gravityScale" : 1,
             "angularVelocity" : 0
           },
-          "generalPosition" : "{0.185342, 0.682068}",
+          "generalPosition" : "{0.185342, 0.645145}",
           "uuid" : "78E3D921-B133-43B0-8779-C35EAA415D05",
           "children" : [
             {
@@ -218,7 +218,8 @@
                   "rotation" : 356.0632,
                   "parentUUID" : "23AC8A25-97AD-4406-A899-E93E4BC0760E",
                   "tags" : [
-                    "DEFAULT"
+                    "DEFAULT",
+                    "UPPER_LEG"
                   ],
                   "spriteUUID" : "B1B9257F-6E94-4835-A313-8DFBB8559BC1",
                   "spriteName" : "leg_upper_L_outline",
@@ -229,7 +230,8 @@
                       "rotation" : 3.863104,
                       "parentUUID" : "F207801C-2839-4DD0-965D-2653F9486AAA",
                       "tags" : [
-                        "DEFAULT"
+                        "DEFAULT",
+                        "LOWER_LEG"
                       ],
                       "spriteUUID" : "4AB26407-4B38-45E8-8B96-5E2032A6DE87",
                       "spriteName" : "leg_lower_L_outline",
@@ -285,7 +287,8 @@
                   "rotation" : 358.3091,
                   "parentUUID" : "23AC8A25-97AD-4406-A899-E93E4BC0760E",
                   "tags" : [
-                    "DEFAULT"
+                    "DEFAULT",
+                    "UPPER_LEG"
                   ],
                   "spriteUUID" : "55C7F992-41E7-499F-A6A9-F63ECAC36761",
                   "spriteName" : "leg_upper_R_outline",
@@ -296,7 +299,8 @@
                       "rotation" : 5.806605,
                       "parentUUID" : "EB7368A7-8FE6-4678-9200-37DC76808CC0",
                       "tags" : [
-                        "DEFAULT"
+                        "DEFAULT",
+                        "LOWER_LEG"
                       ],
                       "spriteUUID" : "E7DCA35D-0B75-4D07-91E3-027DD9AB6A1B",
                       "spriteName" : "leg_lower_R_outline",
@@ -1045,7 +1049,7 @@
                         "C2EE4EDF-1284-4095-AFC4-40516F8862AE" : "{12.987622, -0.808326}",
                         "E30D1DD1-19E6-4F1E-B516-CA6A40D7AB4E" : "{-1.833035, -52.724146}",
                         "69807FC1-0308-4726-BCB0-5BD37E386FD3" : "{0.938620, 23.440787}",
-                        "78E3D921-B133-43B0-8779-C35EAA415D05" : "{177.927924, 436.523419}",
+                        "78E3D921-B133-43B0-8779-C35EAA415D05" : "{177.928320, 412.893061}",
                         "23AC8A25-97AD-4406-A899-E93E4BC0760E" : "{-14.590223, 20.930803}",
                         "8507BA7D-B1FD-443C-9288-BB8CCC6938DC" : "{-4.749597, 0.702195}",
                         "E4E06483-886B-4069-B976-83A258F50E2D" : "{-7.543760, 24.121711}",
@@ -1077,7 +1081,7 @@
                         "C2EE4EDF-1284-4095-AFC4-40516F8862AE" : "{12.987622, -0.808326}",
                         "E30D1DD1-19E6-4F1E-B516-CA6A40D7AB4E" : "{-1.833035, -52.724146}",
                         "69807FC1-0308-4726-BCB0-5BD37E386FD3" : "{0.938620, 23.440787}",
-                        "78E3D921-B133-43B0-8779-C35EAA415D05" : "{177.927924, 436.523419}",
+                        "78E3D921-B133-43B0-8779-C35EAA415D05" : "{177.928320, 412.893061}",
                         "23AC8A25-97AD-4406-A899-E93E4BC0760E" : "{-14.590223, 25.826852}",
                         "8507BA7D-B1FD-443C-9288-BB8CCC6938DC" : "{-4.749597, 0.702195}",
                         "E4E06483-886B-4069-B976-83A258F50E2D" : "{-7.543760, 24.121711}",
@@ -1109,7 +1113,7 @@
                         "C2EE4EDF-1284-4095-AFC4-40516F8862AE" : "{12.987622, -0.808326}",
                         "E30D1DD1-19E6-4F1E-B516-CA6A40D7AB4E" : "{-1.833035, -52.724146}",
                         "69807FC1-0308-4726-BCB0-5BD37E386FD3" : "{0.938620, 23.440787}",
-                        "78E3D921-B133-43B0-8779-C35EAA415D05" : "{177.927924, 436.523419}",
+                        "78E3D921-B133-43B0-8779-C35EAA415D05" : "{177.928320, 412.893061}",
                         "23AC8A25-97AD-4406-A899-E93E4BC0760E" : "{-14.590223, 20.930803}",
                         "8507BA7D-B1FD-443C-9288-BB8CCC6938DC" : "{-4.749597, 0.702195}",
                         "E4E06483-886B-4069-B976-83A258F50E2D" : "{-7.543760, 24.121711}",
@@ -1368,7 +1372,8 @@
           "rotation" : 0,
           "parentUUID" : "_GAME_WORLD_NODE_UUID_",
           "tags" : [
-            "DEFAULT"
+            "DEFAULT",
+            "TYRE"
           ],
           "nodePhysics" : {
             "bullet" : false,
@@ -1379,7 +1384,17 @@
             "fixedRotation" : false,
             "linearDamping" : 0,
             "type" : 2,
-            "shape" : 6,
+            "shape" : 1,
+            "genericFixture" : {
+              "category" : 1,
+              "sensor" : false,
+              "density" : 0,
+              "mask" : 65535,
+              "friction" : 0,
+              "restitution" : 0,
+              "name" : "GenericFixture",
+              "shapeID" : 0
+            },
             "linearVelocity" : "{0.000000, 0.000000}"
           },
           "spriteUUID" : "986AA138-7C74-479B-A627-5BBF982B2605",
@@ -1404,16 +1419,27 @@
             "DEFAULT"
           ],
           "nodePhysics" : {
+            "linearVelocity" : "{0.000000, 0.000000}",
+            "fixedRotation" : false,
+            "shape" : 5,
+            "allowSleep" : true,
+            "fixtureUUID" : "40DCB468-B844-4C19-8235-D0666C479B4F",
+            "linearDamping" : 0,
+            "type" : 0,
+            "genericFixture" : {
+              "category" : 1,
+              "sensor" : false,
+              "density" : 0,
+              "mask" : 65535,
+              "friction" : 0,
+              "restitution" : 0,
+              "name" : "GenericFixture",
+              "shapeID" : 0
+            },
             "bullet" : false,
             "angularDamping" : 0,
             "gravityScale" : 1,
-            "allowSleep" : true,
-            "angularVelocity" : 0,
-            "fixedRotation" : false,
-            "linearDamping" : 0,
-            "type" : 0,
-            "shape" : 6,
-            "linearVelocity" : "{0.000000, 0.000000}"
+            "angularVelocity" : 0
           },
           "spriteUUID" : "98D7378C-BDD3-47B2-A31E-D1A2771124FE",
           "spriteName" : "wood",
@@ -1577,5 +1603,31 @@
     "960x640" : "{{0.000000, 0.000000}, {1.000000, 1.000000}}",
     "general" : "{{0.000000, 0.000000}, {1.000000, 1.000000}}"
   },
-  "globalGravityDirection" : "{0.000000, -1.000000}"
+  "globalGravityDirection" : "{0.000000, -1.000000}",
+  "tracedFixtures" : {
+    "40DCB468-B844-4C19-8235-D0666C479B4F" : [
+      [
+        "{63, 15.5}",
+        "{-34.5, 15.5}",
+        "{-64, 5}",
+        "{-64, -13.5}",
+        "{-63, -15}",
+        "{-27.5, -15.5}",
+        "{63.5, -7}"
+      ],
+      [
+        "{-63, 12.5}",
+        "{-64, 5}",
+        "{-34.5, 15.5}",
+        "{-61.5, 14}"
+      ],
+      [
+        "{62.5, -12.5}",
+        "{63.5, -7}",
+        "{-27.5, -15.5}",
+        "{-27, -16}",
+        "{61, -15}"
+      ]
+    ]
+  }
 }
