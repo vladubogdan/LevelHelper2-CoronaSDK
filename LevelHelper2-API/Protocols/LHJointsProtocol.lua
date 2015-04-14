@@ -71,7 +71,7 @@ local function getContentAnchorA(selfNode)
 	local contentY = 0;
 	
 	if(object ~=nil)then
-		contentY, contentY = object:localToContent( pt.x, pt.y );
+		contentX, contentY = object:localToContent( pt.x, pt.y );
 	end
 	
 	return {x = contentX, y = contentY};
@@ -89,7 +89,7 @@ local function getContentAnchorB(selfNode)
 	local contentY = 0;
 	
 	if(object ~=nil)then
-		contentY, contentY = object:localToContent( pt.x, pt.y );
+		contentX, contentY = object:localToContent( pt.x, pt.y );
 	end
 	
 	return {x = contentX, y = contentY};
