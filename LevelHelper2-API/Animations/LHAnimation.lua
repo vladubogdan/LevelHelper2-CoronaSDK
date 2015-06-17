@@ -215,15 +215,9 @@ local function animateNodeToTime(selfObject, time)
 		
 			local subproperties = prop:allSubproperties();
 			
-			-- print("has subproperties ");
-			-- print(subproperties);
-			
 			if(subproperties)then
 				for j=1, #subproperties do
 					local subprop = subproperties[j];
-					
-					-- print("update subproperty");
-					-- print(subprop);
 					
 					selfObject:updateNodeWithAnimationProperty(subprop, time);
 				end
@@ -235,7 +229,7 @@ end
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 local function resetOneShotFrames(selfObject)
-	selfObject:resetOneShotFramesStartingFromFrameNumber(1);
+	selfObject:resetOneShotFramesStartingFromFrameNumber(0);
 end
 --------------------------------------------------------------------------------
 local function resetOneShotFramesStartingFromFrameNumber(selfObject, frameNumber)
@@ -773,11 +767,13 @@ local function animateSpriteFrameChangeWithFrame(selfObject, beginFrame, animNod
 		return;
 	end
 	
+	
 	if(beginFrame and sprite)then
-		
+	
 		if(selfObject:animating())then
 			if(beginFrame:wasShot() == false)then
- 				sprite:setSpriteFrameWithName(beginFrame:spriteFrameName());
+				
+				sprite:setSpriteFrameWithName(beginFrame:spriteFrameName());
  				beginFrame:setWasShot(true);
  	 		end
  		else

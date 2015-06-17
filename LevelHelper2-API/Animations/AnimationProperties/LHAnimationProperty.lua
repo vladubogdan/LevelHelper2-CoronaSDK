@@ -69,7 +69,6 @@ local function loadDictionary(selfObject, dict)
 	
 	local subsInfo = dict["subproperties"];
 	
-	
 	if(subsInfo~=nil)then
 		
 		local parentNode = selfObject:getAnimation():getNode();
@@ -79,6 +78,10 @@ local function loadDictionary(selfObject, dict)
 			
 			local child = parentNode:getChildNodeWithUUID(subUUID);
 			
+			if(child == nil)then
+				child = parentNode:getChildNodeWithUniqueName(subUUID);
+			end
+			
 			if( child ~= nil and subInfo ~= nil)then
 				
 				if(selfObject._subproperties == nil)then
@@ -86,8 +89,9 @@ local function loadDictionary(selfObject, dict)
 				end
 				
 				local subProp = selfObject:newSubpropertyForNode(child);
-				
+			
 				if(subProp~=nil)then
+					
 					subProp:setParentProperty(selfObject);
 					subProp:setSubpropertyNode(child);
 					subProp:loadDictionary(subInfo);
@@ -104,6 +108,7 @@ local LHAnimationProperty = {}
 function LHAnimationProperty:animationPropertyWithDictionary(dict, animation)
 	
 	local propType = dict["type"];
+	
 	local animPropertyClass = require('LevelHelper2-API.Animations.AnimationProperties.' .. propType);
 	local object =  animPropertyClass:initAnimationPropertyWithDictionary(dict, animation);
 	
