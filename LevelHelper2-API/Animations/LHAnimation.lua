@@ -145,13 +145,22 @@ local function updateTimeWithDelta(selfObject, delta)
 --!@docEnd	
 	if(selfObject._animating)then
 		local newTime = selfObject:getCurrentTime() + delta;
-		selfObject:setCurrentTime(newTime);
+		selfObject:animateToTime(newTime);
 	end
 end
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 local function setCurrentTime(selfObject, val)
 
+	selfObject._currentTime = val;
+
+	selfObject:resetOneShotFramesStartingFromFrameNumber(selfObject:currentFrame());
+
+	selfObject:animateToTime(val);
+end
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+local function animateToTime(selfObject, val)
 	selfObject._currentTime = val;
 
 	selfObject:animateNodeToTime(selfObject._currentTime);
@@ -905,6 +914,7 @@ function LHAnimation:animationWithDictionary(dict, node)
 	--private methods
 	object.resetOneShotFrames 						= resetOneShotFrames;
 	object.resetOneShotFramesStartingFromFrameNumber= resetOneShotFramesStartingFromFrameNumber;
+	object.animateToTime 							= animateToTime;
 	
 	--load animation properties - key frames info
 	local propDictInfo = dict["properties"];
