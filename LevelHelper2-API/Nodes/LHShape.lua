@@ -68,6 +68,9 @@ function LHShape:nodeWithDictionary(dict, prnt)
  	object._outlinePoints = {};
  	local vertices = {};
  	
+ 	-- corona bug fix - min points 4 - so we need first point repeat
+ 	local minPoints = 0;
+ 	
  	local points = dict["points"];
   	for i = 1, #points do
         
@@ -80,7 +83,16 @@ function LHShape:nodeWithDictionary(dict, prnt)
 							
 		vertices[#vertices+1] = vPoint.x*convert.x;
 		vertices[#vertices+1] = vPoint.y*convert.y;
+	
+		minPoints = minPoints + 2;
     end        
+ 
+ 
+ 	if(minPoints < 8)then-- corona bug fix - min points 4
+ 		vertices[#vertices+1] = vertices[1] + 0.001;-- so we dont get warning for self intersection
+		vertices[#vertices+1] = vertices[2];
+ 	end
+ 		
  
  	local polygon = display.newPolygon( object, 0, 0, vertices );
  	polygon:setFillColor( color.red, color.green, color.blue, color.alpha );
