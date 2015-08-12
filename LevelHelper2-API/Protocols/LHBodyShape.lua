@@ -367,11 +367,12 @@ function LHBodyShape:createComplexShapeWithDictionary(dictionary, node, scene, a
 			end
 		end
 	else
-		local circleRadius = dictionary.radius;
-        local centerStr = dictionary.center;
-        local center = LHUtils.pointFromString(centerStr);
-        
-        center.x = center.x * node.xScale;
+		local circleRadius = dictionary.radius * node.xScale;
+
+		local centerStr = dictionary.center;
+		local center = LHUtils.pointFromString(centerStr);
+		
+		center.x = center.x * node.xScale;
 		center.y = center.y * node.yScale;
 		
 		if(center.x ~= 0 and center.y ~= 0)then

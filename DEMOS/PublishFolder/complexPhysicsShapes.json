@@ -61,7 +61,7 @@
           "size" : "{43.000000, 43.000000}",
           "nodeType" : "LHSprite",
           "alpha" : 255,
-          "scale" : "{1.000000, 1.000000}",
+          "scale" : "{4.000000, 5.000000}",
           "relativeImagePath" : "PublishFolder\/",
           "zOrder" : 0,
           "imageFileName" : "carParts.png",
