@@ -200,6 +200,8 @@ function LHWheelJointNode:nodeWithDictionary(dict, prnt)
 	object.nodeType = "LHWheelJointNode"
 	
     prnt:addChild(object);
+    
+    local actualRemoveSelf = object.removeSelf;
 	
 	LHNodeProtocol.initNodeProtocolWithDictionary(dict, object, prnt);
 	LHJointsProtocol.initJointsProtocolWithDictionary(dict, object, prnt:getScene());
@@ -234,8 +236,9 @@ function LHWheelJointNode:nodeWithDictionary(dict, prnt)
     object.nodeProtocolEnterFrame 	= object.enterFrame;
     object.enterFrame = visit;
     
-    object._superRemoveSelf = object.removeSelf;
-    object.removeSelf 		= removeSelf;
+    object._superRemoveSelf = actualRemoveSelf;--object.removeSelf;
+    object.removeSelf 		= removeSelf;   
+    object.nodeProtocolRemoveSelf = nil; 
     
 	return object
 end

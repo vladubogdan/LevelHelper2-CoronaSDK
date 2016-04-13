@@ -761,15 +761,19 @@ local function scheduleForRemoval(selfNode)
 end
 local function nodeProtocolRemoveSelf(selfNode)
 	
+    -- local LHUtils = require("LevelHelper2-API.Utilities.LHUtils");    
+    -- local nodeInfo = LHUtils.LHPrintObjectInfo(selfNode);    
+    -- print("node info " .. tostring(nodeInfo));
+    
 	local children = selfNode:getChildren();
 	while(children ~= nil and children.numChildren > 0)do
 		local child = children[1];
 		
 		if(child)then
-			if(child.nodeProtocolRemoveSelf ~= nil)then
-				child:nodeProtocolRemoveSelf();
+    		if(child.nodeProtocolRemoveSelf ~= nil)then
+	            child:nodeProtocolRemoveSelf();                                               
 			else
-				child:removeSelf();
+	            child:removeSelf();                
 			end
 		end
 		children = selfNode:getChildren();
@@ -779,7 +783,8 @@ local function nodeProtocolRemoveSelf(selfNode)
 		selfNode._pathMovementObj:removeSelf();
 	end
 	selfNode._pathMovementObj = nil;
-	
+	    
+    selfNode.nodeProtocolRemoveSelf = nil;    
 	if(selfNode._superRemoveSelf ~= nil)then
 		selfNode:_superRemoveSelf();
 	end

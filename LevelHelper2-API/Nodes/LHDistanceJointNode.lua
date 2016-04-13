@@ -130,6 +130,8 @@ function LHDistanceJointNode:nodeWithDictionary(dict, prnt)
 	
     prnt:addChild(object);
 	
+    local actualRemoveSelf = object.removeSelf;
+    
 	LHNodeProtocol.initNodeProtocolWithDictionary(dict, object, prnt);
 	LHJointsProtocol.initJointsProtocolWithDictionary(dict, object, prnt:getScene());
 
@@ -149,8 +151,9 @@ function LHDistanceJointNode:nodeWithDictionary(dict, prnt)
     object.nodeProtocolEnterFrame 	= object.enterFrame;
     object.enterFrame = visit;
     
-    object._superRemoveSelf = object.removeSelf;
-    object.removeSelf 		= removeSelf;
+    object._superRemoveSelf = actualRemoveSelf;--object.removeSelf;
+    object.removeSelf 		= removeSelf;   
+    object.nodeProtocolRemoveSelf = nil; 
     
 	return object
 end

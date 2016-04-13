@@ -140,8 +140,7 @@ local function getGameWorldRect(_sceneObj)
 end
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
-local function removeSelf(_sceneObj)
-	
+local function removeSelf(_sceneObj)	    
 	Runtime:removeEventListener( "enterFrame", _sceneObj )
 	_sceneObj:nodeProtocolRemoveSelf();
 	_sceneObj:disableCollisionHandling();
