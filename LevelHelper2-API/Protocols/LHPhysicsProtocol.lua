@@ -27,27 +27,27 @@ function initPhysicsProtocolWithDictionary(dict, node, scene)
 
 	physics.start();
 
-	if(dict == nil)then 
+	-- if(dict ~= nil)then 
 		
-		if(node.getSpriteFrameName and node.getSpriteSheetPath) then
-			local spriteFrameName = node:getSpriteFrameName();
-			local spriteSheetPath = node:getSpriteSheetPath();
+	-- 	if(node.getSpriteFrameName and node.getSpriteSheetPath) then
+	-- 		local spriteFrameName = node:getSpriteFrameName();
+	-- 		local spriteSheetPath = node:getSpriteSheetPath();
 			
-			if(spriteFrameName ~= nil and spriteSheetPath ~= nil)then
-				-- require the sprite sheet information file
-				local sheetInfo = require(spriteSheetPath);
-				if(sheetInfo)then
-					if(sheetInfo.getPhysicsData)then
-						dict = sheetInfo.getPhysicsData()[spriteFrameName];
-					end
-				end
+	-- 		if(spriteFrameName ~= nil and spriteSheetPath ~= nil)then
+	-- 			-- require the sprite sheet information file
+	-- 			local sheetInfo = require(spriteSheetPath);
+	-- 			if(sheetInfo)then
+	-- 				if(sheetInfo.getPhysicsData)then
+	-- 					dict = sheetInfo.getPhysicsData()[spriteFrameName];
+	-- 				end
+	-- 			end
 				
-				if(dict)then
-					dict["shape"] = 6;
-				end
-			end
-		end
-	end
+	-- 			if(dict)then
+	-- 				dict["shape"] = 6;
+	-- 			end
+	-- 		end
+	-- 	end
+	-- end
 
 	if(dict == nil)then return end
 	
@@ -192,6 +192,8 @@ function initPhysicsProtocolWithDictionary(dict, node, scene)
 	elseif(shapeType == 6)then -- editor
 	
 		--this shapey type is available only on sprites
+		
+		
 		
 		local spriteFrameName = node:getSpriteFrameName();
 		local spriteSheetPath = node:getSpriteSheetPath();

@@ -267,6 +267,7 @@ function LHAsset:nodeWithDictionary(dict, prnt)
 					prnt:insert(child);
 					
 					child:setPosition({x = localX, y = localY});
+					child.lhOriginalPosition = {x = localX, y = localY};
 					
 					local xScale = child.xScale;
 					local yScale = child.yScale;
@@ -301,6 +302,117 @@ function LHAsset:nodeWithDictionary(dict, prnt)
 
 	--Functions
 	----------------------------------------------------------------------------
+	
+	return object
+end
+
+--------------------------------------------------------------------------------
+--!@docBegin
+--!Creates a new asset node with a specific name.
+--!@param assetName The name of the new asset node. Can be used later to retrieve the asset from the children hierarchy.
+--!@param fileName The name of the asset file. Do not provide an extension. E.g If file is named "myAsset.lhasset.json" then yous should pass @"myAsset.lhasset".
+--!@param prnt The parent node. Must not be nil and must be a children of the LHScene (or subclass of LHScene).
+--!@return A new node object or nil if no asset file is found.
+--!@code
+--!		local LHAsset = require('LevelHelper2-API.Nodes.LHAsset');
+--!		local newAssetObj = LHAsset:createWithNameAndAssetFileName("uniqueNameOfNodeInScene", "myAsset.lhasset", lhScene:getGameWorldNode());
+--!			
+--!		newNodeObj.x = 100;
+--!		newNodeObj.y = 200;
+--!
+--!		--where lhScene is the object returned by LHScene:initWithContentOfFile("...");
+--!@endcode
+function LHAsset:createWithNameAndAssetFileName(assetName, fileName, prnt, scenePosX, scenePosY)
+--!@docEnd	
+
+	-- get the asset info 
+	local dict = prnt:getScene():assetInfoForFile(fileName);
+	
+	if (nil == dict) then
+		print("Invalid LHAsset initialization!")
+	end
+				
+	local LHUtils = require("LevelHelper2-API.Utilities.LHUtils");
+    local LHNodeProtocol = require('LevelHelper2-API.Protocols.LHNodeProtocol')
+    local LHAnimationsProtocol = require('LevelHelper2-API.Protocols.LHAnimationsProtocol');
+    local LHPhysicsProtocol = require('LevelHelper2-API.Protocols.LHPhysicsProtocol')
+    
+    local object = display.newGroup();
+    
+    --add all LevelHelper 2 valid properties to the object
+	object.nodeType = "LHAsset"
+	
+	--add LevelHelper methods
+    
+    prnt:addChild(object);
+	
+	local scene = prnt:getScene();
+	
+	LHNodeProtocol.initNodeProtocolWithDictionary(dict, object, prnt);
+	
+	local prntPos = prnt:convertToNodeSpace({x = scenePosX, y = scenePosY});
+	object:setPosition(prntPos);
+	
+	LHPhysicsProtocol.initPhysicsProtocolWithDictionary(dict["nodePhysics"], object, prnt:getScene());
+	local LHUtils = require("LevelHelper2-API.Utilities.LHUtils");
+	
+	local assetInfo = dict;
+	if(assetInfo)then
+			
+		fileExists = true;
+		local tracedFix = assetInfo["tracedFixtures"];
+		if(tracedFix)then
+			object._tracedFixtures = LHUtils.LHDeepCopy(tracedFix);
+		end
+
+		LHNodeProtocol.loadChildrenForNodeFromDictionary(object, assetInfo);
+		
+		for i=1, object:getNumberOfChildren() do
+			
+			local child = object:getChildAtIndex(i);
+			
+			if(child)then
+				
+				child._assetParent = object;
+				
+				local contentX, contentY = child:localToContent(0,0);
+			
+				local localX, localY = prnt:contentToLocal(contentX, contentY);
+				
+				prnt:insert(child);
+				
+				child:setPosition({x = localX, y = localY});
+				child.lhOriginalPosition = {x = localX, y = localY};
+				
+				
+				local xScale = child.xScale;
+				local yScale = child.yScale;
+				
+				child:setScale(xScale*object.xScale, yScale*object.yScale);
+				
+				local localRot = child.rotation;
+				
+				child:setRotation(localRot+object.rotation);
+				
+			end
+		end
+	end
+	
+	LHAnimationsProtocol.initAnimationsProtocolWithDictionary(dict, object, prnt:getScene());
+	
+	object.nodeProtocolEnterFrame 	= object.enterFrame;
+	object.enterFrame = visit;
+	
+	object.getChildNodeWithUniqueName = getChildNodeWithUniqueName;
+	object.getChildNodeWithUUID = getChildNodeWithUUID;
+	object.getChildrenOfType = getChildrenOfType;
+	object.getChildrenOfProtocol = getChildrenOfProtocol;
+	object.getChildrenWithTags = getChildrenWithTags;
+
+	--Functions
+	----------------------------------------------------------------------------
+	
+	object.lhUniqueName = assetName;
 	
 	return object
 end

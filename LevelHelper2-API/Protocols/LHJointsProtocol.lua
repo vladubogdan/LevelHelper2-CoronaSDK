@@ -122,6 +122,26 @@ local function findConnectedNodes(selfNode)
 	if(selfNode.lhJointConnectedNodeB == nil)then
 		selfNode.lhJointConnectedNodeB = scene:getChildNodeWithUUID(selfNode.lhJointNodeBUUID);
 	end
+	
+	if(selfNode.lhJointConnectedNodeA ~= nil)then
+		local aIsConnectedToJoints = selfNode.lhJointConnectedNodeA.lhIsConnectedToJoints;
+		if(aIsConnectedToJoints == nil)then
+			aIsConnectedToJoints = {};
+		end
+		
+		aIsConnectedToJoints[#aIsConnectedToJoints +1] = selfNode;
+		selfNode.lhJointConnectedNodeA.lhIsConnectedToJoints = aIsConnectedToJoints;
+	end
+	
+	if(selfNode.lhJointConnectedNodeB ~= nil)then
+		local bIsConnectedToJoints = selfNode.lhJointConnectedNodeB.lhIsConnectedToJoints;
+		if(bIsConnectedToJoints == nil)then
+			bIsConnectedToJoints = {};
+		end
+		
+		bIsConnectedToJoints[#bIsConnectedToJoints +1] = selfNode;
+		selfNode.lhJointConnectedNodeB.lhIsConnectedToJoints = bIsConnectedToJoints;
+	end
 end
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------

@@ -106,7 +106,10 @@ function LHBodyShape:createWithName(name, node, scene, from, to, allBodyFixtures
 	chainPoints[#chainPoints+1] = to.x;
 	chainPoints[#chainPoints+1] = to.y;
 	
-	fixtureInfo = {	}
+	fixtureInfo = {	friction= 0.2,
+					bounce	= 0.2, 
+					density = 0.2
+					}
 	
 	fixtureInfo.chain = chainPoints;
 	fixtureInfo.connectFirstAndLastChainVertex = false;
@@ -444,7 +447,7 @@ function LHBodyShape:createComplexShapeWithDictionary(dictionary, node, scene, a
 					
 		else
             
-			fixtureInfo = {	friction= dictionary["friction"],
+            fixtureInfo = {	friction= dictionary["friction"],
 						bounce	= dictionary["restitution"], 
 						density = dictionary["density"],
 						radius  = circleRadius,

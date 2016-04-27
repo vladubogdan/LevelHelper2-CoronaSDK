@@ -1,0 +1,159 @@
+{
+  "rotation" : 0,
+  "parentUUID" : "E299F721-69E6-4937-843C-B6BC5DA8DD7F",
+  "tags" : [
+    "DEFAULT"
+  ],
+  "generalPosition" : "{0.066667, 0.100000}",
+  "uuid" : "8AAD490E-78E5-4D20-A630-2581C92195AF",
+  "children" : [
+    {
+      "needsCopyReasignment" : true,
+      "parentUUID" : "8AAD490E-78E5-4D20-A630-2581C92195AF",
+      "maxMotorTorque" : 20,
+      "tags" : [
+        "DEFAULT"
+      ],
+      "enableLimit" : false,
+      "uuid" : "70F334B0-39A8-4108-949A-8ADD09B6402B",
+      "name" : "backTyreRevoluteJoint1",
+      "collideConnected" : false,
+      "spriteAUUID" : "BCA074F5-6863-447D-BF60-FFE02BFD2482",
+      "nodeType" : "LHRevoluteJoint",
+      "spriteBUUID" : "19CDA2C3-3087-4C9E-B8C0-9979EC4CF0C8",
+      "lowerAngle" : 0,
+      "motorSpeed" : 1,
+      "relativePosA" : "{0.000000, 0.000000}",
+      "upperAngle" : 90,
+      "enableMotor" : false
+    },
+    {
+      "needsCopyReasignment" : true,
+      "parentUUID" : "8AAD490E-78E5-4D20-A630-2581C92195AF",
+      "maxMotorTorque" : 20.3,
+      "tags" : [
+        "DEFAULT"
+      ],
+      "enableLimit" : false,
+      "uuid" : "7F00A745-5873-431B-95E1-95306A8F5EC0",
+      "name" : "frontTyreRevoluteJoint1",
+      "collideConnected" : false,
+      "spriteAUUID" : "3C55520F-E78C-4280-8F82-C5E66B9D63C3",
+      "nodeType" : "LHRevoluteJoint",
+      "spriteBUUID" : "19CDA2C3-3087-4C9E-B8C0-9979EC4CF0C8",
+      "lowerAngle" : 0,
+      "motorSpeed" : -1.3,
+      "relativePosA" : "{0.000000, 0.000000}",
+      "upperAngle" : 90,
+      "enableMotor" : true
+    },
+    {
+      "rotation" : 0,
+      "parentUUID" : "8AAD490E-78E5-4D20-A630-2581C92195AF",
+      "tags" : [
+        "DEFAULT"
+      ],
+      "nodePhysics" : {
+        "bullet" : false,
+        "angularDamping" : 0,
+        "gravityScale" : 1,
+        "allowSleep" : true,
+        "angularVelocity" : 0,
+        "fixedRotation" : false,
+        "linearDamping" : 0,
+        "type" : 2,
+        "shape" : 6,
+        "linearVelocity" : "{0.000000, 0.000000}"
+      },
+      "spriteUUID" : "C514F546-635E-41AF-B3D7-01C86F585769",
+      "spriteName" : "carBody",
+      "generalPosition" : "{0.000579, -0.015074}",
+      "uuid" : "19CDA2C3-3087-4C9E-B8C0-9979EC4CF0C8",
+      "name" : "carBody1",
+      "anchor" : "{0.500000, 0.500000}",
+      "size" : "{168.000000, 68.000000}",
+      "nodeType" : "LHSprite",
+      "alpha" : 255,
+      "scale" : "{1.000000, 1.000000}",
+      "relativeImagePath" : "PublishFolder\/",
+      "zOrder" : 0,
+      "imageFileName" : "carParts.png",
+      "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+    },
+    {
+      "rotation" : 0,
+      "parentUUID" : "8AAD490E-78E5-4D20-A630-2581C92195AF",
+      "tags" : [
+        "DEFAULT"
+      ],
+      "nodePhysics" : {
+        "bullet" : false,
+        "angularDamping" : 0,
+        "gravityScale" : 1,
+        "allowSleep" : true,
+        "angularVelocity" : 0,
+        "fixedRotation" : false,
+        "linearDamping" : 0,
+        "type" : 2,
+        "shape" : 6,
+        "linearVelocity" : "{0.000000, 0.000000}"
+      },
+      "spriteUUID" : "986AA138-7C74-479B-A627-5BBF982B2605",
+      "spriteName" : "carTyre",
+      "generalPosition" : "{-0.052665, 0.033614}",
+      "uuid" : "BCA074F5-6863-447D-BF60-FFE02BFD2482",
+      "name" : "backTyre1",
+      "anchor" : "{0.500000, 0.500000}",
+      "size" : "{43.000000, 43.000000}",
+      "nodeType" : "LHSprite",
+      "alpha" : 255,
+      "scale" : "{1.000000, 1.000000}",
+      "relativeImagePath" : "PublishFolder\/",
+      "zOrder" : 1,
+      "imageFileName" : "carParts.png",
+      "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+    },
+    {
+      "rotation" : 0,
+      "parentUUID" : "8AAD490E-78E5-4D20-A630-2581C92195AF",
+      "tags" : [
+        "DEFAULT"
+      ],
+      "nodePhysics" : {
+        "bullet" : false,
+        "angularDamping" : 0,
+        "gravityScale" : 1,
+        "allowSleep" : true,
+        "angularVelocity" : 0,
+        "fixedRotation" : false,
+        "linearDamping" : 0,
+        "type" : 2,
+        "shape" : 6,
+        "linearVelocity" : "{0.000000, 0.000000}"
+      },
+      "spriteUUID" : "986AA138-7C74-479B-A627-5BBF982B2605",
+      "spriteName" : "carTyre",
+      "generalPosition" : "{0.054733, 0.034580}",
+      "uuid" : "3C55520F-E78C-4280-8F82-C5E66B9D63C3",
+      "name" : "frontTyre1",
+      "anchor" : "{0.500000, 0.500000}",
+      "size" : "{43.000000, 43.000000}",
+      "nodeType" : "LHSprite",
+      "alpha" : 255,
+      "scale" : "{1.000000, 1.000000}",
+      "relativeImagePath" : "PublishFolder\/",
+      "zOrder" : 1,
+      "imageFileName" : "carParts.png",
+      "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+    }
+  ],
+  "name" : "Untitled",
+  "anchor" : "{0.500000, 0.500000}",
+  "size" : "{168.265732, 87.419945}",
+  "assetUUID" : "6CECE661-EE5C-417C-A2A9-86BF7377A431",
+  "nodeType" : "LHAsset",
+  "alpha" : 255,
+  "scale" : "{1.000000, 1.000000}",
+  "zOrder" : 0,
+  "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+}

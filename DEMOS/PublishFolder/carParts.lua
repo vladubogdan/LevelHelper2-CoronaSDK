@@ -11,8 +11,8 @@ function getSpriteSheetData()
 
 				--FRAME "carTyre"
 				{
-					x = 134,
-					y = 3,
+					x = 131,
+					y = 2,
 					width = 43,
 					height = 43,
 					sourceWidth = 43,
@@ -24,8 +24,8 @@ function getSpriteSheetData()
 
 				--FRAME "wood"
 				{
-					x = 2,
-					y = 2,
+					x = 0,
+					y = 0,
 					width = 128,
 					height = 32,
 					sourceWidth = 128,
@@ -37,8 +37,8 @@ function getSpriteSheetData()
 
 				--FRAME "carBody"
 				{
-					x = 2,
-					y = 49,
+					x = 0,
+					y = 47,
 					width = 168,
 					height = 68,
 					sourceWidth = 168,
@@ -48,8 +48,8 @@ function getSpriteSheetData()
 				},
 
 		},
-		sheetContentWidth = 178,
-		sheetContentHeight = 118
+		sheetContentWidth = 175,
+		sheetContentHeight = 116
 	}
 	return options
 end
@@ -57,9 +57,9 @@ end
 function getPhysicsData()
 	local physics =
 	{
-		["carTyre"] = {linearDamping=0,allowSleep=true,gravityScale=1,fixedRotation=false,bullet=false,shapes={{radius=18.3507,density=0.1,name="smallerCircleShape",category=1,mask=65535,friction=0.2,shapeID=4,center="{0.000000, 0.000000}",sensor=false,restitution=0}},linearVelocity="{0.000000, 0.000000}",type=2,angularDamping=0,angularVelocity=0},
-		["wood"] = {type=0,fixedRotation=false,bullet=false,angularVelocity=0,shapes={{restitution=0,shapeID=0,name="UntitledConcaveShape",density=0.1,points={{"{-27, -16}","{61, -15}","{62.5, -12.5}","{63.5, -7}","{63, 15.5}","{-34.5, 15.5}","{-27.5, -15.5}"},{"{-64, 5}","{-64, -13.5}","{-63, -15}","{-27.5, -15.5}","{-34.5, 15.5}","{-61.5, 14}","{-63, 12.5}"}},mask=65535,friction=0.2,sensor=false,category=1}},gravityScale=1,allowSleep=true,linearVelocity="{0.000000, 0.000000}",linearDamping=0,angularDamping=0},
-		["carBody"] = {allowSleep=true,linearDamping=0,bullet=false,gravityScale=1,angularVelocity=0,linearVelocity="{0.000000, 0.000000}",shapes={{density=0.1,friction=0.2,category=1,shapeID=3,restitution=0,name="complexShapeWithHole",points={{"{30.5, 18.5}","{57.09765625, -5.7890625}","{64.5, -4}","{76, 4}","{83, 11}","{83, 28.5}","{82.5, 30}","{80, 32.5}"},{"{28, -15.5}","{43, -12.5}","{57.09765625, -5.7890625}","{30.5, 18.5}","{18.5, -3.5}","{18, -15.5}"},{"{30.5, 18.5}","{80, 32.5}","{-79, 33}","{-45, 15.5}"},{"{-36, -33}","{-35.5, -33.5}","{6.5, -33.5}","{18, -15.5}","{18.5, -3.5}","{-38, -6}","{-45.5, -15.5}"},{"{-45.5, -15.5}","{-38, -6}","{-45, 15.5}"},{"{-53.5, -15.5}","{-45.5, -15.5}","{-45, 15.5}"},{"{-82.5, -3}","{-53.5, -15.5}","{-45, 15.5}"},{"{-82.5, -3}","{-45, 15.5}","{-79, 33}"},{"{-83.5, -0.5}","{-82.5, -3}","{-79, 33}"},{"{-83.5, 27.5}","{-83.5, -0.5}","{-79, 33}"},{"{-82.5, 30.5}","{-83.5, 27.5}","{-79, 33}"},{"{-80.5, 32.5}","{-82.5, 30.5}","{-79, 33}"}},mask=65535,sensor=false},{density=0.1,friction=0.2,category=1,shapeID=2,restitution=0,name="circleShape",center="{65.666016, 2.742188}",sensor=false,mask=65535,radius=18.89075}},type=2,fixedRotation=false,angularDamping=0},
+		["carTyre"] = {type=2,angularVelocity=0,linearVelocity="{0.000000, 0.000000}",allowSleep=true,fixedRotation=false,gravityScale=1,bullet=false,linearDamping=0,shapes={{restitution=0,category=1,center="{0.000000, 0.000000}",sensor=false,friction=2,name="UntitledCircleShape",shapeID=0,radius=21.25,density=0.1,mask=65535}},angularDamping=0},
+		["wood"] = {bullet=false,allowSleep=true,linearDamping=0,shapes={{density=0.1,name="UntitledConcaveShape",restitution=0,friction=0.2,shapeID=0,sensor=false,mask=65535,points={{"{-27, -16}","{61, -15}","{62.5, -12.5}","{63.5, -7}","{63, 15.5}","{-34.5, 15.5}","{-27.5, -15.5}"},{"{-64, 5}","{-64, -13.5}","{-63, -15}","{-27.5, -15.5}","{-34.5, 15.5}","{-61.5, 14}","{-63, 12.5}"}},category=1}},type=0,angularVelocity=0,gravityScale=1,angularDamping=0,fixedRotation=false,linearVelocity="{0.000000, 0.000000}"},
+		["carBody"] = {linearDamping=0,type=2,angularDamping=0,gravityScale=1,fixedRotation=false,shapes={{friction=0.2,restitution=0,points={{"{-45.75, -15.75}","{-40.25, -27.75}","{-36.25, -33.25}","{-35.75, -33.75}","{6.75, -33.75}","{9.75, -32.25}","{11.25, -30.25}","{11.25, -28.25}"},{"{-82.75, 30.75}","{-83.75, 27.75}","{-45.75, -15.75}"},{"{-80.75, 32.75}","{-82.75, 30.75}","{-45.75, -15.75}"},{"{-79.25, 33.25}","{-80.75, 32.75}","{-45.75, -15.75}"},{"{80.25, 32.75}","{-79.25, 33.25}","{-45.75, -15.75}"},{"{80.25, 32.75}","{-45.75, -15.75}","{18.25, -15.75}"},{"{80.25, 32.75}","{18.25, -15.75}","{43.25, -12.75}"},{"{80.25, 32.75}","{43.25, -12.75}","{53.25, -9.75}"},{"{80.25, 32.75}","{53.25, -9.75}","{64.75, -4.25}"},{"{80.25, 32.75}","{64.75, -4.25}","{76.25, 4.25}"},{"{80.25, 32.75}","{76.25, 4.25}","{83.25, 11.25}"},{"{80.25, 32.75}","{83.25, 11.25}","{83.25, 28.75}"},{"{80.25, 32.75}","{83.25, 28.75}","{82.75, 30.25}"},{"{-40.25, -27.75}","{-39.75, -30.75}","{-36.25, -33.25}"},{"{-45.75, -15.75}","{11.25, -28.25}","{18.25, -15.75}"},{"{-83.75, 27.75}","{-83.75, -0.75}","{-82.75, -3.25}","{-53.75, -15.75}","{-45.75, -15.75}"}},shapeID=0,sensor=false,mask=65535,category=1,name="UntitledConcaveShape",density=0.1}},bullet=false,angularVelocity=0,allowSleep=true,linearVelocity="{0.000000, 0.000000}"},
 	}
 	return physics;
 end

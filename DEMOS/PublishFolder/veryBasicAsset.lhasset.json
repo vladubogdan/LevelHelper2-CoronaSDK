@@ -1,0 +1,84 @@
+{
+  "rotation" : 0,
+  "parentUUID" : "E299F721-69E6-4937-843C-B6BC5DA8DD7F",
+  "tags" : [
+    "DEFAULT"
+  ],
+  "generalPosition" : "{0.066667, 0.100000}",
+  "uuid" : "D51FB67F-6512-4351-93A4-A21C1E459B77",
+  "children" : [
+    {
+      "rotation" : 0,
+      "parentUUID" : "D51FB67F-6512-4351-93A4-A21C1E459B77",
+      "tags" : [
+        "DEFAULT"
+      ],
+      "nodePhysics" : {
+        "bullet" : false,
+        "angularDamping" : 0,
+        "gravityScale" : 1,
+        "allowSleep" : true,
+        "angularVelocity" : 0,
+        "fixedRotation" : false,
+        "linearDamping" : 0,
+        "type" : 0,
+        "shape" : 1,
+        "genericFixture" : {
+          "category" : 1,
+          "sensor" : false,
+          "density" : 0.1,
+          "mask" : 65535,
+          "friction" : 0.2,
+          "restitution" : 0,
+          "name" : "GenericFixture",
+          "shapeID" : 0
+        },
+        "linearVelocity" : "{0.000000, 0.000000}"
+      },
+      "spriteUUID" : "07B979A4-D1B3-418E-9578-B829C405B8FB",
+      "spriteName" : "64x64",
+      "generalPosition" : "{0.018377, 0.024846}",
+      "uuid" : "8BB6E45E-22A2-4EA8-AC17-1DB1C657D1B8",
+      "name" : "64x64",
+      "anchor" : "{0.500000, 0.500000}",
+      "size" : "{32.000000, 32.000000}",
+      "nodeType" : "LHSprite",
+      "alpha" : 255,
+      "scale" : "{1.000000, 1.000000}",
+      "relativeImagePath" : "PublishFolder\/",
+      "zOrder" : 0,
+      "imageFileName" : "test.png",
+      "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+    },
+    {
+      "rotation" : 0,
+      "parentUUID" : "D51FB67F-6512-4351-93A4-A21C1E459B77",
+      "tags" : [
+        "DEFAULT"
+      ],
+      "spriteUUID" : "1558DC5A-01AC-4110-96EC-EFCD29AC9FFF",
+      "spriteName" : "64x64-green",
+      "generalPosition" : "{-0.016881, -0.025370}",
+      "uuid" : "FB125F45-5A54-4368-82CF-2A41B24ABD16",
+      "name" : "64x64-green",
+      "anchor" : "{0.500000, 0.500000}",
+      "size" : "{32.000000, 32.000000}",
+      "nodeType" : "LHSprite",
+      "alpha" : 255,
+      "scale" : "{1.000000, 1.000000}",
+      "relativeImagePath" : "PublishFolder\/",
+      "zOrder" : 0,
+      "imageFileName" : "test.png",
+      "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+    }
+  ],
+  "name" : "Untitled",
+  "anchor" : "{0.500000, 0.500000}",
+  "size" : "{66.710892, 65.259232}",
+  "assetUUID" : "F6F6D5C4-540C-4CEF-9854-5AD5CFCF1FC9",
+  "nodeType" : "LHAsset",
+  "alpha" : 255,
+  "scale" : "{1.000000, 1.000000}",
+  "zOrder" : 0,
+  "colorOverlay" : "{{1.000000, 1.000000}, {1.000000, 1.000000}}"
+}

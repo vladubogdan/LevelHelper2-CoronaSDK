@@ -758,12 +758,27 @@ end
 
 local function scheduleForRemoval(selfNode)
 	selfNode._shouldRemoveSelf = true;
+	
+	-- print("schedule remove self " .. tostring(selfNode));
+	
 end
 local function nodeProtocolRemoveSelf(selfNode)
 	
     -- local LHUtils = require("LevelHelper2-API.Utilities.LHUtils");    
     -- local nodeInfo = LHUtils.LHPrintObjectInfo(selfNode);    
     -- print("node info " .. tostring(nodeInfo));
+    
+    -- print("node protocol remove self " .. tostring(selfNode));
+    
+    if(selfNode.lhIsConnectedToJoints ~= nil)then
+		for i = 1, #selfNode.lhIsConnectedToJoints do
+			local jointNode = selfNode.lhIsConnectedToJoints[i];
+			if(jointNode ~= nil)then
+				jointNode:removeSelf();
+			end
+		end
+	end
+    
     
 	local children = selfNode:getChildren();
 	while(children ~= nil and children.numChildren > 0)do
@@ -943,28 +958,8 @@ function initNodeProtocolWithDictionary(dict, node, prnt)
 			
 			node:setPosition({x = calculatedPos.x, y = calculatedPos.y});
 		
-			-- print("position for sprite " .. node:getUniqueName());
-			-- print(calculatedPos.x);
-			-- print(calculatedPos.y);
+			node.lhOriginalPosition = {x = calculatedPos.x, y = calculatedPos.y};
 			
-	        -- CGPoint unitPos = [dict pointForKey:@"generalPosition"];
-	        --     CGPoint pos = [LHUtils positionForNode:_node
-	        --                                   fromUnit:unitPos];
-	            
-	        --     NSDictionary* devPositions = [dict objectForKey:@"devicePositions"];
-	        --     if(devPositions)
-	        --     {
-	                
-	        --         NSString* unitPosStr = [LHUtils devicePosition:devPositions
-	        --                                               forSize:LH_SCREEN_RESOLUTION];
-	                
-	        --         if(unitPosStr){
-	        --             CGPoint unitPos = LHPointFromString(unitPosStr);
-	        --             pos = [LHUtils positionForNode:_node
-	        --                                   fromUnit:unitPos];
-	        --         }
-	        -- }
-	        
 		end
 	end --if dict
 

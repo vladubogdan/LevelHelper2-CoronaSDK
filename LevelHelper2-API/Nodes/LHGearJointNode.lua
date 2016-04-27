@@ -88,6 +88,11 @@ local function lateLoading(selfNode)
     
     if(nodeA and nodeB and jointA and jointB)then
     
+    	--reset nodes to original position as they may be on top of each other and box2d has snapped them outside of each other
+		--as the joints do not exist yet
+	    nodeA:setPosition(nodeA.lhOriginalPosition);
+		nodeB:setPosition(nodeB.lhOriginalPosition);
+    
     	local physics = require("physics")
 		if(nil == physics)then	return end
 		physics.start();

@@ -14,5 +14,5 @@ local composer = require "composer"
 -- composer.gotoScene( "complexPhysicsShapes" )
 -- composer.gotoScene( "moveOnPathByCode" )
 -- composer.gotoScene( "createSpritesByCode" )
-composer.gotoScene( "duplicateNodesInScene" )
-
+composer.gotoScene( "carjoints" )
+-- composer.gotoScene( "assetLoadByCode" )
