@@ -312,14 +312,13 @@ end
 --!@param assetName The name of the new asset node. Can be used later to retrieve the asset from the children hierarchy.
 --!@param fileName The name of the asset file. Do not provide an extension. E.g If file is named "myAsset.lhasset.json" then yous should pass @"myAsset.lhasset".
 --!@param prnt The parent node. Must not be nil and must be a children of the LHScene (or subclass of LHScene).
+--!@param scenePosX The x position where the asset should be placed in scene coordinates.
+--!@param scenePosY The y position where the asset should be placed in scene coordinates.
 --!@return A new node object or nil if no asset file is found.
 --!@code
 --!		local LHAsset = require('LevelHelper2-API.Nodes.LHAsset');
---!		local newAssetObj = LHAsset:createWithNameAndAssetFileName("uniqueNameOfNodeInScene", "myAsset.lhasset", lhScene:getGameWorldNode());
+--!		local newAssetObj = LHAsset:createWithNameAndAssetFileName("uniqueNameOfNodeInScene", "myAsset.lhasset", lhScene:getGameWorldNode(), 100, 200);
 --!			
---!		newNodeObj.x = 100;
---!		newNodeObj.y = 200;
---!
 --!		--where lhScene is the object returned by LHScene:initWithContentOfFile("...");
 --!@endcode
 function LHAsset:createWithNameAndAssetFileName(assetName, fileName, prnt, scenePosX, scenePosY)
