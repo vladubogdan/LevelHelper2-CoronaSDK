@@ -193,8 +193,6 @@ function initPhysicsProtocolWithDictionary(dict, node, scene)
 	
 		--this shapey type is available only on sprites
 		
-		
-		
 		local spriteFrameName = node:getSpriteFrameName();
 		local spriteSheetPath = node:getSpriteSheetPath();
 		
@@ -232,8 +230,10 @@ function initPhysicsProtocolWithDictionary(dict, node, scene)
 	node.gravityScale		= dict["gravityScale"];
 	node.linearDamping 		= dict["linearDamping"];
 	
-	local linearVel 		= LHUtils.pointFromString(dict["linearVelocity"]);
-	node:setLinearVelocity( linearVel.x*32, linearVel.y*32 );
+	if(dict["linearVelocity"] ~= nil)then
+		local linearVel 		= LHUtils.pointFromString(dict["linearVelocity"]);
+		node:setLinearVelocity( linearVel.x*32, linearVel.y*32 );
+	end
 
 	node.angularVelocity 	= dict["angularVelocity"];
 	node.angularDamping 	= dict["angularDamping"];

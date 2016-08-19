@@ -135,8 +135,12 @@ function LHSprite:createWithSpriteFrameName(spriteFrameName, imageFilePath, pare
 	
 	LHNodeProtocol.simulateModernObjectHierarchy(parent, object);
 	LHNodeProtocol.initNodeProtocolWithDictionary(dict, object, parent);
-	
-	LHPhysicsProtocol.initPhysicsProtocolWithDictionary(nil, object, parent:getScene());
+
+
+	local phyDict = sheetInfo.getPhysicsData()[spriteFrameName];		
+	phyDict["shape"] = 6;
+
+	LHPhysicsProtocol.initPhysicsProtocolWithDictionary(phyDict, object, parent:getScene());
 	LHAnimationsProtocol.initAnimationsProtocolWithDictionary(dict, object, parent:getScene());
 	
 	object.nodeProtocolEnterFrame 	= object.enterFrame;
