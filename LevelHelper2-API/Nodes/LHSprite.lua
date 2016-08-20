@@ -138,7 +138,9 @@ function LHSprite:createWithSpriteFrameName(spriteFrameName, imageFilePath, pare
 
 
 	local phyDict = sheetInfo.getPhysicsData()[spriteFrameName];		
-	phyDict["shape"] = 6;
+	if(phyDict ~= nil)then
+		phyDict["shape"] = 6;
+	end
 
 	LHPhysicsProtocol.initPhysicsProtocolWithDictionary(phyDict, object, parent:getScene());
 	LHAnimationsProtocol.initAnimationsProtocolWithDictionary(dict, object, parent:getScene());

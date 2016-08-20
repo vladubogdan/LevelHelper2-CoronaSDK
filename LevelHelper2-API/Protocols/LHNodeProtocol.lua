@@ -394,6 +394,12 @@ local function setScale(selfNode, xScale, yScale)
 --!@docEnd	
 	selfNode.xScale = xScale;
 	selfNode.yScale = yScale;
+
+	if(selfNode.lhPhysicsDict ~= nil)then
+		physics.removeBody( selfNode )
+		local LHPhysicsProtocol = require('LevelHelper2-API.Protocols.LHPhysicsProtocol');
+		LHPhysicsProtocol.initPhysicsProtocolWithDictionary(selfNode.lhPhysicsDict, selfNode, selfNode:getScene());
+	end
 	
 	if(selfNode.lhChildren)then
 		selfNode.lhChildren.xScale = xScale;

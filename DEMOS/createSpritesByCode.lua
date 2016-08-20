@@ -37,6 +37,9 @@ function scene:touch( event )
 			
 		newSpriteObj.x = event.x;
 		newSpriteObj.y = event.y;
+
+
+		newSpriteObj:setScale(1.2,1.2);--this will scale the object and recreate the physics body to match the new scale
 		
 		print("did create sprite obj " .. tostring(newSpriteObj));
 		

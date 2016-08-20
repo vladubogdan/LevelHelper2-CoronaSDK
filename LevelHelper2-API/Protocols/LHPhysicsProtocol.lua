@@ -51,6 +51,8 @@ function initPhysicsProtocolWithDictionary(dict, node, scene)
 
 	if(dict == nil)then return end
 	
+	node.lhPhysicsDict = dict;
+
 	local shapeType = dict["shape"];
 	local type  	= dict["type"];
  
